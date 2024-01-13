@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="Assets/Icons/Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Assets/Css/Blog.css">
+    <link rel="stylesheet" href="Assets/Css/Universal.css">
+
+    <title>Blog</title>
+
+    <script defer src="Assets/Js/Utility.js"></script>
+    <script defer src="Assets/Js/SearchAndFilter.js"></script>     
+</head>
+
+<body>
+
+    <main>
+        <p class="headline">Návody 📝</p>
+
+        <div class="Search" id="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="Search__input" id="Search__input" onkeyup='SearchAndFilter("search")' placeholder="Search for posts...">
+        </div>
+
+        <div class="filter" id="filter">
+        </div>
+    
+        <content id="content">
+        <section class="section" id="section_1">
+
+            <article class="card">
+                <a class="card__link" href="../Blog/001-Getting-started-with-hWeb.html">
+                    <div class="card__content">
+                        <img class="card__thumbnail" alt="image of a computer" src="Assets/Img/image2.jpg">
+                        <div class="card__text">
+                            <h2 class="card__headline">Anki pro začátečníky</h2>
+                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laboriosam, temporibus libero eaque totam vero neque ad saepe voluptates facere assumenda nobis error iusto modi suscipit ipsum est dolor ducimus.</p>
+                            <div class="card__metadata--wrap">
+                                <p class="card__metadata metadata--action">Read more <i class="fa-solid fa-angle-right"></i></p>
+                                <a href="#" class="card__metadata metadata--category"><i class="fa-solid fa-hashtag"></i> Anki</a>
+                                <a href="#" class="card__metadata metadata--author">Hynek Janac</a>
+                            </div>
+                        </div> 
+                    </div>
+                </a> 
+            </article>
+        </section>
+    </content>
+    </main> 
+</body>
+</html> 
