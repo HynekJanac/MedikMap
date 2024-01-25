@@ -1,18 +1,70 @@
+/* Search */
+.Search{
+	text-align: center;
+	margin: 1em auto;
+	border-radius: 5rem;
+	border: solid 2px var(--main-color);
+	color: var(--main-color);
+	font-size: 20px;
+	display: none;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.Search__input{
+	text-align: center;
+	padding: 1.2rem;
+	font-size: 1.2rem;
+	background: transparent;
+	border: none;
+	color: var(--main-color);
+	font-weight: bold;
+	width: 90%;
+	font-family: var(--default-font);
+}
+
+/*Filter*/
+.filter{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: 1.25rem;
+	row-gap: 0.5em;
+	margin: 1em auto;
+	padding: 0;
+}
+.filter__btn{
+	color: var(--main-color);
+	padding: 0.4em;
+	font-weight: bold;
+	border-radius: 30px;
+	width: fit-content;
+	text-decoration: none;
+	margin: 0 1em;
+	border: 2px solid var(--main-color);
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+.filter__btn:hover{
+	transform: scale(1.1);
+}
+.filter__btn:focus{
+	transform: scale(1.1);
+}
+
+
+
 .linktree{
     text-align: center;
     margin: 0 auto;
 }
 
-.thumbnail-image{
-    width: 5em;
-    margin-bottom: 3em;
 
-}
-
-p{
-    color: var(--text-color);
-    margin: 0;
-    font-size: 1.5rem;
+.link-container{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 
 .links{
@@ -21,18 +73,15 @@ p{
     gap: 1em;
     width: 70%;
     margin: 0 auto;
+    align-items: center;
 }
 
 .links a{
-    border-radius: 2em;
     text-decoration: none;
-    background-color: var(--main-color);
-    color: var(--secondary-color);
+    color: var(--main-color);
     font-weight: bold;
     font-size: 25px;
-    padding: 0.5em;
     transition: transform .2s ease-in-out;
-    
 }
 
 .links h2{
@@ -41,6 +90,41 @@ p{
 }
 
 .links a:hover, .links a:focus{
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+
+.info-icon{
+    cursor: pointer;
+    margin-left: 15px;
+    color: var(--main-color);
+    font-size: 20px;
+    transition: transform .2s ease-in-out;
+
+}
+.info-icon:hover, .info-icon:focus{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+
+.dialog{
+    border: solid 2px var(--main-color);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    max-width: 70%;
+}
+
+.close-button{
+    color: var(--main-color); 
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+
+
+}
+.close-button:hover, .close-button:focus{
     background-color: var(--secondary-color);
     color: var(--text-color);
     transform: scale(1.1);

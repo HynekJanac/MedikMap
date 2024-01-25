@@ -3,29 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linktree</title>
+    <title>MedikMap</title>
     <link rel="icon" href="/Assets/Icons/Favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="Assets/Css/Universal.css">
     <link rel="stylesheet" href="Assets/Css/Linktree.css">
     <script defer src="Assets/Js/Utility.js"></script>
+    <script defer src="Assets/Js/SearchAndFilter - Links.js"></script>
+    <script defer src="Assets/Js/Dialogs.js"></script>
 </head>
+
 <body>
+    
     <main class="linktree">
-        <img class="thumbnail-image" src="/Assets/Icons/Favicon.svg" alt="">
-        <p>Seznam</p>
-        <div class="links">
-            <h2 id="Category">Anatomie</h2>
-            <a href="">Link 1</a>
-            <a href="">Link 2</a>
-            <a href="">Link 3</a>
-            <h2 id="Category">Histologie</h2>
-            <a href="http://histologyguide.com/">HistologyGuide.org</a>
-            <a href="">Link 2</a>
-            <a href="">Link 3</a>  
-            <h2 id="Category">Biofyzika</h2>
-            <a href="">Link 1</a>
-            <a href="">Link 2</a>
-            <a href="">Link 3</a>  
+        <div class="Search" id="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="Search__input" id="Search__input" onkeyup='SearchAndFilter("search")' placeholder="Hledat">
+        </div>
+        <div class="filter" id="filter">
+        </div>
+        <div class="links" id="links">
+            <section class="category-container" title="Anatomie">
+                <h2 class="category">Anatomie 🫀</h2>
+
+                <div class="link-container">
+                    <a href="https://www.anatomystandard.com/" class="link" target="_blank">Anatomy standard</a>
+                    <i class="fa-solid fa-circle-info info-icon"></i>
+                    <dialog class="dialog">
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde veritatis error nesciunt ipsa, sint aliquid eos, magnam perspiciatis voluptas iste facere, vitae tempora recusandae dolor eum vero hic quis libero.
+                        <i  title="Zavřít" class="fa-solid fa-xmark close-button"></i>
+                    </dialog>
+                </div>
+                <div class="link-container">
+                    <a href="https://3d4medical.com/" class="link" target="_blank">Complete Anatomy</a>
+                    <i class="fa-solid fa-circle-info info-icon"></i>
+                    <dialog class="dialog">
+                        Complete anatomy je 3D
+                        <i  title="Zavřít" class="fa-solid fa-xmark close-button"></i>
+                    </dialog>
+                </div>
+            </section>
+            <section class="category-container" title="Histologie">
+                <h2 class="category">Histologie 🔬</h2>
+                <div class="link-container">
+                    <a href="https://histologyguide.com/" class="link" target="_blank">HistologyGuide</a>
+                    <i class="fa-solid fa-circle-info info-icon"></i>
+                    <dialog class="dialog">
+                        Histology guide...
+                        <i  title="Zavřít" class="fa-solid fa-xmark close-button"></i>
+                    </dialog>
+                </div>
+            </section> 
+            <section class="category-container" title="Biofyzika">
+                <h2 class="category">Biofyzika ⚙️</h2>
+            </section>
+            <section class="category-container" title="Latina">
+                <h2 class="category">Latina 📚</h2>
+            </section>
         </div>
     </main>
 </body>

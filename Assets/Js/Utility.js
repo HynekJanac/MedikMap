@@ -19,9 +19,9 @@ var MasterSettings = {
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
-  { title: 'Blog', href: '../blog.html', className: 'nav__link', textContent: 'Blog' },
+  { title: 'Návody', href: '../blog.html', className: 'nav__link', textContent: 'Návody' },
   { title: 'O nás', href: '/about.html', className: 'nav__link', innerHTML: 'O nás' },
-  { title: 'Zapoj se', href: 'https://www.paypal.com/donate/?hosted_button_id=XWBJ7JHATG48Y', target: '_blank', className: 'nav__link', textContent: 'Zapoj se' },
+  { title: 'Zapoj se', href: '#', target: '_blank', className: 'nav__link', textContent: 'Zapoj se' },
   { title: 'Hledat', href: '../Blog.html?search=true', className: 'nav__link', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
 ];
 
@@ -185,8 +185,8 @@ function SocialGrid(){
       iconClassName: 'icon fab fa-youtube'
     },
     {
-      title: 'Check us out on github!',
-      href: 'https://github.com/HynekJanac/hWeb',
+      title: 'Prohlédni si kód',
+      href: 'https://github.com/HynekJanac/MedikMap',
       iconClassName: 'icon fab fa-github'
     },
     {
