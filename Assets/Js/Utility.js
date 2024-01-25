@@ -259,14 +259,6 @@ function CookiePopUp(){
   var paragraphElement = document.createElement('p');
   paragraphElement.textContent = 'Tato stránka využívá soubory cookies k optimalizaci uživatelského zážitku a analytice návštěvnosti.';
 
-  // Create the anchor element
-  var anchorElement = document.createElement('a');
-  anchorElement.style.color = 'var(--main-color)';
-  anchorElement.href = '../Blog/000-cookies.html';
-  anchorElement.textContent = 'Zjisti více';
-
-  // Append the anchor element to the paragraph element
-  paragraphElement.appendChild(anchorElement);
 
   // Append the paragraph element to the div element
   CookieConsentElement.appendChild(paragraphElement);
