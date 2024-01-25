@@ -19,10 +19,10 @@ var MasterSettings = {
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
-  { title: 'Návody', href: '../blog.html', className: 'nav__link', textContent: 'Návody' },
-  { title: 'O nás', href: '/about.html', className: 'nav__link', innerHTML: 'O nás' },
-  { title: 'Zapoj se', href: '#', target: '_blank', className: 'nav__link', textContent: 'Zapoj se' },
-  { title: 'Hledat', href: '../Blog.html?search=true', className: 'nav__link', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
+  { title: 'Návody', href: '../Navody.html', className: 'nav__link', textContent: 'Návody' },
+  { title: 'Nástroje', href: '../Nastroje.html', className: 'nav__link', textContent: 'Nástroje' },
+  { title: 'O nás', href: '/Onas.html', className: 'nav__link', innerHTML: 'O nás' },
+  { title: 'Hledat', href: '../Seznam.html', className: 'nav__link', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
 ];
 
 function Header (NavLinks){

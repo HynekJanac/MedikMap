@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Assets/Icons/Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/Assets/Css/Universal.Css">
+    <link rel="stylesheet" href="/Assets/Css/GeneratorOtazek.css">
+    <script defer src="/Assets/Js/Utility.js"></script>
+    
+    <title>Generátor zkouškových otázek</title>
+    <script defer>
+        function VyberOtazky(){
+        document.getElementById("Seznam_otazek").innerHTML = ""
+        let OtazkySeznam = document.getElementById('otazky_source');
+        var textareaValue = OtazkySeznam.value;
+        var OtazkyArray = textareaValue.split('\n');
+        let pocet_otazek = document.getElementById("pocet_otazek").value
+        let VybraneOtazky = []
+        for (i = 0; i < pocet_otazek; i++){
+            let nahodnecislo = Math.floor(Math.random() * OtazkyArray.length)
+            var NahodnaOtazka = OtazkyArray[nahodnecislo];
+            OtazkyArray.splice(nahodnecislo, 1)
+            VybraneOtazky.push(NahodnaOtazka)
+        }
+        
+        for (i = 0; i < VybraneOtazky.length; i++){
+            let otazka = document.createElement("li")
+            otazka.textContent = VybraneOtazky[i]
+            document.getElementById("Seznam_otazek").appendChild(otazka)
+        }
+        document.getElementById("otazky_vysledek").style.display = "flex"
+    
+}
+    </script>
+</head>
+<body> 
+    <main>
+    <div class="info">
+        <h1>Generátor zkouškových otázek</h1>
+        <ol>
+            <li>Zkopíruj seznam otázek do textového pole</li>
+            <li>Přesvěč se, že kažká otázka je na samostatném řádku</li>
+            <li>Vyber kolik otázek chceš (triplet, quadriplet...)</li>
+            <li>Vygeneruj otázky</li>
+        </ol>
+    </div>
+    
+    <div class="input">
+        <textarea id="otazky_source" cols="30" rows="10" placeholder="Sem vlož seznam otázek &#10 1. Otazka  &#10 2. Otázka &#10 3. Otázka "></textarea>
+        <input id="pocet_otazek"   value="3" type="number" min=1 placeholder="Počet otázek">
+        <button onclick="VyberOtazky()">Vygeneruj otázky</button>
+    </div>
+
+    
+    <div class="otazky" id="otazky_vysledek">
+        <h2>Zde jsou tvé otázky.</h2>
+        <ol id="Seznam_otazek">
+        </ol>
+    </div>
+</main>
+</body>
+</html>
