@@ -333,7 +333,7 @@ function PoweredByhWeb(){
   let PoweredBy = document.createElement("p");
   PoweredBy.className = "hWebCredit";
 
-  PoweredBy.innerText = "Made with ♥ and  ";
+  PoweredBy.innerText = "Made with ♥️ and  ";
 
   let hWebLink = document.createElement("a");
 
