@@ -6,11 +6,11 @@ function TableOfContents(){
   
   let ToCHeading = document.createElement("h2")
   ToCHeading.className = "contents-title"
-  ToCHeading.innerText = "Contents"
+  ToCHeading.innerText = "Obsah"
   let ShowHideTocBtn  = document.createElement("a")
   ShowHideTocBtn.id = "showhide-contents"
   ShowHideTocBtn.setAttribute("onclick", "ShowHideContents()")
-  ShowHideTocBtn.innerText = "(hide)"
+  ShowHideTocBtn.innerText = "(skrýt)"
 
 
   // Create a list for the ToC entries
@@ -103,7 +103,7 @@ function Sharing(){
     },
     {
       title: 'Sdílet na x.com',
-      href: "https://twitter.com/intent/tweet?text=" + windowname + "%20by%20@HynekJanac%20" + currenturl,
+      href: "https://twitter.com/intent/tweet?text=" + windowname + "%20na%20Medikmap.cz%20" + currenturl,
       target: "_blank",
       iconClassName: 'icon fa-brands fa-x-twitter'
     }];

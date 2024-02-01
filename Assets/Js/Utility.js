@@ -1,14 +1,3 @@
-let Localization = {
-  en: {
-
-  },
-  cs: {
-
-  }
-}
-
-let language = document.documentElement.lang
-
 // Settings
 
 var MasterSettings = {
@@ -41,7 +30,7 @@ function Header (NavLinks){
   const jumpToContentLink = document.createElement('a');
   jumpToContentLink.href = '#infobox';
   jumpToContentLink.className = 'header__jump-to-content';
-  jumpToContentLink.textContent = 'Jump to content';
+  jumpToContentLink.textContent = 'Skočit k obsahu';
   header.appendChild(jumpToContentLink);
 
   // Create the menu div element
@@ -50,7 +39,7 @@ function Header (NavLinks){
 
   const menuIcon = document.createElement('i');
   menuIcon.id = 'menu_btn';
-  menuIcon.title = 'Show menu';
+  menuIcon.title = 'Otevřít menu';
   menuIcon.tabIndex = 0;
   menuIcon.className = 'fa-solid fa-bars';
   menuIcon.style.color = 'var(--main-color)';
@@ -175,14 +164,9 @@ function SocialGrid(){
       iconClassName: 'icon fas fa-heart'
     },
     {
-      title: 'Problém s stránkou',
+      title: 'Nahlásit problém',
       href: 'mailto:hynekjanac@gmail.com?subject=Site%20Issue&amp;body=Link:%20http://127.0.0.1:5501/Blog/000-Template.html#%0D%0AIssue%20description:%0D%0A %0D%0AScreenshot:%0D%0A',
       iconClassName: 'icon fas fa-exclamation-triangle'
-    },
-    {
-      title: 'Check out our youtube channel!',
-      href: 'https://www.youtube.com/@hynekjanac',
-      iconClassName: 'icon fab fa-youtube'
     },
     {
       title: 'Prohlédni si kód',
@@ -219,7 +203,7 @@ function SocialGrid(){
 function BackToTop (){
   // Create the anchor element
   var anchorElement = document.createElement('a');
-  anchorElement.title = 'return back to top';
+  anchorElement.title = 'Vrátit se zpět nahoru';
   anchorElement.id = 'back-to-top';
   anchorElement.className = 'back-to-top';
   anchorElement.href = '#';
@@ -333,7 +317,7 @@ function PoweredByhWeb(){
   let PoweredBy = document.createElement("p");
   PoweredBy.className = "hWebCredit";
 
-  PoweredBy.innerText = "Made with ♥️ and  ";
+  PoweredBy.innerText = "Vytvořeno s ♥️ a  ";
 
   let hWebLink = document.createElement("a");
 
