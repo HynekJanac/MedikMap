@@ -54,78 +54,85 @@
 }
 
 
-
 .linktree{
     text-align: center;
     margin: 0 auto;
 }
 
 
-.link-container{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-.links{
+.Links-Wrap{
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
 }
 
-.links a{
-    text-decoration: none;
-    color: var(--main-color);
-    font-weight: bold;
-    font-size: 25px;
-    transition: transform .2s ease-in-out;
-}
-
-.links h2{
+.Links-Wrap h2{
     color: var(--main-color);
     font-size: 2.5rem;
+    
 }
 
-.links a:hover, .links a:focus{
-    color: var(--text-color);
-    transform: scale(1.1);
+
+.link-wrap{
+    text-align: left;
+    margin: 10px 0 10px 0;
 }
 
-.info-icon{
-    cursor: pointer;
-    margin-left: 15px;
+.link-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.link-header a, .link-header i{
+    text-decoration: none;
+    font-weight: bold;
     color: var(--main-color);
-    font-size: 20px;
-    transition: transform .2s ease-in-out;
-
-}
-.info-icon:hover, .info-icon:focus{
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    transform: scale(1.1);
-}
-
-.dialog{
-    border: solid 2px var(--main-color);
-    color: var(--text-color);
-    background-color: var(--secondary-color);
-    border-radius: 20px;
-    max-width: 70%;
-}
-
-.close-button{
-    color: var(--main-color); 
-    font-size: 30px;
     cursor: pointer;
-    transition: transform .2s ease-in-out;
-
-
+    transition: color 0.1s ease-in-out;
 }
-.close-button:hover, .close-button:focus{
-    background-color: var(--secondary-color);
+.link-header a:hover, .link-header a:focus,.link-header i:hover, .link-header i:focus{
     color: var(--text-color);
-    transform: scale(1.1);
+}
+
+
+.close-icon{
+    display: none;
+}
+
+.link-content{
+    color: var(--text-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.link-metadata-wrap{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    font-size: 15px;
+}
+
+.link-metadata i{
+    color: var(--main-color);
+    margin-right: 10px;
+}
+
+.link-metadata, .aktualizace{
+    color: var(--section-note-color);
+}
+
+
+@media (min-width: 850px){
+    .Links-Wrap{
+        width: 70%;
+        
+    }
+
 }

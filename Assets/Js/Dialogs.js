@@ -1,20 +1,24 @@
 
-let OpenDialogBtns = document.getElementsByClassName("info-icon")
-let CloseDialogBtns = document.getElementsByClassName("close-button")
-console.log(OpenDialogBtns)
-for (i = 0; i < OpenDialogBtns.length; i++) {
-    console.log(OpenDialogBtns[i])
-    OpenDialogBtns[i].setAttribute("onclick", "OpenDialog(" + String(i)  + ")")
-    CloseDialogBtns[i].setAttribute("onclick", "CloseDialog(" + String(i)  + ")")
+let OpenCollasibleBtns = document.getElementsByClassName("open-icon")
+let CloseCollasibleBtns= document.getElementsByClassName("close-icon")
+
+for (i = 0; i < OpenCollasibleBtns.length; i++) {
+    OpenCollasibleBtns[i].setAttribute("onclick", "OpenCollapsible(" + String(i)  + ")")
+    CloseCollasibleBtns[i].setAttribute("onclick", "CloseCollapsible(" + String(i)  + ")")
 }
 
-function OpenDialog(dialog){
-    let dialogs = document.getElementsByTagName("dialog")
-    dialogs[dialog].show()
-
+function OpenCollapsible(CollapsibleIndex){
+    // Opens collapsible
+    let Collapsibles = document.getElementsByClassName("link-content")[CollapsibleIndex].style.maxHeight = "200px"
+    document.getElementsByClassName("open-icon")[CollapsibleIndex].style.display = "none"
+    document.getElementsByClassName("close-icon")[CollapsibleIndex].style.display = "block"
 }
-function CloseDialog(dialog){
-    let dialogs = document.getElementsByTagName("dialog")
-    dialogs[dialog].close()
 
+
+function CloseCollapsible(CollapsibleIndex){
+    // Opens collapsible
+    let Collapsibles = document.getElementsByClassName("link-content")[CollapsibleIndex].style.maxHeight = "0"
+    document.getElementsByClassName("open-icon")[CollapsibleIndex].style.display = "block"
+    document.getElementsByClassName("close-icon")[CollapsibleIndex].style.display = "none"
 }
+

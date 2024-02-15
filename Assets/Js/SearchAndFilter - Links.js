@@ -16,8 +16,8 @@ function SearchAndFilter(request_type, search_request){
     if (request_type == "search"){
         search_request = document.getElementById('Search__input');
         filter = search_request.value.toUpperCase();
-        class_selector = "link"
-        container_selector = "link-container"
+        class_selector = "link-link"
+        container_selector = "link-wrap"
        
     } else {filter = search_request.toUpperCase();}
      
@@ -25,9 +25,9 @@ function SearchAndFilter(request_type, search_request){
         class_selector = "category"
         container_selector = "category-container"
     }
-    card = document.getElementById("links").getElementsByClassName(container_selector);
+    card = document.getElementById("Links-Wrap").getElementsByClassName(container_selector);
     // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < card.length; i++) {
+    for (i = 0; i < card.length; i++) {s
     target = card[i].getElementsByClassName(class_selector)[0];
     txtValue = target.textContent || target.innerText || target.getAttribute("title");
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
