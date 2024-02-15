@@ -27,7 +27,7 @@ function SearchAndFilter(request_type, search_request){
     }
     card = document.getElementById("Links-Wrap").getElementsByClassName(container_selector);
     // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < card.length; i++) {s
+    for (i = 0; i < card.length; i++) {
     target = card[i].getElementsByClassName(class_selector)[0];
     txtValue = target.textContent || target.innerText || target.getAttribute("title");
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
