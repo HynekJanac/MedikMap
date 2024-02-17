@@ -4,7 +4,9 @@ let CloseCollasibleBtns= document.getElementsByClassName("close-icon")
 
 for (i = 0; i < OpenCollasibleBtns.length; i++) {
     OpenCollasibleBtns[i].setAttribute("onclick", "OpenCollapsible(" + String(i)  + ")")
+    OpenCollasibleBtns[i].setAttribute("onkeydown", "OpenCollapsible(" + String(i)  + ")")
     CloseCollasibleBtns[i].setAttribute("onclick", "CloseCollapsible(" + String(i)  + ")")
+    CloseCollasibleBtns[i].setAttribute("onkeydown", "CloseCollapsible(" + String(i)  + ")")
 }
 
 function OpenCollapsible(CollapsibleIndex){

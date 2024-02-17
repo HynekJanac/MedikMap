@@ -94,6 +94,7 @@
     color: var(--main-color);
     cursor: pointer;
     transition: color 0.1s ease-in-out;
+    font-size: 1.6rem;
 }
 .link-header a:hover, .link-header a:focus,.link-header i:hover, .link-header i:focus{
     color: var(--text-color);
@@ -109,6 +110,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    font-size: 1.1rem;
 }
 
 .link-metadata-wrap{
