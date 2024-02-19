@@ -11,7 +11,7 @@ const NavLinks = [
   { title: 'Návody', href: '../Navody.html', className: 'nav__link', textContent: 'Návody' },
   { title: 'Nástroje', href: '../Nastroje.html', className: 'nav__link', textContent: 'Nástroje' },
   { title: 'O nás', href: '/Onas.html', className: 'nav__link', innerHTML: 'O nás' },
-  { title: 'Hledat', href: '../Seznam.html', className: 'nav__link', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
+  { title: 'Hledat', href: '../index.html', className: 'nav__link', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
 ];
 
 function Header (NavLinks){
