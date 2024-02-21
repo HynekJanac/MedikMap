@@ -175,7 +175,7 @@ function SocialGrid(){
     },
     {
       title: 'Přida doběr na kanál RSS',
-      href: 'https://hweb.netlify.app/feed.xml',
+      href: 'https://medikmap.cz/feed.xml',
       iconClassName: 'icon fa-solid fa-rss'
     }
   ];
