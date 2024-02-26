@@ -2,7 +2,7 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: false,
+  infobox: true,
   infobox_message: "",
   
 } 
