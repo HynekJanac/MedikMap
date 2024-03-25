@@ -26,6 +26,9 @@ h1, h2{
     font-size: 20px;
 }
 
+#Seznam_otazek{
+font-size: 23px;
+}
 
 .input button{
     background-color: var(--background-color);
