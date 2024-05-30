@@ -2,8 +2,8 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: false,
-  infobox_message: "",
+  infobox: true,
+  infobox_message: "Přejeme hodně štěstí ke zkouškám. 💪🍀",
   
 } 
 // adding [NEW] to the title adds a little dot
