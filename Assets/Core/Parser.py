@@ -11,7 +11,7 @@ import pyperclip
 PosledniAktualizace = datetime.now().strftime("%d.%m.%Y")
 
 
-csvSource = open("Assets/Core/Zdroje.csv", "r")
+csvSource = open("./Zdroje.csv", "r")
 sections = []
 csvfile = list(csv.reader(csvSource, delimiter=','))
 
