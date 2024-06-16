@@ -139,16 +139,32 @@ function EndBlock(){
   endblock.appendChild(footnote)
 
   let buttonContainer = document.createElement("div")
-  let button = document.createElement("a")
+  let button = document.createElement("button")
   button.title = "Přidat"
   button.innerText = "Přidat"
   button.className = "sing-btn"
-  button.href = "https://forms.gle/LdPgMLnGZHZ49uxa9"
+  button.setAttribute('onclick','ShowForm()')
   buttonContainer.appendChild(button)
   endblock.appendChild(buttonContainer)
   
+  
+
+  let formContainer = document.createElement("div")
+  formContainer.className = "form-container"
+  let googleformIframe = document.createElement("iframe")
+  googleformIframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSeA7DkGzf9FJytPXsGDj2d9dpJyVMxRfMv5KuZETFF-T8jrXQ/viewform?embedded=true"
+  googleformIframe.className = "googleform-iframe"
+  googleformIframe.style.display = "none"
+  formContainer.appendChild(googleformIframe)
+  endblock.appendChild(formContainer)
+  
   document.getElementsByTagName("main")[0].appendChild(endblock)
 }
+
+function ShowForm(){
+  document.getElementsByClassName("googleform-iframe")[0].style.display = "inline-block"
+}
+
 
 function SocialGrid(){
   // Create the div element

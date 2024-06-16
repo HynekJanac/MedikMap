@@ -195,7 +195,6 @@ main{
 	border-radius: 20px;
 	width: 100%;
 	min-width: 347px;
-	height: 316px;
 	text-align: center;
 	display: flex;
 	flex-flow: column;
@@ -244,6 +243,15 @@ main{
 	background-color: var(--main-color);
 	transform: scale(1.05);
 }
+
+.form-container{
+}
+.googleform-iframe{
+	width: 100%;
+	border: none;
+	height: 700px;
+}
+
 .section_note{
 	color: var(--section-note-color);
 	font-size: 15px;
