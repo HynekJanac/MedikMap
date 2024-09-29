@@ -3,14 +3,14 @@
 var MasterSettings = {
   preloader: true,
   infobox: true,
-  infobox_message: "Přejeme hodně štěstí ke zkouškám. 💪🍀",
+  infobox_message: "Přejeme úspěšný start akademického roku. 🫀",
   
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
   { title: 'Návody', href: '../Navody.html', className: 'nav__link', textContent: 'Návody' },
   { title: 'Nástroje', href: '../Nastroje.html', className: 'nav__link', textContent: 'Nástroje' },
-  { title: 'O nás', href: '../Onas.html', className: 'nav__link', innerHTML: 'O nás' },
+  { title: 'O nás', href: 'www.hynekjanac.com', className: 'nav__link', innerHTML: 'O nás' },
   { title: 'Hledat', href: '../index.html', className: 'nav__link', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
 ];
 
@@ -143,6 +143,7 @@ function EndBlock(){
   button.title = "Přidat"
   button.innerText = "Přidat"
   button.className = "sing-btn"
+  button.id = "ShowForm"
   button.setAttribute('onclick','ShowForm()')
   buttonContainer.appendChild(button)
   endblock.appendChild(buttonContainer)
@@ -163,6 +164,7 @@ function EndBlock(){
 
 function ShowForm(){
   document.getElementsByClassName("googleform-iframe")[0].style.display = "inline-block"
+  document.getElementById("ShowForm").style.display = "none"
 }
 
 

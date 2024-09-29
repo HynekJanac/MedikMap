@@ -53,30 +53,27 @@
 	transform: scale(1.1);
 }
 
+/*LinkTree*/
 
 .linktree{
     text-align: center;
     margin: 0 auto;
 }
 
-
-.Links-Wrap{
+.Links-Wrap {
     display: flex;
     flex-direction: column;
     gap: 1em;
     width: 100%;
     margin: 0 auto;
     align-items: center;
-}
-
-.Links-Wrap h2{
+& h2{
     color: var(--main-color);
     font-size: 2.5rem;
     
-}
-
-
-.link-wrap{
+}}
+/*link-wrap*/
+section > div{
     text-align: left;
     margin: 10px 0 10px 0;
 }
