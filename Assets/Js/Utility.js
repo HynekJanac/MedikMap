@@ -191,11 +191,6 @@ function SocialGrid(){
       href: 'https://github.com/HynekJanac/MedikMap',
       iconClassName: 'icon fab fa-github'
     },
-    {
-      title: 'Přida doběr na kanál RSS',
-      href: 'https://medikmap.cz/feed.xml',
-      iconClassName: 'icon fa-solid fa-rss'
-    }
   ];
 
   // Create the initial links
