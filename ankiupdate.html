@@ -15,8 +15,8 @@
     
 </head>
 <body style="color: var(--main-color); text-align: center;">
-    <h1  id="update-info">Anki balíček</h1>
-    <p style="display: none;" id="donwload-info">Novější verze k stažení <a id="anki-link" href="">ZDE 📥</a></p>
+    <h1  id="update-info" style="margin-bottom: 0;">Anki balíček</h1>
+    <p style="display: none; margin-top: 0;" id="donwload-info">Novější verze k stažení <a style="color: var(--text-color);" id="anki-link" href="">ZDE 📥</a></p>
 
     <script>
         //Anki update based on parametrs 
@@ -39,10 +39,10 @@
 
 
             if (verze == AnkiBalicky[Number(idbalicku)].verze){
-                document.getElementById("update-info").innerText = "balíček: " + AnkiBalicky[Number(idbalicku)].balicek + " je akutální ✅"
+                document.getElementById("update-info").innerText = "balíček: " + AnkiBalicky[Number(idbalicku)].balicek + " je aktuální ✅"
             }
             else{
-                document.getElementById("update-info").innerHTML = "balíček: " + AnkiBalicky[Number(idbalicku)].balicek + " není akutální ❌"
+                document.getElementById("update-info").innerHTML = "balíček: " + AnkiBalicky[Number(idbalicku)].balicek + " není aktuální ❌"
                 document.getElementById("donwload-info").style.display = "block"
                 document.getElementById("anki-link").href = AnkiBalicky[Number(idbalicku)].odkaz
             }
