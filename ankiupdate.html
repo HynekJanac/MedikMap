@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anki Update</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vítej na MedikMap.cz – tvé mapě zdrojů k úspěchu medicíně! Zapomeň na ztracený čas hledáním tady máš vše potřebné na dosah ruky.">
+    <meta name="author" content="">
+    <link rel="icon" href="Assets/Icons/Favicon.ico">
+    <link rel="stylesheet" href="Assets/Css/Universal.css">
+
+    
+    
+</head>
+<body style="color: var(--main-color); text-align: center;">
+    <h1  id="update-info">Anki balíček</h1>
+    <p style="display: none;" id="donwload-info">Novější verze k stažení <a id="anki-link" href="">ZDE 📥</a></p>
+
+    <script>
+        //Anki update based on parametrs 
+            let AnkiBalicky = [
+                {
+                    "balicek": "Anatomie 🫀",
+                    "verze": "1.5",
+                    "aktualizace":"29.9.2024",
+                    "odkaz": "https://drive.google.com/file/d/1YHY-Z3AkWFoBZdrW0UnOQ6sGBMhNZmcO/view?usp=sharing"
+                },
+                {   
+                    "balicek": "Histologie 🔬",
+                    "verze": "0.5",
+                    "aktualizace":"29.9.2024",
+                    "odkaz": "https://drive.google.com/file/d/1yBaY2Jn7DuFrXxtmq3bAxcv9AeW20Frq/view?usp=sharing"
+                }
+            ]
+            let idbalicku = new URLSearchParams(window.location.search).get('id')
+            let verze = new URLSearchParams(window.location.search).get('verze')
+
+
+            if (verze == AnkiBalicky[Number(idbalicku)].verze){
+                document.getElementById("update-info").innerText = "balíček: " + AnkiBalicky[Number(idbalicku)].balicek + " je akutální ✅"
+            }
+            else{
+                document.getElementById("update-info").innerHTML = "balíček: " + AnkiBalicky[Number(idbalicku)].balicek + " není akutální ❌"
+                document.getElementById("donwload-info").style.display = "block"
+                document.getElementById("anki-link").href = AnkiBalicky[Number(idbalicku)].odkaz
+            }
+    </script>
+</body>
+</html>
