@@ -16,7 +16,7 @@
 </head>
 <body style="color: var(--main-color); text-align: center;">
     <h1  id="update-info" style="margin-bottom: 0;">Anki balíček</h1>
-    <p style="display: none; margin-top: 0;" id="donwload-info">Novější verze k stažení <a style="color: var(--text-color);" id="anki-link" href="">ZDE 📥</a></p>
+    <p style="display: none; margin-top: 0;" id="download-info"></p>
     <p id="balicek-info" style="display: none;"></p>
     <script>
         //Anki update based on parametrs 
@@ -45,8 +45,8 @@
             }
             else{
                 document.getElementById("update-info").innerHTML = "balíček: " + VybranyBalicek.balicek + " není aktuální ❌"
-                document.getElementById("donwload-info").style.display = "block"
-                document.getElementById("anki-link").href = VybranyBalicek.odkaz
+                document.getElementById("download-info").style.display = "block"
+                document.getElementById("download-info").innerHTML = "Novější verze k stažení zde: " + VybranyBalicek.odkaz
             }
     </script>
 </body>
