@@ -22,7 +22,7 @@ for row in csvfile:
 
 ClipBoard =""
 for section in sections:
-    SekceHtml = '<section class="category-container" title="' + section +'"> <h2 class="category">'+ section + '</h2>'
+    SekceHtml = '<section class="category-container" id="'+ section +'" title="' + section +'"> <h2 class="category">'+ section + '</h2>'
     print(SekceHtml)
     ClipBoard = ClipBoard + SekceHtml
     Zdroje = []

@@ -51,7 +51,7 @@ for (var i = 0; i < Alltags.length; i++) {
 let uniquecategories = [...new Set(categories)];
 
 for (var i = 0; i < uniquecategories.length; i++) {
-    document.getElementById("filter").innerHTML += '<a class="filter__btn" href="#"></a>';
+    document.getElementById("filter").innerHTML += '<a class="filter__btn" href="#'+ uniquecategories[i] +'"></a>';
     document.getElementsByClassName("filter__btn")[i].setAttribute('onclick','SearchAndFilter("category" ,"' + uniquecategories[i] + '")')
     document.getElementsByClassName("filter__btn")[i].innerText = uniquecategories[i] 
 }
