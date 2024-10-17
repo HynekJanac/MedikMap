@@ -182,9 +182,9 @@ function SocialGrid(){
       iconClassName: 'icon fas fa-heart'
     },
     {
-      title: 'Nahlásit problém',
-      href: 'mailto:medikmap.connect@gmail.com?subject=Site%20Issue&amp;body=Link:%20http://127.0.0.1:5501/Blog/000-Template.html#%0D%0AIssue%20description:%0D%0A %0D%0AScreenshot:%0D%0A',
-      iconClassName: 'icon fas fa-exclamation-triangle'
+      title: 'Kontaktujte nás',
+      href: 'mailto:medikmap.connect@gmail.com',
+      iconClassName: 'icon fas fa-envelope'
     },
     {
       title: 'Prohlédni si kód',

@@ -6,15 +6,11 @@
     <title>Anki Update</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vítej na MedikMap.cz – tvé mapě zdrojů k úspěchu medicíně! Zapomeň na ztracený čas hledáním tady máš vše potřebné na dosah ruky.">
-    <meta name="author" content="">
+    <meta name="description" content="">
     <link rel="icon" href="Assets/Icons/Favicon.ico">
     <link rel="stylesheet" href="Assets/Css/Universal.css">
-
-    
-    
 </head>
-<body style="color: var(--main-color); text-align: center;">
+<body style="color: var(--main-color); text-align: center; padding: 0;">
     <h1  id="update-info" style="margin-bottom: 0;">Anki balíček</h1>
     <p style="display: none; margin-top: 0;" id="download-info"></p>
     <p id="balicek-info" style="display: none;"></p>
@@ -38,6 +34,24 @@
                     "verze": "1",
                     "aktualizace":"17.10.2024",
                     "odkaz": "https://drive.google.com/file/d/1gSv97JcKxVXFwmSba6uk-EsLEVMuB7tl/view?usp=sharing"
+                },
+                {   
+                    "balicek": "Biologie a genetika 🧬",
+                    "verze": "",
+                    "aktualizace":"",
+                    "odkaz": ""
+                },
+                {   
+                    "balicek": "Fyziologie 💧",
+                    "verze": "",
+                    "aktualizace":"",
+                    "odkaz": ""
+                },
+                {   
+                    "balicek": "Lékařská chemie a biochemie ⚗️",
+                    "verze": "",
+                    "aktualizace":"",
+                    "odkaz": ""
                 }
             ]
             let idbalicku = new URLSearchParams(window.location.search).get('id')
@@ -47,12 +61,12 @@
             if (verze == VybranyBalicek.verze){
                 document.getElementById("update-info").innerText = "balíček: " + VybranyBalicek.balicek + " je aktuální ✅"
                 document.getElementById("balicek-info").style.display = "block"
-                document.getElementById("balicek-info").innerHTML = "současná verze " + VybranyBalicek.verze + " poslední aktualizace: " + VybranyBalicek.aktualizace
+                document.getElementById("balicek-info").innerHTML = "✳️ současná verze: " + VybranyBalicek.verze + " 📅 poslední aktualizace: " + VybranyBalicek.aktualizace
             }
             else{
                 document.getElementById("update-info").innerHTML = "balíček: " + VybranyBalicek.balicek + " není aktuální ❌"
                 document.getElementById("download-info").style.display = "block"
-                document.getElementById("download-info").innerHTML = "Novější verze k stažení zde: " + VybranyBalicek.odkaz
+                document.getElementById("download-info").innerHTML = "Novější verze k stažení zde 📥: " + VybranyBalicek.odkaz
             }
     </script>
 </body>
