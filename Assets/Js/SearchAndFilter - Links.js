@@ -16,8 +16,8 @@ function SearchAndFilter(request_type, search_request){
     if (request_type == "search"){
         search_request = document.getElementById('Search__input');
         filter = search_request.value.toUpperCase();
-        class_selector = "link-link"
-        container_selector = "link-wrap"
+        class_selector = "item-link"
+        container_selector = "item-wrap"
        
     } else {filter = search_request.toUpperCase();}
      
