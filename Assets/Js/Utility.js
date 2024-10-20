@@ -3,7 +3,7 @@
 var MasterSettings = {
   preloader: true,
   infobox: true,
-  infobox_message: "Naše anki balíčky teď umí kontrolovat zda jsou aktuální ⭐️",
+  infobox_message: "Naše anki balíčky nyní umí kontrolovat zda jsou aktuální ⭐️",
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
