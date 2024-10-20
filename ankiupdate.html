@@ -21,37 +21,43 @@
                     "balicek": "Anatomie 🫀",
                     "verze": "1.6",
                     "aktualizace":"20.10.2024",
-                    "odkaz": "https://drive.google.com/file/d/1YHY-Z3AkWFoBZdrW0UnOQ6sGBMhNZmcO/view?usp=sharing"
+                    "odkaz": "https://drive.google.com/file/d/1YHY-Z3AkWFoBZdrW0UnOQ6sGBMhNZmcO/view?usp=sharing",
+                    "zmeny": "Oprava kartiček kožní inervace + oprava chyb u průřezů"
                 },
                 {   
                     "balicek": "Histologie a embryologie 🔬",
                     "verze": "0.5",
                     "aktualizace":"29.9.2024",
-                    "odkaz": "https://drive.google.com/file/d/1yBaY2Jn7DuFrXxtmq3bAxcv9AeW20Frq/view?usp=sharing"
+                    "odkaz": "https://drive.google.com/file/d/1yBaY2Jn7DuFrXxtmq3bAxcv9AeW20Frq/view?usp=sharing",
+                    "zmeny": ""
                 },
                 {   
                     "balicek": "Biofyzika ⚙️",
                     "verze": "1",
                     "aktualizace":"17.10.2024",
-                    "odkaz": "https://drive.google.com/file/d/1gSv97JcKxVXFwmSba6uk-EsLEVMuB7tl/view?usp=sharing"
+                    "odkaz": "https://drive.google.com/file/d/1gSv97JcKxVXFwmSba6uk-EsLEVMuB7tl/view?usp=sharing",
+                    "zmeny": ""
                 },
                 {   
                     "balicek": "Biologie a genetika 🧬",
                     "verze": "",
                     "aktualizace":"",
-                    "odkaz": ""
+                    "odkaz": "",
+                    "zmeny": ""
                 },
                 {   
                     "balicek": "Fyziologie 💧",
                     "verze": "",
                     "aktualizace":"",
-                    "odkaz": ""
+                    "odkaz": "",
+                    "zmeny": ""
                 },
                 {   
                     "balicek": "Lékařská chemie a biochemie ⚗️",
                     "verze": "",
                     "aktualizace":"",
-                    "odkaz": ""
+                    "odkaz": "",
+                    "zmeny": ""
                 }
             ]
             let idbalicku = new URLSearchParams(window.location.search).get('id')
@@ -61,12 +67,15 @@
             if (verze == VybranyBalicek.verze){
                 document.getElementById("update-info").innerText = "balíček: " + VybranyBalicek.balicek + " je aktuální ✅"
                 document.getElementById("balicek-info").style.display = "block"
-                document.getElementById("balicek-info").innerHTML = "✳️ současná verze: " + VybranyBalicek.verze + " 📅 poslední aktualizace: " + VybranyBalicek.aktualizace
+                document.getElementById("balicek-info").innerHTML = "✳️ současná verze: <b>" + VybranyBalicek.verze + "</b> 📅 poslední aktualizace: <b>" + VybranyBalicek.aktualizace +"</b>"
             }
             else{
                 document.getElementById("update-info").innerHTML = "balíček: " + VybranyBalicek.balicek + " není aktuální ❌"
                 document.getElementById("download-info").style.display = "block"
-                document.getElementById("download-info").innerHTML = "Novější verze k stažení zde 📥: " + VybranyBalicek.odkaz
+                document.getElementById("download-info").innerHTML = "Novější verze k stažení zde 📥: <b>" + VybranyBalicek.odkaz + "</b>"
+                document.getElementById("balicek-info").style.display = "block"
+                document.getElementById("balicek-info").innerHTML = "<b>📣 Změny: </b>" + VybranyBalicek.zmeny
+            
             }
     </script>
 </body>
