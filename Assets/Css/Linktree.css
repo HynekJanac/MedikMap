@@ -118,7 +118,7 @@ section > div{
 .item-metadata i{
     color: var(--main-color);
     margin-right: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .item-metadata, .aktualizace{

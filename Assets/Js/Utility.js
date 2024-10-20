@@ -333,7 +333,7 @@ function PoweredByhWeb(){
 
   let hWebLink = document.createElement("a");
 
-  hWebLink.href = "https://hweb.netlify.app/";
+  hWebLink.href = "https://hweb-website.pages.dev/";
   hWebLink.target = "_blank";
   hWebLink.innerText = "hWeb";
  
