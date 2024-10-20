@@ -35,7 +35,7 @@ for section in sections:
 
     ZdrojeSorted = sorted(Zdroje, key=lambda x: x['nazev'])
     for zdroj in ZdrojeSorted:
-        ZdrojHtml = '<div class="item-wrap"><div class="item-header"><a href="' + zdroj["odkaz"] + '" class="link-link" target="_blank">'+ zdroj["nazev"] +'</a><i tabindex="0" class="fa-solid fa-circle-info" title="Více informací"></i><i tabindex="0" class="fa-solid fa-circle-xmark" title="Méně informací"></i></div><div class="item-content"><div class="item-metadata"><i class="fa-solid fa-comment"></i>'+ zdroj["jazyk"] +'<i class="fa-solid fa-graduation-cap"></i>'+ zdroj["ročník"] +'</div><p>'+ zdroj["popis"] +'</p></div></div>'
+        ZdrojHtml = '<div class="item-wrap"><div class="item-header"><a href="' + zdroj["odkaz"] + '" class="item-link" target="_blank">'+ zdroj["nazev"] +'</a><i tabindex="0" class="fa-solid fa-circle-info" title="Více informací"></i><i tabindex="0" class="fa-solid fa-circle-xmark" title="Méně informací"></i></div><div class="item-content"><div class="item-metadata"><i class="fa-solid fa-comment"></i>'+ zdroj["jazyk"] +'<i class="fa-solid fa-graduation-cap"></i>'+ zdroj["ročník"] +'</div><p>'+ zdroj["popis"] +'</p></div></div>'
         print(ZdrojHtml)
         ClipBoard = ClipBoard + ZdrojHtml
     print("</section>")
