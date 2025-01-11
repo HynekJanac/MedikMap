@@ -2,7 +2,7 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: true,
+  infobox: false,
   infobox_message: "Naše anki balíčky nyní umí kontrolovat zda jsou aktuální ⭐️",
 } 
 // adding [NEW] to the title adds a little dot
