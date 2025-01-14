@@ -1,0 +1,39 @@
+/*Import default and quote fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+:root{
+    --default-font: 'Quicksand', sans-serif;
+    --quote-font: 'Rokkitt', serif;
+    --main-color: #ff4d4d;
+    --background-color: #fcf9f9;
+    --secondary-color: #ffffff;
+    --text-color: #000000;
+    --section-note-color: rgba(0, 0, 0, 0.712);
+    --grid: 1fr;
+}
+
+body{
+	margin: 0;
+	font-family: var(--default-font);
+	padding: 0;
+	background-color: var(--background-color);
+	background-image: none;
+	transition: all .3s ease-in-out;
+}
+
+main{
+	padding: 1em;
+}
+
+.headline{
+	color: var(--main-color);
+	font-weight: 900;
+	font-size: 1.5625rem;
+	text-align: center;
+	margin: 0;
+}
+
+a{
+    color: var(--main-color);
+
+}

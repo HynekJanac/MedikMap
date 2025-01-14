@@ -6,14 +6,15 @@
     <title>Anki Update</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <link rel="icon" href="Assets/Icons/Favicon.ico">
-    <link rel="stylesheet" href="Assets/Css/Universal.css">
+    <link rel="stylesheet" href="Assets/Css/AnkiInfo.css">
 </head>
 <body style="color: var(--main-color); text-align: center; padding: 0;">
     <h1  id="update-info" style="margin-bottom: 0;">Anki balíček</h1>
-    <p style="display: none; margin-top: 0;" id="download-info"></p>
     <p id="balicek-info" style="display: none;"></p>
+    <p style="display: block; margin-top: 0;" id="issue-info"></p>
+    <p style="display: block; margin-top: 0;" id="download-info"></p>
+    <p id="balicek-info-zmeny" style="display: none;"></p>
+    <a href="" ></a>
     <script>
         //Pořadí musí zůstat stejné
             let AnkiBalicky = [
@@ -68,13 +69,17 @@
                 document.getElementById("update-info").innerText = "balíček: " + VybranyBalicek.balicek + " je aktuální ✅"
                 document.getElementById("balicek-info").style.display = "block"
                 document.getElementById("balicek-info").innerHTML = "současná verze: <b>" + VybranyBalicek.verze + "</b> ✳️ poslední aktualizace: <b>" + VybranyBalicek.aktualizace +" 📅 </b>"
+                document.getElementById("issue-info").style.display = "block"
+                document.getElementById("issue-info").innerHTML = 'Našli jste chybu v balíčku?: <b><a href="https://forms.gle/SGQwqbE35tNb5tkd6" target="_blank"> Napiště nám 📧 </a></b>' 
+                
+                document.getElementById("download-info").innerHTML = "Odkaz k stažení zde 📥: <b>" +'<a target="_blank" href="' + VybranyBalicek.odkaz + '">'+ VybranyBalicek.odkaz + "</a></b>"
+               
             }
             else{
                 document.getElementById("update-info").innerHTML = "balíček: " + VybranyBalicek.balicek + " není aktuální ❌"
-                document.getElementById("download-info").style.display = "block"
-                document.getElementById("download-info").innerHTML = "Novější verze k stažení zde 📥: <b>" + VybranyBalicek.odkaz + "</b>"
-                document.getElementById("balicek-info").style.display = "block"
-                document.getElementById("balicek-info").innerHTML = "<b>📣 Změny: </b>" + VybranyBalicek.zmeny
+                document.getElementById("download-info").innerHTML = "Novější verze k stažení zde 📥: <b>" +'<a target="_blank" href="' + VybranyBalicek.odkaz + '">'+ VybranyBalicek.odkaz + "</a></b>"
+                document.getElementById("balicek-info-zmeny").style.display = "block"
+                document.getElementById("balicek-info-zmeny").innerHTML = "<b>📣 Změny: </b>" + VybranyBalicek.zmeny
             
             }
     </script>
