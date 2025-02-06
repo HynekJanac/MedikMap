@@ -41,10 +41,10 @@
                 },
                 {   
                     "balicek": "Biologie a genetika 🧬",
-                    "verze": "0.2",
-                    "aktualizace":"14.1.2025",
+                    "verze": "1.0",
+                    "aktualizace":"6.2.2025",
                     "odkaz": "https://drive.google.com/file/d/1rSCO5MvFyjRBsddgdqVSi_uXo8_u29S0/view?usp=sharing",
-                    "zmeny": ""
+                    "zmeny": "Doplnění kapitol"
                 },
                 {   
                     "balicek": "Fyziologie 💧",
@@ -70,7 +70,7 @@
                 document.getElementById("balicek-info").style.display = "block"
                 document.getElementById("balicek-info").innerHTML = "současná verze: <b>" + VybranyBalicek.verze + "</b> ✳️ poslední aktualizace: <b>" + VybranyBalicek.aktualizace +" 📅 </b>"
                 document.getElementById("issue-info").style.display = "block"
-                document.getElementById("issue-info").innerHTML = 'Našli jste chybu v balíčku?: <b><a href="https://forms.gle/SGQwqbE35tNb5tkd6" target="_blank"> Napiště nám 📧 </a></b>' 
+                document.getElementById("issue-info").innerHTML = 'Našli jste chybu v balíčku?: <b><a href="mailto:medikmap.connect@gmail.com?subject=Chyba%20v%20balíčku%20–%20'+  VybranyBalicek.balicek +'" target="_blank"> Napiště nám 📧 </a></b>' 
                 
                 document.getElementById("download-info").innerHTML = "Odkaz k stažení zde 📥: <b>" +'<a target="_blank" href="' + VybranyBalicek.odkaz + '">'+ VybranyBalicek.odkaz + "</a></b>"
                
