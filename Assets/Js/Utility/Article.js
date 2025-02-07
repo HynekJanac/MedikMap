@@ -59,11 +59,11 @@ function CopyLink() {
 function ShowHideContents(){
 if (document.getElementById("table-of-contents-list").style.display == "none"){
   document.getElementById("table-of-contents-list").style.display = "block";
-  document.getElementById("showhide-contents").innerText = "(hide)"
+  document.getElementById("showhide-contents").innerText = "(skrýt)"
 }
 else{
   document.getElementById("table-of-contents-list").style.display = "none";
-  document.getElementById("showhide-contents").innerText = "(show)"
+  document.getElementById("showhide-contents").innerText = "(ukázat)"
 }
 }
 
