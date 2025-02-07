@@ -25,7 +25,7 @@ function TextEditor(){
 function AddCoverImage(){  
     // CoverImage button is presented from the start, it opens a file select dialog and prompts the user to select the cover image
     let filename = document.getElementById("cover-image-input").files[0].name
-    let path = "./Assets/Img/";
+    let path = "/Assets/Img/";
     
     // This try and catch sequence allows to change cover image mid editting
     try {
@@ -212,7 +212,7 @@ function AddImageButton(){
 
 // AddImage uses image_id provided by the button (making sure that 1 button = 1 image)
 function AddImage(location){
-    let path = "./Assets/Img/"
+    let path = "/Assets/Img/"
     let filename = document.getElementsByClassName("image-input")[location].files[0].name
     document.getElementsByClassName("image")[location].src = path + filename
     TextEditor();
@@ -355,43 +355,6 @@ function AddYoutubeVideo(ytb_class_id){
 }
 
 
-
-//For syntax highlighting the hWeb uses prism.js
-
-function AddCodeSnippet(){
-    let CodeSnippet = document.createElement("div")
-    CodeSnippet.title = "code-snippet-block"
-    CodeSnippet.className = "content-block"
-
-
-    var DropDownMenu = document.createElement("select");
-    DropDownMenu.name = "langauge";
-    DropDownMenu.className = "input-select"
-   
-    //To add more language options head to https://prismjs.com/index.html#supported-languages, re-download the js and css file with your language and theme preferences
-    var languageList = ["Atom" ,"C" ,"C-like" ,"C#" ,"C++" ,"CSS" ,"HTML" ,"Java" ,"Javascript" ,"LaTeX" ,"MathML" ,"PHP" ,"Python" ,"RSS" ,"Ruby" ,"Rust" ,"SQL" ,"SSML" ,"SVG" ,"Swift" ,"TypeScript" ,"XML"];
-    var valueList  = ["atom" ,"css" ,"clike" ,"csharp" ,"cpp" ,"css" ,"html" ,"java" ,"javascript " ,"latex" ,"mathml" ,"php" ,"python" ,"rss" ,"ruby" ,"rust" ,"sql" ,"ssml" ,"svg" ,"swift" ,"typescript" ,"xml"];
-      
-    for (let i = 0; i < languageList.length; i++) {
-        var SelectOption = document.createElement("option");
-        SelectOption.value = "language-" + valueList[i];
-        SelectOption.className = "select-option"
-        SelectOption.textContent = languageList[i];
-        DropDownMenu.appendChild(SelectOption);
-    }
-
-    CodeSnippet.appendChild(DropDownMenu)
-    
-    var codeInput = document.createElement("div")
-    codeInput.className = "code"
-    codeInput.contentEditable = "True"
-    codeInput.type = "text"
-    codeInput.innerHTML = "put you code here"
-
-    CodeSnippet.appendChild(codeInput)
-    document.getElementById("content").appendChild(CodeSnippet);
-    TextEditor();}
-
 // Custom element allows to add pure HTML, CSS, JS this is an advanced feature to use at your own risk
 function AddCustomElement(){
     var customElement = document.createElement("input")
@@ -436,47 +399,11 @@ function ExportProject(){
     var author = document.getElementById("author").value
     var date  = document.getElementById("date").value //yyyy-mm-dd
     var category = document.getElementById("category").value
-    var ArticleLocation = document.getElementById("article_location_url").value
 
     var article_description = "No description has been provided, you will have to see for yourself!"
     
-    // Check if article has cover image
-    try {
-        var cover_image = document.getElementById("cover-image")
-        var cover_image_alt = document.getElementById("CoverImageAlt").value
-        var cover_image_cap = document.getElementById("CoverImageCap").value
-        
-        //Create the elemets and add them to the export dialog
-
-        // Create the cover image div
-        let coverImageDiv = document.createElement('div');
-        coverImageDiv.classList.add('cover__image');
-
-        // Create the cover image
-        let coverImageElement = document.createElement('img');
-        coverImageElement.className = 'cover-image';
-        coverImageElement.style.objectPosition = '0 0';
-        var cover_image_src = cover_image.getAttribute("src")
-        coverImageElement.src = cover_image_src;
-        coverImageElement.alt = cover_image_alt
-
-        // Create the image credit paragraph
-        let imageCredit = document.createElement('p');
-        imageCredit.className = 'image-credit';
-        imageCredit.textContent = cover_image_cap;
-
-        // Append the cover image to the cover image div
-        coverImageDiv.appendChild(coverImageElement);
-
-        // Append the image credit to the cover image div
-        coverImageDiv.appendChild(imageCredit);
-        HtmlMain.appendChild(coverImageDiv)
-    } catch { 
-        var cover_image_src = ""
-        var cover_image_alt = "No Cover Image found"
-
-    }
-
+   
+   
     //HTML DOCUMENT
     // Create a new HTML document
     let ArticleDocumentHtml = document.implementation.createHTMLDocument(headline);
@@ -510,17 +437,17 @@ function ExportProject(){
     favicon.href = "../Assets/Icons/Favicon.svg"
     ArticleDocumentHtml.head.appendChild(favicon)
 
-    var StyleSheets = ["Article.css", "prism.css", "Universal.css"]
+    var StyleSheets = ["Article.css", "Universal.css"]
     for (let i = 0; i < StyleSheets.length; i++) {
         let link = ArticleDocumentHtml.createElement("link")
         link.setAttribute("rel", "stylesheet")
         link.href = "../Assets/Css/" + StyleSheets[i]
         ArticleDocumentHtml.head.appendChild(link)
     }
-    var Scripts = ["Utility.js", "prism.js", "Article.js"]
+    var Scripts = ["Utility.js", "Article.js"]
     for (let i = 0; i < Scripts.length; i++) {
         let script = ArticleDocumentHtml.createElement("script")
-        script.src = "../Assets/Js/" + Scripts[i]
+        script.src = "../Assets/Js/Utility/" + Scripts[i]
         script.defer = true
         ArticleDocumentHtml.head.appendChild(script)
     }
@@ -576,9 +503,46 @@ function ExportProject(){
     let HtmlMain = ArticleDocumentHtml.createElement("main")
     
 
+
+
     HtmlMain.appendChild(zoomImageContainer)
     
-    
+     // Check if article has cover image
+     try {
+        var cover_image = document.getElementById("cover-image")
+        var cover_image_alt = document.getElementById("CoverImageAlt").value
+        var cover_image_cap = document.getElementById("CoverImageCap").value
+        
+        //Create the elemets and add them to the export dialog
+
+        // Create the cover image div
+        let coverImageDiv = document.createElement('div');
+        coverImageDiv.classList.add('cover__image');
+
+        // Create the cover image
+        let coverImageElement = document.createElement('img');
+        coverImageElement.className = 'cover-image';
+        coverImageElement.style.objectPosition = '0 0';
+        var cover_image_src = cover_image.getAttribute("src")
+        coverImageElement.src = cover_image_src;
+        coverImageElement.alt = cover_image_alt
+
+        // Create the image credit paragraph
+        let imageCredit = document.createElement('p');
+        imageCredit.className = 'image-credit';
+        imageCredit.textContent = cover_image_cap;
+
+        // Append the cover image to the cover image div
+        coverImageDiv.appendChild(coverImageElement);
+
+        // Append the image credit to the cover image div
+        coverImageDiv.appendChild(imageCredit);
+        HtmlMain.appendChild(coverImageDiv)
+    } catch { 
+        var cover_image_src = ""
+        var cover_image_alt = "No Cover Image found"
+
+    }
 
     // Create the headline h1 element
     let headlineElement = document.createElement('h1');
@@ -621,121 +585,19 @@ function ExportProject(){
    
 
     function ArticleThumbnail(){
-    //Article Thumbnail
-        // Create article element
-        let ArticleThumbnail = document.createElement('article');
-        ArticleThumbnail.classList.add('card');
-    
-        // Create link element
-        let ArticleLink = document.createElement('a');
-        ArticleLink.classList.add('card__link');
-        ArticleLink.href = "/Blog/" + headline.replace(/\s/g, '-') + ".html";
-    
-        // Create content div
-        let ArticleThumbContent = document.createElement('div');
-        ArticleThumbContent.classList.add('card__content');
-    
-        // Create thumbnail image
-        let ArticleThumbnailImage = document.createElement('img');
-        ArticleThumbnailImage.classList.add('card__thumbnail');
-        ArticleThumbnailImage.alt = cover_image_alt;
-        ArticleThumbnailImage.src = cover_image_src;
-    
-        // Create text div
-        let ArticleThumbailText = document.createElement('div');
-        ArticleThumbailText.classList.add('card__text');
-    
-        // Create headline h2 element
-        let ArticleThumbnailHeadline = document.createElement('h2');
-        ArticleThumbnailHeadline.classList.add('card__headline');
-        ArticleThumbnailHeadline.textContent = headline;
-    
-        // Create description paragraph
-        let ArticleThumbnailDescription = document.createElement('p');
-        ArticleThumbnailDescription.classList.add('card__description');
-        ArticleThumbnailDescription.textContent = article_description
-    
-        // Create metadata wrapper div
-        let metadataWrap = document.createElement('div');
-        metadataWrap.classList.add('card__metadata--wrap');
-    
-        // Create action metadata paragraph
-        let actionMetadata = document.createElement('p');
-        actionMetadata.classList.add('card__metadata', 'metadata--action');
-        actionMetadata.textContent = 'Read more ';
-    
-        // Create angle-right icon
-        let angleRightIcon = document.createElement('i');
-        angleRightIcon.classList.add('fa-solid', 'fa-angle-right');
-    
-        // Create category metadata link
-        let categoryMetadata = document.createElement('a');
-        categoryMetadata.classList.add('card__metadata', 'metadata--category');
-        categoryMetadata.href = '#';
-        categoryMetadata.innerHTML = '<i class="fa-solid fa-hashtag"></i> ' + category;
-    
-        // Create author metadata link
-        let authorMetadata = document.createElement('a');
-        authorMetadata.classList.add('card__metadata', 'metadata--author');
-        authorMetadata.href = '#';
-        authorMetadata.textContent = author;
-    
-        // Append elements in the correct hierarchy
-        actionMetadata.appendChild(angleRightIcon);
-        metadataWrap.appendChild(actionMetadata);
-        metadataWrap.appendChild(categoryMetadata);
-        metadataWrap.appendChild(authorMetadata);
-    
-        ArticleThumbailText.appendChild(ArticleThumbnailHeadline);
-        ArticleThumbailText.appendChild(ArticleThumbnailDescription);
-        ArticleThumbailText.appendChild(metadataWrap);
-    
-        ArticleThumbContent.appendChild(ArticleThumbnailImage);
-        ArticleThumbContent.appendChild(ArticleThumbailText);
-    
-        ArticleLink.appendChild(ArticleThumbContent);
-    
-        ArticleThumbnail.appendChild(ArticleLink);
-
-
-        document.getElementById("Thumbnail-Export-Preview").innerText = ArticleThumbnail.outerHTML
-        document.getElementsByClassName("Export-Copy")[1].value = ArticleThumbnail.outerHTML
-        }
-
-    function RSSItem(){
-        // Create the <item> element
+        //Article Thumbnail
+            const ArticleThumbnail = {}
+            ArticleThumbnail.nazev =  headline;
+            ArticleThumbnail.odkaz = "/Clanky/"+ headline.replace(/\s/g, '-') + ".html"
+            ArticleThumbnail.obrazek = cover_image_src;
+            ArticleThumbnail.popis = article_description
+            ArticleThumbnail.kategorie = category;
+            ArticleThumbnail.autor = author;
         
+            document.getElementById("Thumbnail-Export-Preview").innerText = JSON.stringify(ArticleThumbnail, null, 2)
+            document.getElementsByClassName("Export-Copy")[1].value = JSON.stringify(ArticleThumbnail, null, 2)
+            }
 
-        // Create the <title> element and set its text content
-        let title = "<title>" + headline +"</title>";
-
-        // Create the <link> element and set its text content
-        if (ArticleLocation.value == null){
-           var url = window.location.origin + "/Blog/" + String(headline.replace(/\s/g, '-') + ".html") 
-        }
-        else{
-            var url = ArticleLocation + String(headline.replace(/\s/g, '-') + ".html") 
-        }
-        
-        let link = "<link>" + url +  "</link>" 
-
-        // Create the <description> element and set its text content
-        let cdata = '<![CDATA[<div><a href="' + url + '">Read more<a/><div>]]>'
-        let description = "<description>" + article_description + cdata + "</description>";
-        
-        let guid = "<guid>" + url + "</guid>" 
-        
-        
-        var RSSItemElement = '<item>'+ title + link + description + guid + '</item>';
-
-
-        // Append the <title>, <link>, and <description> elements to the <item> element
-       
-
-        document.getElementById("RSS-Export-Preview").innerText = RSSItemElement
-        document.getElementsByClassName("Export-Copy")[2].value = RSSItemElement
-
-    }
 
     // Second step is to locate all the content blocks
     let content = document.getElementsByClassName("content-block")
@@ -837,20 +699,6 @@ function ExportProject(){
                 ArticleText.appendChild(video)
                 }
 
-        if (element.title == "code-snippet-block"){
-            let code_source = element.querySelectorAll("div")[0]
-            
-            let code_container = document.createElement("pre")
-            let code_target = document.createElement("code")
-
-            code_target.className = element.querySelectorAll("select")[0].value
-
-            code_target.innerText = String(code_source.innerText).replace(/</g,"&lt;").replace(/>/g,"&gt;")
-            
-            code_container.appendChild(code_target)
-            ArticleText.appendChild(code_container)
-        }
-
 
         if (element.title == "custom-element-block"){
             let temp = document.createElement("custom")
@@ -865,9 +713,35 @@ function ExportProject(){
     HtmlBody.appendChild(HtmlMain)
     // Convert the HTML document to a string
     let htmlString = new XMLSerializer().serializeToString(ArticleDocumentHtml);
+   
+    let formattedHtml = "";
+    let indentLevel = 0;
+    const indent = (level) => " ".repeat(level * 2);
+
+    // Split HTML into meaningful lines
+    htmlString = htmlString.replace(/>\s*</g, ">\n<").split("\n");
+
+    htmlString.forEach((line) => {
+      let trimmedLine = line.trim();
+
+      if (trimmedLine.match(/^<\/\w/)) {
+        // Decrease indent for closing tags
+        indentLevel--;
+      }
+
+      formattedHtml += indent(indentLevel) + trimmedLine + "\n";
+
+      if (trimmedLine.match(/^<\w[^>]*[^/]>\s*$/)) {
+        // Increase indent for normal opening tags (not self-closing)
+        indentLevel++;
+      }
+    });
+
+    formattedHtml.trim();
+
 
     // Downloads finished article as a Html file with correct name
-    const ArticleHtmlFile = new File([htmlString],  String(headline.replace(/\s/g, '-') + '.html'), {
+    const ArticleHtmlFile = new File([formattedHtml],  String(headline.replace(/\s/g, '-') + '.html'), {
             type: 'text/plain',
         })
     const link = document.createElement('a')
@@ -881,10 +755,9 @@ function ExportProject(){
     document.body.removeChild(link)
     window.URL.revokeObjectURL(url)
 
-    document.getElementById("Article-Export-Preview").innerText = htmlString
-    document.getElementsByClassName("Export-Copy")[0].value = htmlString
+    document.getElementById("Article-Export-Preview").innerText = formattedHtml
+    document.getElementsByClassName("Export-Copy")[0].value = formattedHtml
     ArticleThumbnail()
-    RSSItem()
 
 }
 

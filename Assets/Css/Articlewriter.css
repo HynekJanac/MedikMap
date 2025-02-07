@@ -248,8 +248,7 @@ b{
 /*Export-Dialog*/
 .Export-Dialog{
 	color: var(--main-color);
-	text-align: center;
-	width: 65%;
+	text-align: center;;
 	margin: 0 auto;
 }
 
@@ -267,6 +266,9 @@ b{
 	overflow-wrap: break-word;
 }
 
+pre{
+	overflow: auto;
+}
 .heading-selector{
 	font-size: 40px; height: 50px;
 	width: 40%; letter-spacing: 0.1em;

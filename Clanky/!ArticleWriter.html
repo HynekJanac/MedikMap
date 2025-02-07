@@ -7,10 +7,8 @@
 
     <link rel="stylesheet" href="../Assets/Css/Universal.css">
     <link rel="stylesheet" href="../Assets/Css/Articlewriter.css">
-    <link rel="stylesheet" href="../Assets/Css/prism.css">
     <link rel="icon" href="../Assets/Icons/Favicon.svg" type="image/x-icon">
-    <script defer src="../Assets/Js/prism.js"></script>
-    <script defer src="../Assets/Js/Articlewriter.js"></script>
+    <script defer src="../Assets/Js/Utility/Articlewriter.js"></script>
 </head>
 
 <body> 
@@ -28,9 +26,7 @@
             <input type="date" title="Headline" placeholder="Headline"  class="article__info--date input-box" id="date">
             <input type="text" placeholder="Category" title="Category" class="article__info--category input-box" id="category">
         </div>
-        
-        <input placeholder="Article location url (https://yourwebsite.com/blog/)" class="article__info--image_path input-box" id="article_location_url"> 
-        <label  for="cover-image-input" class="input__label"><i class="fa-solid fa-file-image"></i> Upload cover image
+         <label  for="cover-image-input" class="input__label"><i class="fa-solid fa-file-image"></i> Upload cover image
          <input id="cover-image-input" type="file" name="cover-image" accept="image/png, image/gif, image/jpeg, image/webp"  onchange="AddCoverImage()" >
         </label> 
         
@@ -48,7 +44,6 @@
         <button class="button" onclick="AddImageGrid()" title="Add Image Gallery"><i class="fa-solid fa-images"></i></button>
         <button class="button" onclick="AddQuote()" title="Add Quote"><i class="fas fa-quote-right"></i></i></button>
         <button class="button" onclick="AddYoutubeVideoInput()" title="Add YouTube Video"><i class="fa-brands fa-youtube"></i></button>
-        <button class="button" onclick="AddCodeSnippet()" title="Add Code Snippet"><i class="fas fa-code"></i></button>
         <button class="button" onclick="AddCustomElement()" title="Add Custom Element"><i class="fa-solid fa-wrench"></i></button>
         <button class="button" onclick="SaveProject()" title="Save Project"><i class="fas fa-save"></i></button>
         <button class="button" onclick="ExportProject()" title="Export Project"><i class="fas fa-file-export"></i></button>
@@ -59,25 +54,18 @@
         <p>Now you can copy and paste the code</p>
         
         <p>Article</p>
-        <div class="ExportTarget language-html" id="Article-Export-Preview" contenteditable="false"></div>
+        <div class="ExportTarget language-html"  contenteditable="false"><pre id="Article-Export-Preview"></pre></div>
         <input style="display: none;" class="Export-Copy" type="text" value="">
         <p class="copy-info" id="" style="display: none; color: var(--main-color);">Copied!</p>
         <button class="button" onclick="CopyCode(0)"><i class="fas fa-copy"></i></button>
         <button class="button" onclick="DownloadHTML()"><i class="fa-solid fa-file-arrow-down"></i></button>
         
         <p>Thumbnail card</p>
-        <div class="ExportTarget" id="Thumbnail-Export-Preview" contenteditable="false" ></div>
+        <div class="ExportTarget" contenteditable="false" ><pre  id="Thumbnail-Export-Preview"></pre></div>
         <input style="display: none;" class="Export-Copy" type="text" value="">
         <p class="copy-info" style="display: none; color: var(--main-color);">Copied!</p>
         <button class="button" onclick="CopyCode(1)"><i class="fas fa-copy"></i></button>
-
-        <p>RSS item</p>
-        <div class="ExportTarget" id="RSS-Export-Preview" contenteditable="false"></div>
-        <input style="display: none;" class="Export-Copy" type="text" value="">
-        <p class="copy-info" style="display: none; color: var(--main-color);">Copied!</p>
-        <button class="button" onclick="CopyCode(2)"><i class="fas fa-copy"></i></button>
-
-    </div>
+</div>
     </main>
 </body>
 </html
