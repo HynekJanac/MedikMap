@@ -186,6 +186,16 @@ function SocialGrid(){
       iconClassName: 'icon fas fa-envelope'
     },
     {
+      title: 'Instagram',
+      href: 'https://www.instagram.com/medikmap/',
+      iconClassName: 'icon fa-brands fa-instagram'
+    },
+    {
+      title: 'YouTube',
+      href: 'https://www.youtube.com/@medikmap',
+      iconClassName: 'icon fa-brands fa-youtube'
+    },
+    {
       title: 'Prohlédni si kód',
       href: 'https://github.com/HynekJanac/MedikMap',
       iconClassName: 'icon fab fa-github'
