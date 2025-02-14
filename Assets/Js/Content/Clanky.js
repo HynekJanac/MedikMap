@@ -16,6 +16,13 @@ let Clanky = [
     "kategorie": "Anatomie",
     "autor": "Hynek Janáč",
     "datum": ""},
+    {"nazev": "Generátor zkouškových otázek",
+        "odkaz": "/Clanky/GeneratorOtazek.html",
+        "obrazek":"Assets/Img/Generic1.png",
+        "popis": "Jednoduchý a efektivní nástroj na přípravu k ústní zkoušce, umožnuje vložit vlastní seznam otázek a vygenerovat náhodný triplet, quadriplet...",
+        "kategorie": "Nástroj",
+        "autor": "Hynek Janáč",
+        "datum": ""},
 ]
     
     
