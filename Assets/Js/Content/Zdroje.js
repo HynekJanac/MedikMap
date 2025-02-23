@@ -1,6 +1,15 @@
 // Návod na přidání nového zdroje
-//
+// Zdroj lze přidat kamkoliv do seznamu, stránka ho zařadí do kategorie sama
+// Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 let Zdroje = [
+    {"nazev": " ⭐️ Biochemie  – Anki",
+        "odkaz": "https://drive.google.com/file/d/1METZt7hYeBPoZ8w0ponTBqjkBenXt3_X/view?usp=sharing",
+        "popis": "Anki balíček biochemie podle výuky 1. paralelky 1.LF, balíček je stále v aktivní tvorbě, pro dostuponst aktualizací zkontrolujte popisek hlavního balíčku. Obsahuje kartičky na vzorce požadované u zkouškového testu, balíček na názvy enzymů v jednotlivých krocích metabolismu a postupně se přidají další.",
+        "předmět": "Biochemie ⚗️",
+        "jazyk": ["Čeština"],
+        "ročník": [2],
+        "typ": "Anki balíček"},
+
     {"nazev": " ⭐️ Anatomie – Anki",
     "odkaz": "https://drive.google.com/file/d/1YHY-Z3AkWFoBZdrW0UnOQ6sGBMhNZmcO/view?usp=sharing",
     "popis": "Asi nelepší Anki balíček na anatomii, obsahuje popsané obrázky z učebnice Anatomie 1,2,3 od profesora Čiháka, balíček je rozdělen tak, aby kopíroval postup výuky.",
