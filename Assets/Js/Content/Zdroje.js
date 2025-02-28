@@ -2,6 +2,30 @@
 // Zdroj lze přidat kamkoliv do seznamu, stránka ho zařadí do kategorie sama
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 let Zdroje = [
+    {"nazev": " ⭐️ Physeo – Bakterie",
+        "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw_D72oHzNk9YI0vukZzQY9V&si=h1wKr9-LM4KEZwRz",
+        "popis": "Videa popisující charakteristiky jednotlivých bakterií, pomocí kresby. Každý bakterie má svoji scénu, na které jsou pomocí metafor znázorněné její vlastnosti (fialové pozadí = G+ bakterie...). Tento styl videjí je zábavnější a snadněji zapamatovatelný zůsob jak se jednotlivé bakterie naučit.",
+        "předmět": "Mikrobiologie 🧫",
+        "jazyk": ["English"],
+        "ročník": [2,3],
+        "typ": "YouTube"},
+
+    {"nazev": " ⭐️ Physeo – Viry",
+        "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw-mM4PT-EjFSMsfh1vdFcJA&si=byXYKphbl7SGoHKX",
+        "popis": "Videa popisující charakteristiky jednotlivých birů, pomocí kresby. Každý virus má svoji scénu, na které jsou pomocí metafor znázorněné jejho vlastnosti (fialové pozadí = DNA virus.). Tento styl videjí je zábavnější a snadněji zapamatovatelný zůsob jak se jednotlivé viry naučit.",
+        "předmět": "Mikrobiologie 🧫",
+        "jazyk": ["English"],
+        "ročník": [2,3],
+        "typ": "YouTube"},
+
+    {"nazev": " ⭐️ Physeo – Paraziti",
+        "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw-_x_DornZ5kgyd5xTZZ4ur&si=RtAoq9otVTHus4yu",
+        "popis": "Videa popisující charakteristiky jednotlivých parazitů, pomocí kresby. Každý parazit má svoji scénu, na které jsou pomocí metafor znázorněné jeho vlastnosti.Tento styl videjí je zábavnější a snadněji zapamatovatelný zůsob jak se jednotlivé bakterie naučit.",
+        "předmět": "Mikrobiologie 🧫",
+        "jazyk": ["English"],
+        "ročník": [2,3],
+        "typ": "YouTube"},
+
     {"nazev": " ⭐️ Biochemie  – Anki",
         "odkaz": "https://drive.google.com/file/d/1METZt7hYeBPoZ8w0ponTBqjkBenXt3_X/view?usp=sharing",
         "popis": "Anki balíček biochemie podle výuky 1. paralelky 1.LF, balíček je stále v aktivní tvorbě, pro dostuponst aktualizací zkontrolujte popisek hlavního balíčku. Obsahuje kartičky na vzorce požadované u zkouškového testu, balíček na názvy enzymů v jednotlivých krocích metabolismu a postupně se přidají další.",
