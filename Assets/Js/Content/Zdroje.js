@@ -2,7 +2,33 @@
 // Zdroj lze přidat kamkoliv do seznamu, stránka ho zařadí do kategorie sama
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 let Zdroje = [
-    {"nazev": " ⭐️ Physeo – Bakterie",
+    {
+        "nazev": " ⭐️ Přehled požadovaných témat k letní pitevně",
+        "odkaz": "https://docs.google.com/document/d/1j_zVU4xXUgUL6zmkXyYZyD5DqEZ5dAeiL6yBFxkoVzk/edit?usp=sharing",
+        "popis": "Dokument s uceleným přehledem doporučených znalostí k letní pitevně.",
+        "předmět": "Anatomie 🫀",
+        "jazyk": ["Čeština"],
+        "ročník": [1],
+        "typ": "Dokument"},
+        {
+            "nazev": " ⭐️ Přehled požadovaných témat k zimní pitevně",
+            "odkaz": "https://docs.google.com/document/d/1Ct4nWM1yJ0CZmGdhZYfWJn_Wyzizu6F6LJFEg2GmG6o/edit?usp=sharing",
+            "popis": "Dokument s uceleným přehledem doporučených znalostí k zimní pitevně.",
+            "předmět": "Anatomie 🫀",
+            "jazyk": ["Čeština"],
+            "ročník": [1],
+            "typ": "Dokument"},
+            
+        {
+            "nazev": "Příklady z lékařské genetiky",
+            "odkaz": "https://www.wikiskripta.eu/w/Procvičování:Příklady_z_lékařské_genetiky",
+            "popis": "Příklady k procvičení znalostí lékařské genetiky na WikiSkriptech.",
+            "předmět": "Biologie a genetika 🧬",
+            "jazyk": ["Čeština"],
+            "ročník": [1,2],
+            "typ": "Testy"},
+    {
+        "nazev": " ⭐️ Physeo – Bakterie",
         "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw_D72oHzNk9YI0vukZzQY9V&si=h1wKr9-LM4KEZwRz",
         "popis": "Videa popisující charakteristiky jednotlivých bakterií, pomocí kresby. Každý bakterie má svoji scénu, na které jsou pomocí metafor znázorněné její vlastnosti (fialové pozadí = G+ bakterie...). Tento styl videjí je zábavnější a snadněji zapamatovatelný zůsob jak se jednotlivé bakterie naučit.",
         "předmět": "Mikrobiologie 🧫",
