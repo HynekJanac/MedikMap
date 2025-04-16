@@ -44,14 +44,11 @@ font-size: 23px;
     transition: all .3s ease-in-out;
 }
 
-
 .input button:hover{
     color: var(--background-color);
     background-color:  var(--main-color);
     transform: scale(1.05);
 }
-
-
 
 .otazky{
     display: none;

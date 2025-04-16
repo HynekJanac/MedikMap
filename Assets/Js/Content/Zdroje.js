@@ -8,7 +8,7 @@ let Zdroje = [
         "popis": "YouTube kanál Všeobecné fakultní nemocice, ukazující správné provedení běžných ošetřovatelských postupů.  ",
         "předmět": "Ošetřovatelství 💉",
         "jazyk": ["Čeština"],
-        "ročník": [1],
+        "ročník": [2],
         "typ": "Youtube kanál"},
     {
         "nazev": " ⭐️ Přehled požadovaných témat k letní pitevně",
