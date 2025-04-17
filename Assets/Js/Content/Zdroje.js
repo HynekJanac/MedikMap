@@ -3,15 +3,24 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 let Zdroje = [
     {
+        "nazev": "LF2 Prezentace",
+        "odkaz": "https://anatomie.lf2.cuni.cz/vseobecne-lekarstvi/vyukove-materialy",
+        "popis": "Prezentace z přednášek a další doplňkové výukové materiály anatomického ústavu 2. lékařské fakulty Univerzity Karlovy.",
+        "předmět": "Anatomie 🫀",
+        "jazyk": ["Čeština"],
+        "ročník": [1],
+        "typ": "Prezentace"
+      },
+    {
         "nazev": " ⭐️ Ošetřovatelské postupy",
         "odkaz": "https://www.youtube.com/@osetrovatelskepostupy/videos",
-        "popis": "YouTube kanál Všeobecné fakultní nemocice, ukazující správné provedení běžných ošetřovatelských postupů.  ",
+        "popis": "YouTube kanál Všeobecné fakultní nemocice, ukazující správné provedení běžných ošetřovatelských výkonů.",
         "předmět": "Ošetřovatelství 💉",
         "jazyk": ["Čeština"],
         "ročník": [2],
         "typ": "Youtube kanál"},
     {
-        "nazev": " ⭐️ Přehled požadovaných témat k letní pitevně",
+        "nazev": " ⭐️ Přehled témat k letní pitevně",
         "odkaz": "https://docs.google.com/document/d/1j_zVU4xXUgUL6zmkXyYZyD5DqEZ5dAeiL6yBFxkoVzk/edit?usp=sharing",
         "popis": "Dokument s uceleným přehledem doporučených znalostí k letní pitevně.",
         "předmět": "Anatomie 🫀",
@@ -19,7 +28,7 @@ let Zdroje = [
         "ročník": [1],
         "typ": "Dokument"},
     {
-        "nazev": " ⭐️ Přehled požadovaných témat k zimní pitevně",
+        "nazev": " ⭐️ Přehled témat k zimní pitevně",
         "odkaz": "https://docs.google.com/document/d/1Ct4nWM1yJ0CZmGdhZYfWJn_Wyzizu6F6LJFEg2GmG6o/edit?usp=sharing",
         "popis": "Dokument s uceleným přehledem doporučených znalostí k zimní pitevně.",
         "předmět": "Anatomie 🫀",
