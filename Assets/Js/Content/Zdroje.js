@@ -3,6 +3,15 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 let Zdroje = [
     {
+        "nazev": "Národní ošetřovatelské postupy",
+        "odkaz": "https://mzd.gov.cz/narodni-osetrovatelske-postupy/",
+        "popis": "Oficiální ošetřovatelské postupy ministerstva zdravotnictví ČR, web obsahuje detailně popsané doporučené postupy pri provádění ošetřovatelských výkonů.",
+        "předmět": "Ošetřovatelství 💉",
+        "jazyk": ["Čeština"],
+        "ročník": [2],
+        "typ": "Web"
+      },
+    {
         "nazev": "LF2 Prezentace",
         "odkaz": "https://anatomie.lf2.cuni.cz/vseobecne-lekarstvi/vyukove-materialy",
         "popis": "Prezentace z přednášek a další doplňkové výukové materiály anatomického ústavu 2. lékařské fakulty Univerzity Karlovy.",
