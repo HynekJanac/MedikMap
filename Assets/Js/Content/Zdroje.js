@@ -182,7 +182,7 @@ let Zdroje = [
         "typ": "Skripta"},
     
     {"nazev": " ⭐️ Topografická anatomie LF3",
-    "odkaz": "http://anatomie.lf3.cuni.cz/prezentace_topografie.htm",
+    "odkaz": "https://web.archive.org/web/20250207091403/http://anatomie.lf3.cuni.cz/prezentace_topografie.htm",
     "popis": "Soubor prezentací z topografické anatomie, obsahuje přehledná schémata a informace o topografických útvarech.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština", "English"],
@@ -190,7 +190,7 @@ let Zdroje = [
     "typ": "Webová stránka"},
     
     {"nazev": "Studjiní materiály LF3",
-    "odkaz": "http://anatomie.lf3.cuni.cz/studijnimaterialy.htm",
+    "odkaz": "https://web.archive.org/web/20250216091052/http://anatomie.lf3.cuni.cz/studijnimaterialy.htm",
     "popis": "Studijní materiály pro studium anatomie od prof. Kachlíka. Přehledné tabulky a schémata.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština", "English"],
