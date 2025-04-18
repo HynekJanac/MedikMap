@@ -95,7 +95,7 @@ let Zdroje = [
     "typ": "Anki balíček"},
     
     {"nazev": " ⭐️ Ústav Anatomie LF2",
-    "odkaz": "https://www.youtube.com/@Ustavanatomie2LFUK",
+    "odkaz": "https://www.youtube.com/c/%C3%9Astavanatomie2LFUK",
     "popis": "V době distanční výuky nahrál Ústav Anatomie LF.2 své přednášky na YouTube, přednáší pan profesor David Kachlík. Na rychlosti 1,5x se jedná o perfektní úvod do jednotlivých systémů, zvlášť pokud se někomu špatně učí z učebnice.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
