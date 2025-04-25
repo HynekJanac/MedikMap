@@ -3,6 +3,15 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 let Zdroje = [
     {
+        "nazev": " ⭐️ Atlas řezů mozkem",
+        "odkaz": "https://www.nan.upol.cz/atlas-mozku/",
+        "popis": "Interaktivní atlas řezů mozkem, s možností vlastního zkoušení. ",
+        "předmět": "Anatomie 🫀",
+        "jazyk": ["Čeština","English"],
+        "ročník": [1],
+        "typ": "Web"
+      },
+    {
         "nazev": "Národní ošetřovatelské postupy",
         "odkaz": "https://mzd.gov.cz/narodni-osetrovatelske-postupy/",
         "popis": "Oficiální ošetřovatelské postupy ministerstva zdravotnictví ČR, web obsahuje detailně popsané doporučené postupy pri provádění ošetřovatelských výkonů.",

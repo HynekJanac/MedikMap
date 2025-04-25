@@ -2,7 +2,7 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: true,
+  infobox: false,
   infobox_message: "Vyzkoušejte náš nový anki balíček biochemie ⚗️",
 } 
 // adding [NEW] to the title adds a little dot
