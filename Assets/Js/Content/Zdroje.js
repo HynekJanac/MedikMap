@@ -14,7 +14,7 @@ let Zdroje = [
     {
         "nazev": "Národní ošetřovatelské postupy",
         "odkaz": "https://mzd.gov.cz/narodni-osetrovatelske-postupy/",
-        "popis": "Oficiální ošetřovatelské postupy ministerstva zdravotnictví ČR, web obsahuje detailně popsané doporučené postupy pri provádění ošetřovatelských výkonů.",
+        "popis": "Oficiální ošetřovatelské postupy ministerstva zdravotnictví ČR, web obsahuje detailně popsané doporučené postupy při provádění ošetřovatelských výkonů.",
         "předmět": "Ošetřovatelství 💉",
         "jazyk": ["Čeština"],
         "ročník": [2],
@@ -32,7 +32,7 @@ let Zdroje = [
     {
         "nazev": " ⭐️ Ošetřovatelské postupy",
         "odkaz": "https://www.youtube.com/@osetrovatelskepostupy/videos",
-        "popis": "YouTube kanál Všeobecné fakultní nemocice, ukazující správné provedení běžných ošetřovatelských výkonů.",
+        "popis": "YouTube kanál Všeobecné fakultní nemocnice, ukazující správné provedení běžných ošetřovatelských výkonů.",
         "předmět": "Ošetřovatelství 💉",
         "jazyk": ["Čeština"],
         "ročník": [2],
@@ -65,7 +65,7 @@ let Zdroje = [
     {
         "nazev": " ⭐️ Physeo – Bakterie",
         "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw_D72oHzNk9YI0vukZzQY9V&si=h1wKr9-LM4KEZwRz",
-        "popis": "Videa popisující charakteristiky jednotlivých bakterií, pomocí kresby. Každý bakterie má svoji scénu, na které jsou pomocí metafor znázorněné její vlastnosti (fialové pozadí = G+ bakterie...). Tento styl videjí je zábavnější a snadněji zapamatovatelný zůsob jak se jednotlivé bakterie naučit.",
+        "popis": "Videa popisující charakteristiky jednotlivých bakterií, pomocí kresby. Každá bakterie má svoji scénu, na které jsou pomocí metafor znázorněné její vlastnosti (fialové pozadí = G+ bakterie...). Tento styl videjí je zábavnější a snadněji zapamatovatelný způsob jak se jednotlivé bakterie naučit.",
         "předmět": "Mikrobiologie 🧫",
         "jazyk": ["English"],
         "ročník": [2,3],
@@ -73,7 +73,7 @@ let Zdroje = [
 
     {"nazev": " ⭐️ Physeo – Viry",
         "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw-mM4PT-EjFSMsfh1vdFcJA&si=byXYKphbl7SGoHKX",
-        "popis": "Videa popisující charakteristiky jednotlivých birů, pomocí kresby. Každý virus má svoji scénu, na které jsou pomocí metafor znázorněné jejho vlastnosti (fialové pozadí = DNA virus.). Tento styl videjí je zábavnější a snadněji zapamatovatelný zůsob jak se jednotlivé viry naučit.",
+        "popis": "Videa popisující charakteristiky jednotlivých virů, pomocí kresby. Každý virus má svoji scénu, na které jsou pomocí metafor znázorněné jeho vlastnosti (fialové pozadí = DNA virus.). Tento styl videjí je zábavnější a snadněji zapamatovatelný způsob jak se jednotlivé viry naučit.",
         "předmět": "Mikrobiologie 🧫",
         "jazyk": ["English"],
         "ročník": [2,3],
@@ -81,7 +81,7 @@ let Zdroje = [
 
     {"nazev": " ⭐️ Physeo – Paraziti",
         "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw-_x_DornZ5kgyd5xTZZ4ur&si=RtAoq9otVTHus4yu",
-        "popis": "Videa popisující charakteristiky jednotlivých parazitů, pomocí kresby. Každý parazit má svoji scénu, na které jsou pomocí metafor znázorněné jeho vlastnosti.Tento styl videjí je zábavnější a snadněji zapamatovatelný zůsob jak se jednotlivé bakterie naučit.",
+        "popis": "Videa popisující charakteristiky jednotlivých parazitů, pomocí kresby. Každý parazit má svoji scénu, na které jsou pomocí metafor znázorněné jeho vlastnosti.Tento styl videjí je zábavnější a snadněji zapamatovatelný způsob jak se jednotlivé bakterie naučit.",
         "předmět": "Mikrobiologie 🧫",
         "jazyk": ["English"],
         "ročník": [2,3],
@@ -89,7 +89,7 @@ let Zdroje = [
 
     {"nazev": " ⭐️ Biochemie  – Anki",
         "odkaz": "https://drive.google.com/file/d/1METZt7hYeBPoZ8w0ponTBqjkBenXt3_X/view?usp=sharing",
-        "popis": "Anki balíček biochemie podle výuky 1. paralelky 1.LF, balíček je stále v aktivní tvorbě, pro dostuponst aktualizací zkontrolujte popisek hlavního balíčku. Obsahuje kartičky na vzorce požadované u zkouškového testu, balíček na názvy enzymů v jednotlivých krocích metabolismu a postupně se přidají další.",
+        "popis": "Anki balíček biochemie podle výuky 1. paralelky 1.LF, balíček je stále v aktivní tvorbě, pro dostupnost aktualizací zkontrolujte popisek hlavního balíčku. Obsahuje kartičky na vzorce požadované u zkouškového testu, balíček na názvy enzymů v jednotlivých krocích metabolismu a postupně se přidají další.",
         "předmět": "Biochemie ⚗️",
         "jazyk": ["Čeština"],
         "ročník": [2],
@@ -97,7 +97,7 @@ let Zdroje = [
 
     {"nazev": " ⭐️ Anatomie – Anki",
     "odkaz": "https://drive.google.com/file/d/1YHY-Z3AkWFoBZdrW0UnOQ6sGBMhNZmcO/view?usp=sharing",
-    "popis": "Asi nelepší Anki balíček na anatomii, obsahuje popsané obrázky z učebnice Anatomie 1,2,3 od profesora Čiháka, balíček je rozdělen tak, aby kopíroval postup výuky.",
+    "popis": "Asi nejlepší Anki balíček na anatomii, obsahuje popsané obrázky z učebnice Anatomie 1,2,3 od profesora Čiháka, balíček je rozdělen tak, aby kopíroval postup výuky.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -113,7 +113,7 @@ let Zdroje = [
     
     {"nazev": "Anatom.cz",
     "odkaz": "https://anatom.cz/",
-    "popis": "Doprovodná webová stránka k Memorix anatomii, umožnuje prozkoušt své znalosti anatomických struktur na dobře známých schématech.",
+    "popis": "Doprovodná webová stránka k Memorix anatomii, umožňuje prozkoušt své znalosti anatomických struktur na dobře známých schématech.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -129,7 +129,7 @@ let Zdroje = [
     
     {"nazev": "Neuroanatomie",
     "odkaz": "https://publi.cz/books/219/index.html?secured=false#Cover",
-    "popis": "Online učebnice neuroanatomize z LFHK, poskytuje studijní materiál a zároveň zajištuje zpětnou vazbu v podobě testů.",
+    "popis": "Online učebnice neuroanatomize z LFHK, poskytuje studijní materiál a zároveň zajišťuje zpětnou vazbu v podobě testů.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -153,7 +153,7 @@ let Zdroje = [
     
     {"nazev": "Skelet 3D",
     "odkaz": "http://skelet3d.lf3.cuni.cz/index.xhtml",
-    "popis": "3D Atlas kostí, sice žádná hitparáda, ale lze otevří zadarmo v prohlížeči.",
+    "popis": "3D Atlas kostí, sice žádná hitparáda, ale lze otevřít zadarmo v prohlížeči.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -161,7 +161,7 @@ let Zdroje = [
     
     {"nazev": "Topografický přehled",
     "odkaz": "https://jonaeyomi.notion.site/Topografick-p-ehled-1-35b7ab426f044549a27ec6a800f59ac8",
-    "popis": "Přehled topografických utvarů pro zimní pitevnu",
+    "popis": "Přehled topografických útvarů pro zimní pitevnu",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -177,7 +177,7 @@ let Zdroje = [
     
     {"nazev": " ⭐️ LF3 Letní pitevna",
     "odkaz": "https://web.archive.org/web/20180828191307/http://topografietela.cz/index.html",
-    "popis": "Interaktivní portál topografické anatomie na letní pitvení cvičení, obsahuje část výkladovou, ale také testovou, kde můžeze ověřit své znalosti. Výkladovou část lze stáhnout jako skripta v formátu pdf.",
+    "popis": "Interaktivní portál topografické anatomie na letní pitvení cvičení, obsahuje část výkladovou, ale také testovou, kde můžete ověřit své znalosti. Výkladovou část lze stáhnout jako skripta ve formátu pdf.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -198,7 +198,7 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Webová stránka"},
     
-    {"nazev": "Studjiní materiály LF3",
+    {"nazev": "Studijní materiály LF3",
     "odkaz": "https://web.archive.org/web/20250216091052/http://anatomie.lf3.cuni.cz/studijnimaterialy.htm",
     "popis": "Studijní materiály pro studium anatomie od prof. Kachlíka. Přehledné tabulky a schémata.",
     "předmět": "Anatomie 🫀",
@@ -312,7 +312,7 @@ let Zdroje = [
     
     {"nazev": "Principy zobrazovacích metod",
     "odkaz": "https://radio.lf1.cuni.cz/prope",
-    "popis": "Radiodiagnostická klinika 1. LF UK má na svých stránkách dostupné komentované prezentace vysvětlující princip jednotlivých zobrazovacíhc metod. Pro biofyziku je užitečný popis fungování RTG, CT, ultrazvuku a MRI. ",
+    "popis": "Radiodiagnostická klinika 1. LF UK má na svých stránkách dostupné komentované prezentace vysvětlující princip jednotlivých zobrazovacích metod. Pro biofyziku je užitečný popis fungování RTG, CT, ultrazvuku a MRI. ",
     "předmět": "Biofyzika ⚙️",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -352,7 +352,7 @@ let Zdroje = [
     
     {"nazev": "Metabolické dráhy - ROCHE",
     "odkaz": "https://web.archive.org/web/20230614121818/http://biochemical-pathways.com/#/map/1",
-    "popis": "Obrovské schéma všech metabolických drah v vzájemném konetxtu ",
+    "popis": "Obrovské schéma všech metabolických drah v vzájemném kontextu ",
     "předmět": "Biochemie ⚗️",
     "jazyk": ["English"],
     "ročník": [2],
@@ -384,7 +384,7 @@ let Zdroje = [
     
     {"nazev": "Učebnice DNA diagnostiky",
     "odkaz": "https://kolweb.lf2.cuni.cz/Projekty/prusa-dna/newlook/defa.htm",
-    "popis": "Multimediální učebince DNA diagnostiky od 2.LF, jedná se o projekt z roku 1998, takže nečekjete nejnovější informace, jsou tady detailně probrány postupy základních technik DNA diagnostiky.",
+    "popis": "Multimediální učebnice DNA diagnostiky od 2.LF, jedná se o projekt z roku 1998, takže nečekejte nejnovější informace, jsou tady detailně probrány postupy základních technik DNA diagnostiky.",
     "předmět": "Biologie a genetika 🧬",
     "jazyk": ["Čeština"],
     "ročník": [1, 2],
@@ -408,7 +408,7 @@ let Zdroje = [
     
     {"nazev": "Úvod do Fyziologie člověka",
     "odkaz": "https://fyziebook.lf1.cuni.cz/",
-    "popis": "Online video učebnice fyziologie od prof. Kittnara. Obsahuja krátká názorná videa vysvětlující základní fyziologické principy.",
+    "popis": "Online video učebnice fyziologie od prof. Kittnara. Obsahuje krátká názorná videa vysvětlující základní fyziologické principy.",
     "předmět": "Fyziologie 💧",
     "jazyk": ["Čeština"],
     "ročník": [2],
@@ -440,7 +440,7 @@ let Zdroje = [
     
     {"nazev": "Histologický atlas LF.2 UK",
     "odkaz": "https://histo-atlas.eu/",
-    "popis": "Histologický atlas LF.2 UK, obsahuje virtuální mikroksop s popisem jednotlivých preparátů",
+    "popis": "Histologický atlas LF.2 UK, obsahuje virtuální mikroskop s popisem jednotlivých preparátů",
     "předmět": "Histologie 🔬",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -504,7 +504,7 @@ let Zdroje = [
     
     {"nazev": "Interaktivní embryologický atlas - MUNI",
     "odkaz": "https://is.muni.cz/do/rect/el/estud/lf/ps15/atlas/web/index.html",
-    "popis": "Interaktivní embryologický atlas od Masarykovy univerzity. Obsahuje výklad embryologických řezů a každá kapitola je opatřena procivčováním.",
+    "popis": "Interaktivní embryologický atlas od Masarykovy univerzity. Obsahuje výklad embryologických řezů a každá kapitola je opatřena procvičováním.",
     "předmět": "Histologie 🔬",
     "jazyk": ["Čeština", "English"],
     "ročník": [1],
@@ -528,7 +528,7 @@ let Zdroje = [
     
     {"nazev": "Histology Drawings",
     "odkaz": "https://histologydrawings.blogspot.com/",
-    "popis": "Histologcká schématka, poskytují dostatečné zjednodušení histologické stavby jednolivých orgánů.",
+    "popis": "Histologická schématka, poskytují dostatečné zjednodušení histologické stavby jednotlivých orgánů.",
     "předmět": "Histologie 🔬",
     "jazyk": ["English"],
     "ročník": [1],
@@ -538,7 +538,7 @@ let Zdroje = [
     "odkaz": "https://www.youtube.com/channel/UCYvSIOkPeo3TqaxdacRKC9w/videos",
     "popis": "Youtube kanál Andrey Felšöové, věnuje se hlavně histologii",
     "předmět": "Histologie 🔬",
-    "jazyk": ["Slověnština"],
+    "jazyk": ["Slovenština"],
     "ročník": [1],
     "typ": "YouTube"},
     
@@ -600,7 +600,7 @@ let Zdroje = [
     
     {"nazev": "Wikiskripta",
     "odkaz": "https://www.wikiskripta.eu/w/Home",
-    "popis": "Stránka, kterou nepochybně znáte, online zdoj pro mediky číslo jedna, obsahuje převážně výukové články, ale také virtuální mikroskop, procvičování (často opomíjené online testy, např. u histologie skvělý trénink na zápočet), kalkulačky a mnoho další. Je vhodné projít a využívat všechny dostupné funkce wikiskript. (Navštivte naši sekci návody)  ",
+    "popis": "Stránka, kterou nepochybně znáte, online zdroj pro mediky číslo jedna, obsahuje převážně výukové články, ale také virtuální mikroskop, procvičování (často opomíjené online testy, např. u histologie skvělý trénink na zápočet), kalkulačky a mnoho další. Je vhodné projít a využívat všechny dostupné funkce wikiskript. (Navštivte naši sekci návody)  ",
     "předmět": "Síň slávy ⭐️",
     "jazyk": ["Čeština"],
     "ročník": ["Všechny"],
@@ -608,7 +608,7 @@ let Zdroje = [
     
     {"nazev": "Medical Media",
     "odkaz": "https://www.medicalmedia.eu/cs",
-    "popis": "Platforma pro distanční výuku, jsou zde záznamy přednášek z lékařských fakult v ČR. Zejména vhodné na zhlédnutí biofyzikálních přednášek, třeba před zkoušku.",
+    "popis": "Platforma pro distanční výuku, jsou zde záznamy přednášek z lékařských fakult v ČR. Zejména vhodné na zhlédnutí biofyzikálních přednášek, třeba před zkouškou.",
     "předmět": "Síň slávy ⭐️",
     "jazyk": ["Čeština", "English"],
     "ročník": ["Všechny"],
@@ -640,7 +640,7 @@ let Zdroje = [
     
     {"nazev": "Quizlet",
     "odkaz": "https://quizlet.com/",
-    "popis": "Webový ekvivalent k Anki, umožňuje snadné sdílení balíčků a má jednoduší rozhraní, bohužel pokročilé funkce jsou zamčené pod předplatným. ",
+    "popis": "Webový ekvivalent k Anki, umožňuje snadné sdílení balíčků a má jednodušší rozhraní, bohužel pokročilé funkce jsou zamčené pod předplatným. ",
     "předmět": "Síň slávy ⭐️",
     "jazyk": ["English"],
     "ročník": ["Všechny"],
