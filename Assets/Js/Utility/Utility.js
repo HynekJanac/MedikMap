@@ -2,8 +2,8 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: false,
-  infobox_message: "Vyzkoušejte náš nový anki balíček biochemie ⚗️",
+  infobox: true,
+  infobox_message: "Přejeme vám hodně štěstí u zkoušek 🍀",
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
