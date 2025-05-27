@@ -3,6 +3,15 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 let Zdroje = [
     {
+  "nazev": "⭐️ Ošetřovatelské postupy FZS TUL",
+  "odkaz": "https://www.youtube.com/playlist?list=PLlRBRonUT-haniD94Tx6t5U2ErZs5DnnK",
+  "popis": "Velmi kvalitně (možná až příliš) natočeny, základní ošetřovatelské postupy. Bohužel bez slovního komentáře.",
+  "předmět": "Ošetřovatelství 💉",
+  "jazyk": ["Česky"],
+  "ročník": [2],
+  "typ": "YouTube videa"
+    },
+    {
         "nazev": " ⭐️ Atlas řezů mozkem",
         "odkaz": "https://www.nan.upol.cz/atlas-mozku/",
         "popis": "Interaktivní atlas řezů mozkem, s možností vlastního zkoušení. ",
