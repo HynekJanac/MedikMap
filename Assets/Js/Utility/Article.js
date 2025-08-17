@@ -70,67 +70,6 @@ else{
 //Script used to find url for sharing
 
 
-function Sharing(){
-  let currenturl = window.location.href
-  var windowname = document.title
-  
-  let ShareDialog = document.createElement("div")
-  
-  let ShareGrid = document.createElement("div")
-  ShareGrid.className = "social-grid share-wrap"
-
-  let ShareCopy = document.createElement("input")
-  ShareCopy.type = "text"
-  ShareCopy.id = "Copy"
-  ShareCopy.value = currenturl
-
-  let CopyInfo = document.createElement("p")
-  CopyInfo.id = "Copy_Info"
-  CopyInfo.innerText = "Odkaz byl zkopírován"
-
-  var ShareButtons = [
-    {
-      title: 'Odkaz byl zkopírován',
-      href: '#Copy',
-      target: "_Self",
-      iconClassName: 'icon fas fa-link'
-    },
-    {
-      title: 'Sdílet na Facebooku',
-      href: "https://www.facebook.com/sharer/sharer.php?u=" + currenturl,
-      target: "_blank",
-      iconClassName: 'icon fab fa-facebook'
-    },
-    {
-      title: 'Sdílet na x.com',
-      href: "https://twitter.com/intent/tweet?text=" + windowname + "%20na%20Medikmap.cz%20" + currenturl,
-      target: "_blank",
-      iconClassName: 'icon fa-brands fa-x-twitter'
-    }];
-
-    // Create the initial links
-    for (let i = 0; i < ShareButtons.length; i++) {
-      let ShareButtonData = ShareButtons[i];
-      var ShareButton = document.createElement('a');
-      ShareButton.title = ShareButtonData.title;
-      ShareButton.className = 'social';
-      ShareButton.setAttribute("onclick", "CopyLink()")
-      ShareButton.href = ShareButtonData.href;
-
-      var iconElement = document.createElement('i');
-      iconElement.className = ShareButtonData.iconClassName;
-
-      ShareButton.appendChild(iconElement);
-      ShareGrid.appendChild(ShareButton);
-  }
-  ShareDialog.appendChild(ShareGrid)
-  ShareDialog.appendChild(ShareCopy)
-  ShareDialog.appendChild(CopyInfo)
-  let article = document.getElementsByTagName("article")[0]
-  document.getElementsByTagName("main")[0].insertBefore(ShareDialog, article)
-
-
-}
 
 function ArticleImageViewer(){
   let images = Array.from(document.querySelectorAll('article img'))

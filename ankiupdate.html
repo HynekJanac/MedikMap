@@ -16,7 +16,7 @@
     <p id="balicek-info-zmeny" style="display: none;"></p>
     <a href="" ></a>
     <script>
-        //Pořadí musí zůstat stejné
+            //Pořadí balíčku musí zůstat zachované kvůli ID
             let AnkiBalicky = [
                 {
                     "balicek": "Anatomie 🫀",
@@ -77,7 +77,10 @@
             }
             else{
                 document.getElementById("update-info").innerHTML = "balíček: " + VybranyBalicek.balicek + " není aktuální ❌"
-                document.getElementById("download-info").innerHTML = "Novější verze k stažení zde 📥: <b>" +'<a target="_blank" href="' + VybranyBalicek.odkaz + '">'+ VybranyBalicek.odkaz + "</a></b>"
+                document.getElementById("balicek-info").style.display = "block"
+                document.getElementById("balicek-info").innerHTML = "<b>✳️ aktualizace: " + verze + " → " + VybranyBalicek.verze + "</b>"
+
+                document.getElementById("download-info").innerHTML = "Aktuální verze k stažení zde 📥: <b>" +'<a target="_blank" href="' + VybranyBalicek.odkaz + '">'+ VybranyBalicek.odkaz + "</a></b>"
                 document.getElementById("balicek-info-zmeny").style.display = "block"
                 document.getElementById("balicek-info-zmeny").innerHTML = "<b>📣 Změny: </b>" + VybranyBalicek.zmeny
             

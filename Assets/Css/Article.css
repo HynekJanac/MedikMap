@@ -145,8 +145,36 @@ article b{
 article i{
 	color: var(--main-color);
 }
+article li{
+	color: var(--text-color);
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 400;
+}
 
-
+.link-grid{
+	width: 100%;
+	display: grid;
+	grid-template-columns:  repeat(auto-fit, minmax(200px,1fr)); 
+	gap: 1em;
+	font-size: 1.25rem;
+}
+.item{
+	color: var(--main-color);
+	display: flex;
+	gap: 1em;
+	padding: 1em;
+	border: 2px solid var(--main-color);
+	border-radius: 20px;
+	font-weight: bold;
+	align-items: center;
+	text-decoration: none;
+}
+.item p{
+	color: var(--main-color);
+	font-weight: bold;
+	margin: 0;
+}
 
 /*Quote*/
 q{

@@ -165,7 +165,6 @@ function ShowForm(){
   document.getElementById("ShowForm").style.display = "none"
 }
 
-
 function SocialGrid(){
   // Create the div element
   var SocialGrid = document.createElement('div');
@@ -279,7 +278,6 @@ function CookiePopUp(){
 
   // Append the div element to the document body
   document.getElementsByTagName("main")[0].appendChild(CookieConsentElement);
-
 
 }
 

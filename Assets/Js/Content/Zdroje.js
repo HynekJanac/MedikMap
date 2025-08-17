@@ -12,7 +12,7 @@ let Zdroje = [
   "typ": "YouTube videa"
     },
     {
-        "nazev": " ⭐️ Atlas řezů mozkem",
+        "nazev": "Atlas řezů mozkem",
         "odkaz": "https://www.nan.upol.cz/atlas-mozku/",
         "popis": "Interaktivní atlas řezů mozkem, s možností vlastního zkoušení. ",
         "předmět": "Anatomie 🫀",
@@ -152,7 +152,7 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Webová stránka"},
     
-    {"nazev": "Schémata z embryologie ",
+    {"nazev": " ⭐️ Schémata z embryologie LFP",
     "odkaz": "https://www.youtube.com/playlist?list=PL1VZpcaQ43L2LE0MgeERAHMUm4wNXgTu5",
     "popis": "Krátká videa z LFP, vysvětlující vývoj jednotlivých systémů pomocí jednoduchých schémat.",
     "předmět": "Anatomie 🫀",
@@ -176,7 +176,7 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Webová stránka"},
     
-    {"nazev": " ⭐️ LF3 Letní pitevna",
+    {"nazev": "3LF Letní pitevna",
     "odkaz": "https://web.archive.org/web/20180828191307/http://topografietela.cz/index.html",
     "popis": "Interaktivní portál topografické anatomie na letní pitvení cvičení, obsahuje část výkladovou, ale také testovou, kde můžete ověřit své znalosti. Výkladovou část lze stáhnout jako skripta ve formátu pdf.",
     "předmět": "Anatomie 🫀",
@@ -262,26 +262,11 @@ let Zdroje = [
     "jazyk": ["English"],
     "ročník": [1],
     "typ": "Webová stránka"},
-    
-    {"nazev": "The Whole Brain Atlas",
-    "odkaz": "www.med.harvard.edu/AANLIB/",
-    "popis": "Atlas neuroanatomie Harvardské univerzity",
-    "předmět": "Anatomie 🫀",
-    "jazyk": ["English"],
-    "ročník": [1],
-    "typ": "Webová stránka"},
+
     
     {"nazev": "UBC Neuroanatomy",
     "odkaz": "http://www.neuroanatomy.ca",
     "popis": "Portál úvodu do neuroanatomie Univerzity Britské Kolumbie, obsahuje kvalitní videa a interaktivní řezy mozkem",
-    "předmět": "Anatomie 🫀",
-    "jazyk": ["English"],
-    "ročník": [1],
-    "typ": "Webová stránka"},
-    
-    {"nazev": "WhoNamedIt?",
-    "odkaz": "https://www.whonamedit.com/",
-    "popis": "Slovník lékařských eponym.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["English"],
     "ročník": [1],
