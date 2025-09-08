@@ -659,6 +659,7 @@ let Zdroje = [
         sekce.className = "category-container"
         sekce.id = predmety[i]
         sekce.title= predmety[i]
+
         const sekceNadpis = document.createElement("h2")
         sekceNadpis.textContent = predmety[i]
         sekceNadpis.className = "category"

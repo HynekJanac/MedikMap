@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Podpořeno tebou</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="No description has been provided, you will have to see for yourself!" />
+      <meta name="author" content="Hynek Janáč" />
+      <link rel="icon" type="image/x-icon" href="../Assets/Icons/Favicon.ico" />
+      <link rel="stylesheet" href="../Assets/Css/Article.css" />
+      <link rel="stylesheet" href="../Assets/Css/Universal.css" />
+      <link rel="stylesheet" href="../Assets/Css/Donations.css">
+      <script src="../Assets/Js/Utility/Utility.js" defer></script>
+      <script src="../Assets/Js/Utility/Article.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+      
+   </head>
+   <body>
+      <main>
+         <div class="zoom_image--container" id="zoom_image--container">
+            <span tabindex="0" id="zoom_image--close">×</span>
+            <div class="zoom_image-controls"><i class="fa-solid fa-angle-left" tabindex="0" id="controls-left"></i><img class="zoom_image--image" id="zoom_image--image" src="" alt="" /><i class="fa-solid fa-angle-right" tabindex="0" id="controls-right"></i></div>
+            <p class="zoom_image--caption">Caption test</p>
+         </div>
+
+         <h1>Děkujeme ♥️</h1>
+         <div class="article__info--container">
+            <a class="article__info info--author" href="mailto:medikmap.connect@gmail.com"><i class="fa-solid fa-user"></i> Hynek Janáč</a>
+            <p class="article__info info--date"><i class="fa-solid fa-clock"></i> 08.09.2025</p>
+            <a class="article__info info--category" href="index.html"><i class="fa-solid fa-graduation-cap"></i> MedikMap</a>
+         </div>
+         <article>
+      
+            <p>Velmi si vážíme vašeho příspěvku, ten pomůže financovant provoz webu, tvorbu výukových materiálů dostupných pro všechny.</p>
+            <p>Děkujeme ♥️</p>
+            
+            <!--
+            <h2 id="heading-Materialy">MedikMap podpořili: 🫶</h2>
+            <p>(Klikněte na jméno pro 🎉)</p>
+            <ul class="Darci" id="Darci">
+               <button>Hynek Janáč</button>
+            </ul>-->
+         <script defer>
+         setTimeout(() => {confetti({
+            particleCount: 150,
+            spread: 200,
+            origin: { y: 0.6 }})},2000)
+         
+         var darci = document.getElementById("Darci").children;
+
+         for (var i = 0; i < darci.length; i++) {
+         darci[i].addEventListener('click', () => {
+            confetti({
+            particleCount: 150,
+            spread: 200,
+            origin: { y: 0.6 }
+});
+         });
+         }
+      </script>
+         </article>
+      </main>
+   </body>
+</html>

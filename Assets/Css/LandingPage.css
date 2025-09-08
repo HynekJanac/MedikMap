@@ -45,7 +45,7 @@
 
 /* -----------------MEDIA-------------- */
 /*Laptop */
-@media (min-width: 1430px){
+@media (min-width: 1080px){
 	/*About*/
 	.infoblock{
 		border-radius: 20px;

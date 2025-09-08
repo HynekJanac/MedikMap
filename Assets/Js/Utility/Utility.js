@@ -152,7 +152,7 @@ function EndBlock(){
   formContainer.className = "form-container"
   let googleformIframe = document.createElement("iframe")
   googleformIframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSeA7DkGzf9FJytPXsGDj2d9dpJyVMxRfMv5KuZETFF-T8jrXQ/viewform?embedded=true"
-  googleformIframe.className = "googleform-iframe"
+  googleformIframe.className = "googleform-iframe pridatZdroj"
   googleformIframe.style.display = "none"
   formContainer.appendChild(googleformIframe)
   endblock.appendChild(formContainer)
@@ -161,7 +161,7 @@ function EndBlock(){
 }
 
 function ShowForm(){
-  document.getElementsByClassName("googleform-iframe")[0].style.display = "inline-block"
+  document.getElementsByClassName("pridatZdroj")[0].style.display = "inline-block"
   document.getElementById("ShowForm").style.display = "none"
 }
 
@@ -175,7 +175,7 @@ function SocialGrid(){
   var SocialLinks = [
     {
       title: 'Přispět',
-      href: 'https://www.paypal.com/donate/?hosted_button_id=XWBJ7JHATG48Y',
+      href: 'https://www.paypal.com/donate/?hosted_button_id=WYUJMHWUYT47Q',
       iconClassName: 'icon fas fa-heart'
     },
     {
@@ -244,11 +244,9 @@ function BackToTop (){
 function scrollFunction() {
   mybutton = document.getElementById("back-to-top");
   if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
-    mybutton.style.opacity = 1;
-    mybutton.style.transform = "scale(1)";
+    mybutton.className = "back-to-top-show";
   } else {
-    mybutton.style.opacity = 0;
-    mybutton.style.transform = "scale(0)";
+    mybutton.className = "back-to-top-hide";
   }
 }
 

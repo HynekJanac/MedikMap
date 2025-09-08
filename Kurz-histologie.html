@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tady v budoucnosti najdeš různé (technické) vychytávky, které mohou usnadnit sudium. Například generátor zkoškových otázek.">
+    <meta name="author" content="">
+
+    <link rel="icon" href="Assets/Icons/Favicon.ico">
+    <link rel="stylesheet" href="Assets/Css/Blog.css">
+    <link rel="stylesheet" href="Assets/Css/Universal.css">
+
+    <title>Kurz Histologie 🔬</title>
+
+    <script defer src="Assets/Js/Utility/Utility.js"></script>
+    <script defer src="Assets/Js/Content/Histologie.js"></script>     
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCGKHBJTPP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCGKHBJTPP');
+</script>
+
+</head>
+
+<body>
+    <main>
+        <p class="headline">Kurz Histologie MedikMap 🔬</p>
+
+        <div class="Search" id="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="Search__input" id="Search__input" onkeyup='SearchAndFilter("search")' placeholder="Search for posts...">
+        </div>
+
+        <div class="filter" id="filter">
+        </div>
+    
+        <content id="content">
+        <section class="section" id="section">
+        </section>
+    </content>
+    </main> 
+</body>
+</html> 

@@ -45,7 +45,6 @@ var Alltags = document.getElementsByClassName("category")
 var categories = []
 for (var i = 0; i < Alltags.length; i++) {
     categories.push(Alltags[i].innerText);
-    Alltags[i].setAttribute('onclick','SearchAndFilter("category" , "' + Alltags[i].innerText + '")');
 }
 
 let uniquecategories = [...new Set(categories)];

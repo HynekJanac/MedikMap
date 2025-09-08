@@ -76,9 +76,8 @@ h1{
 	font-size: 3rem;
 	font-weight: bold;
 	text-align: center;
-	letter-spacing: 0.1em;
 	color: var(--main-color);
-	margin: 0;
+	margin: 0px 0px 10px 0px;
 }
 article h2{
 	color: var(--main-color);
@@ -155,12 +154,12 @@ article li{
 .link-grid{
 	width: 100%;
 	display: grid;
-	grid-template-columns:  repeat(auto-fit, minmax(200px,1fr)); 
+	grid-template-columns:  repeat(auto-fit, minmax(300px,1fr)); 
 	gap: 1em;
 	font-size: 1.25rem;
+	margin: 1em 0;
 }
 .item{
-	color: var(--main-color);
 	display: flex;
 	gap: 1em;
 	padding: 1em;
@@ -169,11 +168,18 @@ article li{
 	font-weight: bold;
 	align-items: center;
 	text-decoration: none;
+	transition: all .3s ease-in-out;
 }
 .item p{
 	color: var(--main-color);
 	font-weight: bold;
 	margin: 0;
+}
+.item:hover{
+	transform: scale(1.05);
+}
+.item:focus{
+	transform: scale(1.1);
 }
 
 /*Quote*/
@@ -273,7 +279,7 @@ iframe{
 		text-align: left;
 	}
 	article h3{
-		font-size: 20px;
+		font-size: 25px;
 		text-align: left;
 	}
 	article img{

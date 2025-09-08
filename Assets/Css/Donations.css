@@ -1,0 +1,26 @@
+.Darci{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+	list-style: none;
+	font-size: 1.4rem;
+	font-weight: 300;
+    gap: 1em;
+	transition: all .3s ease-in-out;
+}
+.Darci button{
+    color: var(--main-color);
+    font-weight: bold;
+    font-family: var(--default-font);
+    background-color: var(--background-color);
+    font-size: 20px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+.Darci button:hover{
+    color: var(--text-color);
+    transform: scale(1.1);
+    font-weight: bold;
+    cursor: pointer;
+}
