@@ -3,11 +3,12 @@
 var MasterSettings = {
   preloader: true,
   infobox: true,
-  infobox_message: "Přejeme vám hodně štěstí u zkoušek 🍀",
+  infobox_message: "Spustili jsme kurz histologie! 🔬 <a class='infobox--link' href='../Kurz-histologie.html'>(zde)</a>",
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
   { title: 'Články', href: '../Clanky.html', className: 'nav__link', textContent: 'Články 📝' },
+  { title: 'Články', href: '../Kurz-histologie.html', className: 'nav__link', textContent: 'Kurz histologie 🔬' },
   { title: 'O nás', href: '../onas.html', className: 'nav__link', innerHTML: 'O nás' },
   { title: 'Hledat', href: '../index.html', className: 'nav__link', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
 ];

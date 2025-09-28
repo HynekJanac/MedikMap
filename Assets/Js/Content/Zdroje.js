@@ -3,6 +3,51 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 let Zdroje = [
     {
+  "nazev": " ⭐️ Kurz histologie MedikMap",
+  "odkaz": "/Kurz-histologie.html",
+  "popis": "Online výukový kurz zaměření na histologii, rozdělen do tématických celků s doporučenými materiály a souhrnými kvízy. ",
+  "předmět": "Histologie 🔬",
+  "jazyk": ["Čeština"],
+  "ročník": [1],
+  "typ": "MedikMap kurz"
+},
+    {
+  "nazev": "Webináře z chirugické propedeutiky",
+  "odkaz": "https://www.youtube.com/watch?v=Qldcx4j8sfc&list=PLE9pe8e7_OMw1KMs9ay4HnkaSqMtKvQ3j",
+  "popis": "Webináře chirugické propedeutiky od doktora Jana Pastora",
+  "předmět": "Chirurgická propedeutika 🔪",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "YouTube playlist"
+},
+    {
+  "nazev": "Anatomie - Jan Pastor",
+  "odkaz": "https://www.youtube.com/playlist?list=PLE9pe8e7_OMwb4Hm8VfnD7UsDcO5o5WjX",
+  "popis": "Webináře z anatomie od doktora Jana Pastora.",
+  "předmět": "Anatomie 🫀",
+  "jazyk": ["Čeština"],
+  "ročník": [1],
+  "typ": "Přednášly"
+},
+{
+  "nazev": "Anatomie - Jiří Beneš",
+  "odkaz": "https://www.youtube.com/watch?v=u-uqQiDviAg&list=PLgGmZrDa3cFNhaFBVDgYKuNBUL47Nijt7",
+  "popis": "Přednášky z anatomie od doktora Jiřího Beneše.",
+  "předmět": "Anatomie 🫀",
+  "jazyk": ["Čeština"],
+  "ročník": [1],
+  "typ": "Přednášky"
+},
+    {
+  "nazev": "Zimní pitevna LF3",
+  "odkaz": "https://www.youtube.com/@zimnipitevna3LF/videos",
+  "popis": "Videodemonstrace topografických útvarů zimní pitevny. ",
+  "předmět": "Anatomie 🫀",
+  "jazyk": ["Čeština"],
+  "ročník": [1],
+  "typ": "YouTube kanál"
+},
+    {
   "nazev": "⭐️ Ošetřovatelské postupy FZS TUL",
   "odkaz": "https://www.youtube.com/playlist?list=PLlRBRonUT-haniD94Tx6t5U2ErZs5DnnK",
   "popis": "Velmi kvalitně (možná až příliš) natočeny, základní ošetřovatelské postupy. Bohužel bez slovního komentáře.",
