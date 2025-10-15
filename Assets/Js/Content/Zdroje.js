@@ -22,7 +22,7 @@ let Zdroje = [
   "typ": "Přednášky"
 },
    {
-  "nazev": "Atlas makroskopické patologické anatomie",
+  "nazev": "Testy z patologické fyziologie",
   "odkaz": "https://www.wikiskripta.eu/w/Port%C3%A1l:Procvi%C4%8Dov%C3%A1n%C3%AD_patofyziologie",
   "popis": "Interaktivní cvičné testy z patologické fyziologie na wikiskriptech, skvělé k vlastní kontrole nabitých znalostí.",
   "předmět": "Patofyziologie 💔",
