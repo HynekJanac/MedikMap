@@ -1,7 +1,53 @@
 // Návod na přidání nového zdroje
 // Zdroj lze přidat kamkoliv do seznamu, stránka ho zařadí do kategorie sama
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
+
 let Zdroje = [
+  {
+  "nazev": "Obvazová technika",
+  "odkaz": "https://www.youtube.com/watch?v=QXkmfZR3tcQ&list=PLckO12CLqdz3ff6eu6U4TfAJq6GO_3bcV",
+  "popis": "Videa základních obvazových techniky",
+  "předmět": "Chirurgická propedeutika 🔪",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Youtube playlist"
+},
+  {
+  "nazev": "Přednášky a výukové materiály LF2",
+  "odkaz": "https://fyziologie.lf2.cuni.cz/vseobecne-lekarstvi/vyukove-materialy",
+  "popis": "Záznamy z přednášek fyziologie z 2. Lékařské fakulty a další materiály.",
+  "předmět": "Fyziologie 💧",
+  "jazyk": ["Čeština"],
+  "ročník": [2],
+  "typ": "Přednášky"
+},
+   {
+  "nazev": "Atlas makroskopické patologické anatomie",
+  "odkaz": "https://www.wikiskripta.eu/w/Port%C3%A1l:Procvi%C4%8Dov%C3%A1n%C3%AD_patofyziologie",
+  "popis": "Interaktivní cvičné testy z patologické fyziologie na wikiskriptech, skvělé k vlastní kontrole nabitých znalostí.",
+  "předmět": "Patofyziologie 💔",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "WikiSkripta"
+},
+  {
+  "nazev": "Atlas makroskopické patologické anatomie",
+  "odkaz": "https://lf1.smartzoom.com/s8/course10/f24/f25/",
+  "popis": "Atlas makroskopické obecné patologie, obsahuje snímky s popisky jednotlivých nálezů.",
+  "předmět": "Patologie 💀",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Virtuální mikroskop"
+},
+  {
+  "nazev": "Přednášky 1LF UK",
+  "odkaz": "https://www.medicalmedia.eu/cs/media/3f95c29e1b8c4e4aa08b7bda949f65c0/54410103764d4dc7ab2337f5267e1ef9",
+  "popis": "Záznamy přednášek z propedeutiky vnitřního lékařství.",
+  "předmět": "Interní propedeutika 🩺",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "MedicalMedia playlist"
+},
     {
   "nazev": " ⭐️ Kurz histologie MedikMap",
   "odkaz": "/Kurz-histologie.html",
