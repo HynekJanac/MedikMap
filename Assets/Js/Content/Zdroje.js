@@ -4,6 +4,15 @@
 
 let Zdroje = [
   {
+  "nazev": "Přednášky a výukové materiály LF2",
+  "odkaz": "https://patologie.lf2.cuni.cz/vseobecne-lekarstvi/vyukove-materialy",
+  "popis": "Záznamy z přednášek patologie z 2. Lékařské fakulty a další materiály.",
+  "předmět": "Patologie 💀",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Přednášky"
+},
+  {
   "nazev": "Obvazová technika",
   "odkaz": "https://www.youtube.com/watch?v=QXkmfZR3tcQ&list=PLckO12CLqdz3ff6eu6U4TfAJq6GO_3bcV",
   "popis": "Videa základních obvazových techniky",
