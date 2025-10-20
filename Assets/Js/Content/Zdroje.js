@@ -4,6 +4,15 @@
 
 let Zdroje = [
   {
+  "nazev": "PropdeutikA – LF2",
+  "odkaz": "http://new.propedeutika.cz/",
+  "popis": "Výukové materiály k propedeutice vnitřního lékařství z 2. Lékařské faukulty, obsahují články k tématům chorobobips, fyzikální vyšetření atd. ",
+  "předmět": "Interní propedetuika 🩺",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Výukové materiály"
+},
+  {
   "nazev": "Přednášky a výukové materiály LF2",
   "odkaz": "https://patologie.lf2.cuni.cz/vseobecne-lekarstvi/vyukove-materialy",
   "popis": "Záznamy z přednášek patologie z 2. Lékařské fakulty a další materiály.",
