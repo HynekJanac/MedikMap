@@ -3,14 +3,14 @@
 var MasterSettings = {
   preloader: true,
   infobox: true,
-  infobox_message: "Spustili jsme kurz histologie! 🔬 <a class='infobox--link' href='../Kurz-histologie.html'>(zde)</a>",
+  infobox_message: "Spustili jsme kurz histologie! 🔬 <a class='infoboxLink' href='../Kurz-histologie.html'>(zde)</a>",
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
-  { title: 'Články', href: '../Clanky.html', className: 'nav__link', textContent: 'Články 📝' },
-  { title: 'Články', href: '../Kurz-histologie.html', className: 'nav__link', textContent: 'Kurz histologie 🔬' },
-  { title: 'O nás', href: '../onas.html', className: 'nav__link', innerHTML: 'O nás' },
-  { title: 'Hledat', href: '../index.html', className: 'nav__link', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
+  { title: 'Články', href: '../Clanky.html', className: 'navLink', textContent: 'Články 📝' },
+  { title: 'Články', href: '../Kurz-histologie.html', className: 'navLink', textContent: 'Kurz histologie 🔬' },
+  { title: 'O nás', href: '../onas.html', className: 'navLink', innerHTML: 'O nás' },
+  { title: 'Hledat', href: '../index.html', className: 'navLink', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
 ];
 
 function Header (NavLinks){
@@ -21,20 +21,20 @@ function Header (NavLinks){
   const logoLink = document.createElement('a');
   logoLink.id = 'header__logo_link';
   logoLink.href = '/';
-  logoLink.innerHTML = '<img src="../Assets/Icons/Logo.svg" alt="" class="logo__image">'
+  logoLink.innerHTML = '<img src="../Assets/Icons/Logo.svg" alt="" class="logoImage">'
   header.appendChild(logoLink);
 
 
   // Create the jump to content link element
-  const jumpToContentLink = document.createElement('a');
-  jumpToContentLink.href = '#infobox';
-  jumpToContentLink.className = 'header__jump-to-content';
-  jumpToContentLink.textContent = 'Skočit k obsahu';
-  header.appendChild(jumpToContentLink);
+  const jumptocontentLink = document.createElement('a');
+  jumptocontentLink.href = '#infobox';
+  jumptocontentLink.className = 'headerJumptocontent';
+  jumptocontentLink.textContent = 'Skočit k obsahu';
+  header.appendChild(jumptocontentLink);
 
   // Create the menu div element
   const menuDiv = document.createElement('div');
-  menuDiv.className = 'header__menu';
+  menuDiv.className = 'headerMenu';
 
   const menuIcon = document.createElement('i');
   menuIcon.id = 'menu_btn';
@@ -59,12 +59,12 @@ function Header (NavLinks){
 
   // Create the nav element
   const nav = document.createElement('nav');
-  nav.className = 'header__nav';
+  nav.className = 'headerNav';
   header.appendChild(nav);
 
   // Create the ul element
   const ul = document.createElement('ul');
-  ul.className = 'nav__list';
+  ul.className = 'navList';
   nav.appendChild(ul);
 
   // Create li and a elements for each link
@@ -89,7 +89,7 @@ function Header (NavLinks){
   document.body.insertBefore(header, document.body.firstElementChild);
 }
 function Menu(){
-    var nav = document.getElementsByClassName("header__nav")[0];
+    var nav = document.getElementsByClassName("headerNav")[0];
     let menu_btn = document.getElementById("menu_btn")
     console.log(nav.style.opacity)
     if (nav.style.opacity == 0){
@@ -133,7 +133,7 @@ function EndBlock(){
   endblock.appendChild(text)
 
   let footnote = document.createElement("div")
-  footnote.className = "section_note"
+  footnote.className = "sectionNote"
   footnote.innerHTML = 'Jen prosím zkontroluj, zda už jsme zdroj nepřidali. :)'
   endblock.appendChild(footnote)
 
@@ -141,7 +141,7 @@ function EndBlock(){
   let button = document.createElement("button")
   button.title = "Přidat"
   button.innerText = "Přidat"
-  button.className = "sing-btn"
+  button.className = "singBtn"
   button.id = "ShowForm"
   button.setAttribute('onclick','ShowForm()')
   buttonContainer.appendChild(button)
@@ -153,7 +153,7 @@ function EndBlock(){
   formContainer.className = "form-container"
   let googleformIframe = document.createElement("iframe")
   googleformIframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSeA7DkGzf9FJytPXsGDj2d9dpJyVMxRfMv5KuZETFF-T8jrXQ/viewform?embedded=true"
-  googleformIframe.className = "googleform-iframe pridatZdroj"
+  googleformIframe.className = "googleformIframe pridatZdroj"
   googleformIframe.style.display = "none"
   formContainer.appendChild(googleformIframe)
   endblock.appendChild(formContainer)
@@ -169,8 +169,8 @@ function ShowForm(){
 function SocialGrid(){
   // Create the div element
   var SocialGrid = document.createElement('div');
-  SocialGrid.className = 'social-grid';
-  SocialGrid.id = 'social-grid';
+  SocialGrid.className = 'socialGrid';
+  SocialGrid.id = 'socialGrid';
 
   // Create an array of link objects
   var SocialLinks = [
@@ -245,17 +245,17 @@ function BackToTop (){
 function scrollFunction() {
   mybutton = document.getElementById("back-to-top");
   if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
-    mybutton.className = "back-to-top-show";
+    mybutton.className = "backToTopShow";
   } else {
-    mybutton.className = "back-to-top-hide";
+    mybutton.className = "backToTopHide";
   }
 }
 
 // Cookie consent
 function CookiePopUp(){
   var CookieConsentElement = document.createElement('div');
-  CookieConsentElement.className = 'cookie-consent';
-  CookieConsentElement.id = 'cookie-consent';
+  CookieConsentElement.className = 'cookiesConsent';
+  CookieConsentElement.id = 'cookiesConsent';
   CookieConsentElement.style.display = 'block';
 
   // Create the paragraph element
@@ -268,7 +268,7 @@ function CookiePopUp(){
 
   // Create the "Got it!" button
   var buttonElement = document.createElement('a');
-  buttonElement.className = 'cookie-btn';
+  buttonElement.className = 'cookieBtn';
   buttonElement.textContent = 'OK';
   buttonElement.onclick = GotIt;
 
@@ -304,7 +304,7 @@ function GotIt() {
     currentDate.setMonth(currentDate.getMonth() + 1);
     
     document.cookie = "cookiepolicy=True ; expires=" + String(currentDate);
-    document.getElementById("cookie-consent").style.display = "none"; 
+    document.getElementById("cookiesConsent").style.display = "none"; 
 }
 
 //Preloader
@@ -368,7 +368,7 @@ function MasterFunction(){
   PoweredByhWeb()
   
   if (getCookie("cookiepolicy") == "True"){
-   document.getElementById("cookie-consent").style.display = "none";}
+   document.getElementById("cookiesConsent").style.display = "none";}
 
   BackToTop()
   window.onscroll = function() {scrollFunction()};

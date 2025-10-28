@@ -18,16 +18,16 @@
         <p class="article-writer--info">Article writer is a simple tool that allows you write an article with ease.</p>
     </div>
 
-    <div class="article__info--setup">
-        <input id="headline" type="text" placeholder="Headline" oninput="document.title = this.value + ' - draft'" class="article__info--headline input-box">
+    <div class="articleMetadata--setup">
+        <input id="headline" type="text" placeholder="Headline" oninput="document.title = this.value + ' - draft'" class="articleMetadata--headline input-box">
         
-        <div class="article__info--metadata">
-            <input type="text" title="Author" placeholder="Author"  class="article__info--author input-box" id="author">
-            <input type="date" title="Headline" placeholder="Headline"  class="article__info--date input-box" id="date">
-            <input type="text" placeholder="Category" title="Category" class="article__info--category input-box" id="category">
+        <div class="articleMetadata--metadata">
+            <input type="text" title="Author" placeholder="Author"  class="articlemetadataAuthor input-box" id="author">
+            <input type="date" title="Headline" placeholder="Headline"  class="articleMetadata--date input-box" id="date">
+            <input type="text" placeholder="Category" title="Category" class="articlemetadataCategory input-box" id="category">
         </div>
-         <label  for="cover-image-input" class="input__label"><i class="fa-solid fa-file-image"></i> Upload cover image
-         <input id="cover-image-input" type="file" name="cover-image" accept="image/png, image/gif, image/jpeg, image/webp"  onchange="AddCoverImage()" >
+         <label  for="coverImage-input" class="input__label"><i class="fa-solid fa-file-image"></i> Upload cover image
+         <input id="coverImage-input" type="file" name="coverImage" accept="image/png, image/gif, image/jpeg, image/webp"  onchange="AddcoverImageWrap()" >
         </label> 
         
     </div>

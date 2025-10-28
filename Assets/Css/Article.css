@@ -8,18 +8,18 @@ main{
 	z-index: -3;
 }
 
-/*table-of-contents*/
-.contents-title{
+/*toc*/
+.contentsTitle{
 	font-size: 25px;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	text-align: center;
 
 }
-#showhide-contents{
+#showHideContents{
 	cursor: pointer;
 }
-.table-of-contents{
+.toc{
 	text-align: center;
 	background-color: var(--secondary-color);
 	color: var(--main-color);
@@ -28,21 +28,21 @@ main{
 	padding-bottom: 10px;
 }
 
-.table-of-contents-list{
+.tocList{
 	padding-left: 0px;
 	font-size: 20px;
 }
 
-.table-of-contents-list li{
+.tocList li{
 	list-style: none;
 }
 
-.table-of-contents-list li a{
+.tocList li a{
 	color: var(--main-color);
 	text-decoration: none;
 	list-style: none;
 }
-.table-of-contents-list li a:hover{
+.tocList li a:hover{
 	color: var(--text-color);
 	text-decoration: none;
 	list-style: none;
@@ -50,25 +50,25 @@ main{
 
 /* Articles */
 
-.cover__image{
+.coverImageWrap{
 	width: 90%;
 	margin: 0 auto;
 }
 
-.cover-image{
+.coverImage{
 	width: 100%;
 	border-radius: 20px;
 }
 
-.image-credit{
+.coverImageCredit{
 	margin: 0;
 	text-align: center;
 	color: var(--text-color);
 }
-.image-credit a{
+.coverImageCredit a{
 	color: var(--main-color);
 }
-.image-credit a:hover{
+.coverImageCredit a:hover{
 	color: var(--text-color);
 }
 
@@ -86,11 +86,11 @@ article h2{
 }
 article h3{
 	color: var(--main-color);
-	font-size: 20px;
-	text-align: left;
+	font-size: 25px;
+	text-align: center;
 }
 
-.article__info--container{
+.articleMetadataContainer{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	text-align: center;
@@ -99,7 +99,7 @@ article h3{
 	gap: 1em;
 }
 
-.article__info{
+.articleMetadata{
 	font-size: 1rem;
 	font-weight: 300;
 	color: var(--main-color);
@@ -107,18 +107,18 @@ article h3{
 	font-weight: bold;
 	transition: all .3s ease-in-out;
 }
-.article__info i{
+.articleMetadata i{
 	transition: all .3s ease-in-out;
 }
 
-.info--date{
+.MetadataDate{
 	margin: 0;
 }
-.info--author:hover, .info--author:focus, .info--category:hover, .info--category:focus{
+.MetadataAuthor:hover, .MetadataAuthor:focus, .MetadataCategory:hover, .MetadataCategory:focus{
 	transform: scale(1.1);
 	color: var(--text-color);
 }
-.info--author:hover > i, .info--author:focus > i, .info--category:hover > i, .info--category:focus > i{
+.MetadataAuthor:hover > i, .MetadataAuthor:focus > i, .MetadataCategory:hover > i, .MetadataCategory:focus > i{
 	color: var(--text-color);
 }
 
@@ -151,7 +151,7 @@ article li{
 	font-weight: 400;
 }
 
-.link-grid{
+.linkGrid{
 	width: 100%;
 	display: grid;
 	grid-template-columns:  repeat(auto-fit, minmax(300px,1fr)); 
@@ -221,13 +221,13 @@ iframe{
 }
 
 /*image grid*/
-.image-grid{
+.imageGrid{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
 	width: 100%;
 	justify-items: center;
 }
-.image-grid div{
+.imageGrid div{
 	text-align: center;
 }
 
@@ -236,30 +236,7 @@ iframe{
 	text-align: center;
 	font-size: 18px;
 }
-/* Share*/
-#Copy{
-	display: none;
-}
-#Copy_Info{
-	font-size: 20px;
-	font-weight: 200;
-	text-align: center;
-	opacity: 0;
-	transition: opacity .30s ease;
-	display: block;
-	width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 20px;
-	padding: 3px;
-	color: var(--secondary-color);
-	background-color: var(--main-color);
-}
-/*Share buttons footer*/
-.share-wrap{
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
+
 /* -----------------MEDIA-------------- */
 @media (min-width: 850px){
 	/* Articles*/
@@ -268,7 +245,7 @@ iframe{
 		padding: 4em;
 	}
 	
-	.article__info{
+	.articleMetadata{
 		font-size: 1.25rem;}
 
 	h1{
@@ -289,33 +266,13 @@ iframe{
 		height:350px ;
 		width:100% ;
 	}
-	.npr{
-		width:78% ;
-		height: 190px;
-		border-radius: 20px;
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-	.spotify{
-		width: 78%;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
 }
 @media (min-width: 1300px){
 	.youtube{
 		height:600px ;
 		width:100% ;
 	}
-	.npr{
-		width:78% ;
-		height: 270px;
-		border-radius: 20px;
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-	.table-of-contents{
+	.toc{
 		text-align: center;
 		border-radius: 30px;
 		padding-top: 10px;
@@ -324,10 +281,10 @@ iframe{
 		padding-right: 50px;
 		width: fit-content;
 	}	
-	.table-of-contents-list{
+	.tocList{
 		font-size: 16px;
 	}
-	.contents-title{
+	.contentsTitle{
 		font-size: 30px;
 		margin-top: 5px;
 		margin-bottom: 5px;

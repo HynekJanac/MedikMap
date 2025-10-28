@@ -11,7 +11,7 @@
 	align-items: baseline;
 }
 
-.Search__input{
+.SearchInput{
 	text-align: center;
 	padding: 1.2rem;
 	font-size: 1.2rem;
@@ -34,7 +34,7 @@
 	margin: 1em auto;
 	padding: 0;
 }
-.filter__btn{
+.filterBtn{
 	color: var(--main-color);
 	padding: 0.4em;
 	font-weight: bold;
@@ -46,10 +46,10 @@
 	cursor: pointer;
 	transition: all .3s ease-in-out;
 }
-.filter__btn:hover{
+.filterBtn:hover{
 	transform: scale(1.1);
 }
-.filter__btn:focus{
+.filterBtn:focus{
 	transform: scale(1.1);
 }
 
@@ -78,41 +78,41 @@
 	transform: scale(1.05);
 }
 
-.card__link{
+.cardLink{
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.card__thumbnail{
+.cardThumbnail{
 	width: 100%;
 	border-radius: 20px;
 	object-fit: cover;
 }
-.card__content{
+.cardContent{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-.card__text{
+.cardText{
 	padding: 0.5em;
 }
 
-.card__headline{
+.cardHeadline{
 	font-size: 25px;
 	font-weight: bold;
 	color: var(--main-color);
 	word-wrap: break-word;
 	margin: 0;
 }
-.card__description{
+.cardDescription{
 	font-size: 18px;
 	word-wrap: break-word;
 	color: var(--text-color);
 	margin: 0.5em 0 0.5em 0;
 }
 
-.card__metadata--wrap{
+.cardMetadataWrap{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -121,34 +121,34 @@
 	text-decoration: none;
 }
 
-.card__metadata{
+.cardMetadata{
 	margin: 0;
 	transition: all .3s ease-in-out;
 	color: var(--main-color);
 }
 
-.metadata--action{
+.metadataAction{
 	font-size: 22px;
 	font-weight: 300;
 	
 }
 
-.metadata--category{
+.metadataCategory{
 	font-size: 15px;
 	font-weight: 300;
 	text-decoration: none;
 }
 /*author element is hidden by default to be used by SearchAndFilter*/
-.metadata--author{
+.metadataAuthor{
 	display: none;
 	visibility: hidden;
 }
 
-.card:hover .metadata--action, .card:focus .metadata--action{
+.card:hover .metadataAction, .card:focus .metadataAction{
 	font-weight: bold;
 }
 
-.metadata--category:hover, .metadata--category:focus{
+.metadataCategory:hover, .metadataCategory:focus{
 	font-weight: bold;
 }
 

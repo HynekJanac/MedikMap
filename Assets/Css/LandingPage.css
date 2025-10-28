@@ -5,26 +5,26 @@
 	display: grid;
 	margin: 50px auto 50px auto;
 }
-.infoblock__image{
+.infoblockImage{
 	width: 100%;
 	border-radius: 20px 20px 20px 20px;
 }
 
-.infoblock__text{
+.infoblockText{
 	padding: 10px 15px 25px 15px;
 	color: var(--text-color);
 }
 
-.text__headline{
+.textHeadline{
 	color: var(--main-color);
 	font-size: 30px;
 }
 
-.text__content{
+.textContent{
 	font-size: 18px;
 }
 
-.text__hyperlink{
+.textHyperlink{
 	font-weight: 700;
 	font-size: 20px;
 	display: block;
@@ -38,7 +38,7 @@
 	background-color: var(--secondary-color);
 	border-radius: 20px;
 }
-.text__hyperlink:hover{
+.textHyperlink:hover{
 	font-size: 1.5em;}
 
 
@@ -55,23 +55,23 @@
 		margin: 50px auto 50px auto;
 	}
 	
-	.infoblock__text{
+	.infoblockText{
 		padding: 10px 25px 25px 25px;
 	}
 
-	.text__content{
+	.textContent{
 		font-size: auto;
 	}
 
-	.text__hyperlink{
+	.textHyperlink{
 		text-decoration: none;
 		color: var(--main-color);
 		text-transform: uppercase;
 	}
-	.text__hyperlink:hover{
+	.textHyperlink:hover{
 		font-weight: bold;
 	}
-	.infoblock__image--right{
+	.infoblockImage--right{
 		order: 2;}
 }
 /*Desktop*/
@@ -84,23 +84,23 @@
 		grid-template-columns: 1fr 1fr;
 		margin: 50px auto 50px auto;
 	}
-	.text__headline{
+	.textHeadline{
 		font-size: 35px;
 	}
 	
-	.infoblock__text{
+	.infoblockText{
 		padding: 20px 50px 0px 50px;
 	}
 
-	.text__content{
+	.textContent{
 		font-size: 20px;
 	}
-	.text__hyperlink{
+	.textHyperlink{
 		font-size: 22px;
 	}
-	.text__hyperlink:hover{
+	.textHyperlink:hover{
 		font-weight: bold;
 	}
-	.infoblock__image--right{
+	.infoblockImage--right{
 		order: 2;}
 }

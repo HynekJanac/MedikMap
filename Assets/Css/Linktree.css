@@ -11,7 +11,7 @@
 	align-items: baseline;
 }
 
-.Search__input{
+.SearchInput{
 	text-align: center;
 	padding: 1.2rem;
 	font-size: 1.2rem;
@@ -34,7 +34,7 @@
 	margin: 1em auto;
 	padding: 0;
 }
-.filter__btn{
+.filterBtn{
 	color: var(--main-color);
 	padding: 0.4em;
 	font-weight: bold;
@@ -46,10 +46,10 @@
 	cursor: pointer;
 	transition: all .3s ease-in-out;
 }
-.filter__btn:hover{
+.filterBtn:hover{
 	transform: scale(1.1);
 }
-.filter__btn:focus{
+.filterBtn:focus{
 	transform: scale(1.1);
 }
 

@@ -22,14 +22,14 @@ function TextEditor(){
 
 // All the images have to reside in assets Img folder
 
-function AddCoverImage(){  
-    // CoverImage button is presented from the start, it opens a file select dialog and prompts the user to select the cover image
-    let filename = document.getElementById("cover-image-input").files[0].name
+function AddcoverImageWrap(){  
+    // coverImageWrap button is presented from the start, it opens a file select dialog and prompts the user to select the cover image
+    let filename = document.getElementById("coverImage-input").files[0].name
     let path = "/Assets/Img/";
     
     // This try and catch sequence allows to change cover image mid editting
     try {
-        let image = document.getElementById("cover-image")
+        let image = document.getElementById("coverImage")
         image.src =  path + filename
     } catch (error) {
         // Create the outer div element
@@ -39,8 +39,8 @@ function AddCoverImage(){
 
     // Create the img element to be display to the user
     var img = document.createElement('img');
-    img.className = 'cover__image--image';
-    img.id = 'cover-image';
+    img.className = 'coverImageWrap--image';
+    img.id = 'coverImage';
     img.title = 'cover image';
     img.src =  path + filename
 
@@ -49,14 +49,14 @@ function AddCoverImage(){
     alt_input.type = 'text';
     alt_input.placeholder = 'Alternative text';
     alt_input.className = 'input-box';
-    alt_input.id = "CoverImageAlt"
+    alt_input.id = "coverImageWrapAlt"
 
     // Create the input for caption (Image credit)
     var caption_input = document.createElement('input');
     caption_input.type = 'text';
     caption_input.placeholder = 'Caption';
     caption_input.className = 'input-box';
-    caption_input.id = "CoverImageCap"
+    caption_input.id = "coverImageWrapCap"
 
     // Append the elements to the outer div
     div.appendChild(img);
@@ -248,7 +248,7 @@ function AddGridImageButton(local_grid_id){
 
 
     var grid_button = document.getElementById("grid-button-" + String(local_grid_id))
-    document.getElementById("image-grid-" + String(local_grid_id)).insertBefore(label, grid_button);
+    document.getElementById("imageGrid-" + String(local_grid_id)).insertBefore(label, grid_button);
 
     // Create the parent div element
     var div = document.createElement("div");
@@ -278,7 +278,7 @@ function AddGridImageButton(local_grid_id){
 
     // Append the parent div to the document body or any other desired element
 
-    document.getElementById("image-grid-" + String(local_grid_id)).insertBefore(div, grid_button)
+    document.getElementById("imageGrid-" + String(local_grid_id)).insertBefore(div, grid_button)
     
     image_id +=1
     TextEditor();
@@ -288,9 +288,9 @@ function AddGridImageButton(local_grid_id){
 function AddImageGrid(){
     global_grid_id += 1
     var grid = document.createElement("div")
-    grid.className = "content-image-grid content-block"
+    grid.className = "content-imageGrid content-block"
     grid.title = "grid-block"
-    grid.id = "image-grid-" + String(global_grid_id)
+    grid.id = "imageGrid-" + String(global_grid_id)
 
     // Create button element
     var button = document.createElement("button");
@@ -379,7 +379,7 @@ function SaveProject(){
 function DeleteProject(){
     if (confirm("Are you sure you want to delete this project?")){
         document.getElementById("content").innerHTML = ""
-        document.getElementsByClassName("article__info--setup")[0].innerHTML += " "
+        document.getElementsByClassName("articleMetadata--setup")[0].innerHTML += " "
         document.getElementById("Export-Dialog").style.display = "none"
         ytb_class_id = 0
         image_id = 0
@@ -455,8 +455,8 @@ function ExportProject(){
 
     // Create div element with class and id attributes
     let zoomImageContainer = document.createElement('div');
-    zoomImageContainer.className = 'zoom_image--container';
-    zoomImageContainer.id = 'zoom_image--container';
+    zoomImageContainer.className = 'imageZoomContainer';
+    zoomImageContainer.id = 'imageZoomContainer';
 
     // Create span element with tabindex and id attributes
     let closeSpan = document.createElement('span');
@@ -466,7 +466,7 @@ function ExportProject(){
 
     // Create div element with class attribute
     let zoomImageControls = document.createElement('div');
-    zoomImageControls.className = 'zoom_image-controls';
+    zoomImageControls.className = 'imageZoomControls';
 
     // Create i elements with class, tabindex, and id attributes
     let controlsLeft = document.createElement('i');
@@ -475,8 +475,8 @@ function ExportProject(){
     controlsLeft.id = 'controls-left';
 
     let zoomImage = document.createElement('img');
-    zoomImage.className ='zoom_image--image';
-    zoomImage.id = 'zoom_image--image';
+    zoomImage.className ='imageZoomImage';
+    zoomImage.id = 'imageZoomImage';
     zoomImage.setAttribute('src', '');
     zoomImage.setAttribute('alt', '');
 
@@ -487,7 +487,7 @@ function ExportProject(){
 
     // Create p element with class attribute and set text content
     let caption = document.createElement('p');
-    caption.className ='zoom_image--caption';
+    caption.className ='imageZoomCaption';
     caption.textContent = 'Caption test';
 
     // Append elements to the container
@@ -509,35 +509,35 @@ function ExportProject(){
     
      // Check if article has cover image
      try {
-        var cover_image = document.getElementById("cover-image")
-        var cover_image_alt = document.getElementById("CoverImageAlt").value
-        var cover_image_cap = document.getElementById("CoverImageCap").value
+        var cover_image = document.getElementById("coverImage")
+        var cover_image_alt = document.getElementById("coverImageWrapAlt").value
+        var cover_image_cap = document.getElementById("coverImageWrapCap").value
         
         //Create the elemets and add them to the export dialog
 
         // Create the cover image div
-        let coverImageDiv = document.createElement('div');
-        coverImageDiv.classList.add('cover__image');
+        let coverImageWrapDiv = document.createElement('div');
+        coverImageWrapDiv.classList.add('coverImageWrap');
 
         // Create the cover image
-        let coverImageElement = document.createElement('img');
-        coverImageElement.className = 'cover-image';
-        coverImageElement.style.objectPosition = '0 0';
+        let coverImageWrapElement = document.createElement('img');
+        coverImageWrapElement.className = 'coverImage';
+        coverImageWrapElement.style.objectPosition = '0 0';
         var cover_image_src = cover_image.getAttribute("src")
-        coverImageElement.src = cover_image_src;
-        coverImageElement.alt = cover_image_alt
+        coverImageWrapElement.src = cover_image_src;
+        coverImageWrapElement.alt = cover_image_alt
 
         // Create the image credit paragraph
         let imageCredit = document.createElement('p');
-        imageCredit.className = 'image-credit';
+        imageCredit.className = 'coverImageCredit';
         imageCredit.textContent = cover_image_cap;
 
         // Append the cover image to the cover image div
-        coverImageDiv.appendChild(coverImageElement);
+        coverImageWrapDiv.appendChild(coverImageWrapElement);
 
         // Append the image credit to the cover image div
-        coverImageDiv.appendChild(imageCredit);
-        HtmlMain.appendChild(coverImageDiv)
+        coverImageWrapDiv.appendChild(imageCredit);
+        HtmlMain.appendChild(coverImageWrapDiv)
     } catch { 
         var cover_image_src = ""
         var cover_image_alt = "No Cover Image found"
@@ -550,22 +550,22 @@ function ExportProject(){
 
     // Create the article info container div
     let ArticleInfo = document.createElement('div');
-    ArticleInfo.className = 'article__info--container';
+    ArticleInfo.className = 'articleMetadataContainer';
 
     // Create the author link
     let authorLink = document.createElement('a');
-    authorLink.classList.add('article__info', 'info--author');
+    authorLink.classList.add('articleMetadata', 'MetadataAuthor');
     authorLink.href = '../blog.html?author=' + String(author);
     authorLink.innerHTML = '<i class="fa-solid fa-pen"></i> ' + String(author);
 
     // Create the date paragraph
     let PublishedDate = document.createElement('p');
-    PublishedDate.classList.add('article__info', 'info--date');
+    PublishedDate.classList.add('articleMetadata', 'MetadataDate');
     PublishedDate.textContent = String(date);
 
     // Create the category link
     let categoryLink = document.createElement('a');
-    categoryLink.classList.add('article__info', 'info--category');
+    categoryLink.classList.add('articleMetadata', 'MetadataCategory');
     categoryLink.href = '../blog.html?category=' + String(category);
     categoryLink.innerHTML = '<i class="fa-solid fa-hashtag"></i> ' + String(category);
 
@@ -652,7 +652,7 @@ function ExportProject(){
 
         if (element.title == "grid-block"){
             var gridElement = document.createElement("div")
-            gridElement.className = "image-grid"
+            gridElement.className = "imageGrid"
 
             gridItems = element.querySelectorAll("div")
             for (var g=0; g<gridItems.length;g++){

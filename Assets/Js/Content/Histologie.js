@@ -186,46 +186,46 @@ for(i = 0; i < Clanky.length; i++ ){
 
     // Create anchor element
     const link = document.createElement("a");
-    link.classList.add("card__link");
+    link.classList.add("cardLink");
     link.href = Clanky[i].odkaz;
 
     // Create div for content
     const contentDiv = document.createElement("div");
-    contentDiv.classList.add("card__content");
+    contentDiv.classList.add("cardContent");
 
     // Create image
     const img = document.createElement("img");
-    img.classList.add("card__thumbnail");
+    img.classList.add("cardThumbnail");
     img.alt = "image of a squares and circles";
     img.src = Clanky[i].obrazek;
 
     // Create text container
     const textDiv = document.createElement("div");
-    textDiv.classList.add("card__text");
+    textDiv.classList.add("cardText");
 
     // Create headline
     const headline = document.createElement("h2");
-    headline.classList.add("card__headline");
+    headline.classList.add("cardHeadline");
     headline.textContent = Clanky[i].nazev;
 
     // Create description
     const description = document.createElement("p");
-    description.classList.add("card__description");
+    description.classList.add("cardDescription");
     description.textContent = Clanky[i].popis;
 
     // Create metadata wrapper
     const metadataWrap = document.createElement("div");
-    metadataWrap.classList.add("card__metadata--wrap");
+    metadataWrap.classList.add("cardMetadataWrap");
 
     // Create metadata action
     const metadataAction = document.createElement("p");
-    metadataAction.classList.add("card__metadata", "metadata--action");
+    metadataAction.classList.add("cardMetadata", "metadataAction");
     metadataAction.innerHTML = 'Prozkoumat <i class="fa-solid fa-angle-right"></i>';
 
     // Create author link
     const authorLink = document.createElement("a");
     authorLink.href = "#";
-    authorLink.classList.add("card__metadata", "metadata--author");
+    authorLink.classList.add("cardMetadata", "metadataAuthor");
     authorLink.textContent = Clanky[i].autor;
 
     // Assemble elements

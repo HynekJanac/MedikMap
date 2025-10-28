@@ -3,6 +3,15 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 
 let Zdroje = [
+   {
+  "nazev": " ",
+  "odkaz": "https://www.mypathologyreport.ca/cs/",
+  "popis": " ",
+  "předmět": "Patologie 💀",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Výukové materiály"
+},
   {
   "nazev": "PropdeutikA – LF2",
   "odkaz": "http://new.propedeutika.cz/",

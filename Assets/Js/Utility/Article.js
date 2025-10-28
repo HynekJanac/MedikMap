@@ -2,23 +2,23 @@
 function TableOfContents(){
   let TableOfContents = document.createElement("nav")
   TableOfContents.role = "navigation"
-  TableOfContents.className = "table-of-contents"
+  TableOfContents.className = "toc"
   
-  let ToCHeading = document.createElement("h2")
-  ToCHeading.className = "contents-title"
-  ToCHeading.innerText = "Obsah"
-  let ShowHideTocBtn  = document.createElement("a")
-  ShowHideTocBtn.id = "showhide-contents"
-  ShowHideTocBtn.setAttribute("onclick", "ShowHideContents()")
-  ShowHideTocBtn.innerText = "(skrýt)"
+  let tocHeading = document.createElement("h2")
+  tocHeading.className = "contentsTitle"
+  tocHeading.innerText = "Obsah"
+  let ShowHidetocBtn  = document.createElement("a")
+  ShowHidetocBtn.id = "showHideContents"
+  ShowHidetocBtn.setAttribute("onclick", "ShowHideContents()")
+  ShowHidetocBtn.innerText = "(skrýt)"
 
 
-  // Create a list for the ToC entries
+  // Create a list for the toc entries
   let tocList = document.createElement("ul");
-  tocList.className = "table-of-contents-list"
-  tocList.id = "table-of-contents-list"   
+  tocList.className = "tocList"
+  tocList.id = "tocList"   
 
-  // Get the h3 tags - ToC entries
+  // Get the h3 tags - toc entries
   headers = document.getElementsByTagName("h2");
 
   // For each h2
@@ -36,8 +36,8 @@ function TableOfContents(){
     tocList.appendChild(tocListItem);
   }
 
-  TableOfContents.appendChild(ToCHeading)
-  TableOfContents.appendChild(ShowHideTocBtn)
+  TableOfContents.appendChild(tocHeading)
+  TableOfContents.appendChild(ShowHidetocBtn)
   TableOfContents.appendChild(tocList)
   let article = document.getElementsByTagName("article")[0]
   document.getElementsByTagName("main")[0].insertBefore(TableOfContents, article)
@@ -57,13 +57,13 @@ function CopyLink() {
 }
 // When the user clicks on the button, hide or show table of contents
 function ShowHideContents(){
-if (document.getElementById("table-of-contents-list").style.display == "none"){
-  document.getElementById("table-of-contents-list").style.display = "block";
-  document.getElementById("showhide-contents").innerText = "(skrýt)"
+if (document.getElementById("tocList").style.display == "none"){
+  document.getElementById("tocList").style.display = "block";
+  document.getElementById("showHideContents").innerText = "(skrýt)"
 }
 else{
-  document.getElementById("table-of-contents-list").style.display = "none";
-  document.getElementById("showhide-contents").innerText = "(ukázat)"
+  document.getElementById("tocList").style.display = "none";
+  document.getElementById("showHideContents").innerText = "(ukázat)"
 }
 }
 
@@ -79,11 +79,11 @@ function ArticleImageViewer(){
       
    )
    document.getElementById("zoom_image--close").onclick = () => {
-      document.getElementById('zoom_image--container').style.display = "none";
+      document.getElementById('imageZoomContainer').style.display = "none";
   }
   document.addEventListener("keydown", function(event) {
       if (event.key === "Escape") {
-        document.getElementById('zoom_image--container').style.display = "none";
+        document.getElementById('imageZoomContainer').style.display = "none";
         }
     });
 }
@@ -93,9 +93,9 @@ function ViewImage(image_id){
   let images = Array.from(document.querySelectorAll('article img'))
   let caption = document.getElementsByClassName("caption")[image_id].textContent
   
-  document.getElementById('zoom_image--container').style.display = "flex";
-  document.getElementById("zoom_image--image").src = images[image_id].getAttribute('src')
-  document.getElementsByClassName("zoom_image--caption")[0].innerHTML = caption
+  document.getElementById('imageZoomContainer').style.display = "flex";
+  document.getElementById("imageZoomImage").src = images[image_id].getAttribute('src')
+  document.getElementsByClassName("imageZoomCaption")[0].innerHTML = caption
   var image_id_left = String(image_id - 1)
   var image_id_right = String(image_id + 1)
 
@@ -128,5 +128,4 @@ document.addEventListener("keydown", function(event) {
     }); 
 
 ArticleImageViewer()
-Sharing()
 TableOfContents()

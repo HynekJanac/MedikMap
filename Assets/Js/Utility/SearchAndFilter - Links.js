@@ -14,7 +14,7 @@ function SearchAndFilter(request_type, search_request){
     // Declare variabless
     var filter, card, target, i, txtValue, class_selector, search_request;
     if (request_type == "search"){
-        search_request = document.getElementById('Search__input');
+        search_request = document.getElementById('SearchInput');
         filter = search_request.value.toUpperCase();
         class_selector = "item-link"
         container_selector = "item-wrap"
@@ -50,9 +50,9 @@ for (var i = 0; i < Alltags.length; i++) {
 let uniquecategories = [...new Set(categories)];
 
 for (var i = 0; i < uniquecategories.length; i++) {
-    document.getElementById("filter").innerHTML += '<a class="filter__btn" href="#'+ uniquecategories[i] +'"></a>';
-    document.getElementsByClassName("filter__btn")[i].setAttribute('onclick','SearchAndFilter("category" ,"' + uniquecategories[i] + '")')
-    document.getElementsByClassName("filter__btn")[i].innerText = uniquecategories[i] 
+    document.getElementById("filter").innerHTML += '<a class="filterBtn" href="#'+ uniquecategories[i] +'"></a>';
+    document.getElementsByClassName("filterBtn")[i].setAttribute('onclick','SearchAndFilter("category" ,"' + uniquecategories[i] + '")')
+    document.getElementsByClassName("filterBtn")[i].innerText = uniquecategories[i] 
 }
 
 
