@@ -3,14 +3,14 @@
 var MasterSettings = {
   preloader: true,
   infobox: true,
-  infobox_message: "Máme nové články k pitevním cvičením 🫀 <a class='infoboxLink' href='../Clanky.html'>(zde)</a>",
+  infobox_message: "Spustili jsme kurz anatomie 🫀 <a class='infoboxLink' href='/kurz-anatomie.html'>(zde)</a>",
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
-  { title: 'Články', href: '../Clanky.html', className: 'navLink', textContent: 'Články 📝' },
-  { title: 'Články', href: '../Kurz-histologie.html', className: 'navLink', textContent: 'Kurz histologie 🔬' },
-  { title: 'O nás', href: '../onas.html', className: 'navLink', innerHTML: 'O nás' },
-  { title: 'Hledat', href: '../index.html', className: 'navLink', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
+  { title: 'Články', href: '/kurzy.html', className: 'navLink', textContent: 'Kurzy  🎓' },
+  { title: 'Články', href: '/Clanky.html', className: 'navLink', textContent: 'Články 📝' },
+  { title: 'O nás', href: '/onas.html', className: 'navLink', innerHTML: 'O nás' },
+  { title: 'Hledat', href: '/index.html', className: 'navLink', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
 ];
 
 function Header (NavLinks){
@@ -21,7 +21,7 @@ function Header (NavLinks){
   const logoLink = document.createElement('a');
   logoLink.id = 'header__logo_link';
   logoLink.href = '/';
-  logoLink.innerHTML = '<img src="../Assets/Icons/Logo.svg" alt="" class="logoImage">'
+  logoLink.innerHTML = '<img src="/Assets/Icons/Logo.svg" alt="" class="logoImage">'
   header.appendChild(logoLink);
 
 
@@ -312,7 +312,7 @@ function Preloader(){
   const preloaderwrap = document.createElement("div")
   preloaderwrap.className = "preloader"
   preloaderwrap.id = "preloader"
-  preloaderwrap.innerHTML = '<img class="loader" src="../Assets/Icons/Favicon.svg" alt="Preloader" srcset="">'
+  preloaderwrap.innerHTML = '<img class="loader" src="/Assets/Icons/Favicon.svg" alt="Preloader" srcset="">'
 
   var header_class = document.getElementsByClassName("header");
   header_class[0].appendChild(preloaderwrap);

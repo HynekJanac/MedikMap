@@ -1,4 +1,3 @@
-
 // Searches URL paremetrs for arguments
 let search = new URLSearchParams(window.location.search).get('search')
 let category = new URLSearchParams(window.location.search).get('category')

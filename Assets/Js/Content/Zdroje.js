@@ -3,17 +3,26 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 
 let Zdroje = [
+  {
+  "nazev": "Decoiled by Coiled",
+  "odkaz": "https://www.youtube.com/@decoiledbycoiled8777",
+  "popis": "Výuková videa z patofyziologie od doktora Otakara Rašky",
+  "předmět": "Patofyziologie 💔",
+  "jazyk": ["Čeština", "Angličtina"],
+  "ročník": [3],
+  "typ": "YouTube kanál"
+},
    {
-  "nazev": " ",
+  "nazev": "My pathology report",
   "odkaz": "https://www.mypathologyreport.ca/cs/",
-  "popis": " ",
+  "popis": "Stránka poskytující pacientům a rodinám porozumět jejich patologickým zprávám. Stránka obsahuje přehledové články a také slovník patologických pojmů.",
   "předmět": "Patologie 💀",
   "jazyk": ["Čeština"],
   "ročník": [3],
   "typ": "Výukové materiály"
 },
   {
-  "nazev": "PropdeutikA – LF2",
+  "nazev": "PropdeutikA – 2.LF",
   "odkaz": "http://new.propedeutika.cz/",
   "popis": "Výukové materiály k propedeutice vnitřního lékařství z 2. Lékařské faukulty, obsahují články k tématům chorobobips, fyzikální vyšetření atd. ",
   "předmět": "Interní propedeutika 🩺",
@@ -22,7 +31,7 @@ let Zdroje = [
   "typ": "Výukové materiály"
 },
   {
-  "nazev": "Přednášky a výukové materiály LF2",
+  "nazev": "Přednášky a výukové materiály 2.LF",
   "odkaz": "https://patologie.lf2.cuni.cz/vseobecne-lekarstvi/vyukove-materialy",
   "popis": "Záznamy z přednášek patologie z 2. Lékařské fakulty a další materiály.",
   "předmět": "Patologie 💀",
@@ -40,7 +49,7 @@ let Zdroje = [
   "typ": "Youtube playlist"
 },
   {
-  "nazev": "Přednášky a výukové materiály LF2",
+  "nazev": "Přednášky a výukové materiály 2.LF",
   "odkaz": "https://fyziologie.lf2.cuni.cz/vseobecne-lekarstvi/vyukove-materialy",
   "popis": "Záznamy z přednášek fyziologie z 2. Lékařské fakulty a další materiály.",
   "předmět": "Fyziologie 💧",
@@ -94,7 +103,7 @@ let Zdroje = [
   "typ": "YouTube playlist"
 },
     {
-  "nazev": "Anatomie - Jan Pastor",
+  "nazev": "Anatomie – Jan Pastor",
   "odkaz": "https://www.youtube.com/playlist?list=PLE9pe8e7_OMwb4Hm8VfnD7UsDcO5o5WjX",
   "popis": "Webináře z anatomie od doktora Jana Pastora.",
   "předmět": "Anatomie 🫀",
@@ -103,7 +112,7 @@ let Zdroje = [
   "typ": "Přednášly"
 },
 {
-  "nazev": "Anatomie - Jiří Beneš",
+  "nazev": "Anatomie – Jiří Beneš",
   "odkaz": "https://www.youtube.com/watch?v=u-uqQiDviAg&list=PLgGmZrDa3cFNhaFBVDgYKuNBUL47Nijt7",
   "popis": "Přednášky z anatomie od doktora Jiřího Beneše.",
   "předmět": "Anatomie 🫀",
@@ -112,7 +121,7 @@ let Zdroje = [
   "typ": "Přednášky"
 },
     {
-  "nazev": "Zimní pitevna LF3",
+  "nazev": "Zimní pitevna 3.LF",
   "odkaz": "https://www.youtube.com/@zimnipitevna3LF/videos",
   "popis": "Videodemonstrace topografických útvarů zimní pitevny. ",
   "předmět": "Anatomie 🫀",
@@ -148,7 +157,7 @@ let Zdroje = [
         "typ": "Webová stránka"
       },
     {
-        "nazev": "LF2 Prezentace",
+        "nazev": "2.LF Prezentace",
         "odkaz": "https://anatomie.lf2.cuni.cz/vseobecne-lekarstvi/vyukove-materialy",
         "popis": "Prezentace z přednášek a další doplňkové výukové materiály anatomického ústavu 2. lékařské fakulty Univerzity Karlovy.",
         "předmět": "Anatomie 🫀",
@@ -230,9 +239,9 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Anki balíček"},
     
-    {"nazev": " ⭐️ Ústav Anatomie LF2",
+    {"nazev": " ⭐️ Ústav Anatomie 2.LF",
     "odkaz": "https://www.youtube.com/c/%C3%9Astavanatomie2LFUK",
-    "popis": "V době distanční výuky nahrál Ústav Anatomie LF2 své přednášky na YouTube, přednáší pan profesor David Kachlík. Na rychlosti 1,5x se jedná o perfektní úvod do jednotlivých systémů, zvlášť pokud se někomu špatně učí z učebnice.",
+    "popis": "V době distanční výuky nahrál Ústav Anatomie 2.LF své přednášky na YouTube, přednáší pan profesor David Kachlík. Na rychlosti 1,5x se jedná o perfektní úvod do jednotlivých systémů, zvlášť pokud se někomu špatně učí z učebnice.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -286,7 +295,7 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Webová stránka"},
     
-    {"nazev": "Úvod do CNS – LF3",
+    {"nazev": "Úvod do CNS – 3.LF",
     "odkaz": "http://www.cnsonline.cz/",
     "popis": "Cílem tohoto kurzu je především usnadnit studentům první kroky v džungli, kterou CNS představuje. ",
     "předmět": "Anatomie 🫀",
@@ -294,14 +303,14 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Webová stránka"},
     
-    {"nazev": "3LF Letní pitevna",
+    {"nazev": "3.LF Letní pitevna",
     "odkaz": "https://web.archive.org/web/20180828191307/http://topografietela.cz/index.html",
     "popis": "Interaktivní portál topografické anatomie na letní pitvení cvičení, obsahuje část výkladovou, ale také testovou, kde můžete ověřit své znalosti. Výkladovou část lze stáhnout jako skripta ve formátu pdf.",
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
     "typ": "Skripta"},
-    {"nazev": " ⭐️ Skripta na letní pitevnu LF3",
+    {"nazev": " ⭐️ Skripta na letní pitevnu 3.LF",
         "odkaz": "https://drive.google.com/file/d/19S7E9CcpIX6O52sp6gX3x2iHk1X99zj9/view?usp=sharing",
         "popis": "Skripta na letní pitevnu ve formátu PDF.",
         "předmět": "Anatomie 🫀",
@@ -309,7 +318,7 @@ let Zdroje = [
         "ročník": [1],
         "typ": "Skripta"},
     
-    {"nazev": " ⭐️ Topografická anatomie LF3",
+    {"nazev": " ⭐️ Topografická anatomie 3.LF",
     "odkaz": "https://web.archive.org/web/20250207091403/http://anatomie.lf3.cuni.cz/prezentace_topografie.htm",
     "popis": "Soubor prezentací z topografické anatomie, obsahuje přehledná schémata a informace o topografických útvarech.",
     "předmět": "Anatomie 🫀",
@@ -317,7 +326,7 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Webová stránka"},
     
-    {"nazev": "Studijní materiály LF3",
+    {"nazev": "Studijní materiály 3.LF",
     "odkaz": "https://web.archive.org/web/20250216091052/http://anatomie.lf3.cuni.cz/studijnimaterialy.htm",
     "popis": "Studijní materiály pro studium anatomie od prof. Kachlíka. Přehledné tabulky a schémata.",
     "předmět": "Anatomie 🫀",
@@ -438,7 +447,7 @@ let Zdroje = [
     "ročník": [2],
     "typ": "Webová stránka"},
     
-    {"nazev": "Přednášky z biochemie 3LF",
+    {"nazev": "Přednášky z biochemie3.LF",
     "odkaz": "https://www.youtube.com/@jantrnka227",
     "popis": "Videopřednášky z lékařské biochemie od doc. Jana Trnky z 3. lékařské fakulty.",
     "předmět": "Biochemie ⚗️",
@@ -446,7 +455,7 @@ let Zdroje = [
     "ročník": [2],
     "typ": "YouTube"},
     
-    {"nazev": "Metabolické dráhy - ROCHE",
+    {"nazev": "Metabolické dráhy – ROCHE",
     "odkaz": "https://web.archive.org/web/20230614121818/http://biochemical-pathways.com/#/map/1",
     "popis": "Obrovské schéma všech metabolických drah ve vzájemném kontextu ",
     "předmět": "Biochemie ⚗️",
@@ -534,9 +543,9 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Webová stránka"},
     
-    {"nazev": "Histologický atlas LF2 UK",
+    {"nazev": "Histologický atlas 2.LF UK",
     "odkaz": "https://histo-atlas.eu/",
-    "popis": "Histologický atlas LF2 UK, obsahuje virtuální mikroskop s popisem jednotlivých preparátů",
+    "popis": "Histologický atlas 2.LF UK, obsahuje virtuální mikroskop s popisem jednotlivých preparátů",
     "předmět": "Histologie 🔬",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -558,9 +567,9 @@ let Zdroje = [
     "ročník": [1],
     "typ": "YouTube"},
     
-    {"nazev": "Virtuální mikroskop – LF3",
+    {"nazev": "Virtuální mikroskop – 3.LF",
     "odkaz": "https://slides.lf3.cuni.cz/",
-    "popis": "Databáze virtuálních preparátů LF3. – vyžaduje přihlášení přes CAS",
+    "popis": "Databáze virtuálních preparátů 3.LF. – vyžaduje přihlášení přes CAS",
     "předmět": "Histologie 🔬",
     "jazyk": ["Čeština"],
     "ročník": [1],
@@ -598,7 +607,7 @@ let Zdroje = [
     "ročník": [1],
     "typ": "Webová stránka"},
     
-    {"nazev": "Interaktivní embryologický atlas - MUNI",
+    {"nazev": "Interaktivní embryologický atlas – MUNI",
     "odkaz": "https://is.muni.cz/do/rect/el/estud/lf/ps15/atlas/web/index.html",
     "popis": "Interaktivní embryologický atlas od Masarykovy univerzity. Obsahuje výklad embryologických řezů a každá kapitola je opatřena procvičováním.",
     "předmět": "Histologie 🔬",
@@ -638,9 +647,9 @@ let Zdroje = [
     "ročník": [1],
     "typ": "YouTube"},
     
-    {"nazev": " ⭐️ Latina – Anki LF1",
+    {"nazev": " ⭐️ Latina – Anki 1.LF",
     "odkaz": "https://udl.lf1.cuni.cz/slovni-zasoba-pro-studenty-lek",
-    "popis": "Oficiální Anki balíček Ústavu dějin lékařství a cizích jazyků LF1 – jedná se doporučenou slovní zásobu na zkoušku z lékařské terminologie. ",
+    "popis": "Oficiální Anki balíček Ústavu dějin lékařství a cizích jazyků 1.LF – jedná se doporučenou slovní zásobu na zkoušku z lékařské terminologie. ",
     "předmět": "Latina 📚",
     "jazyk": ["Čeština"],
     "ročník": [1],

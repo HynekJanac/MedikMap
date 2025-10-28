@@ -9,18 +9,26 @@
 //   "datum": ""}
 
 let Clanky = [
+        {"nazev": "Zimní pitevna 💪",
+        "odkaz": "/Kurzy/Anatomie/01-Zimni-pitevna.html",
+        "obrazek":"Assets/Img/ZimniPitevna.jpg",
+        "popis": "Souhrný článek k zimním pitevním cvičením na 1.LF, materiály, tipy atd...",
+        "autor": "Hynek Janáč",},
         
+        {"nazev": "Letní pitevna ☀️",
+        "odkaz": "/Kurzy/Anatomie/02-Letni-pitevna.html",
+        "obrazek":"Assets/Img/LetniPitevna.jpg",
+        "popis": "Souhrný článek k letním pitevním cvičením na 1.LF, materiály, tipy atd...",
+        "autor": "Hynek Janáč",},
 
-        {"nazev": "Generátor zkouškových otázek",
-        "odkaz": "/Clanky/01-GeneratorOtazek.html",
-        "obrazek":"Assets/Img/Nastroj.jpeg",
-        "popis": "Jednoduchý a efektivní nástroj na přípravu k ústní zkoušce, umožnuje vložit vlastní seznam otázek a vygenerovat náhodný triplet, quadriplet...",
-        "kategorie": "Nástroj",
-        "autor": "Hynek Janáč",
-        "datum": ""},
+        {"nazev": "Interaktivní dráhy CNS 🧠",
+        "odkaz": "/Kurzy/Anatomie/03-Interaktivni-drahy-CNS.html",
+        "obrazek":"Assets/Img/Mozek.jpeg",
+        "popis": "Návod jak zprovoznit interaktivní dráhy CNS od Anatomického ústavu 1. Lékařské fakulty.",
+        "autor": "Hynek Janáč",},
 ]
-    
-
+     
+//–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 for(i = 0; i < Clanky.length; i++ ){
     const article = document.createElement("article");
@@ -64,12 +72,6 @@ for(i = 0; i < Clanky.length; i++ ){
     metadataAction.classList.add("cardMetadata", "metadataAction");
     metadataAction.innerHTML = 'Prozkoumat <i class="fa-solid fa-angle-right"></i>';
 
-    // Create category link
-    const categoryLink = document.createElement("a");
-    categoryLink.href = "#";
-    categoryLink.classList.add("cardMetadata", "metadataCategory");
-    categoryLink.innerHTML = '<i class="fa-solid fa-hashtag"></i>' + Clanky[i].kategorie;
-
     // Create author link
     const authorLink = document.createElement("a");
     authorLink.href = "#";
@@ -78,7 +80,6 @@ for(i = 0; i < Clanky.length; i++ ){
 
     // Assemble elements
     metadataWrap.appendChild(metadataAction);
-    metadataWrap.appendChild(categoryLink);
     metadataWrap.appendChild(authorLink);
 
     textDiv.appendChild(headline);

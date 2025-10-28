@@ -23,4 +23,3 @@ function CloseCollapsible(CollapsibleIndex){
     document.getElementsByClassName("fa-circle-info")[CollapsibleIndex].style.display = "block"
     document.getElementsByClassName("fa-circle-xmark")[CollapsibleIndex].style.display = "none"
 }
-

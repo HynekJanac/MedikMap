@@ -434,20 +434,20 @@ function ExportProject(){
     let favicon = ArticleDocumentHtml.createElement("link")
     favicon.rel = "icon"
     favicon.type = "image/x-icon"
-    favicon.href = "../Assets/Icons/Favicon.svg"
+    favicon.href = "/Assets/Icons/Favicon.svg"
     ArticleDocumentHtml.head.appendChild(favicon)
 
     var StyleSheets = ["Article.css", "Universal.css"]
     for (let i = 0; i < StyleSheets.length; i++) {
         let link = ArticleDocumentHtml.createElement("link")
         link.setAttribute("rel", "stylesheet")
-        link.href = "../Assets/Css/" + StyleSheets[i]
+        link.href = "/Assets/Css/" + StyleSheets[i]
         ArticleDocumentHtml.head.appendChild(link)
     }
     var Scripts = ["Utility.js", "Article.js"]
     for (let i = 0; i < Scripts.length; i++) {
         let script = ArticleDocumentHtml.createElement("script")
-        script.src = "../Assets/Js/Utility/" + Scripts[i]
+        script.src = "/Assets/Js/Utility/" + Scripts[i]
         script.defer = true
         ArticleDocumentHtml.head.appendChild(script)
     }
@@ -461,7 +461,7 @@ function ExportProject(){
     // Create span element with tabindex and id attributes
     let closeSpan = document.createElement('span');
     closeSpan.setAttribute('tabindex', '0');
-    closeSpan.id = 'zoom_image--close';
+    closeSpan.id = 'imageZoomClose';
     closeSpan.textContent = '×';
 
     // Create div element with class attribute
@@ -555,7 +555,7 @@ function ExportProject(){
     // Create the author link
     let authorLink = document.createElement('a');
     authorLink.classList.add('articleMetadata', 'MetadataAuthor');
-    authorLink.href = '../blog.html?author=' + String(author);
+    authorLink.href = '/blog.html?author=' + String(author);
     authorLink.innerHTML = '<i class="fa-solid fa-pen"></i> ' + String(author);
 
     // Create the date paragraph
@@ -566,7 +566,7 @@ function ExportProject(){
     // Create the category link
     let categoryLink = document.createElement('a');
     categoryLink.classList.add('articleMetadata', 'MetadataCategory');
-    categoryLink.href = '../blog.html?category=' + String(category);
+    categoryLink.href = '/blog.html?category=' + String(category);
     categoryLink.innerHTML = '<i class="fa-solid fa-hashtag"></i> ' + String(category);
 
     // Append the author link, date paragraph, and category link to the article info container

@@ -1,19 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spořič obrazovky</title>
-    <link rel="stylesheet" href="Assets/Css/Universal.css">
-</head>
-<style>
-    .sporic{
-        height:55px;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="Assets/Icons/Favicon.ico">
+
+  <title>Spořič obrazovky</title>
+  <style>
+
+    @media (prefers-color-scheme: dark) {
+    :root{
+      --background-color: #1a1818;
+      --logo-size: 120px;
+      --speed: 2.2; /* pixels per frame baseline */
+      }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root{
+      --background-color: #fcf9f9;
+      --logo-size: 120px;
+      --speed: 2.2; /* pixels per frame baseline */
     }
-</style>
+  }
+
+    html,body{height:100%;margin:0;background:#000;}
+    .stage{
+      position:relative;
+      width:100%;
+      height:100vh;
+      overflow:hidden;
+      display:flex;
+      align-items:flex-start;
+      justify-content:flex-start;
+      background-color: var(--background-color); }
+    /* the DVD "logo" - you can replace text with an <img> if you like */
+    .logo{
+      position:absolute;
+      width:var(--logo-size);
+      height:var(--logo-size);
+      font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial;
+      user-select:none;
+      -webkit-user-select:none;
+      transform: translate3d(0,0,0);
+      will-change: transform;
+      cursor:default;
+    }
+    
+
+  </style>
+</head>
 <body>
-    <div class="bounds">
-        <img class="sporic" src="./Assets/Icons/Logo.svg"> </img>
-    </div>
+  <div class="stage" id="stage">
+    <img class="logo" id="logo" src="/Assets/Icons/Favicon.svg" alt="">
+  </div>
+  <script>
+    (function(){
+      const stage = document.getElementById('stage');
+      const logo = document.getElementById('logo');
+
+      // initial position and velocity
+      let x = 60, y = 60;
+      let vx = (Math.random() < 0.5 ? 1 : -1) * (1 * parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--speed')));
+      let vy = (Math.random() < 0.5 ? 1 : -1) * (0.8 * parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--speed')));
+      let paused = false;
+
+
+      function size(){
+        return {
+          w: logo.offsetWidth,
+          h: logo.offsetHeight,
+          sw: stage.clientWidth,
+          sh: stage.clientHeight
+        }
+      }
+
+      let lastTime = performance.now();
+      function step(now){
+        if(paused){ lastTime = now; requestAnimationFrame(step); return; }
+        const dt = Math.min(40, now - lastTime) / 16.6667; // normalize to ~60fps
+        lastTime = now;
+
+        const s = size();
+        x += vx * dt;
+        y += vy * dt;
+
+        let bounced = false;
+        // hit left or right
+        if(x <= 0){ x = 0; vx = Math.abs(vx); bounced = true; }
+        else if(x + s.w >= s.sw){ x = s.sw - s.w; vx = -Math.abs(vx); bounced = true; }
+        // hit top or bottom
+        if(y <= 0){ y = 0; vy = Math.abs(vy); bounced = true; }
+        else if(y + s.h >= s.sh){ y = s.sh - s.h; vy = -Math.abs(vy); bounced = true; }
+
+        // tiny speed stabilization (prevent it from going too slow)
+        const speed = Math.sqrt(vx*vx + vy*vy);
+        if(speed < 0.6) {
+          const factor = 1.1; vx *= factor; vy *= factor;
+        }
+
+        // write transform
+        logo.style.transform = `translate3d(${Math.round(x)}px, ${Math.round(y)}px, 0)`;
+
+        if(bounced) onBounce();
+
+        requestAnimationFrame(step);
+      }
+
+      function onBounce(){
+        // change color and give a flash on bounce
+        setTimeout(()=> flash.classList.remove('on'), 90);
+      }
+
+      // start animation
+      requestAnimationFrame(step);
+
+      // make sure the logo starts fully inside the stage
+      window.addEventListener('load', ()=>{
+        const s = size();
+        x = Math.min(x, s.sw - s.w - 4);
+        y = Math.min(y, s.sh - s.h - 4);
+        logo.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      });
+
+      // keep it responsive on resize
+      window.addEventListener('resize', ()=>{
+        const s = size();
+        x = Math.min(x, s.sw - s.w);
+        y = Math.min(y, s.sh - s.h);
+      });
+
+    })();
+  </script>
 </body>
 </html>

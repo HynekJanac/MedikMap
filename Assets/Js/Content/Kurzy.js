@@ -9,17 +9,22 @@
 //   "datum": ""}
 
 let Clanky = [
-        
+        {"nazev": "Kurz anatomie 🫀",
+        "odkaz": "/kurz-anatomie.html",
+        "obrazek":"Assets/Img/Srdce.jpeg",
+        "popis": "Kurz anatomie MedikMap, jedná se převážně o doprovodné materiály k pitevním cvičením na 1. Lékařské fakultě.",
+        "kategorie": "Anatomie",
+        "autor": "Hynek Janáč"},
 
-        {"nazev": "Generátor zkouškových otázek",
-        "odkaz": "/Clanky/01-GeneratorOtazek.html",
-        "obrazek":"Assets/Img/Nastroj.jpeg",
-        "popis": "Jednoduchý a efektivní nástroj na přípravu k ústní zkoušce, umožnuje vložit vlastní seznam otázek a vygenerovat náhodný triplet, quadriplet...",
-        "kategorie": "Nástroj",
-        "autor": "Hynek Janáč",
-        "datum": ""},
+        {"nazev": "Kurz histologie 🔬",
+        "odkaz": "/kurz-histologie.html",
+        "obrazek":"Assets/Img/Histologie/00-Uvod-do-histologie.jpeg",
+        "popis": "Kurz histologie MedikMap, pokrývá syllabus 1. Lékařské fakulty, obsahuje materiály a kvízy sloužící k systematické přípravě na zkoušku z histologie.",
+        "kategorie": "Anatomie",
+        "autor": "Hynek Janáč",}
 ]
     
+
 
 
 for(i = 0; i < Clanky.length; i++ ){
@@ -64,12 +69,6 @@ for(i = 0; i < Clanky.length; i++ ){
     metadataAction.classList.add("cardMetadata", "metadataAction");
     metadataAction.innerHTML = 'Prozkoumat <i class="fa-solid fa-angle-right"></i>';
 
-    // Create category link
-    const categoryLink = document.createElement("a");
-    categoryLink.href = "#";
-    categoryLink.classList.add("cardMetadata", "metadataCategory");
-    categoryLink.innerHTML = '<i class="fa-solid fa-hashtag"></i>' + Clanky[i].kategorie;
-
     // Create author link
     const authorLink = document.createElement("a");
     authorLink.href = "#";
@@ -78,7 +77,6 @@ for(i = 0; i < Clanky.length; i++ ){
 
     // Assemble elements
     metadataWrap.appendChild(metadataAction);
-    metadataWrap.appendChild(categoryLink);
     metadataWrap.appendChild(authorLink);
 
     textDiv.appendChild(headline);

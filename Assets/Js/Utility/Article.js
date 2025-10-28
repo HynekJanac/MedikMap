@@ -44,17 +44,6 @@ function TableOfContents(){
 
 }
 
-function CopyLink() {
-  document.getElementById("Copy").style.display = "block";
-  //select the text in the text box
-  document.getElementById("Copy").select();
-  //copy the text to the clipboard
-  document.execCommand("copy");
-  document.getElementById("Copy").style.display = "none";
-  
-  document.getElementById("Copy_Info").style.opacity = "1";
-  document.getElementById("Copy_Info").style.position = "relative";
-}
 // When the user clicks on the button, hide or show table of contents
 function ShowHideContents(){
 if (document.getElementById("tocList").style.display == "none"){
@@ -67,10 +56,6 @@ else{
 }
 }
 
-//Script used to find url for sharing
-
-
-
 function ArticleImageViewer(){
   let images = Array.from(document.querySelectorAll('article img'))
   images.forEach( function(image){
@@ -78,7 +63,7 @@ function ArticleImageViewer(){
   } 
       
    )
-   document.getElementById("zoom_image--close").onclick = () => {
+   document.getElementById("imageZoomClose").onclick = () => {
       document.getElementById('imageZoomContainer').style.display = "none";
   }
   document.addEventListener("keydown", function(event) {
