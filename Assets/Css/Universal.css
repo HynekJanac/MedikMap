@@ -247,7 +247,7 @@ main{
 	font-size: 15px;
 }
 /*------------------------ Footer ------------------------*/
-.socialGrid{
+.socialShareGrid{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 70px);
 	text-align: center;
@@ -256,7 +256,7 @@ main{
 	row-gap: 16px;
 	margin-bottom: 25px;
 }
-.socialGrid a{
+.socialShareGrid a{
 	padding: 20px;
 	background-color: var(--main-color);
 	border-radius: 10px;

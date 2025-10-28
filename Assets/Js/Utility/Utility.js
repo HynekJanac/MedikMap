@@ -166,11 +166,11 @@ function ShowForm(){
   document.getElementById("ShowForm").style.display = "none"
 }
 
-function SocialGrid(){
+function socialShareGrid(){
   // Create the div element
-  var SocialGrid = document.createElement('div');
-  SocialGrid.className = 'socialGrid';
-  SocialGrid.id = 'socialGrid';
+  var socialShareGrid = document.createElement('div');
+  socialShareGrid.className = 'socialShareGrid';
+  socialShareGrid.id = 'socialShareGrid';
 
   // Create an array of link objects
   var SocialLinks = [
@@ -214,10 +214,10 @@ function SocialGrid(){
     iconElement.className = link.iconClassName;
 
     anchorElement.appendChild(iconElement);
-    SocialGrid.appendChild(anchorElement);
+    socialShareGrid.appendChild(anchorElement);
   }
 
-  document.getElementsByTagName("main")[0].appendChild(SocialGrid)
+  document.getElementsByTagName("main")[0].appendChild(socialShareGrid)
 }
 
 // Back to top
@@ -361,7 +361,7 @@ function MasterFunction(){
   
   EndBlock()
   
-  SocialGrid()
+  socialShareGrid()
   
   CookiePopUp()
 
