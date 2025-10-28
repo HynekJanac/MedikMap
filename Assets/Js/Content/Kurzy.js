@@ -17,7 +17,7 @@ let Clanky = [
         "autor": "Hynek Janáč"},
 
         {"nazev": "Kurz histologie 🔬",
-        "odkaz": "/kurz-histologie.html",
+        "odkaz": "/Kurz-histologie.html",
         "obrazek":"Assets/Img/Histologie/00-Uvod-do-histologie.jpeg",
         "popis": "Kurz histologie MedikMap, pokrývá syllabus 1. Lékařské fakulty, obsahuje materiály a kvízy sloužící k systematické přípravě na zkoušku z histologie.",
         "kategorie": "Anatomie",
