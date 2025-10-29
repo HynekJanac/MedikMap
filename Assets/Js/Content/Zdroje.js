@@ -3,6 +3,15 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 
 let Zdroje = [
+   {
+  "nazev": "Přednášky z patologie FFix It!",
+  "odkaz": "https://www.youtube.com/playlist?list=PL_Pf2a8Jj8AAuRPrQYjbqIOm5G_u6HZ7s",
+  "popis": "Přednášky z patologie doktora Ondřeje Fabiána.",
+  "předmět": "Patologie 💀",
+  "jazyk": ["Čeština", "Angličtina"],
+  "ročník": [3],
+  "typ": "YouTube playlist"
+},
   {
   "nazev": "Decoiled by Coiled",
   "odkaz": "https://www.youtube.com/@decoiledbycoiled8777",
