@@ -122,6 +122,9 @@ article h3{
 	color: var(--text-color);
 }
 
+.upozorneni{
+
+}
 
 /*Basic text actions*/
 article p{
@@ -150,6 +153,23 @@ article li{
 	line-height: 30px;
 	font-weight: 400;
 }
+
+.upozorneni{
+	display: flex;
+	padding: 0.5em;
+	border: 2px solid var(--main-color);
+	border-radius: 20px;
+	align-items: center;
+	font-size: 25px;
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+}
+.upozorneni p{
+	font-size: 17px;
+	line-height: normal;
+	margin: 0 15px;
+}
+
 
 .linkGrid{
 	width: 100%;
@@ -186,7 +206,7 @@ article li{
 q{
 	display: block;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	font-family: var(--quote-font);
 	color: var(--text-color);
