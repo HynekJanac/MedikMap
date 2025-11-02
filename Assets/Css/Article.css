@@ -190,6 +190,7 @@ article li{
 	text-decoration: none;
 	transition: all .3s ease-in-out;
 }
+
 .item p{
 	color: var(--main-color);
 	font-weight: bold;
