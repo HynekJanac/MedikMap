@@ -8,6 +8,7 @@ var MasterSettings = {
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
   { title: 'Články', href: '/kurzy.html', className: 'navLink', textContent: 'Kurzy  🎓' },
+  { title: 'Zdroje', href: '/index.html', className: 'navLink', textContent: 'Zdroje  📚' },
   { title: 'Články', href: '/Clanky.html', className: 'navLink', textContent: 'Články 📝' },
   { title: 'O nás', href: '/onas.html', className: 'navLink', innerHTML: 'O nás' },
   { title: 'Hledat', href: '/index.html', className: 'navLink', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
