@@ -3,7 +3,7 @@
 var MasterSettings = {
   preloader: true,
   infobox: true,
-  infobox_message: "Spustili jsme kurz anatomie 🫀 <a class='infoboxLink' href='/kurz-anatomie.html'>(zde)</a>",
+  infobox_message: "Přejeme veselé Vánoce a štastný nový rok 🎄",
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [

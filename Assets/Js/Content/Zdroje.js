@@ -31,7 +31,7 @@ let Zdroje = [
   "typ": "Výukové materiály"
 },
   {
-  "nazev": "PropdeutikA – 2.LF",
+  "nazev": "PropedeutikA – 2.LF",
   "odkaz": "http://new.propedeutika.cz/",
   "popis": "Výukové materiály k propedeutice vnitřního lékařství z 2. Lékařské faukulty, obsahují články k tématům chorobobips, fyzikální vyšetření atd. ",
   "předmět": "Interní propedeutika 🩺",
