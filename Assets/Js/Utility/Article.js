@@ -112,5 +112,5 @@ document.addEventListener("keydown", function(event) {
         }
     }); 
 
+    TableOfContents()
 ArticleImageViewer()
-TableOfContents()
