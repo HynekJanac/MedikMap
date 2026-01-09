@@ -2,7 +2,7 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: true,
+  infobox: false,
   infobox_message: "Přejeme veselé Vánoce a štastný nový rok 🎄",
 } 
 // adding [NEW] to the title adds a little dot
