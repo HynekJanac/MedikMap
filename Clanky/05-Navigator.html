@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>MedikMap Navigátor</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+      <meta name="author" content="Hynek Janáč" />
+      <link rel="icon" type="image/x-icon" href="/Assets/Icons/Favicon.ico" />
+      <link rel="stylesheet" href="/Assets/Css/Article.css" />
+      <link rel="stylesheet" href="/Assets/Css/Universal.css" />
+      <link rel="stylesheet" href="/Assets/Css/GeneratorOtazek.css">
+      <script src="/Assets/Js/Utility/Utility.js" defer="defer"></script>
+      <script src="/Assets/Js/Utility/Article.js" defer="defer"></script>
+
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCGKHBJTPP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCGKHBJTPP');
+</script>
+<script defer="defer">
+    function UpravSeznam(){
+    let source = document.getElementById("otazky_source")
+    
+    let removeNumbers = source.value.replace(/(\d+. +)|(\d+.[a-z] +)|([A-Z]\d+. +)|(\d+ +([a-f]) +)|((?<=\n)[a-f] +)|(\d+.\n. )|((?<=\n)- +)/gm,"")
+    let removeNewLines = removeNumbers.replace(/((?<=\n)\n)|(\n^(?=[a-z]))/gm," ")
+    source.value = removeNewLines
+}
+    function CopySeznam(){
+         // Select the text field
+        let source = document.getElementById("otazky_source").value
+        navigator.clipboard.writeText(source);
+            }   
+    function ClearSeznam(){
+                document.getElementById("otazky_source").value = ""
+    }
+</script>
+   </head>
+   <body>
+      <main>
+         <div class="imageZoomContainer" id="imageZoomContainer">
+            <span tabindex="0" id="imageZoomClose">×</span>
+            <div class="imageZoomControls"><i class="fa-solid fa-angle-left" tabindex="0" id="controls-left"></i><img class="imageZoomImage" id="imageZoomImage" src="" alt="" /><i class="fa-solid fa-angle-right" tabindex="0" id="controls-right"></i></div>
+            <p class="imageZoomCaption">Caption test</p>
+         </div>
+         <div class="coverImageWrap">
+            <img class="coverImage"   src="/Assets/Img/Navigator.jpg" alt="">
+        </div>
+
+
+         <h1>MedikMap: Navigátor 🧭</h1>
+         <div class="articleMetadataContainer">
+            <a class="articleMetadata MetadataAuthor" href="mailto:medikmap.connect@gmail.com" title="Kontaktovat autora článku"><i class="fa-solid fa-user"></i> Hynek Janáč</a>
+            <p class="articleMetadata MetadataDate"><i class="fa-solid fa-clock"></i> 07.02.2026</p>
+             <a class="articleMetadata MetadataCategory" href="/Clanky.html?category=Nástroj" title="Další články ze kategorie"><i class="fa-solid fa-gear"></i> Nástroj</a>
+             
+         </div>
+         <article>
+            <h2 id="Představujeme">Představujeme MedikMap: Navigátor  🧭</h2>
+            <p>Zkoušky na lékařské fakultě se vyznačují svým rozsahem, a proto je pro úspěšné zkouškové zásadní si správně rozplánovat učení.</p>
+            <p>S tím mi už od prvního ročníku pomáhala jednoduchá google tabuka, kde jsem si jednotlivé otázky rozdělené po tématech označoval metodou semafor (A,B,C,D). Postupně jsem si do tabulky přidával další a další funkce, díky kterým je plánování učiva výrazně jednoduší.</p>
+            <h2 id="funkce">Funkce MediMap Navigátor 🧭</h2>
+            <ul>
+                <li>✅ Automatický výpočet počtu otázek na den</li>
+                <li>✅ Možnost nastavení počtu dnů potřebných k opakování</li>
+                <li>✅ Vestavěné formátování pro metodu semafor</li>
+                <li>✅ Graf k sledování počtu zvládnutých otázek za den</li>
+                <li>✅ Automatické upozornění na otázky k zopakování</li>
+            </ul>
+            <div class="image">
+                <img src="/Assets/Img/Clanky/MedikMapTable.png" alt="">
+                <p class="caption">MedikMap Navigátor v akci</p>
+            </div>
+            
+
+            <div><a target="_blank" href=" https://docs.google.com/spreadsheets/d/1SIIwXs8y_w00dDulHjoqOdiDczQL29svBVnUHg_fNao/edit?usp=sharing">Odkaz na tabulku</a></div>
+            
+            
+            <h2 id="Návod">Návod k použítí</h2>
+            <p>Tabulka může na první pohled vypadat komplikovaně, ale její používání je ve skutenčnosti snadené</p>
+            <ol>
+                <li>Vytvořte si kopii tabulky</li>
+                <li>Nastavte si termín zkoušky, den od kterého se začnete učit, a kolik dní potřebujete na opakování</li>
+                <li>Následně vložte seznam otázek, tak aby každá otázka byla na vlastním řádku (Ke správnému formátování můžete využít nástroj níže)</li>
+                <li>Vše je připraveno, přejeme hodně štětí při studiu</li>
+            </ol>
+            <div class="image">
+                <img src="/Assets/Img/Clanky/NavigatorNavod.gif" alt="">
+                <p class="caption">Podrobný návod</p>
+            </div>
+           <h2 id="Připrava">Příprava seznamu otázek</h2>
+            <p>Tento nástroj automaticky odebere číslování otázek a nadbytečné nové řádky, tak aby každá otázka byla na svém vlastním řádku.</p>
+           <div class="input">
+                <textarea id="otazky_source" cols="30" rows="15" placeholder="Sem vlož neupravený seznam otázek &#10 1. Otazka  &#10 2. Otázka &#10 3. Otázka "></textarea>
+            <div class="buttonsGrid">
+                    <button title="Upravit seznam" onclick="UpravSeznam()"><i class="fa-solid fa-circle-check"></i></button>
+                    <button title="Zkopírovat do schránky" onclick="CopySeznam()"><i class="fa-solid fa-copy"></i></button>
+                    <button title="Vyčistit" onclick="ClearSeznam()"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+                
+            </div>
+        </article>
+      </main>
+   </body>
+</html>

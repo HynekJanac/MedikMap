@@ -230,6 +230,10 @@ article img{
 	cursor: zoom-in;
 	transition: transform .30s ease-in-out;
 }
+article img:hover{
+	transform: scale(1.1);
+
+}
 /*iframes*/
 
 iframe{
@@ -281,7 +285,7 @@ iframe{
 		text-align: left;
 	}
 	article img{
-		width: 70%;
+		width: 95%;
 	}
 	.youtube{
 		height:350px ;

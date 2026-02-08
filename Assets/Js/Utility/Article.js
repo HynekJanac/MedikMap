@@ -71,6 +71,9 @@ function ArticleImageViewer(){
         document.getElementById('imageZoomContainer').style.display = "none";
         }
     });
+  document.getElementById("imageZoomContainer").onclick = () => {
+      document.getElementById('imageZoomContainer').style.display = "none";
+  }
 }
 
 function ViewImage(image_id){

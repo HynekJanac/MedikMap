@@ -9,7 +9,13 @@
 //   "datum": ""}
 
 let Clanky = [
-        
+         {"nazev": "MedikMap: Navigátor 🧭",
+        "odkaz": "/Clanky/05-Navigator.html",
+        "obrazek":"Assets/Img/Navigator.jpg",
+        "popis": "MedikMap Navigátor pomáhá s učením se na zkoušky.",
+        "kategorie": "Nástroj",
+        "autor": "Hynek Janáč",
+        "datum": ""},
 
         {"nazev": "Recenze – Atlas fyziologie (Silbernagl Stefan) 📚",
         "odkaz": "/Clanky/04-Ucebnice-Silbernagl.html",

@@ -8,6 +8,7 @@
     <link rel="icon" href="Assets/Icons/Favicon.ico" type="icon">
     <link rel="stylesheet" href="/Assets/Css/Universal.css">
     <link rel="stylesheet" href="/Assets/Css/GeneratorOtazek.css">
+    <link rel="stylesheet" href="/Assets/Css/Article.css">
     <script defer src="/Assets/Js/Utility/Utility.js"></script>
     
     <title>Generátor zkouškových otázek</title>
@@ -49,8 +50,18 @@
 </head>
 <body> 
     <main>
-    <div class="info">
-        <h1>Generátor zkouškových otázek</h1>
+          <div class="coverImageWrap">
+            <img class="coverImage"   src="/Assets/Img/Nastroj.jpeg" alt="">
+        </div>
+         <h1>Generátor zkouškových tripletů</h1>
+         <div class="articleMetadataContainer">
+            <a class="articleMetadata MetadataAuthor" href="mailto:medikmap.connect@gmail.com" title="Kontaktovat autora článku"><i class="fa-solid fa-user"></i> Hynek Janáč</a>
+            <p class="articleMetadata MetadataDate"><i class="fa-solid fa-clock"></i> 07.02.2026</p>
+             <a class="articleMetadata MetadataCategory" href="/Clanky.html?category=Nástroj" title="Další články ze kategorie"><i class="fa-solid fa-gear"></i> Nástroj</a>
+             
+         </div>    
+         <article>
+         <div class="info">
         <p>Jednoduchý a efektivní nástroj na přípravu k ústní zkoušce, umožnuje vložit vlastní seznam otázek a vygenerovat náhodný triplet (či jakýkoli jiný počet)</p>
         <ol>
             <li>Zkopíruj seznam otázek do textového pole</li>
@@ -59,7 +70,7 @@
             <li>Vygeneruj otázky</li>
         </ol>
     </div>
-    
+         </article>
     <div class="input">
         <textarea id="otazky_source" cols="30" rows="10" placeholder="Sem vlož seznam otázek &#10 1. Otazka  &#10 2. Otázka &#10 3. Otázka "></textarea>
         <input id="pocet_otazek"   value="3" type="number" inputmode="numeric" min=1 placeholder="Počet otázek">

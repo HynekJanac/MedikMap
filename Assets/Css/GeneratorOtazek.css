@@ -18,6 +18,7 @@ h1, h2{
     border: 2px solid var(--main-color);
     border-radius: 15px;
     font-family: var(--default-font);
+    padding: 15px;
     
 }
 
@@ -48,6 +49,14 @@ font-size: 23px;
     color: var(--background-color);
     background-color:  var(--main-color);
     transform: scale(1.05);
+}
+.input button:hover > .fa-solid{
+		color: var(--secondary-color);
+	}
+.buttonsGrid{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .otazky{
