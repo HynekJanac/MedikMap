@@ -2,8 +2,8 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: false,
-  infobox_message: "Přejeme veselé Vánoce a štastný nový rok 🎄",
+  infobox: true,
+  infobox_message: '<a href="/Clanky/05-Navigator.html"> Představujeme MedikMap: Navigátor 🧭</a>',
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [

@@ -177,11 +177,11 @@ main{
 	background-color: var(--main-color);
 	margin: 0 0.5em;
 }
-.infoboxLink{
+.infobox a{
 	color: var(--secondary-color);
 	transition: color .30s ease;
 }
-.infoboxLink:hover{
+.infobox a:hover{
 	color: var(--text-color);
 }
 
