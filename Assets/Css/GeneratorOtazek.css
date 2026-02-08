@@ -31,7 +31,7 @@ h1, h2{
 font-size: 23px;
 }
 
-.input button{
+.inputButton{
     background-color: var(--background-color);
     color: var(--main-color);
     border-radius: 20px;
@@ -45,12 +45,12 @@ font-size: 23px;
     transition: all .3s ease-in-out;
 }
 
-.input button:hover{
+.inputButton:hover{
     color: var(--background-color);
     background-color:  var(--main-color);
     transform: scale(1.05);
 }
-.input button:hover > .fa-solid{
+.inputButton:hover > .fa-solid{
 		color: var(--secondary-color);
 	}
 .buttonsGrid{
