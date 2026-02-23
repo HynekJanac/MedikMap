@@ -2,7 +2,7 @@
 // Zdroj lze přidat kamkoliv do seznamu, stránka ho zařadí do kategorie sama
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 
-let Zdroje = [
+const Zdroje = [
    {
   "nazev": "Přednášky z patologie FFix It!",
   "odkaz": "https://www.youtube.com/playlist?list=PL_Pf2a8Jj8AAuRPrQYjbqIOm5G_u6HZ7s",
@@ -55,7 +55,7 @@ let Zdroje = [
   "předmět": "Chirurgická propedeutika 🔪",
   "jazyk": ["Čeština"],
   "ročník": [3],
-  "typ": "Youtube playlist"
+  "typ": "YouTube playlist"
 },
   {
   "nazev": "Přednášky a výukové materiály 2.LF",
@@ -118,7 +118,7 @@ let Zdroje = [
   "předmět": "Anatomie 🫀",
   "jazyk": ["Čeština"],
   "ročník": [1],
-  "typ": "Přednášly"
+  "typ": "Přednášky"
 },
 {
   "nazev": "Anatomie – Jiří Beneš",
@@ -145,7 +145,7 @@ let Zdroje = [
   "předmět": "Ošetřovatelství 💉",
   "jazyk": ["Česky"],
   "ročník": [2],
-  "typ": "YouTube videa"
+  "typ": "YouTube kanál"
     },
     {
         "nazev": "Atlas řezů mozkem",
@@ -214,7 +214,7 @@ let Zdroje = [
         "předmět": "Mikrobiologie 🧫",
         "jazyk": ["English"],
         "ročník": [2,3],
-        "typ": "YouTube"},
+        "typ": "YouTube kanál"},
 
     {"nazev": " ⭐️ Physeo – Viry",
         "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw-mM4PT-EjFSMsfh1vdFcJA&si=byXYKphbl7SGoHKX",
@@ -222,7 +222,7 @@ let Zdroje = [
         "předmět": "Mikrobiologie 🧫",
         "jazyk": ["English"],
         "ročník": [2,3],
-        "typ": "YouTube"},
+        "typ": "YouTube kanál"},
 
     {"nazev": " ⭐️ Physeo – Paraziti",
         "odkaz": "https://youtube.com/playlist?list=PLfJxXWqsLMw-_x_DornZ5kgyd5xTZZ4ur&si=RtAoq9otVTHus4yu",
@@ -230,7 +230,7 @@ let Zdroje = [
         "předmět": "Mikrobiologie 🧫",
         "jazyk": ["English"],
         "ročník": [2,3],
-        "typ": "YouTube"},
+        "typ": "YouTube kanál"},
 
     {"nazev": " ⭐️ Biochemie  – Anki",
         "odkaz": "https://drive.google.com/file/d/1METZt7hYeBPoZ8w0ponTBqjkBenXt3_X/view?usp=sharing",
@@ -254,7 +254,7 @@ let Zdroje = [
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "Anatom.cz",
     "odkaz": "https://anatom.cz/",
@@ -294,7 +294,7 @@ let Zdroje = [
     "předmět": "Anatomie 🫀",
     "jazyk": ["Čeština"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "Skelet 3D",
     "odkaz": "http://skelet3d.lf3.cuni.cz/index.xhtml",
@@ -389,7 +389,7 @@ let Zdroje = [
     "předmět": "Anatomie 🫀",
     "jazyk": ["English"],
     "ročník": [1],
-    "typ": "Youtube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "Terminologia Anatomica 2.0",
     "odkaz": "https://ta2viewer.openanatomy.org/",
@@ -414,7 +414,7 @@ let Zdroje = [
     "předmět": "Anatomie 🫀",
     "jazyk": ["English"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "Biofyzika – Anki",
     "odkaz": "https://drive.google.com/file/d/1gSv97JcKxVXFwmSba6uk-EsLEVMuB7tl/view?usp=sharing",
@@ -446,7 +446,7 @@ let Zdroje = [
     "předmět": "Biofyzika ⚙️",
     "jazyk": ["English"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "Prezentace a další studijní materiály ULBLD",
     "odkaz": "http://biochemie.euweb.cz/",
@@ -462,7 +462,7 @@ let Zdroje = [
     "předmět": "Biochemie ⚗️",
     "jazyk": ["Čeština", "English"],
     "ročník": [2],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "Metabolické dráhy – ROCHE",
     "odkaz": "https://web.archive.org/web/20230614121818/http://biochemical-pathways.com/#/map/1",
@@ -566,7 +566,7 @@ let Zdroje = [
     "předmět": "Histologie 🔬",
     "jazyk": ["Čeština"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "Video popisy histologických preparátů z LFP",
     "odkaz": "https://www.youtube.com/playlist?list=PL1VZpcaQ43L1Yu-uNZowbddqm5CPn5urA",
@@ -574,7 +574,7 @@ let Zdroje = [
     "předmět": "Histologie 🔬",
     "jazyk": ["Čeština"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "Virtuální mikroskop – 3.LF",
     "odkaz": "https://slides.lf3.cuni.cz/",
@@ -598,7 +598,7 @@ let Zdroje = [
     "předmět": "Histologie 🔬",
     "jazyk": ["Čeština"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": " ⭐️ Histologie a embryologie – Anki",
     "odkaz": "https://drive.google.com/file/d/1yBaY2Jn7DuFrXxtmq3bAxcv9AeW20Frq/view?usp=sharing",
@@ -630,7 +630,7 @@ let Zdroje = [
     "předmět": "Histologie 🔬",
     "jazyk": ["English"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": "HistologyGuide",
     "odkaz": "https://histologyguide.com/",
@@ -654,7 +654,7 @@ let Zdroje = [
     "předmět": "Histologie 🔬",
     "jazyk": ["Slovenština"],
     "ročník": [1],
-    "typ": "YouTube"},
+    "typ": "YouTube kanál"},
     
     {"nazev": " ⭐️ Latina – Anki 1.LF",
     "odkaz": "https://udl.lf1.cuni.cz/slovni-zasoba-pro-studenty-lek",
@@ -769,105 +769,3 @@ let Zdroje = [
     "typ": "Webová stránka"},
     
     ]
-    
-    
-    //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    
-    // Seřadí array Zdroje abecedně podle názvu 
-    Zdroje.sort((a, b) => a.nazev.localeCompare(b.nazev));
-    
-    
-    // První for loop zjistí k kterým předmětům (anatomie, histologie...) zdroje patří
-    let predmety = [];
-    
-    // Pokud v seznamu není je název předmětu přidán
-    for(a=0; a < Zdroje.length; a++){
-        if (predmety.includes(Zdroje[a].předmět) == false){
-            predmety.push(Zdroje[a].předmět)
-        }
-    }
-    predmety.sort() //Seřadí předměty podle abecedy
-    
-    // Pak dojde k procházení zdrojů jeden po druhém, podle předmětu
-    for(i=0; i < predmety.length;i++){
-        // Vytvoří se html pro sekci předmětu
-        const sekce = document.createElement("section")
-        sekce.className = "category-container"
-        sekce.id = predmety[i]
-        sekce.title= predmety[i]
-
-        const sekceNadpis = document.createElement("h2")
-        sekceNadpis.textContent = predmety[i]
-        sekceNadpis.className = "category"
-        sekce.appendChild(sekceNadpis)
-        //Vytvoří se for loop pro jednotlivé array Zdroje
-        for(z=0; z < Zdroje.length; z++){
-            //Pokud zdroj souhlasí se zvoleným předmětem postoupí se k tvorbě html kódu
-            if(predmety[i] == Zdroje[z].předmět){
-                const zdrojWrap = document.createElement("div"); // základní wrapper
-                zdrojWrap.classList.add("item-wrap");
-    
-                const header = document.createElement("div"); // hlavní nadpis
-                header.classList.add("item-header");
-    
-                const nazevAodkaz = document.createElement("a");
-                nazevAodkaz.href = Zdroje[z].odkaz; 
-                nazevAodkaz.classList.add("item-link");
-                nazevAodkaz.target = "_blank";
-                nazevAodkaz.innerHTML = Zdroje[z].nazev;
-    
-                const infoIcon = document.createElement("i"); // ikonka ℹ︎
-                infoIcon.classList.add("fa-solid", "fa-circle-info");
-                infoIcon.setAttribute("tabindex", "0");
-                infoIcon.setAttribute("title", "Více informací");
-    
-                const closeIcon = document.createElement("i"); // ikonka x
-                closeIcon.classList.add("fa-solid", "fa-circle-xmark");
-                closeIcon.setAttribute("tabindex", "0");
-                closeIcon.setAttribute("title", "Méně informací");
-    
-                header.appendChild(nazevAodkaz);
-                header.appendChild(infoIcon);
-                header.appendChild(closeIcon);
-    
-                const content = document.createElement("div"); // prostor pro metadata a popiske
-                content.classList.add("item-content");
-    
-                const metadata = document.createElement("div"); // metadata
-                metadata.classList.add("item-metadata");
-    
-                const typIkona = document.createElement("i"); // typ zdroje
-                typIkona.classList.add("fa-solid", "fa-bookmark");
-                const typText = document.createTextNode(Zdroje[z].typ);
-    
-                const jazykIkona = document.createElement("i"); // jazyk zdroje
-                jazykIkona.classList.add("fa-solid", "fa-comment");
-                const jazykText = document.createTextNode(Zdroje[z].jazyk.join(', '));
-    
-                const rocnikIkona = document.createElement("i"); // doporučené ročníky
-                rocnikIkona.classList.add("fa-solid", "fa-graduation-cap");
-                const rocnikText = document.createTextNode("Ročník: " + Zdroje[z].ročník.join("., "));
-    
-                metadata.appendChild(typIkona);
-                metadata.appendChild(typText);
-                
-                metadata.appendChild(rocnikIkona);
-                metadata.appendChild(rocnikText);
-    
-                metadata.appendChild(jazykIkona);
-                metadata.appendChild(jazykText);
-    
-                const popis = document.createElement("p"); // popis zdroje
-                popis.textContent = Zdroje[z].popis
-                content.appendChild(metadata);
-                content.appendChild(popis);
-    
-                zdrojWrap.appendChild(header);
-                zdrojWrap.appendChild(content);
-    
-                sekce.appendChild(zdrojWrap) // přidání k hlavní sekci předmětu
-            }
-        }
-        let target = document.getElementById("Links-Wrap")
-        target.appendChild(sekce)
-    }

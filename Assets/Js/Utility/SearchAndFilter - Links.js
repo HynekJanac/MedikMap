@@ -1,60 +1,58 @@
-// Searches URL paremetrs for arguments
-let search = new URLSearchParams(window.location.search).get('search')
-let category = new URLSearchParams(window.location.search).get('category')
-
-// Displays search field
-
 document.getElementById("Search").style.display = "flex";
 
-// SearchAndFilter function searches through articles in blog.html, and shows results
-// It accepts 3 types of requests, 1. text search headline, 2. search categories, 3. search authors
-// The function itself has 3 arguments, search_request = target searcg string, class_selector = specifies range
-function SearchAndFilter(request_type, search_request){
-    // Declare variabless
-    var filter, card, target, i, txtValue, class_selector, search_request;
-    if (request_type == "search"){
-        search_request = document.getElementById('SearchInput');
-        filter = search_request.value.toUpperCase();
-        class_selector = "item-link"
-        container_selector = "item-wrap"
-       
-    } else {filter = search_request.toUpperCase();}
-     
-    if (request_type == "category"){
-        class_selector = "category"
-        container_selector = "category-container"
-    }
-    card = document.getElementById("Links-Wrap").getElementsByClassName(container_selector);
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < card.length; i++) {
-    target = card[i].getElementsByClassName(class_selector)[0];
-    txtValue = target.textContent || target.innerText || target.getAttribute("title");
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        card[i].style.display = "";
-    } else {
-        card[i].style.display = "none";
-    }
-    }
+let predmety = [... new Set(Zdroje.map(zdroj => zdroj.předmět))].sort();
+let zdroje = [... new Set(Zdroje.map(zdroj => zdroj.nazev))].sort();
+let typy = [... new Set(Zdroje.map(zdroj => zdroj.typ))].sort();
+let jazyk = [... new Set(Zdroje.map(zdroj => zdroj.jazyk))]
 
+function createFilters(options,id){
+    document.createElement("option")
+    for (var i = 0; i < options.length; i++) {
+        let option = document.createElement("option")
+        option.value = options[i] 
+        option.textContent = options[i] 
+        document.getElementById(id).append(option);
+    }
+}
+
+createFilters(predmety,"predmet")
+createFilters(typy,"typ")
+
+
+function search(){
+    let search = document.getElementById("SearchInput").value
+    console.log(search)
+    let upraveneZdroje = Zdroje.filter(zdroje => zdroje.nazev.toLowerCase().includes(search.toLowerCase()))
+    console.log(upraveneZdroje)
+    zdrojeBuilder(upraveneZdroje)
 }
 
 
-// This code finds all the tags attached to articles and generates filters
-var Alltags = document.getElementsByClassName("category")
-var categories = []
-for (var i = 0; i < Alltags.length; i++) {
-    categories.push(Alltags[i].innerText);
+function filter(){
+    let predmet = document.getElementById("predmet").value
+    let typ = document.getElementById("typ").value
+    
+    if (predmet == "NoFilter" && typ == "NoFilter"){
+        zdrojeBuilder()
+    }
+    if (predmet == "NoFilter" && typ != "NoFilter"){
+        let uppraveneZdroje = Zdroje.filter(zdroj => zdroj.typ == typ)
+        zdrojeBuilder(uppraveneZdroje)
+    }
+    if (typ == "NoFilter" && predmet != "NoFilter"){
+        let uppraveneZdroje = Zdroje.filter(zdroj => zdroj.předmět == predmet)
+        zdrojeBuilder(uppraveneZdroje)
+    }
+    if (predmet != "NoFilter" && typ != "NoFilter"){
+        let uppraveneZdroje = Zdroje.filter(zdroj => zdroj.předmět == predmet && 
+        zdroj.typ == typ)
+        zdrojeBuilder(uppraveneZdroje)
+    }
 }
 
-let uniquecategories = [...new Set(categories)];
-
-for (var i = 0; i < uniquecategories.length; i++) {
-    document.getElementById("filter").innerHTML += '<a class="filterBtn" href="#'+ uniquecategories[i] +'"></a>';
-    document.getElementsByClassName("filterBtn")[i].setAttribute('onclick','SearchAndFilter("category" ,"' + uniquecategories[i] + '")')
-    document.getElementsByClassName("filterBtn")[i].innerText = uniquecategories[i] 
-}
-
-
-if (category != null){
-    SearchAndFilter("category" ,category)
+function resetFilters(){
+    document.getElementById("predmet").value = "NoFilter"
+    document.getElementById("typ").value = "NoFilter"
+     document.getElementById("SearchInput").value = ""
+    zdrojeBuilder()
 }

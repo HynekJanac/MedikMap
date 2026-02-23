@@ -14,7 +14,6 @@
 		--secondary-color: #111111;
 		--text-color: #ffffff;
 		--section-note-color: rgba(255, 255, 255, 0.712);
-		--grid: 1fr;
 		}
 }
 
@@ -27,13 +26,9 @@
 		--secondary-color: #ffffff;
 		--text-color: #000000;
 		--section-note-color: rgba(0, 0, 0, 0.712);
-		--grid: 1fr;
 	}
 }
 
-*,*::before,*::after{
-	box-sizing: border-box;
-}
 html{
 	scroll-behavior: smooth;
 }

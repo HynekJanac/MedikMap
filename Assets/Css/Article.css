@@ -118,12 +118,19 @@ article h3{
 	transform: scale(1.1);
 	color: var(--text-color);
 }
-.MetadataAuthor:hover > i, .MetadataAuthor:focus > i, .MetadataCategory:hover > i, .MetadataCategory:focus > i{
+.MetadataAuthor:hover > i,
+.MetadataAuthor:focus > i,
+.MetadataCategory:hover > i,
+.MetadataCategory:focus > i{
 	color: var(--text-color);
 }
 
-.upozorneni{
 
+article pre{
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	padding: 1em;
+	border-radius: 15px;
 }
 
 /*Basic text actions*/

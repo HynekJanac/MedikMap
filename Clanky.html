@@ -14,7 +14,8 @@
 
     <script defer src="Assets/Js/Utility/Utility.js"></script>
     <script defer src="Assets/Js/Content/Clanky.js"></script>
-    <script defer src="Assets/Js/Utility/SearchAndFilter.js"></script>    
+    <script defer src="Assets/Js/Utility/ContentBuilder.js"></script>
+    <script defer src="Assets/Js/Utility/SearchAndFilter - Articles.js"></script>
     
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCGKHBJTPP"></script>
@@ -36,7 +37,11 @@
             <input type="text" class="SearchInput" id="SearchInput" onkeyup='SearchAndFilter("search")' placeholder="Search for posts...">
         </div>
 
-        <div class="filter" id="filter">
+         <div class="filter" id="filters">
+            <select name="kategorie" id="kategorie" class="filterBtn" oninput="filter()">
+                <option value="NoFilter">Všechny články</option>
+            </select>
+            <button class="filterBtn" onclick="resetFilters()"><i class="fa-solid fa-filter-circle-xmark"></i> Vymazat filtry</button>
         </div>
     
         <content id="content">

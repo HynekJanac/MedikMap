@@ -1,4 +1,3 @@
-
 function TableOfContents(){
   let TableOfContents = document.createElement("nav")
   TableOfContents.role = "navigation"

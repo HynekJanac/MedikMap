@@ -29,22 +29,25 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	font-size: 1.25rem;
 	row-gap: 0.5em;
 	margin: 1em auto;
 	padding: 0;
 }
 .filterBtn{
 	color: var(--main-color);
-	padding: 0.4em;
+	padding: 0.5em;
 	font-weight: bold;
 	border-radius: 30px;
 	width: fit-content;
 	text-decoration: none;
 	margin: 0 1em;
+    font-family: var(--default-font);
+    text-align: center;
+    font-size: 1.1em;
 	border: 2px solid var(--main-color);
 	cursor: pointer;
 	transition: all .3s ease-in-out;
+    background-color: var(--background-color);
 }
 .filterBtn:hover{
 	transform: scale(1.1);

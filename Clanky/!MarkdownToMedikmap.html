@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown To Medikmap</title>
+
+    <link rel="stylesheet" href="/Assets/Css/Universal.css">
+    <link rel="stylesheet" href="/Assets/Css/Markdowntomedikmap.css">
+    <link rel="icon" href="/Assets/Icons/Favicon.svg" type="image/x-icon">
+    <script defer src="/Assets/Js/Utility/Markdownconverter.js"></script>
+</head>
+
+<body> 
+    <main>
+    <div class="tool-info">
+        <h1>Markdonw to MedikMap</h1>
+        <p class="article-writer--info">Tento nástroj umožní, snadný převod textu formátovaný jako MarkDown do production-ready html kódu.</p>
+    </div>
+    <div>
+        <label for="importFile" class="inputLabel">
+            <i class="fa-solid fa-file-import"></i> Načíst soubor 
+            <input name="importFile" type="file" id="importFile" accept=".md, .txt" oninput="importFile()">
+        </label>
+    </div>
+    <div class="buttons-grid">
+        <button class="button" onclick="edit('nadpis')" title="Přidejte nadpis"><i class="fas fa-heading"></i></button>
+        <button class="button" onclick="edit('tucny')" title="Přidat tučný text"><i class="fas fa-bold"></i></button>
+        <button class="button" onclick="edit('kurziva')" title="Přidat kurzíbu"><i class="fas fa-italic"></i></button>
+        <button class="button" onclick="edit('odkaz')" title="Přidat odkaz seznam"><i class="fas fa-link"></i></button>
+        <button class="button" onclick="edit('seznam1')" title="Přidat číslovaný seznam"><i class="fas fa-list-ol"></i></button>
+        <button class="button" onclick="edit('seznam2')" title="Přidat seznam"><i class="fas fa-list-ul"></i></button>
+        <button class="button" onclick="edit('obrazek')" title="Přidat obrázek"><i class="fa-solid fa-file-image"></i></button>
+        <button class="button" onclick="edit('grid')" title="Přidat galerii"><i class="fa-solid fa-images"></i></button>
+        <button class="button" onclick="edit('citace')" title="Přidat citát"><i class="fas fa-quote-right"></i></i></button>
+        <button class="button" onclick="edit('youtube')" title="Přidat youtube video"><i class="fa-brands fa-youtube"></i></button>
+        <button class="button" onclick="edit('kod')" title="Kód"><i class="fa-solid fa-code"></i></button>
+    </div>
+    <div class="content" id="content">
+        <textarea placeholder="{
+autor: Hynek Janáč
+datum: 22.02.2026
+kategorie: Anatomie
+nahledovyObrazek: ceta k obrázku
+}
+
+# Název" name="MdContent" class="markdownEditor" id="MdContents">
+
+        </textarea>
+    </div> 
+
+    <div class="buttons-grid">
+        <button class="button" onclick="saveProject()" title="Uložit jak .md"><i class="fas fa-save"></i></button>
+        <button class="button" onclick="exportProject()" title="Exportovat jako .html"><i class="fas fa-file-export"></i></button>
+        <button class="button" onclick="deleteProject()" title="Smazat"><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+    </main>
+</body>
+</html

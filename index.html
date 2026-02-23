@@ -8,10 +8,10 @@
     <link rel="icon" href="Assets/Icons/Favicon.ico">
     <link rel="stylesheet" href="Assets/Css/Universal.css">
     <link rel="stylesheet" href="Assets/Css/Linktree.css">
-    <script defer src="Assets/Js/Content/Zdroje.js"></script>
+    <script src="Assets/Js/Content/Zdroje.js"></script>
+    <script defer src="Assets/Js/Utility/ZdrojeBuilder.js"></script>
     <script defer src="Assets/Js/Utility/Utility.js"></script>
     <script defer src="Assets/Js/Utility/SearchAndFilter - Links.js"></script>
-    <script defer src="Assets/Js/Utility/Dialogs.js"></script>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCGKHBJTPP"></script>
@@ -28,9 +28,18 @@
     <main class="linktree">
         <div class="Search" id="Search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" class="SearchInput" id="SearchInput" onkeyup='SearchAndFilter("search")' placeholder="Hledat">
+            <input type="text" class="SearchInput" id="SearchInput" oninput='search()' placeholder="Hledat">
         </div>
-        <div class="filter" id="filter"></div>
+        <div class="filter" id="filters">
+            <select name="predmet" id="predmet" class="filterBtn" oninput="filter()">
+                <option value="NoFilter">Všechny předměty</option>
+            </select>
+            <select name="typ" id="typ" class="filterBtn" oninput="filter()">
+                <option value="NoFilter">Jakýkoli zdroj</option>
+            </select>
+            <button class="filterBtn" onclick="resetFilters()"><i class="fa-solid fa-filter-circle-xmark"></i> Vymazat filtry</button>
+        </div>
+       
         <div class="Links-Wrap" id="Links-Wrap">
   
         </div>
