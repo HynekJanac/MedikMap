@@ -6,11 +6,11 @@ console.log(kategorie)
 
 function createFilters(options,id){
     document.createElement("option")
-    for (var i = 0; i < options.length; i++) {
-        let option = document.createElement("option")
-        option.value = options[i] 
-        option.textContent = options[i] 
-        document.getElementById(id).append(option);
+    for (const option of options) {
+        let select = document.createElement("option")
+        select.value = option
+        select.textContent = option 
+        document.getElementById(id).append(select);
     }
 }
 

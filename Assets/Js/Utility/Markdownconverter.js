@@ -69,7 +69,7 @@ function wrapHtml(content, nazev, autor, datum, kategorie, coverImage) {
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="" />
-      <meta name="author" content="Hynek Janáč" />
+      <meta name="author" content="${autor}" />
       <link rel="icon" type="image/x-icon" href="/Assets/Icons/Favicon.ico" />
       <link rel="stylesheet" href="/Assets/Css/Article.css" />
       <link rel="stylesheet" href="/Assets/Css/Universal.css" />
@@ -97,7 +97,7 @@ function wrapHtml(content, nazev, autor, datum, kategorie, coverImage) {
          </div>
 
          <div class="coverImageWrap">
-            <img class="coverImage" src="../Assets/Img/${coverImage}" alt="">
+            <img class="coverImage" src="/Assets/Img/${coverImage}" alt="">
          </div>
 
          <h1>${nazev}</h1>
@@ -130,40 +130,26 @@ function exportProject(){
     let coverImage = input.match(/^nahledovyObrazek:\s(.*)/m)[1]
     input = input.replace(/^\{.*\}/gms,"")
 
-
-    // nadpisy
-    input = input.replace(/^# (.*$)/gm, '<h1>$1</h1>')
-    input = input.replace(/^## (.*$)/gim, '<h2>$1</h2>')
-    input = input.replace(/^### (.*$)/gim, '<h3>$1</h3>')
-    // efekty textu
-    input = input.replace(/\*\*(.*)\*\*/gm,'<b>$1</b>')
-    input = input.replace(/\*(.*?)\*/gm,'<i>$1</i>')
-    
-    // citát
-    input = input.replace(/^>\s(.*)/gm,'<q>$1</q>')
-
-    // odkaz
-    input = input.replace(/(?<!\!)\[(.*)]\((.*)\)/gm, '<a href="$2">$1</a>')
-
-    // seznamy
-    // První určit zda se jedná o číslovaný nebo odrážkový seznam, pak až vyměním obsahy.
-    input = input.replace(/^(\d+\.\s.*(?:\n\d+\.\s.*)*)/gm,"<ol>\n$1\n</ol>")
-    input = input.replace(/(^-\s.*(?:\n^- .*))/gm,"<ul>\n$1\n</ul>")
-    input = input.replace(/^(\d+\. +|- )(.*$)/gm, "<li>$2</li>")
-
-
-    // obrázek
-    input = input.replace(/\!\[(.*)]\((.*)\)/gm, '<div class="image"><img src="../Assets/Img/$2" alt="$1"><p class="caption">$1</p></div>')
-    // galerie
-    input = input.replace(/<grid>(.*)<\/grid>/gms,'<div class="imageGrid">$1</div>')
-    // youtube
-    input = input.replace(/<youtube>(.*)<\/youtube>/gm,'<iframe class="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/$1">')
-
-    // kód
-    input = input.replace(/^```(.*)```/gms,'<pre>$1</pre>')
-    // odstavce
-    input = input.replace(/^(?!<)(.+)$/gm,"<p>$1</p>")
-    
+    const regex = [
+        {regex: /^# (.*$)/gm, replace: '<h1>$1</h1>'}, // Nadpis 1
+        {regex: /^## (.*$)/gim, replace: '<h2>$1</h2>'}, // Nadpis 2
+        {regex: /^### (.*$)/gim, replace: '<h3>$1</h3>'}, // Nadpis 3
+        {regex: /\*\*(.*)\*\*/gm, replace: '<b>$1</b>'}, // Tučný text
+        {regex: /\*(.*?)\*/gm, replace: '<i>$1</i>'}, // Kurzíva
+        {regex: /^>\s(.*)/gm, replace: '<q>$1</q>'}, // Citát
+        {regex: /(?<!\!)\[(.*)]\((.*)\)/gm, replace: '<a href="$2">$1</a>'}, // Odkaz
+        {regex: /^(\d+\.\s.*(?:\n\d+\.\s.*)*)/gm, replace: "<ol>\n$1\n</ol>"}, // Číslovaný seznam
+        {regex: /(^-\s.*(?:\n^- .*))/gm, replace: "<ul>\n$1\n</ul>"}, // Puntíkatý seznam
+        {regex: /^(\d+\. +|- )(.*$)/gm, replace: "<li>$2</li>"}, // Jednotlivé položky
+        {regex: /\!\[(.*)]\((.*)\)/gm, replace: '<div class="image"><img src="/Assets/Img/$2" alt="$1"><p class="caption">$1</p></div>'}, // Obrázek
+        {regex: /<grid>(.*)<\/grid>/gms, replace: '<div class="imageGrid">$1</div>' }, // Galerie
+        {regex: /<youtube>(.*)<\/youtube>/gm, replace: '<iframe class="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/$1">'}, // YouTube
+        {regex: /^```(.*)```/gms, replace: '<pre>$1</pre>'}, // Kód
+        {regex: /^(?!<)(.+)$/gm, replace: "<p>$1</p>"}, // Odstavce
+    ]
+    for (const rule of regex){
+        input = input.replace(rule.regex,rule.replace)
+    }
 
     const html = wrapHtml(input ,nazev,autor,datum,kategorie,coverImage)
     console.log(html)

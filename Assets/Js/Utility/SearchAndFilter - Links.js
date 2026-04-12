@@ -7,11 +7,11 @@ let jazyk = [... new Set(Zdroje.map(zdroj => zdroj.jazyk))]
 
 function createFilters(options,id){
     document.createElement("option")
-    for (var i = 0; i < options.length; i++) {
-        let option = document.createElement("option")
-        option.value = options[i] 
-        option.textContent = options[i] 
-        document.getElementById(id).append(option);
+    for (const option of options) {
+        let select = document.createElement("option")
+        select.value = option
+        select.textContent = option
+        document.getElementById(id).append(select);
     }
 }
 
@@ -21,9 +21,7 @@ createFilters(typy,"typ")
 
 function search(){
     let search = document.getElementById("SearchInput").value
-    console.log(search)
     let upraveneZdroje = Zdroje.filter(zdroje => zdroje.nazev.toLowerCase().includes(search.toLowerCase()))
-    console.log(upraveneZdroje)
     zdrojeBuilder(upraveneZdroje)
 }
 

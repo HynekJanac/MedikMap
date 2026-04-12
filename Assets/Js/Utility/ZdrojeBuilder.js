@@ -5,7 +5,6 @@ function OpenCollapsible(CollapsibleIndex){
     document.getElementsByClassName("fa-circle-xmark")[CollapsibleIndex].style.display = "block"
 }
 
-
 function CloseCollapsible(CollapsibleIndex){
     // Opens collapsible
     document.getElementsByClassName("item-content")[CollapsibleIndex].style.maxHeight = "0"

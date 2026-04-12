@@ -203,8 +203,7 @@ function socialShareGrid(){
   ];
 
   // Create the initial links
-  for (var i = 0; i < SocialLinks.length; i++) {
-    let link = SocialLinks[i];
+  for (const link of SocialLinks) {
     var anchorElement = document.createElement('a');
     anchorElement.title = link.title;
     anchorElement.className = 'social';
@@ -254,10 +253,11 @@ function scrollFunction() {
 
 // Cookie consent
 function CookiePopUp(){
-  var CookieConsentElement = document.createElement('div');
-  CookieConsentElement.className = 'cookiesConsent';
-  CookieConsentElement.id = 'cookiesConsent';
-  CookieConsentElement.style.display = 'block';
+  var CookieConsentElement = Object.assign(document.createElement('div'), {
+    className: 'cookiesConsent',
+    id: 'cookiesConsent',
+    style: 'display: block;',
+  })
 
   // Create the paragraph element
   var paragraphElement = document.createElement('p');
@@ -336,16 +336,20 @@ function PoweredByhWeb(){
   let PoweredBy = document.createElement("p");
   PoweredBy.className = "hWebCredit";
 
-  PoweredBy.innerText = "Vytvořeno s ♥️ a  ";
+  PoweredBy.innerText = "S láskou k medícíně vytvořil Hynek Janáč";
 
+  let hweb = document.createElement("p")
+  hweb.className = "hWebCredit";
+  hweb.innerText = "Poháněto technologí ";
   let hWebLink = document.createElement("a");
 
   hWebLink.href = "https://hweb-website.pages.dev/";
   hWebLink.target = "_blank";
   hWebLink.innerText = "hWeb";
  
-  PoweredBy.appendChild(hWebLink);
+  hweb.appendChild(hWebLink);
   document.body.appendChild(PoweredBy);
+  document.body.appendChild(hweb)
 }
 
 function MasterFunction(){

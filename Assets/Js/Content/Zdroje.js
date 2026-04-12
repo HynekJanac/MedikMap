@@ -3,6 +3,15 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 
 const Zdroje = [
+  {
+  "nazev": "Poznávačka chirurgických nástrojů",
+  "odkaz": "https://www.wikiskripta.eu/w/Procvi%C4%8Dov%C3%A1n%C3%AD:Chirurgick%C3%A9_n%C3%A1stroje",
+  "popis": "Poznávačka chirurgickýhc nástrojů",
+  "předmět": "Chirurgická propedeutika 🔪",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Kartičky"
+},
    {
   "nazev": "Přednášky z patologie FFix It!",
   "odkaz": "https://www.youtube.com/playlist?list=PL_Pf2a8Jj8AAuRPrQYjbqIOm5G_u6HZ7s",

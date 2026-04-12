@@ -3,14 +3,14 @@ function contentBuilder(content){
             var content = contentData
         }
     document.getElementById("section").innerHTML=""
-    for(i = 0; i < content.length; i++ ){
+    for(const element of content){
         const article = document.createElement("article");
         article.classList.add("card");
 
         // Create anchor element
         const link = document.createElement("a");
         link.classList.add("cardLink");
-        link.href = content[i].odkaz;
+        link.href = element.odkaz;
 
         // Create div for content
         const contentDiv = document.createElement("div");
@@ -20,7 +20,7 @@ function contentBuilder(content){
         const img = document.createElement("img");
         img.classList.add("cardThumbnail");
         img.alt = "image of a squares and circles";
-        img.src = content[i].obrazek;
+        img.src = element.obrazek;
 
         // Create text container
         const textDiv = document.createElement("div");
@@ -29,12 +29,12 @@ function contentBuilder(content){
         // Create headline
         const headline = document.createElement("h2");
         headline.classList.add("cardHeadline");
-        headline.textContent = content[i].nazev;
+        headline.textContent = element.nazev;
 
         // Create description
         const description = document.createElement("p");
         description.classList.add("cardDescription");
-        description.textContent = content[i].popis;
+        description.textContent = element.popis;
 
         // Create metadata wrapper
         const metadataWrap = document.createElement("div");
@@ -49,7 +49,7 @@ function contentBuilder(content){
         const authorLink = document.createElement("a");
         authorLink.href = "#";
         authorLink.classList.add("cardMetadata", "metadataAuthor");
-        authorLink.textContent = content[i].autor;
+        authorLink.textContent = element.autor;
 
         // Assemble elements
         metadataWrap.appendChild(metadataAction);

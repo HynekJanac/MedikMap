@@ -21,15 +21,15 @@ function TableOfContents(){
   headers = document.getElementsByTagName("h2");
 
   // For each h2
-  for (i = 0; i < headers.length; i++){
+  for (const heading of headers){
   
     // a list item for the entry
     tocListItem = document.createElement("li");
 
     // a link for the h3
     tocEntry = document.createElement("a");
-    tocEntry.setAttribute("href","#"+ headers[i].id);
-    tocEntry.innerText=headers[i].innerText;
+    tocEntry.setAttribute("href","#"+ heading.id);
+    tocEntry.innerText=heading.innerText;
   
     tocListItem.appendChild(tocEntry);
     tocList.appendChild(tocListItem);
