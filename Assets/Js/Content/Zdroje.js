@@ -4,6 +4,14 @@
 
 const Zdroje = [
   {
+  "nazev": "Kazooistky z patologuie",
+  "odkaz": "  https://ucebnice-patologie.cz/kazooistiky/",
+  "popis": "Doprovodné kauzuistiky k učebinici patologie od profesora Zámečníka.",
+  "předmět": "Patologie 💀",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Kauzuistiky"},
+  {
   "nazev": "Poznávačka chirurgických nástrojů",
   "odkaz": "https://www.wikiskripta.eu/w/Procvi%C4%8Dov%C3%A1n%C3%AD:Chirurgick%C3%A9_n%C3%A1stroje",
   "popis": "Poznávačka chirurgickýhc nástrojů",
