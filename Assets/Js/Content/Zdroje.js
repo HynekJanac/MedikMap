@@ -4,6 +4,30 @@
 
 const Zdroje = [
   {
+  "nazev": " ⭐️ Přednášky z chirurgické propedeutiky",
+  "odkaz": " https://youtube.com/playlist?list=PLE9pe8e7_OMw1KMs9ay4HnkaSqMtKvQ3j&si=BHvvJCFZiBat1fXQ",
+  "popis": "Záznam přednášek MUDr. Jana Pastora z chirurgické propdeutiky na YouTube",
+  "předmět": "Chirurgická propedeutika 🔪",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Přednášky"},
+  {
+  "nazev": " ⭐️ Vypracované oátzky z chirugické propedeutiky",
+  "odkaz": "https://lf1.cz/01-zakladni-predoperacni-vysetreni-ver-2026/",
+  "popis": "Vypracované otázky z chirurgické propdeutiky od MUDr. Jana Pastora ve spolupráci s MUDr. Kristiánem Chrzem",
+  "předmět": "Chirurgická propedeutika 🔪",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Web"},
+  {
+  "nazev": "Atlas mikrochirurgie",
+  "odkaz": " https://www.microsurgeon.org/index",
+  "popis": "Atlas technik mikrochirurgie s přehlednými schématy a videii.",
+  "předmět": "Chirurgická propedeutika 🔪",
+  "jazyk": ["English"],
+  "ročník": [3,4],
+  "typ": "Web"},
+  {
   "nazev": "Kazooistky z patologuie",
   "odkaz": "  https://ucebnice-patologie.cz/kazooistiky/",
   "popis": "Doprovodné kauzuistiky k učebinici patologie od profesora Zámečníka.",

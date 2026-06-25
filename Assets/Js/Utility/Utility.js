@@ -3,7 +3,7 @@
 var MasterSettings = {
   preloader: true,
   infobox: true,
-  infobox_message: '<a href="/Clanky/05-Navigator.html"> Představujeme MedikMap: Navigátor 🧭</a>',
+  infobox_message: 'Přejeme zasloužený odpočinek po zkouškách 🏆',
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
