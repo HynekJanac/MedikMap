@@ -1,7 +1,6 @@
 // Návod na přidání nového zdroje
 // Zdroj lze přidat kamkoliv do seznamu, stránka ho zařadí do kategorie sama
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
-
 const Zdroje = [
   {
   "nazev": " ⭐️ Přednášky z chirurgické propedeutiky",
@@ -12,7 +11,7 @@ const Zdroje = [
   "ročník": [3],
   "typ": "Přednášky"},
   {
-  "nazev": " ⭐️ Vypracované oátzky z chirugické propedeutiky",
+  "nazev": " ⭐️ Vypracované otázky z chirugické propedeutiky",
   "odkaz": "https://lf1.cz/01-zakladni-predoperacni-vysetreni-ver-2026/",
   "popis": "Vypracované otázky z chirurgické propdeutiky od MUDr. Jana Pastora ve spolupráci s MUDr. Kristiánem Chrzem",
   "předmět": "Chirurgická propedeutika 🔪",
@@ -45,7 +44,7 @@ const Zdroje = [
   "typ": "Kartičky"
 },
    {
-  "nazev": "Přednášky z patologie FFix It!",
+  "nazev": " ⭐️ Přednášky z patologie FFix It!",
   "odkaz": "https://www.youtube.com/playlist?list=PL_Pf2a8Jj8AAuRPrQYjbqIOm5G_u6HZ7s",
   "popis": "Přednášky z patologie doktora Ondřeje Fabiána.",
   "předmět": "Patologie 💀",
@@ -54,22 +53,13 @@ const Zdroje = [
   "typ": "YouTube playlist"
 },
   {
-  "nazev": "Decoiled by Coiled",
+  "nazev": " ⭐️ Decoiled by Coiled",
   "odkaz": "https://www.youtube.com/@decoiledbycoiled8777",
   "popis": "Výuková videa z patofyziologie od doktora Otakara Rašky",
   "předmět": "Patofyziologie 💔",
   "jazyk": ["Čeština", "Angličtina"],
   "ročník": [3],
   "typ": "YouTube kanál"
-},
-   {
-  "nazev": "My pathology report",
-  "odkaz": "https://www.mypathologyreport.ca/cs/",
-  "popis": "Stránka poskytující pacientům a rodinám porozumět jejich patologickým zprávám. Stránka obsahuje přehledové články a také slovník patologických pojmů.",
-  "předmět": "Patologie 💀",
-  "jazyk": ["Čeština"],
-  "ročník": [3],
-  "typ": "Výukové materiály"
 },
   {
   "nazev": "PropedeutikA – 2.LF",
@@ -336,15 +326,6 @@ const Zdroje = [
     "jazyk": ["Čeština"],
     "ročník": [1],
     "typ": "YouTube kanál"},
-    
-    {"nazev": "Skelet 3D",
-    "odkaz": "http://skelet3d.lf3.cuni.cz/index.xhtml",
-    "popis": "3D Atlas kostí, sice žádná hitparáda, ale lze otevřít zadarmo v prohlížeči.",
-    "předmět": "Anatomie 🫀",
-    "jazyk": ["Čeština"],
-    "ročník": [1],
-    "typ": "Webová stránka"},
-    
     {"nazev": "Úvod do CNS – 3.LF",
     "odkaz": "http://www.cnsonline.cz/",
     "popis": "Cílem tohoto kurzu je především usnadnit studentům první kroky v džungli, kterou CNS představuje. ",
@@ -719,32 +700,14 @@ const Zdroje = [
     "předmět": "Mikrobiologie 🧫",
     "jazyk": ["Čeština"],
     "ročník": [2,3],
-    "typ": "Webová stránka"},
-    
-    {"nazev": "Základy mikrobiologie",
-    "odkaz": "http://mikrobiologie.lf3.cuni.cz/mikrobiologie-nova/",
-    "popis": "Přestože se jedná o web určený primárně pro bakaláře, tak obsahuje užitečné základy mikrobiologie od oběru přes zpracování a identifikaci kultur.",
-    "předmět": "Mikrobiologie 🧫",
-    "jazyk": ["Čeština"],
-    "ročník": [2,3],
-    "typ": "Webová stránka"},
-    
+    "typ": "Webová stránka"},    
     {"nazev": "Microbe Canvas",
     "odkaz": "https://www.microbe-canvas.com/",
     "popis": 'Takový "google" pro mikroby, je zde možné vyhledávat v databázi mikrobů podle názvu, či charakteristik.',
     "předmět": "Mikrobiologie 🧫",
     "jazyk": ["English"],
     "ročník": [2,3],
-    "typ": "Webová stránka"},
-    
-    {"nazev": "Parazitologický atlas",
-    "odkaz": "http://mikrobiologie.lf3.cuni.cz/parazitologie-nova/",
-    "popis": "Parazitologický atlas z 3.LF, hezky rozdělené preparáty s popisky v angličtině",
-    "předmět": "Mikrobiologie 🧫",
-    "jazyk": ["English"],
-    "ročník": [2,3],
-    "typ": "Webová stránka"},
-    
+    "typ": "Webová stránka"},    
     {"nazev": "Anki balíčky českých z lékařských fakult",
     "odkaz": "http://anki-update-check.4fan.cz/browse",
     "popis": "Veřejné Anki balíčky od ostatních mediků s možností podpory aktualizací",
@@ -808,5 +771,4 @@ const Zdroje = [
     "jazyk": ["English"],
     "ročník": ["Všechny"],
     "typ": "Webová stránka"},
-    
     ]
