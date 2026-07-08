@@ -3,7 +3,7 @@
 var MasterSettings = {
   preloader: true,
   infobox: true,
-  infobox_message: '🧩 Spustili jsme nový prohlížeč volitelných předmětů. <a href="../Volitelne-Predmety/">Vyzkoušet<a/>',
+  infobox_message: '🧩 Spustili jsme nový prohlížeč volitelných předmětů. <a href="../Volitelne-predmety/">Vyzkoušet<a/>',
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
