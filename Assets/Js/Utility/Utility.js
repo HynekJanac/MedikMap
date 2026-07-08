@@ -2,7 +2,7 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: false,
+  infobox: true,
   infobox_message: '🧩 Spustili jsme nový prohlížeč volitelných předmětů. <a href="../Volitelne-Predmety/">Vyzkoušet<a/>',
 } 
 // adding [NEW] to the title adds a little dot
