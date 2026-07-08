@@ -1,3 +1,17 @@
+.nadpis{
+    color: var(--main-color);
+    font-size: 2em;
+}
+.paragraf{
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+.paragraf a{
+    color: var(--main-color);
+}
+.paragraf a:hover{
+    color: var(--text-color);
+}
 /* Search */
 .Search{
 	text-align: center;
@@ -115,6 +129,7 @@ section > div{
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     font-size: 1.1rem;
+    padding-bottom: 10px;
 }
 
 .item-metadata{
@@ -132,6 +147,17 @@ section > div{
     color: var(--section-note-color);
 }
 
+.hodnoceni{
+text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--main-color);
+  border-radius: 15px;
+  padding: 10px;
+  transition: all 0.2s ease-out;
+}
+.hodnoceni:hover{
+    font-size: 1.1em;
+}
 
 @media (min-width: 850px){
     .Links-Wrap{

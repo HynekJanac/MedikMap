@@ -2,8 +2,8 @@
 
 var MasterSettings = {
   preloader: true,
-  infobox: true,
-  infobox_message: 'Přejeme zasloužený odpočinek po zkouškách 🏆',
+  infobox: false,
+  infobox_message: '🧩 Spustili jsme nový prohlížeč volitelných předmětů. <a href="../Volitelne-Predmety/">Vyzkoušet<a/>',
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [

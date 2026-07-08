@@ -3,6 +3,14 @@
 // Je nutné vyplnit všechny informace ve stanoveném formátu (viz ostatní položky)
 const Zdroje = [
   {
+  "nazev": "Chirurgické šití a uzlení",
+  "odkaz": "https://www.youtube.com/playlist?list=PLWXXOUqxJ_VP8lxhFP7jJbXVSdXDi0iaC",
+  "popis": "Videonávody základních chirurgických stehů.",
+  "předmět": "Chirurgická propedeutika 🔪",
+  "jazyk": ["Čeština"],
+  "ročník": [3],
+  "typ": "Playlist"},
+  {
   "nazev": " ⭐️ Přednášky z chirurgické propedeutiky",
   "odkaz": " https://youtube.com/playlist?list=PLE9pe8e7_OMw1KMs9ay4HnkaSqMtKvQ3j&si=BHvvJCFZiBat1fXQ",
   "popis": "Záznam přednášek MUDr. Jana Pastora z chirurgické propdeutiky na YouTube",

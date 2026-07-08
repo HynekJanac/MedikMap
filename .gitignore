@@ -1,4 +1,4 @@
 .DS_Store
-check_links.py
+*.py
 links.json
 /Clanky/Koncepty/

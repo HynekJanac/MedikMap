@@ -1,0 +1,3513 @@
+const Predmety = [
+  {
+    nazev: "(Nejen) nefrologie v kazuistikách",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02411",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace:
+      "Předmět je koncipován jako teoretický (bez přímého kontaktu s pacientem). Na kazuistikách bude demonstrováno využití preklinických předmětů (zejména fyziologie, patofyziologie a farmakologie) a jejich propojení s klinickými znalostmi při řešení konkrétních diagnostických a diferenciálně diagnostických problémů. Případy budou vybírány cíleně na pomezí nefrologie a dalších interních oborů, případně i jiných medicínských specializací. \n",
+  },
+  {
+    nazev:
+      "Administrace standardizovaných testů k hodnocení funkce horních končetin ergoterapeutem",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03313",
+    rocnik: [3, 1, 2],
+    obor: ["BER", "NER"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 20",
+    anotace:
+      "V rámci předmětu budou studenti seznámeni s vybranými existujícími standardizovanými testy sloužícími k \r\nhodnocení funkce horních končetin. Tyto testy si vyzkouší prakticky provádět v roli testujícího ergoterapeuta i \r\ntestované osoby. \r\n\n",
+  },
+  {
+    nazev: "Adolescentologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00650",
+    rocnik: [3, 4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 5",
+    anotace:
+      "Adolescentologie: \r\nje povinně volitelný předmět, který se zabývá fyziologickými zvláštnostmi období adolescence (10-19 let), ale i celým spektrem somatických chorob tohoto věku i poruchami příjmu potravy. Tak jako adolescentní medicína celosvětově, zaměřuje se adolescentologie na oblast nové morbidity mládeže, rizikového chování dospívajících i na oblast přechodu z pediatrické do dospělé péče (transition period).\r\n\n",
+  },
+  {
+    nazev: "AI (umělá inteligence) a její uplatnění v medicíně",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03576",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "2 - 25",
+    anotace:
+      "''Vývoj umělé inteligence je stejně zásadní jako vznik osobních počítačů. Změní se způsob, jakým lidé pracují, učí \r\nse a komunikují – a změní se i zdravotní péče… Bill Gates, 2023''\r\nVyužití umělé inteligence hluboce ovlivní život společnosti. V medicíně přináší řadu nových možností a bude \r\nurčujícím rysem vývoje v dalším období. Pomocí umělé inteligence bude možné optimalizovat proces klinického \r\nrozhodování, snížit náklady, zlepšit diagnostiku (zvláště u vzácných případů), zlepšit terapii i paliativní péči. \r\nV oblasti lékařského výzkumu se již dnes umělá inteligence používá k analýze velkého množství dat a hledání \r\nnových způsobů léčby. Například v roce 2020 byla v ČR spuštěna platforma pro analýzu dat z CT snímků plic \r\npacientů s podezřením na COVID-19. Platforma využívá umělou inteligenci k rychlému vyhodnocení snímků a \r\npomáhá tak lékařům v diagnostice a léčbě nemoci. \r\nVyužití velkých jazykových modelů má potenciál “vrátit lékaře od počítačů zpět k pacientovi”. Mohou pomoci zlepšit \r\ndostupnost lékařské péče a snížit její náklady.\r\n\n",
+  },
+  {
+    nazev: "Akupunktura 1,2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00651",
+    rocnik: [5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 5,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 15",
+    anotace:
+      "Kurs akupunktury 1,2 je určen zejména pro posluchače 5.-6. ročníku 1. Lékařské fakulty (včetně \r\nstomatologů). Je rozdělen na 2 semestry (začíná v zimním a končí v letním). Týdně probíhají 2 výukové hodiny \r\npřednášek a 2 hodiny praktik. \r\n\n",
+  },
+  {
+    nazev: "Akutní chirurgická praxe",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01313",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 15",
+    anotace:
+      "Předmět je zaměřený na rozvíjení znalosti a zkušeností studenta v rámci pohotovostních služeb na chirurgické klinice . Student se účastní práce na ambulanci a vizitách , asistuje  při akutních operacích na operačním  sále. \n",
+  },
+  {
+    nazev: "Akutní kardiologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03656",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 6",
+    anotace:
+      "Volitelný předmět Akutní kardiologie je zaměřen na praktickou výuku akutních kardiologických stavů formou bedside \r\nteaching přímo na koronární jednotce intenzivní péče a katetrizačním sále. Studenti se aktivně zapojují do klinického \r\nuvažování, interpretace EKG, hodnocení hemodynamického stavu a rozhodování o diagnostických a terapeutických \r\npostupech u pacientů s akutním infarktem myokardu, srdečním selháním, arytmiemi, kardiogenním šokem a \r\nsrdeční zástavou. Výuka probíhá v malé skupině, je založena na reálných kazuistikách a podporuje rozvoj \r\nstrukturovaného myšlení, prioritizace a interdisciplinární spolupráce v akutní medicíně. \r\n\n",
+  },
+  {
+    nazev: "ALSS -  Rozšířená první pomoc v simulacích",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03436",
+    rocnik: [],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "24 - 72",
+    anotace:
+      "Kurz WALSS (Weekend of Advanced Life Support in Simulations) poskytuje studentům teoretické znalosti a \r\npraktické dovednosti potřebné k rozpoznání a zvládnutí akutních stavů ohrožujících život. Zaměřuje se na pokročilé \r\ntechniky resuscitace, správné použití defibrilátoru, farmakoterapii nejen při zástavě oběhu a týmovou spolupráci v \r\nkrizových situacích. Výuka probíhá formou simulací, nácviků dovedností a teoretických vstupů. Kurz je vhodný pro \r\nvšechny studenty, obzvláště pro studenty směřující k akutním oborům. \r\n\r\n\n",
+  },
+  {
+    nazev:
+      "Analýza biomarkerů u dědičných metabolických poruch: praktický kurz hmotnostní spektrometrie ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03577",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 8",
+    anotace:
+      "Praktický kurz hmotnostní spektrometrie je zaměřen na teoretické seznámení studentů s instrumentací a aplikací \r\nhmotnostní spektrometrie v moderní biomedicíně a klinické laboratorní praxi při screeningu a diagnostice \r\nlysosomálních onemocnění jako modelovém příkladu dědičných metabolických onemocnění. Studenti se v části \r\nzabývající se instrumentací seznámí s pojmy jako elektrosprej, MALDI, kvadrupolový analyzátor, TOF atd. V \r\naplikační teorii budou seznámeni s pojmy biomarker, screening, diferenciální screening/diagnostika, kvantifikace \r\nbiomarkerů, lysosomální střádavé onemocnění atd. V praktické části budou prakticky seznámení s přípravou \r\nvzorků pro hmotnostně spektrometrickou analýzu. Provedou analýzu série anonymních vzorků a vyhodnotí kvantitu \r\nsledovaných biomarkerů. Na základě stanovených hodnot biomarkerů následně určí, jestli hodnoty odpovídají \r\nmodelovému lysosomálnímu onemocnění či nikoliv. \r\n\n",
+  },
+  {
+    nazev: "Anatomie a chirurgie končetinových kloubů",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02085",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "FYZ", "ERGO", "NAF"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 22",
+    anotace:
+      "Náplní je klinická anatomie jednotlivých kloubů a společně s vývojovými poznámkami v korelaci s nejčastějšími \r\núrazy a onemocněními pohybového aparátu u dospělých i u dětí a způsoby operační léčby.\r\n\n",
+  },
+  {
+    nazev:
+      "Anestezie a intenzivní medicína v reálném životě (praxe v okresní nemocnici)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03637",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "2 - 10",
+    anotace:
+      "Předmět je primárně určen pro zájemce o obor anesteziologie a intenzívní medicína. Výuka je zaměřena prakticky, \r\nzejména na oblast umělé plicní ventilace a anesteziologického managementu pacientů s obezitou. Předmět bude \r\nprobíhat 1 týden po domluvě. Místo kurzu je Oddělení anesteziologie, resuscitace a intenzivní medicíny Nemocnice \r\nDěčín, U nemocnice 1, Děčín, 405 02\r\n\n",
+  },
+  {
+    nazev: "Angličtina a čeština pro klinickou praxi ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03025",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "ALEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "3 - 25",
+    anotace:
+      "Předmět  Angličtina a čeština pro klinickou praxi  si klade za cíl podpořit rozvoj komunikativních dovedností \r\nstudentů v angličtině v rámci jejich odbornosti a budoucí profese lékaře. Výuka využívá inovativní přístupy k učení \r\nse cizím jazykům (Problem-based learning, Task-based learning). Studenti s podporou a supervizí učitele jazyka a \r\nlékaře řeší klinické případové studie, formulují diferenciálně diagnostickou rozvahu, prezentují ji a obhajují své \r\nzávěry. Integrovaná výuka jazyka a oboru předpokládá pokročilejší znalosti z klinických předmětů, proto je tento kurz \r\ndoporučen studentům 4., 5. a 6. ročníku oboru VL.\r\n\n",
+  },
+  {
+    nazev: "Angličtina pro terapie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02254",
+    rocnik: [2, 3],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "4 - 20",
+    anotace:
+      "Volitelný předmět je určen pro studenty zdravotnických programů, kteří již klasifikovaným zápočtem ukončili povinný předmět Cizí jazyk pro bakaláře. Během semestru se budou věnovat anglickým textům ze svého oboru i oborů příbuzných a procvičovat související jazykové jevy, zahrnující odbornou terminologii a příslušné komunikativní dovednosti. Na závěr semestru si v anglickém jazyce připraví ústní prezentaci a písemný abstrakt na téma své předpokládané závěrečné práce či podobné téma dle vlastního výběru.\r\n\n",
+  },
+  {
+    nazev: "Aplikace biochemie v klinické medicíně",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01032",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace:
+      "Kazuisticky koncipovaný seminář demonstruje použití laboratorních vyšetřovacích metod probraných v rámci biochemie ve druhém ročníku. Student se seznámí i s dalšími metodami, které se v současné době zavádějí do praxe nebo jejichž zavedení se očekává. Jako první seznámení s problematikou se probírá i kombinace a racionání indikace jednotlivých vyšetření. Jednotlivá témata se probírají na základě skutečných kazuistik. Předmět doplňuje výuku patobiochemie a klinické propedeutiky, přístupnou formou připravuje půdu pro mnohem podrobnější výuku klinických oborů a klinické biochemie. Je určen především pro posluchače 3. ročníku, bude-li volná kapacita, mohou se jej účastnit i posluchači vyšších ročníků.\n",
+  },
+  {
+    nazev: "Asistování lidem s disabilitou ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02979",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["BER", "NER", "FYZ", "NAF"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "1 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Autoimunitní choroby trávicího ústrojí",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02980",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "4 - 14",
+    anotace:
+      "Předmět je zaměřen na etiologii a patogenezi, klinické projevy a speciální léčbu imunosupresivy a biologiky u \r\nautoimunitně zprostředkovaných chorob trávicího ústrojí.\r\n\n",
+  },
+  {
+    nazev: "Biofyzikální metody v medicíně",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00090",
+    rocnik: [3, 4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 40",
+    anotace:
+      "Magnetická rezonance (MRI), ultrazvuk, Leksellův gama nůž, neutronová aktivační analýza, rázová vlna, \r\nhyperbarická oxygenoterapie, hypertermie, endoskopie, PET/CT, základy radioterapie, Protonové centrum – \r\nNemocnice Na Bulovce.\r\nÚvodní hodina bude včas upřesněna v průběhu ledna 2026 a uskuteční se na Ústavu biofyziky a informatiky.\r\n\r\n\n",
+  },
+  {
+    nazev: "Biochemie sportu a výživy v praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03538",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "6 - 20",
+    anotace:
+      "Volitelný předmět navazuje na výuku lékařské biochemie, částečně také fyziologie. Studenti se v něm z \r\nbiochemického pohledu seznámí s obecnými doporučeními pro výživu, pohybovou aktivitu a životní styl pro zdravou \r\npopulaci. Důraz se přitom klade na to, aby problematika byla vyučována v souladu se současným stavem poznání, \r\nstudenti se učili kriticky pracovat se závěry studií a důkazy, kterými jsou doporučení podložena, a seznámili se s \r\njejich biochemickou podstatou, pokud je známa.\r\nVýuka bude probíhat kombinovanou, inovativní formou. Část lekcí se bude odehrávat v učebně (zejména formou \r\nworkshopů), část v terénu (např. otužování či vybrané fyzické aktivity při sledování vybraných fyziologických funkcí) a \r\nv laboratoři (např. měření vybraných metabolitů převážně z kapilární krve). Některá témata budou vyučována ve \r\nspolupráci s externími hosty.\r\nTematicky bude předmět pokrývat obecná pohybová i výživová doporučení – základy výživy (makro i mikronutrienty, \r\nspeciální diety, výživové doplňky, hydratace ve sportu). Diskutují se i další aktuální témata – hormeze, otužování, \r\nextrémní zátěž. Probírá se i význam regenerace a její metabolické principy.  Výuka směřuje k řadě praktických \r\naplikací, od základů nutričních intervencí v jednoduchých situacích, přes tréninkové režimy, až po interpretaci \r\nněkterých biochemických parametrů - studenti si např. vyzkouší sestrojení laktátové křivky.\r\n\n",
+  },
+  {
+    nazev: "Biokybernetika a asistivní technologie v medicině",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02174",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 20",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Biologie buňky",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00832",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "10 - 101",
+    anotace:
+      "Přednáškový kurz Biologie buňky (B00832) je určen pro studenty 2.–6. ročníku magisterského studia Všeobecného \r\nlékařství. Cyklus přednášek poskytne studentům současné vědecké poznatky k vybraným zásadním tématům v \r\noboru buněčné biologie a patologie, včetně organizace buněčného jádra, struktury genomu a epigenetiky, \r\nkmenových buněk, buněčného cyklu, cytoskeletu, genetických onemocnění, nádorové biologie či metabolických \r\nchorob.\r\n\r\nPřednášet budou odborníci z ústavů 1. lékařské fakulty UK, hostující přednášející z jiných fakult UK, z Akademie věd \r\nČR i pozvaní experti ze zahraničních institucí. Některé přednášky proběhnou prezenčně, jiné budou probíhat online. \r\nStudenti jsou proto žádáni, aby důsledně kontrolovali u každé přednášky, zda je vedena v online režimu, či \r\nprezenčně.\r\n\r\nCyklus je veden v českém jazyce. V případě, že přednášejícím je zahraniční expert, bude přednáška přednesena v \r\nangličtině.\r\n\r\nDotazy týkající se výuky tohoto předmětu je možné adresovat na raskaota@gmail.com. Prosíme, aby touto cestou \r\nbyly směřovány pouze věcně důležité a nezbytné dotazy, nikoli organizační záležitosti, které jsou již uvedeny v \r\nharmonogramu či na stránkách kurzu.\r\n\r\nPřipomínáme, že témata i časy jednotlivých přednášek se mohou měnit. Sledujte proto prosím aktuální informace \r\nna stránkách kurzu:\r\nhttps://kurzy.lf1.cuni.cz/course/view.php?id=188\r\n\n",
+  },
+  {
+    nazev: "Biomedicína a biotechnologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02981",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace:
+      "This subject focuses on educating students in biomedical research and biotechnologies. It teaches the basis of \r\nscientific work, introduction to methodology in biomedicine up to the development of novel diagnostics and \r\ntherapeutics. Lectures and seminars will contain the insight into modern tools such as transgenic biology or \r\nglobal technologies such as OMICs.\r\n\n",
+  },
+  {
+    nazev: "BLSS -  První pomoc v simulacích",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03435",
+    rocnik: [],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "24 - 48",
+    anotace:
+      "Jedná se o třídenní intenzivní zážitkový kurz první pomoci (BLS – Basic Life Support). Jedním z důležitých cílů je \r\nmimo osvojení si základních dovedností z první pomoci i získání sebedůvěry při samotném poskytování pomoci. \r\nProto je naprostá většina času věnována praktickému a opakovanému nácviku dovedností a řešení modelových \r\nsituací. Pracovní skupinky jsou typicky 2-4 studenti a nácvik probíhá na modelech, nebo na sobě navzájem. Kurz \r\nprobíhá pod vedením lékařů a vyškolených lektorů z vyšších ročníků. Podle možností buď v Simulačním centru LF1 \r\nv Praze nebo ve výcvikovém středisku UK v Dobronicích.\r\n\r\nKurz je veden jako tzv. FLEXI volitelný předmět, to znamená, že se si jej nejde napsat do SIS předem. Na základě \r\nVaší prezence na kurzu vám zpětně bude předmět zapsán společně s kredity za něj. Počet kreditů za kurz je 3 \r\nkredity. Zároveň touto cestou informujeme, že nemůžeme zaručit místo pro všechny studenty, tudíž není dobré \r\npočítat dopředu s jistými kredity.\r\n\r\nZápis probíhá přes moodle kurzu: https://moodle.lf1.cuni.cz/mod/facetoface/view.php?id=21248 \r\nKlíč k zápisu je: DobroSIM-1\r\nV moodle také naleznete další informace ke kurzu společně s videem a odkazem na fotky.\r\n\r\n\n",
+  },
+  {
+    nazev: "Body and mind formy cvičení a terapie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03608",
+    rocnik: [1, 2],
+    obor: ["NAF"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 20",
+    anotace:
+      "Předmět si klade má seznámit studenty s metodami tzv. body and mind cvičení (terapie), se kterými se mohou v \r\npraxi u svých pacientů setkat. „Body and mind“ formy cvičení jsou zpravidla pomalejší formy cvičení, které bývají \r\nprováděny v pomalejším tempu s plným soustředěním a zapojením dechu. Mnohé z nich vychází z tradiční \r\nvýchodní medicíny, jiné však jsou zcela moderní. Některé z těchto přístupů jsou řazeny do alternativní léčby, jiné \r\nspíše jako typ fyzického cvičení. Je proto vhodné, aby byl fyzioterapeut s těmito přístupy základně seznámen a mohl \r\npřípadně svým (zejména chronickým) pacientům případně doporučit pro ně vhodné (nebo méně vhodné) formy \r\ncvičení a terapie.\r\n\r\n\n",
+  },
+  {
+    nazev: "Case management jako doplněk léčebného kontinua (praktikum)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02602",
+    rocnik: [],
+    obor: ["ADI"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 25",
+    anotace:
+      "Volitelný předmět je určen studentům kombinované formy studia adiktologie, kteří se zajímají o téma case managementu (CM). Předmět je možno opakovaně zapsat, seznamuje studenty s různými praktickými způsoby využití CM v adiktologických službách v ČR i v zahraničí. \n",
+  },
+  {
+    nazev: "Case Studies without Borders",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03394",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ALEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "5 - 21",
+    anotace:
+      "Case Studies without Border is a course available to both the English and Czech parallel. It is aimed to be an all-\r\ninclusive elective giving a chance for both parallel to learn together. This elective is primarily thought by 5th and \r\n6th-year tutors. The course itself is thought in English however we do want to encourage you to join especially if \r\nEnglish is not your mother tongue. We are all here to learn together. \r\n\r\nThe course involves weekly 1-2 hour lessons for 10-12 weeks. \r\n\r\nThis course is designed to train clinical thinking as well as the application of knowledge already acquired. The \r\nmost efficient way to learn is to do so in the setting where the knowledge will need to be applied and in this case, \r\nthis means on the patient. The students will be walked through a collection of case studies, case reports, and \r\nUSMLE like questions to trained the aforementioned skills/knowledge.\r\n\r\nClinical thinking does not magically appear and the purpose of this course is in a way to give you the opportunity to \r\nutilize what you have learned and will be learning in a clinical fashion. We want to train your clinical thinking and \r\nknowledge application by making you practice what you will have to practice once you reach upper years and once \r\nyou are an MD. \r\n\r\nThe course is built around the syllabus of the 3rd year pathophysiology practicals and works very well in \r\nconjunction with this year.  There are no year requirements however this course is best designed for the 3rd and \r\n4th years. Upper years may join as well but we do encourage those two years to join this elective as clinical \r\nthinking takes time to develop and we want you to develop good habits from the very start of your clinical years. \r\n\r\nThe requirement for credit at the end of the course will be 80% attendance to the classes as well as the \r\nsubmission of your own case study at the end of the course. We will walk you through the case study requirement \r\nduring the first lesson. The lessons are held over zoom to ensure that you may join wherever you currently are \r\nstaying during this pandemic\r\n\r\n\n",
+  },
+  {
+    nazev: "Case Studies Without Borders II.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03490",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ALEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "3 - 10",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Centračně-stabilizační cvičení",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03397",
+    rocnik: [3],
+    obor: ["FYZ"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 12",
+    anotace:
+      "Teoretický úvod by měl studenta vybavit znalostmi pro rozhodování o vhodnosti poloh a pohybů z hlediska \r\nfyziologického nastavení kloubů. Nácvik praktických dovedností obsahuje diagnostickou palpaci, manuální kontakt \r\npři nastavování kloubů a procvičování didaktických dovedností. Důraz klademe na bezchybné předvedení \r\nzákladních centračně-stabilizačních cviků a jejich nácvik s pacienty. Při praxi se bude prolínat opakování \r\nvýchodisek (ontogeneze, fylogeneze, biomechanika, neurální komponenty pohybu). Používané metody: zdůvodnění \r\nvýběru cviku, ukázka a učení cviku (manuální a didaktické dovednosti), posilování, strečink, postizometrická \r\nrelaxace, postizometrické protažení, reciproční inhibice. Vybrané prvky z postupů, kde se centračně-stabilizačních \r\npoloh a pohybů využívá (tai ji, qi gong, jóga aj.).\r\n\n",
+  },
+  {
+    nazev: "Cestovní medicína",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02984",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 25",
+    anotace:
+      "V roce 2017 vycestivalo za hranice své domovské země 1,3 miliardy lidí. \r\nCestování je fenomén dneška, který nebývá neustále na významu.\r\nCestujeme za poznáním, prací, studiem....Cestujeme mnohdy bez jakékoliv přípravy a nic se nám nestane.\r\nPokud ale provází naši cestu zdravotní problémy, často nám drahou dovolenouči předem naplánovanou pracovní cestu velmi znepříjemní.\r\nVelká část lidí dnes chápe, že příprava před cestou je velmi důležitá. Znalost rizik, znalost možností prevence je velice důležitým faktorem moderního cestovatele.\r\nJe úkolem lékařů ve specializovaných centrech, aby lidem poskytly dostatek informací, které jim umožní rizika na cestách přinejmenším výrazným způsobem snížit.\r\nVolitelný předmět cestovní medicína se bude snažit studentům tyto informace zprostředkovat.\n",
+  },
+  {
+    nazev: "Četba odborných textů z oblasti rehabilitace",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03609",
+    rocnik: [1, 2],
+    obor: ["NAF"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 20",
+    anotace:
+      "Kurz je vhodný především jako doplnění diplomových seminářů. Během semestru se seminární formou \r\nseznámíme s různými akademickými texty z oblasti rehabilitace a fyzioterapie. Kriticky je přečteme a zamyslíme se \r\nnad možnostmi aplikace poznatků v diplomových projektech. Výběr textů se částečně odvíjí od konkrétní \r\nbadatelské orientace studujících a může se podle situace měnit. \r\n\n",
+  },
+  {
+    nazev: "Další cizí jazyk  1,2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01259",
+    rocnik: [3, 4, 5],
+    obor: ["LEK", "ZUB"],
+    kredity: 5,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 40",
+    anotace:
+      "Studenti oboru VL (3.-6. ročník) si zvolí ten cizí jazyk (Angličtina, Němčina, Francouzština), který nestudovali v povinném modulu a nesložili z něj zkoušku z cizího jazyka. Podmínky udělení zápočtů jsou v kompetenci příslušného vyučujícího. Nezbytným předpokladem účasti na kurzu je minimální znalost cizího jazyka na B1-B2 úrovni dle SERR pro jazyky.\r\n\r\nZájemci o Aj, Nj se připojí k výuce 2. ročníku oboru VL (Cizí jazyk 3,4 B02165 podle rozvrhu v SISu)., oboru ZL (Cizí jazyk 3,4 B03124 podle rozvrhu v SISu)\r\n\r\nZájemci o Fj kontaktují ústav. Výuka se rozvrhuje až podle skutečného zájmu studentů.\r\n\r\nB01259 Další cizí jazyk pro mediky 1, 2 v rámci programu ERASMUS\r\n\r\nPředmět lze splnit také v rámci programu ERASMUS na zahraniční univerzitě. Kurz jazyka musí být na:\r\n\r\n1) úrovni min B1 a vyšší pro jazyky, které vyučujeme (Aj, Nj, Fj)\r\n\r\n2) úrovni min A2 a vyšší pro jazyky, které Nevyučujeme (např. It, Šp, aj.)\n",
+  },
+  {
+    nazev: "Dechový vzor v širších souvislostech ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02985",
+    rocnik: [2, 3, 1, 2],
+    obor: ["FYZ", "NAF"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 20",
+    anotace:
+      "Předmět je určený studentům 2. a 3. ročníku Fyzioterapie a 1. a 2. ročníku oboru Aplikovaná Fyzioterapie.\r\nV předmětu se studenti teoreticky seznámí s hlavními zásadami a principy plicní rehabilitace, metodickými \r\npostupy a dechovými technikami. Vybraná problematika bude zaměřená na důsledky abnormálního dechového \r\nvzoru. Přiblížením základní souvislosti z fyziologie a kineziologie získají studenti na problematiku ucelený náhled. \r\nStudenti budou seznámeni s možnostmi využití vhodných terapeutických metodik. Při praktickém nácviku si \r\nstudenti osvojí schopnost účelně využít přístupy v terapii.\r\n\n",
+  },
+  {
+    nazev: "Dějiny lékařství ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01967",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace:
+      "Předmět seznamuje zájemce s různými tématy z dějin evropské i české medicíny. Tento předmět není primárně určen pro studenty historie, ale je koncipován s ohledem na potřeby a odborná východiska studentů přírodovědných oborů. \n",
+  },
+  {
+    nazev: "Demonstrace na cvičeních z lékařské biochemie 1",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02986",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 30",
+    anotace:
+      "Předmět je zaměřený na prohlubování znalostí biochemických principů a jejich aplikací v klinickém kontextu. Studenti se podílí aktivně na výuce, vytváří kazuistiky pacientů, diskutují a hodnotí interpretaci naměřených dat. Pomáhají svým kolegům ve 2. ročníku podle svých zkušeností s optimální přípravou ke zkoušce. Absolvováním předmětu si studenti nejen upevní biochemické znalosti, zejména však rozšíří své experimentální, komunikační a pedagogické schopnosti.\n",
+  },
+  {
+    nazev: "Demonstrace na cvičeních z lékařské biochemie 2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02987",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 30",
+    anotace:
+      "Předmět je zaměřený na prohlubování znalostí biochemických principů a jejich aplikací v klinickém kontextu. Studenti se podílí aktivně na výuce, vytváří kazuistiky pacientů, diskutují a hodnotí interpretaci naměřených dat. Pomáhají svým kolegům ve 2. ročníku podle svých zkušeností s optimální přípravou ke zkoušce. Absolvováním předmětu si studenti nejen upevní biochemické znalosti, zejména však rozšíří své experimentální, komunikační a pedagogické schopnosti.\n",
+  },
+  {
+    nazev: "Demonstrátorství orální chirurgie ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02405",
+    rocnik: [4],
+    obor: ["ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "2 - 4",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Dentální hygiena – skupinové instruktáže",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03610",
+    rocnik: [3, 4, 5],
+    obor: ["ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 10",
+    anotace:
+      "V rámci tohoto předmětu budou studenti provádět skupinové instruktáže dentální hygieny pro pacienty klinik \r\nVšeobecné fakultní nemocnice. Toho času je navázána spolupráce s Psychiatrickou klinikou a Klinikou \r\nadiktologie, ale po domluvě se může rozšířit na další pracoviště. Jedná se buď o hospitalizované pacienty nebo o \r\npacienty navštěvující stacionáře těchto klinik.\r\n\n",
+  },
+  {
+    nazev: "Dětská a dorostová psychiatrie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02693",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "ZUB", "FYZ", "ERGO"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 20",
+    anotace:
+      "Volitelný předmět Dětská a dorostová psychiatrie seznámí studenty s nejčastějšími diagnózami, typickou \r\npsychopatologií a možnostmi léčby v dětské a dorostové psychiatrii. \r\n\n",
+  },
+  {
+    nazev: "Diferenciální diagnostika v pediatrii a v neonatologii ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01316",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 10",
+    anotace:
+      "Předmět je určen pro studenty medicíny 5. a 6. ročníku s hlubším zájmem o dětské lékařství. Výuka je dvousemestrální, dvě hodiny týdně. V průběhu jednoho roku by studenti měli zvládnout základy a specifika fyzikálního vyšetření dětí různého věku a umění odběru anamnézy. Na stážích budeme diskutovat základní klinické příznaky a laboratorní nálezy u nejčastějších onemocnění dětského věku. Důraz bude kladen také na hodnocení psychomotorického vývoje dítěte a hodnocení růstových a percentilových grafů včetně stadií puberty. V druhém semestru výuky bychom řešili i složitější problémy zejména z oblasti dětské neurologie, výživy a gastroenterologie, endokrinologie a metabolických onemocnění. Pro zájemce o praktické dovednosti bude možno zorganizovat účast při ranních odběrech a zavádění kanyl u dětí.    \n",
+  },
+  {
+    nazev: "Digitalizace ve stomatologii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03016",
+    rocnik: [3, 4, 5],
+    obor: ["ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "6 - 15",
+    anotace:
+      "Seznámení s 3D technologiemi ve stomatologii, jejich využití a urychlení protetických prací. Teorie 3D skenování, \r\nprincipy a indikace. Možnosti frézovaných prací, materiálů k frézování, preparace pro frézovanou protetiku. K čemu \r\nlze využít 3D skenování a 3D zobrazení pro indikaci léčby, možnosti implantologických šablon. Provizorní \r\nfrézované práce, možnosti frézování pro keramickou fixní protetiku a plně anatomické zirkonové frézované práce. \r\nSeznámení s druhy skenerů (ordinačních a laboratorních), typy laboratorních fréz. Úvod do 3D tisku.\r\n\n",
+  },
+  {
+    nazev: "Doplňková ergoterapeutická praxe",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03129",
+    rocnik: [2, 3],
+    obor: ["BER"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "1 - 20",
+    anotace:
+      "Předmět je určen pro studenty 2. a 3. ročníku bakalářského studia ergoterapie. Absolvováním tohoto předmětu si \r\nstudenti ergoterapie rozšíří nebo prohloubí \r\nsvé praktické dovednosti při práci s pacienty či klienty. Vyberou si jedno zařízení, na kterém absolvují \r\nergoterapeutickou praxi v rozsahu 40 hodin. \r\nPraxe bude zaměřena především na přímou práci ergoterapeuta s pacienty či klienty. Studenti se seznámí i s \r\norganizační strukturou, chodem daného zařízení a s činností jednotlivých členů týmu. Také se naučí orientovat ve \r\nzdravotnické i ergoterapeutické dokumentaci na daném pracovišti. Budou seznámeni s vykazováním \r\nzdravotnických výkonů a bodovým systémem pro zdravotní pojišťovny a další administrativou, vedenou odborníky \r\nna daném pracovišti. \r\n\n",
+  },
+  {
+    nazev: "Doplňková praxe 1",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02073",
+    rocnik: [],
+    obor: ["ADI"],
+    kredity: 1,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - neomezen",
+    anotace:
+      'Předmět rozšiřuje praktickou výuku absolvovanou v předmětech řady "Praxe ve vybraném zařízení". Umožňuje studentce či studentovi rozšířit záběr zkušeností získaných během studia, a to o služby s adiktologií související anebo z jiného úhlu zkušenosti: v managementu, protidrogové politice, financování adiktologických služeb. Student se na vybraném pracovišti aktivně zapojuje do jeho chodu, učí se dílčím úkonům, výsledkem je vypracovaná zpráva z praxe.\n',
+  },
+  {
+    nazev: "Doplňková praxe 2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02158",
+    rocnik: [],
+    obor: ["ADI-kombi"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "1 - neomezen",
+    anotace:
+      'Předmět rozšiřuje praktickou výuku absolvovanou v předmětech řady "Praxe ve vybraném zařízení". Umožňuje studentce či studentovi rozšířit záběr zkušeností získaných během studia, a to o služby s adiktologií související anebo z jiného úhlu zkušenosti: v managementu, protidrogové politice, financování adiktologických služeb. Student se na vybraném pracovišti aktivně zapojuje do jeho chodu, učí se dílčím úkonům, výsledkem je vypracovaná zpráva z praxe.\r\n\n',
+  },
+  {
+    nazev: "Doplňková praxe v porodní asistenci 1 ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03130",
+    rocnik: [2],
+    obor: ["PA"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - neomezen",
+    anotace:
+      "Předmět rozšiřuje výuku předmětu Odborné praxe v porodní asistenci 2, umožňuje především prohlubovat a \r\nupevnit si již získané vědomosti a praktické zkušenosti, které získali studenti v rámci teoretických a teoreticko-\r\npraktických odborných předmětů z oblasti gynekologie a porodnictví a při realizaci ošetřovatelské péče o ženy v \r\nrůzných obdobích jejich života, o těhotné ženy, rodičky, ženy v období šestinedělí a o novorozence. Předmět \r\numožňuje rozšířit zkušenosti získané během Odborné praxe v porodní asistenci.\r\n\n",
+  },
+  {
+    nazev: "Doplňkové praxe v porodní asistenci 2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03131",
+    rocnik: [3],
+    obor: ["PA"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - neomezen",
+    anotace:
+      "Předmět rozšiřuje výuku předmětu Odborné praxe v porodní asistenci 3, umožňuje především prohlubovat a \r\nupevnit si již získané vědomosti a praktické zkušenosti, které získali studenti v rámci teoretických a teoreticko-\r\npraktických odborných předmětů z oblasti gynekologie a porodnictví a při realizaci ošetřovatelské péče o ženy v \r\nrůzných obdobích jejich života, o těhotné ženy, rodičky, ženy v období šestinedělí a o novorozence. Předmět \r\numožňuje rozšířit zkušenosti získané během Odborné praxe v porodní asistenci.\r\n\n",
+  },
+  {
+    nazev: "Dráhy CNS 2 s profesorem Faberem",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03599",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 100",
+    anotace:
+      "Předmět navazující na předmět Dráhy CNS je organizován do šesti dvouhodinových přednášek, kde se probírá \r\nanatomický podklad, fyziologie a klinický obraz různých stavů mozkové činnosti.\r\n\n",
+  },
+  {
+    nazev: "Dráhy CNS a klinické obrazy jejich poruch",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01248",
+    rocnik: [1, 2, 3, 4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "30 - 230",
+    anotace:
+      "Předmět je organizován do šesti dvaapůlhodinových přednášek kde je nejdříve probrán anatomický obraz dané \r\nstruktury, v následném semináři pak klinik uvádí klinické souvislosti.\r\nKaždá přednáška má 2 části\r\n\n",
+  },
+  {
+    nazev: "Drogy a umění",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02364",
+    rocnik: [3, 4, 5, 6],
+    obor: ["ADI-kombi"],
+    kredity: 1,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace:
+      "Hlavním cílem předmětu je zprostředkovat studentům - prostřednictvím rozboru a analýzy literárních děl, výtvarného umění, hudby či filmů - poznatky významné pro porozumění důvodům užívání návykových látek jako nezbytného předpokladu pro realizaci účinných preventivních a léčebných opatření v oboru adiktologie. Drogy byly a jsou v lidské historii úzce spjaty s celou řadou činností člověka včetně umění. Historicky hrály drogy a jejich užívání v umění roli inspirace, námětu uměleckých děl někdy i zdroj umělcovy výdrže. Proto se drogy a s nimi související témata objevují v řadě uměleckých žánrů - od literatury, přes malbu, hudbu či film. V předmětu budou představeni významní umělci a jejich díla - jež se tématu drog a jejich užívání věnovala. Osvojení znalostí studentů bude ověřováno průběžně v diskusích a skupinových cvičeních, na závěr semináře formou eseje a/nebo seminární práce s rozborem uměleckých děl. \r\n\n",
+  },
+  {
+    nazev: "ECMO: Extrakorporální membránová oxygenace",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03305",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 10",
+    anotace:
+      "Extrakorporální membránová oxygenace (ECMO) je metoda používaná k mimotělní podpoře základních životních \r\nfunkcí u kriticky nemocných pacientů, kdy dochází k selhávání konvenčních metod léčby. Uplatňuje při léčbě \r\ntěžkého kardiálního, respiračního selhání nebo při kombinaci obou.  Případně lze ECMO použít při pokračování \r\nkardiopulmonální resuscitace (nedaří-li se obnovit oběh pacienta standardní cestou). Jde o dynamicky rozvíjející \r\nse součást péče o kriticky nemocné pacienty. Seznámení s touto moderní metodou by mělo patřit mezi vybraná \r\ntémata kardiovaskulární medicíny. Výuka bude probíhat formou seminářů a praktických cvičení, při kterých by si \r\nstudenti měli osvojit základní znalosti a dovednosti z oblasti ECMO podpor. Jedná se především o základní \r\nprincipy, příprava a ovládání zařízení, indikace k podpoře, kanylaci a napojení, řešení komplikací. \r\n\n",
+  },
+  {
+    nazev: "Ekoimunologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01666",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ZUB", "NMgr."],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace:
+      "Ekoimunologie je obor zaměřený na sledování vlivů prostředí na imunitní systém, mechanismy a možnosti ovlivnění jeho funkcí.\r\n\n",
+  },
+  {
+    nazev: "Ekologie člověka",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00058",
+    rocnik: [2, 3, 4, 5],
+    obor: ["LEK", "ZUB"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "20 - 85",
+    anotace:
+      "Předmět je určet studentům, kteří mají zájem seznámit se hlouběji s významem populace a s faktory, které na \r\nčlověka působí. Dále také porozumět vzájemným vazbám ve společnosti a vlivům člověka na životní prostředí.\r\n\n",
+  },
+  {
+    nazev: "Endoskopie a laparoskopie ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01319",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 50",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "ERASMUS - Sokrates",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02010",
+    rocnik: [],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "neomezen - 200",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Ergoterapie v mezinárodním kontextu ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03132",
+    rocnik: [1, 2, 3],
+    obor: ["BER", "NER"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "1 - 15",
+    anotace:
+      "Předmět studenty seznámí se současnými trendy ergoterapie v evropských zemích a ve světě. Seznámí se se \r\nzahraničními ergoterapeutickými organizacemi, jejich aktivitami a jejich informačními kanály, aby mohli studenti \r\ndále tyto informace sledovat. Dále studenty seznámí s možností internacionalizace v rámci studia ergoterapie. \r\nStudenti budou aktivně spolupracovat v rámci studentského spolku Mini SPOT na 1. LF UK, který se jmenuje SPOT \r\nPrague. Mini SPOT je spolek studentů ergoterapie na jedné univerzitě, spolupracující s ostatními evropskými \r\nškolami v rámci SPOT Europe (Europe Student Platforme Occupational Therapy- Studentská ergoterapeutická \r\nplatforma).\r\n\n",
+  },
+  {
+    nazev: "Ergoterapie v praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02880",
+    rocnik: [2, 3],
+    obor: ["BER"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 10",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev:
+      "Farmakovigilance: základy monitorování bezpečnosti léčiv pro student medicíny",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03695",
+    rocnik: [3, 4, 5, 6],
+    obor: ["ZUB", "LEK", "ALEK", "AZUB"],
+    kredity: 1,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Filozofický seminář 1",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00670",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 30",
+    anotace:
+      "Předmět uvádí do dějin filosofie a aktuálních filosofických otázek. K přednáškám se pojí také četba a výklad vybraných filosofických textů.\n",
+  },
+  {
+    nazev: "Filozofický seminář 2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00671",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace:
+      "Předmět uvádí do dějin filosofie a aktuálních filosofických otázek. K přednáškám se pojí také četba a výklad vybraných filosofických textů.\n",
+  },
+  {
+    nazev: "First aid zážitkem",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03579",
+    rocnik: [2, 3, 4],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "6 - 15",
+    anotace:
+      "Předmět je koncipován jako teoreticko-praktický celek. V teoretické části si studenti rozšíří svou anglickou slovní \r\nzásobu o odborné výrazy v jednotlivých tématech. V praktické části si vyzkoušejí komunikaci v kolektivu a na \r\nsimulacích zjistí své reakce v jednotlivých situacích.  V neposlední řadě si vyzkoušejí jaké to je být zasahující, \r\npacient či náhodný chodec v nevyžádané situaci a také získají zkušenost s cílenou zpětnou vazbou na svou práci. \r\n\n",
+  },
+  {
+    nazev: "Forenzní a úrazová biomechanika",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03613",
+    rocnik: [2, 4, 5, 6],
+    obor: ["NAF", "LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 20",
+    anotace:
+      "Endogenní a exogenní zátěž organismu člověka, limity tolerance organismu na zátěž, metodologie analýzy \r\nzátěžového pole, technická a režimová prevence, sportinženýring a jeho úrazová protektivní role, legislativní aspekty \r\nforenzní biomechaniky, znalecké posudky – forenzní biomechanika.\r\n\n",
+  },
+  {
+    nazev: "Fyzikální a mechanické vlastnosti materiálů pro zubní lékařství  1",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01479",
+    rocnik: [3, 4],
+    obor: ["ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "4 - 6",
+    anotace:
+      "Studenti se seznámí se základními fyzikálně-mechanickými vlastnostmi otiskovacích hmot, vlivem mísícího poměru na průběh tuhnutí alginátových a C-silikonových otiskovacích hmot, význam barevné indikace průběhu tuhnutí alginátových hmot v závislosti na teplotě, tvrdosti vody a mísícím poměru. Náplní cvičení bude i charakterizace reprodukčních schopností otiskovacích hmot (alginátové, C a A-silikonových), rozměrových změn spojených s tuhnutím otiskovacích hmot, přesnost otiskovacích hmot měřená na sádrových odlitcích. Chování otiskovacích hmot při zatížení, určování elastické a plastické deformace jako míry visko-elastických vlastností otiskovacích hmot. \r\n\r\n\n",
+  },
+  {
+    nazev:
+      "Fyzikální a mechanické vlastnosti materiálů pro zubní lékařství  2 ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01323",
+    rocnik: [3, 4],
+    obor: ["ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "4 - 6",
+    anotace:
+      "Náplň předmětu je orientována na hodnocení vlivu polymerační doby, intenzity světla a typu polymerační lampy na hloubku polymerace světlem tuhnoucích kompozitních a sklo-ionomerních cementů , na změnu teploty v zubních tkáních při světelné polymeraci, měření tvrdosti tvrdých zubních tkání a jejich srovnání s typickými výplňovými materiály (amalgám, kompozity, cementy), měření jejich mechanických vlastností (pevnost v tlaku, ohybu), či sledování vlivu povrchové úpravy sklo-ionomerních cementů na jejich desintegraci. Součástí kurzu je hodnocení polymerační kontrakce kompozitních materiálů Archimedovou metodou, seznámení se s problematikou subjektivního a objektivního určování barevného odstínu zubů a z oblasti kariologie analýzu povrchu skloviny po expozici nápojům. \n",
+  },
+  {
+    nazev: "Fyziologií k medicíně ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03539",
+    rocnik: [2, 3],
+    obor: ["LEK", "ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 15",
+    anotace:
+      "Fyziologie - zdravotnické právo - etika - komunikace - dovednost:                                                                                            \r\n \r\n                                                                                                                                                                                                                \r\n                                                                                                                                                                                                                \r\n                   \r\n\r\nPředmět je postaven na dvou pilířích: simulační andragogice a kolegiálním vztahu učitel-student. Hlavním \r\nzaměřením předmětu je lékařská fyziologie, tedy porozumění fungování lidského organismu v kontextu \r\nmedicínských priorit. Navazuje na simulační výuku 2. ročníku všeobecného lékařství, případně otvírá toto zorné \r\npole studentům jiných oborů, včetně nelékařských. Při řešení fyziologických simulací akcentuje problematiku \r\nzdravotnického práva, etiky a komunikace, tedy staví pacienta do role subjektu, nikoliv objektu zdravotní péče. \r\nPředmět je založen na společném hledání a přemýšlení, nikoliv jednosměrném předávání informací.\r\n\n",
+  },
+  {
+    nazev: "Fyzioterapie po úrazech ve sportu ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03018",
+    rocnik: [3, 1, 2],
+    obor: ["FYZ", "NAF"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "8 - 10",
+    anotace:
+      "Předmět studenty seznamuje s teoretickými základy sportovní traumatologie, biomechaniky a fyziologie svalu. V \r\nrámci výuky budou popsána jednotlivá stádia svalových lézí, způsob vyšetření a příslušné fáze terapie. Dále se \r\nbudeme zabývat tendinopatiemi a negativními faktory, které ovlivňují jejich fragilitu. Představíme univerzální \r\nprotokol určený k léčbě svalových vláken a šlach. Zmíníme důležitost preventivní péče o měkké tkáně a základy \r\npřiměřeného zatížení svalu a šlachy u pacientů po sportovních úrazech. Praktická část předmětu je zaměřena na \r\nreedukaci pohybu v rámci excentrického svalového cvičení a readaptaci na terén. \r\n\n",
+  },
+  {
+    nazev: "Fyzioterapie v praxi - aplikace propedeutických znalostí",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02004",
+    rocnik: [1],
+    obor: ["FYZ"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace:
+      "Aplikace teoretických znalostí získaných v předmětu Fyzioterapeutická propedeutika 1,2 při práci s konkrétnimi pacienty -   demonstrace kineziologického vyšetření a následné terapie. Možnost práce s pacientem pod vedením vyučujícího.\r\n\n",
+  },
+  {
+    nazev: "Genetika pro forenzní identifikace",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02334",
+    rocnik: [4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Gynekologie a porodnictví - prázdninová praxe",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00129",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "neomezen - neomezen",
+    anotace:
+      "dvoutýdenní praxe, práce s pacientem, fyziologický porod,asistence při  operacích a vyšetřeních.  \r\n\n",
+  },
+  {
+    nazev: "Hematologie a hematoonkologie v klinické praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03600",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 5",
+    anotace:
+      "Kurz „Hematologie a hematoonkologie v klinické praxi“ nabízí zájemcům o tento obor podrobné seznámení se s \r\nprací hematologa systémem „shadowing the doctor“. Studenti se pod vedením určeného mentora zúčastní \r\nklinického provozu na lůžkových odděleních I. interní kliniky, budou přítomni odborným ambulantním vyšetřením, \r\nvčetně invazivních vyšetření (trepanobioptický stacionář apod.), pod dohledem budou provádět denní vizity \r\npacientů, a zúčastní se také seminářů na pracovišti (vzdělávací semináře, indikační a transplantační semináře). \r\nDále studenti navštíví hematologickou laboratoř (morfologie, průtoková cytometrie), která je nedílnou součástí \r\nhematologického pracoviště a podílí se na diagnostice chorob krvetvorby, a navštíví také oddělení transfúzní \r\nmedicíny.\r\n\n",
+  },
+  {
+    nazev:
+      "Hepatogastroenterologie a klinická výživa a intenzivní metabolické péče v klinické praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03651",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "4 - 12",
+    anotace:
+      "Předmět je určen studentům vyšších ročníků lékařské fakulty se zájmem o praktické aspekty hepatologie, \r\ngastroenterologie a klinické výživy. Cílem kurzu je propojit teoretické znalosti s praktickými dovednostmi potřebnými \r\npro klinickou praxi. Studenti se seznámí se základními i pokročilými diagnostickými a terapeutickými přístupy v \r\noblasti onemocnění jater, trávicího traktu a poruch výživy. Důraz je kladen na nácvik klinického myšlení \r\nprostřednictvím stáží u lůžka pacienta, rozboru kazuistik, simulací akutních stavů a praktické výuky vybraných \r\ndiagnostických metod. Součástí předmětu je také rozvoj komunikačních dovedností, práce v eticky náročných \r\nsituacích a základní orientace v právním rámci dotýkajícího se oblasti hepatogastroenterologie a klinické výživy. \r\nPředmět vede k získání praktických návyků důležitých nejen pro specializaci ve zmiňovaných oborech, ale i pro \r\nvšeobecnou klinickou praxi.\r\n\n",
+  },
+  {
+    nazev: "Chirurgická anatomie a základy operačních přístupů",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02425",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 50",
+    anotace:
+      "Cílem předmětu je studentům poskytnout detailní znalosti chirurgické anatomie břišní oblasti vč. jejich využití v \r\noperačních přístupech otevřených i laparoskopických. Dále bude probrán anatomický podklad nejčastějších \r\noperací v dutině břišní se zaměřením na onkochirurgii a traumatologii. Obsah přednášek rozšiřuje učivo anatomie \r\n1. ročníku o fakta důležitá pro pozdější klinickou a chirurgickou praxi.   \r\nKurs je určen pro studenty 2.-6. ročníku studijního oboru lékařství (podmínkou zkouška z anatomie), zahrnuje 7 \r\npřednášek (ob týden) v zimním a 7 přednášek v letním semestru. \r\nMísto a čas konání bude upřesněno na začátku zimního semestru (mailem přihlášeným studentům) - úterý v sudé \r\nvýukové týdny 16.15-17.45 hod ve FN Motol, malá levá posluchárna.\r\nPodmínkou zápočtu je účast na přednáškách. \r\n\n",
+  },
+  {
+    nazev: "IFMSA Chirurgické šití – flexi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03483",
+    rocnik: [1, 2, 3],
+    obor: ["LEK", "ALEK", "AZUB"],
+    kredity: 1,
+    semestr: "Oba",
+    kapacita: "10 - 24",
+    anotace:
+      "Nácvik sterilního oblékaní, chirurgických sutur a laparoskopických technik. Správné držení nástrojů. Náhlé příhody \r\nbřišní. Chirurgické instrumentárium. \r\n\n",
+  },
+  {
+    nazev: "IFMSA zahraniční stáž – flexi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03484",
+    rocnik: [],
+    obor: ["LEK", "ALEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "10 - 45",
+    anotace:
+      "Podpora výjezdů student na zahraniční stáže na klinických pracovištích poskytovaných v rámci program \r\nSCOPE/SCORE IFMSA. Seznámení studentů s organizací práce na zahraničním pracovišti, s kulturou práce \r\nkliniků/výzkumných pracovníků v zahraničí, s komunikací mezi ošetřujícím lékařem a pacientem v cizím jazyce, s \r\nvybavením zahraničních pracovišť a léčebnými postupy, popř. navázání další spolupráce \r\nJedná se o flexi VP, tedy zápis provádí vyučující až po úspěšném absolvování stáže.\r\n\n",
+  },
+  {
+    nazev: "Indikace a interpretace vyšetření v nukleární medicíně",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01254",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 15",
+    anotace:
+      "V 8 dvouhodinových lekcích jsou demonstrovány a diskutovány nejvýznamnější klinické indikace vyšetřovacích metod nukleární medicíny a interpretace jejich výsledků.\n",
+  },
+  {
+    nazev: "Infektologie v praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02989",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "1 - 3",
+    anotace:
+      "Předmět je určen pouze pro studenty 5. a 6. ročníku všeobecného lékařství, kteří již absolvovali předmět Infekční \r\nlékařství na našem pracovišti, a problematika je zaujala natolik, že by chtěli prohloubit své teoretické i praktické \r\nznalosti v infektologii. \r\nPředmět bude koncipován ryze prakticky se zaměřením na možnost vyšetřit si pacienta, provést některá vyšetření, \r\nujasnit si diferenciální diagnostiku a možnosti terapie. \r\n\r\n\r\n\n",
+  },
+  {
+    nazev: "Integrovaná biologie a patologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01959",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 20",
+    anotace:
+      "Charakteristika volitelného předmětu, jeho uspořádání a cíle: Tento volitelný předmět má cíle znalostní, \r\ndovednostní a v širším pohledu intelektuální. V první rovině (znalostní a dovednostní) je postaven tak, aby \r\nefektivním způsobem presentoval současný stav informatiky se vztahem k biologii a lékařství. Aktivním způsobem \r\nbudou probrány přístupy a nástroje současné bioinformatiky zahrnující ukládání lékařských a vědeckých informací, \r\njejich získávání z databazí, specifické použití a další návazné analyzování. V druhé rovině budou probrány \r\nspecifické oblasti, které mají význam pro chápání důležitých konceptů a důležitých oblastí biologie a medicíny. Do \r\ntěchto oblastí patří evoluční koncept biologie, regulační mechanismy metabolismu, vývoje, buněčné a tkáňové \r\nhomeostázy, tkáňovou obměnu, specializace a diferenciace buněk. Předmět je připraven tak, aby studentům \r\numožnil orientaci v informatických biomedicínských systémech. Semináře jsou rozděleny na část přednášky \r\nzaměřené na konkrétní tématiku a část praktickou, kdy studenti budou moci řešit vybrané problémy pomocí \r\nbioinformatiky na individuálních počítačích. Je připraveno deset základních seminářů. Témata jsou vybrána tak, \r\naby zahrnovala oblasti, které se prolínají do většího počtu lékařských oborů a absolvování předmětu tak dalo \r\nstudentům nástroje, které budou používat během dalšího studia. \r\n\n",
+  },
+  {
+    nazev: "Interaktivní intenzivní péče",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02953",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 10",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Interpretace EKG v klidu a při zátěži",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01257",
+    rocnik: [3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "3 - 180",
+    anotace:
+      "Interpretace EKG v klidu a při zátěži.  \r\n7 lekcí, 6 tématických celků: \r\n1) Infarkt\r\n2) Ischemie,Poruchy vedení \r\n3) Hypertrofie\r\n4) Arytmie\r\n5) EKG sportovce,Zátěžové EKG. \r\n6) Hypertrofie, přetížení komor. Vliv minerálů na EKG.\r\n7) Opakování. Zápočet.\r\nKaždá lekce: krátký teoretický úvod, příklady několika křivek, pokus o samostatnou interpretaci a diagnózu formou kvízu, na závěr lektor vysvětlí jak dospěl k diagnóze. Výuka se odehrává s využitím prezentačního software MS Power Point.\n",
+  },
+  {
+    nazev: "Invazivní léčba obstrukční plicní nemoci",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03529",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "3 - 8",
+    anotace:
+      "Invazivní léčba zúžení centrálních a periferních dýchacích cest je v posledních letech v popředí zájmu a indikace k \r\nrůzným takovým léčebným modalitám velmi rychle narůstá. Jedná  se o soubor metodologie k reventilaci \r\nprůduškového stromu u nádorových i nenádorových obstrukcí dýchacích cest, případně jejich strukturálních \r\ncharakteristik. V případě CHOPN a astmatu jde o metody, které mohou zmenšit objem plíce postižené hyperinflací \r\na/nebo upravit slizniční a podslizniční patofyziologické mechanismy zánětu a  bronchiální hypersekrece. Tyto \r\nmetody jsou převážně miniinvazivní, prováděné bronchoskopickým přístupem.\r\n\n",
+  },
+  {
+    nazev: "Jak tělu rozumět tělem",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03643",
+    rocnik: [],
+    obor: ["FYZ", "NAF", "BER", "NER"],
+    kredity: 1,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 20",
+    anotace:
+      "Předmět se zabývá otázkami, které si v běžné praxi dennodenně kladou odborníci pracující s těly druhých. V jakém \r\nsmyslu je tělo druhého mechanismem, který je možné opravit zvnějšku? Jak reaguje sval a jiné tkáně na náš \r\ndotek, tlak, tah? Jaká je, měla by být nebo být neměla role vlastního těla v terapii či léčbě druhých? Podobné otázky \r\na mnohé další (limity západní vědecké medicíny, hranice esoterismu a šarlatánství, terapie jako řemeslo atp.) \r\nbudou otvírat jednotlivé moderované diskuze doplňované praktickými ukázkami, cvičeními či experimenty.\r\n\n",
+  },
+  {
+    nazev: "Jazykový tandem",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02865",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "20 - 80",
+    anotace:
+      "Tandemové učení se cizím jazykům se studenty anglické paralelky.\n",
+  },
+  {
+    nazev: "Kapitoly medicíny Dálného východu",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01907",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 30",
+    anotace:
+      "Úvod do problematiky lékařských tradic v zemích Dálného východu. \n",
+  },
+  {
+    nazev: "Kardiologie -mentor I",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02954",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 3",
+    anotace:
+      "Dvousemestrální kurz mentor v kardiologii je určen pro vážné zájemce o obor kardiologie a vnitřní lékařství, kteří \r\nchtějí získat praktické zkušenosti před nástupem do svého zaměstnání. Výuka je zaměřená na individuální \r\npraktickou edukaci studentů 4., 5. a 6. ročníku v praktických kardiologických a interních dovednostech nad rámec \r\nstandardního logbooku.\r\nPředmět se koná 1x týdně. Studenti jsou rozděleni do 2 skupin dle preferencí dne výuky. U první skupiny probíhá \r\nvýuka v pondělí nebo úterý, u druhé skupiny ve středu nebo ve čtvrtek. Časový rámec výuky dle rozpisu zveřejněném \r\nv detailu předmetu v SIS nebo na nástěnce II.IK (vchod A14b, 1. patro, vedle Eiseltovi síně). Výuka začíná vě většině \r\npřípadů ve 14:00 hodin. Rozpis výuky je zvěřejněn v detailu předmětu v SIS.\r\n\r\n\r\n\r\n\n",
+  },
+  {
+    nazev: "Kardiologie-mentor II",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02955",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 3",
+    anotace:
+      "Dvousemestrální kurz mentor v kardiologii je určen pro vážné zájemce o obor kardiologie a vnitřní lékařství, kteří \r\nchtějí získat praktické zkušenosti před nástupem do svého zaměstnání. Výuka je zaměřená na individuální \r\npraktickou edukaci studentů 4., 5. a 6. ročníku v praktických kardiologických a interních dovednostech nad rámec \r\nstandardního logbooku.\r\nPředmět se koná 1x týdně. Studenti jsou rozděleni do 2 skupin dle preferencí dne výuky. U první skupiny probíhá \r\nvýuka v pondělí nebo úterý, u druhé skupiny ve středu nebo ve čtvrtek. Časový rámec výuky dle rozpisu zveřejněném \r\nv detailu předmetu v SIS nebo na nástěnce II.IK (vchod A14b, 1. patro, vedle Eiseltovi síně). Výuka začíná vě většině \r\npřípadů ve 14:00 hodin. Rozpis výuky je zvěřejněn v detailu předmětu v SIS.\r\n\r\n\r\nKontakt: petra.smejkalova@lf1.cuni.cz\r\n\r\n\r\n\n",
+  },
+  {
+    nazev: "Kardiovaskulární rehabilitace a sportovní kardiologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02550",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "FYZ", "ERGO", "NT", "NAF"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 25",
+    anotace:
+      "Kardiovaskulární rehabilitace je povinně volitelný předmět, určený pro studenty oborů Všeobecné lékařství, Nutriční \r\nterapeut, Fyzioterapie, Ergoterapie od 2. ročníku. Výuka probíhá po dobu letního semestru formou seminářů v \r\ncelkovém rozsahu 15 hodin; výuka je zakončena zápočtem. \r\n\n",
+  },
+  {
+    nazev: "Kardiovaskulární výzkum",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03616",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 5",
+    anotace:
+      "Předmět je koncipován jako samostatná práce na projektu pod vedením školitele kliniky. Samostatná práce je \r\nvedena tak, aby student získal schopnost vytvoření protokolu projektu a jeho následnou realizaci, zpracování a \r\nzhodnocení nasbíraných dat v kontextu známé literatury a zvolení formátu pro prezentaci. \r\n\n",
+  },
+  {
+    nazev: "Kasuistiky manželských a rozvodových sporů ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02188",
+    rocnik: [3, 4, 5],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 15",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Kazuistiky z kardiovaskulární medicíny ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01664",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Kazuistiky z laboratorní diagnostiky ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02089",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 20",
+    anotace:
+      "Cílem předmětu je rozbor kazuistik ze všech lékařských oborů s důrazem na nálezy laboratorních vyšetření. Studenti budou tázáni na a) stanovení diagnózy, b)diferenciální diagnostiku, c)návrh dalších vyšetření, d)návrh léčby. Po prezentaci kazuistiky bude v rámci diskuse prezentováno: - současný stav znalostí o daném onemocnění včetně výzkumných aspektů, - kompletní diferenciální diagnostika, - aktuální možnosti léčby. \n",
+  },
+  {
+    nazev: "Klinická anatomie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00691",
+    rocnik: [1, 2, 3, 4, 5],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "30 - 200",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev:
+      "Klinická aplikace ICF (Mezinárodní klasifikace funkčních schopností, disability a zdraví, WHO",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01298",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["LEK", "FYZ", "BER", "NER", "NAF"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Klinická farmakologie 1,2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00131",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "10 - 40",
+    anotace:
+      "Klinicky aplikovaná farmakokinetika, variabilita lékové odpovědi, klinické využití určování koncentrace léčiv, farmakoterapie za patologických stavů, nežádoucí účinky, lékové interakce. \r\n\r\nDoporučená literatura:František Perlík; Ondřej Slanař; Individualizace farmakoterapie Triton 2016, 160 stran\r\n\r\nJiří Slíva, Martin Votava, Farmakologie Triton, 2010\r\n  \r\n\n",
+  },
+  {
+    nazev:
+      "Klinická mikrobiologie – diagnostika a interpretace laboratorních nálezů",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02086",
+    rocnik: [5],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 6",
+    anotace:
+      "Praktická účast studentů na diagnostickém procesu v laboratoři s následnou interpretací nálezů. Zpracování návrhů atb terapie a profylaxe. Účast na klinických vizitách na jednotkách intenzivní péče v rámci hematoonkologie, chirurgie a ARO. Zpracování kasuistiky a její prezentace formou semináře na UIM.\n",
+  },
+  {
+    nazev: "Klinická onkologie v běžné praxi – stáž",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03617",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 2",
+    anotace:
+      "Praktická stáž cílící na rozšíření informací o epidemiologii, léčebných modalitách a jejich sekvencích, hodnocení \r\nléčebné odpovědi, paliativní a symptomatické péči, psychoterapii v onkologii, léčebné rehabilitaci. Stáž je \r\nzaměřena rozvoj souvisejících dovedností, schopností, postojů i hodnot důležitých pro uplatnění budoucího lékaře \r\nv praxi i ve společnosti (kritické myšlení, rozhodování, komunikativní dovednosti, sociální kompetence).\r\n\n",
+  },
+  {
+    nazev: "Klinická pastorační péče",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02546",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace:
+      "Předmět seznámí studenta s historií péče o duchovní potřeby nemocných, s biblickými základy židovsko-křesťanského pohledu na zdraví a nemoc a paralelami v dalších starověkých textech. Dále objasní kulturně-religiózní proměny v posledních desetiletích i současné duchovní potřeby nemocných, jejich blízkých a personálu. Uvede rovněž do základů křesťanství a křesťanského pojetí pastorace. Zohlední i další náboženství, která se v ČR vyskytují. Především formou kazuistik bude přiblížena práce nemocničního kaplana - poskytovatele klinické pastorační péče - na různých odborných pracovištích. Dále bude provedeno srovnání ve vzdělávání a v poskytování klinické pastorační péče v ČR a v zemích západní Evropy a USA.  \n",
+  },
+  {
+    nazev:
+      "Klinická patofyziologie vnitřního prostředí – integrativní přístup/Clinical pathopsysiology of the internal environment – integrative approach",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03530",
+    rocnik: [3, 4, 5],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 27",
+    anotace:
+      "Pochopení klinické patofyziologie a patofyziologických principů diagnostiky a terapie zejména akutních poruch \r\nvnitřního prostředí.\r\n\n",
+  },
+  {
+    nazev: "Kmenové buňky a regenerační lékařství ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01674",
+    rocnik: [3, 4, 5, 6],
+    obor: ["ALEK", "LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 15",
+    anotace:
+      "The aim of the course is to acquaint students with the development of knowledge in the field of stem cells, focusing \r\nmainly on the latest scientific knowledge and its exploitation in regenerative medicine. The lectures are divided \r\nthematically: 1) Introduction into stem cell biology, 2) Embryonic stem cells, 3) Adult stem cells, 4) Induced \r\npluripotent stem cells 5) Hematopoietic stem cells 6) Tissue engineering, 6) Tissue repair from stem cells. The \r\ncourse is taught in English. The requirement to obtain 2 credits is a physical participation in a course with only one \r\nabsence allowed and passing a short test during the last lesson.\r\n\n",
+  },
+  {
+    nazev: "Komplexní výživa sportovců  (i nesportovců) a sportovní výkon",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01830",
+    rocnik: [3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "3 - 180",
+    anotace:
+      "Výživa vytrvalostního sportovce. Energetický výdej a tělesná zátěž. Sacharidy a tuky, doplňky stravy. Výživa u silového \r\nsportovce. Bílkoviny, aminokyseliny, kreatin. Povolené anabolické přípravky. Nutriční anamnéza sportovce. \r\nHodnocení výživy (osobní jídelníčky). Tělesné složení. Somatotypy. Antropometrie. Komplexnost potravinového \r\nkoše sportovce. Potravinové doplňky stravy. Stopové prvky. Doping. Pitný režim sportovců. Minerály, vitaminy. Strava \r\nu vybraných vnitřních onemocnění. Strava u onemocnění pohybového aparátu a doplňky stravy.\r\n\n",
+  },
+  {
+    nazev: "Kurz Mindfulness Based Stress Reduction (MBSR) ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03619",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "8 - 12",
+    anotace:
+      "Program Mindfulness Based Stress Reduction (MBSR) je vědecky ověřená metoda sloužící k lepšímu zvládání \r\nstresu pomocí technik všímavosti. Mnoho vědeckých prací potvrdilo, že trénování technik všímavosti pozitivně \r\novlivňuje fungování mozku, pomáhá lépe zvládat stres a emoce.\r\nHlavním cílem kurzu je rozvíjet mindfulness (všímavost), schopnost jasněji vnímat přítomnost a vše, co se v ní \r\nodehrává. Jedná se jak o vnější události (např. prostředí a osoby), tak o události vnitřní (např. pocity, myšlenky a \r\ntělesné stavy). Rozvoj tohoto uvědomění pomáhá být všímavější vůči tomu, co zažíváme, a zároveň mít od těchto \r\nudálostí „odstup“ - tedy být jimi méně často a méně intenzivně ovlivňováni. Toto uvědomění nám nabízí širší \r\nspektrum možností, jak zareagovat v dané situaci, a zároveň zvyšuje šanci, že se zachováme tak, aby to to bylo pro \r\nnás i ostatní prospěšnější. \r\nKurz MBSR je zaměřen na rozvíjení individuální všímavosti a práci se stresem, převaha praxe je tedy v nacvičování \r\nindividuálních technik všímavosti (body-scan (praxe procházení těla), všímavý pohyb, práce s dechem…). K lepší \r\nmotivaci účastníků slouží i skupinová sdílení. Součástí každého setkání je část teoretická, která vždy rozebírá určité \r\ntéma z oblasti práce se stresem, a část praktická - nácvik technik všímavosti. \r\n\n",
+  },
+  {
+    nazev: "Kurz sportovní a rekondiční masáže",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00792",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "24 - 36",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Kurz tvorby Wikilectures I. / Wikilectures Writing Course I. ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03492",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ALEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "3 - 30",
+    anotace:
+      "This writing course will be held in ENGLISH but is fully open for CZECH students as well. \r\nA student will have to write in ENGLISH (or translate into ENGLISH) at least 40 000 character text within the \r\nWikilectures Web Pages (the amount of character can be changed by the guarantor).\r\n\r\n\n",
+  },
+  {
+    nazev: "Kurz vědeckého psaní II. / Scientific Writing Course II.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03491",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ALEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "3 - 12",
+    anotace:
+      "This scientific writing course will be held in ENGLISH but is fully open for CZECH students as well. The written \r\ndigests can be submitted in both languages, either in CZECH or in ENGLISH.\r\nA student with this role of editor will take care of a team of writers (3 to 10 students) from the Scientific Digests I. \r\nCourse and will be responsible for guiding them through the Scientific Digests I. Course. The editor will aid their \r\nstudents in discovering relevant original science papers and then revise the digests written by his/her team of \r\nwriters.\r\nThe applicants for this course will be selected based on the submission of a motivational letter to the guarantor of \r\nthe course.\r\n\n",
+  },
+  {
+    nazev: "Léčba závislosti na alkoholu a jiných drogách",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02913",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 11",
+    anotace:
+      "Léčba závislosti na alkoholu a jiných drogách - výuka probíhá na Klinice adiktologie.\r\n\n",
+  },
+  {
+    nazev: "Léčba závislosti na tabáku v praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03020",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 5",
+    anotace:
+      'Předmět "Léčba závislosti na tabáku v praxi" je určen pro studenty s nejméně 6 ukončenými semestry \r\nmagisterského studia všeobecné medicíny (mohou být i z jiných fakult), kteří mají zájem ověřit si své komunikační \r\na další schopnosti v praxi v případě léčby závislosti na tabáku. Budou navštěvovat Centrum pro závislé na tabáku \r\nIII. interní kliniky 1. LF UK a VFN na poliklinice VFN, budou přítomni vyšetřením a intervencím, budou sledovat \r\nprůběh léčby pacientů v čase, případně se sami do intervencí zapojovat. Mohou být také směrováni ke sledování \r\ndalších klinických souvislostí kouření podle svého osobního zájmu o různé klinické obory. Pro nutnou znalost \r\nčeštiny není předmět vhodný pro studenty v angličtině. Předmět je na dva semestry, bude zakončen testem, \r\npohovorem a praktickou zkouškou. \r\n\n',
+  },
+  {
+    nazev: "Lékařská parazitologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00055",
+    rocnik: [2, 3, 4],
+    obor: ["LEK", "ZUB"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "10 - 30",
+    anotace:
+      "Tento volitelný předmět je zaměřen na rozšíření znalostí o původcích parazitárních nákaz zběžně probíraných v rámci předmětu Mikrobiologie I a II. Studenti jsou seznamováni s mechanismy patogenního působení původců, se základy patogeneze jednotlivých onemocnění a s jejich klinickým obrazem. Předmět rovněž rozšiřuje znalosti o dostupných diagnostických metodách přímého a nepřímého průkazu původců v klinickém materiálu, s omezeními těchto metod (ve vztahu k metodě, k možnostem odběru materiálu resp. stavu nemocného apod.), s výběrem, odběrem a uchováváním materiálu, s interpretací výsledků vyšetření. Součástí předmětu je rovněž seznámení s dostupnými léky. Na vybraných kazuistikách je studentům demonstrováno, jak lze využít teoretické znalosti původce při diagnostice onemocnění. Snahou je, aby studenti propojovali své znalosti z předchozích předmětů s novými informacemi.  \r\n\n",
+  },
+  {
+    nazev: "Lekce z EKG ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02189",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace:
+      "Předmět Lekce z EKG je cílen na praktickou stránku věci - osvojení základních EKG znalostí, které by měli lékaři na \r\ninterním příjmu a koronárních jednotkách bezpečně znát. Při výuce je kladen zřetel na samostatnou práci studentů \r\na praktický nácvik popisu EKG křivek v provázanosti s nezbytnou teorií.\r\n\n",
+  },
+  {
+    nazev: "Lektorské techniky chirurgických dovedností – flexi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03485",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ALEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "5 - 40",
+    anotace:
+      "Kurz slouží k přípravě student-lektorů pro výuku veškerých chirurgických předmětů. Účastníci kurzu se naučí \r\ndidakticky provádět jednotlivé zákroky tak, aby byli schopni je následně přednášet dalším studentům v rámci \r\nostatních předmětů curricula. Každý student bude proškolen v základech chirurgického šití a v pokročilých \r\ntechnikách chirurgického šití, v hrudní drenáži, základech ultrasonografie, základech diagnostiky náhlých příhod \r\nbřišních a v základech sádrování. Předpokládá se, že absolventi tohoto kurzu se aktivně zapojí do výuky \r\nchirurgických předmětů v rámci Simulačního centra 1. LF UK. \r\n\n",
+  },
+  {
+    nazev: "Lektorské techniky simulační medicíny - BLS",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02547",
+    rocnik: [2, 3, 4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 18",
+    anotace:
+      'Předmět je určen absolventům VP "Urgentní medicína v simulacích - na ulici (BLS)" a "BLSS - První pomoc v \r\nsimulacích - flexi". Jedná se o intenzivní, jednosemestrální kurz lektorských dovedností v oblasti výuky akutní \r\nmedicíny a první pomoci. V tomto kurzu zdokonalíte svoji schopnost předat druhým znalosti i dovednosti, které si v \r\nkurzu sami zdokonalíte. Osvojíte si principy simulační výuky, rozbor simulačních scénářů a zpětnou vazbu. \r\nKurz probíhá pod vedením lékařů KARIM 1. LF UK a VFN a ZZS HMP, je honorován 3 kredity. Jako absolventi tohoto \r\npředmětu se stáváte lektory simulační medicíny, kteří vedou výuku na adaptačních kurzech v Dobronicích pro první \r\nročníky a na předmětu BLLS - První pomoc v simulacích, tzv. Dobrosim. Zlepšení komunikačních dovedností, které \r\ntento předmět bezesporu přináší, je obrovským bonusem pro Vaši další studentskou ale i lékařskou karieru. \r\n\n',
+  },
+  {
+    nazev: "Letní výcvikový kurz I.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00037",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 150",
+    anotace: "zaměření na sporty a pobyt v přírodě\r\n\n",
+  },
+  {
+    nazev: "Letní výcvikový kurz II.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00699",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 70",
+    anotace: "zaměření na vodní turistiku\r\n\n",
+  },
+  {
+    nazev: "Letní výcvikový kurz III.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01196",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 60",
+    anotace: "zaměření na cykloturistiku a vysokohorskou turistiku\r\n\n",
+  },
+  {
+    nazev: "Letní výcvikový kurz s WikiSkripty",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02699",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 15",
+    anotace:
+      "Letní výcvikový kurz s WikiSkripty je kombinovaný týdenní kurz s odborným programem a sportovními aktivitami. Cílem odborné části je naučit frekventanty zásady vědecké a didaktické publikace, se zvláštním zřetelem k aspektům publikování v otevřených prostředích. Formou workshopů se seznámí s formálními náležitostmi odborných textů, zásadami redakčního a recenzního procesu, vyhledáváním informací, posuzováním jejich validity, medicínou založenou na důkazech, autorským právem a vybranými licenčními systémy, zásadami komunikace na síti, profesionalismem v sociálních sítích, ochranou osobních dat a dalšími tématy. Odborný program je doplněn sportovními aktivitami.\r\n\r\nKurz probíhá v době letních prázdnin společně s druhým turnusem letních výcvikových kurzů.\r\n\r\nČasové uspořádání programu:\r\n4 vyučovací hodiny denně (tj. 3 hodiny čistého času) odborného programu formou workshopů – garantuje dr. \r\nVejražka (ÚLBLD, WikiSkripta),\r\ndále 3 hodiny doplňkového sportovního programu – garantuje Ústav tělesné výchovy\r\n\r\n\r\n\r\n\n",
+  },
+  {
+    nazev: "Marketing a vedení fyzioterapeutické praxe",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03644",
+    rocnik: [1.0, 2.0],
+    obor: ["NAF"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 16",
+    anotace:
+      "Předmět „Marketing a vedení fyzioterapeutické praxe“ se zaměřuje na přípravu studentů fyzioterapie k založení a \r\nvedení vlastní praxe. Cílem je poskytnout základy marketingu, budování osobní značky a praktické dovednosti \r\nnezbytné pro efektivní podnikání v oblasti zdravotní péče. Studenti získají přehled o tvorbě podnikatelského plánu, \r\nnastavení cenových strategií a komunikaci s klienty, a zároveň se naučí, jak využívat moderní marketingové nástroje \r\nk propagaci svých služeb.\r\n\n",
+  },
+  {
+    nazev: "Matematika pro studenty medicíny ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03582",
+    rocnik: [],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "2 - 20",
+    anotace:
+      "Matematika je základem všech přírodních věd, včetně medicíny. Studenti většiny studijních programů na fakultě \r\nabsolvují předměty jako biofyzika, biochemie, fyziologie, informatika a farmakologie, které se ve velké míře opírají o \r\nmatematické metody (jako příklad lze uvést modelování fyziologických funkcí, chemické či farmakologické výpočty, \r\nzpracování signálů a předmět biofyzika prakticky v celém svém rozsahu). Na fakultě v současnosti zcela chybí \r\nexplicitní výuka matematiky, přesto mnoho stávajících předmětů (například výše jmenované) vyžaduje, aby studenti \r\njiž disponovali značnými matematickými dovednostmi. Proto by studenti v tomto kurzu rozvíjeli své matematické \r\nznalosti, jako jsou rovnice nebo matematické funkce a následně by je mohli aplikovat ve výše zmíněných \r\npředmětech.\r\nNa konci kurzu by si studenti osvojili pokročilejší téma diferenciálního a integrálního počtu, které je na mnoha \r\nevropských středních školách opomíjeno. Přesto je toto téma nezbytné pro hlubší pochopení základních přírodních \r\nzákonitostí, stejně jako sofistikovanějších modelovacích přístupů v medicíně. \r\nMatematika je navíc jedním z nejlepších nástrojů pro rozvoj systematického a analytického myšlení, které je pro \r\nřešení problémů klíčové. Studenti medicíny s dobrými znalostmi matematiky jsou lépe vybaveni pro analýzu \r\nsložitých lékařských problémů a vypracování účinných léčebných plánů.\r\nMatematika je rovněž klíčová pro statistiku, jejíž znalost je nezbytná pro správnou interpretaci vědeckých studií. Z \r\ntěch potom pramení informovaná klinická rozhodnutí v moderní medicíně založené na důkazech (Evidence-Based \r\nMedicine). Kromě toho může kurz pomoci studentům, kteří se chtějí zapojit do vědeckého výzkumu, a to jednak \r\nběhem studia, ale i po něm. Tento kurz by okrajově zahrnoval základy pravděpodobnosti a statistiky, logicky by tedy \r\npředcházel předmětu B83534 Zdravotnická statistika 1, 2.\r\n\n",
+  },
+  {
+    nazev: "Medicína za mimořádných událostí a krizových situací",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02709",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 25",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Medicína životního stylu",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03021",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["LEK", "FYZ", "BER", "NER", "BNT"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 30",
+    anotace:
+      "Chronická nepřenosná onemocnění, jako jsou kardiovaskulární onemocnění, diabetes mellitus, obezita, některá \r\nonkologická onemocnění a duševní poruchy, představují významnou zdravotní zátěž současné populace. Jejich \r\nvznik, průběh i prognóza jsou úzce spojeny s životním stylem, zejména s výživou, pohybovou aktivitou, spánkem, \r\npsychickým zdravím a dalšími behaviorálními faktory.\r\nMedicína životního stylu představuje moderní, multidisciplinární a na důkazech založený přístup, který využívá \r\nintervenci životního stylu jako součást prevence i léčby těchto chronických onemocnění. \r\nPředmět seznamuje studenty se základními principy medicíny životního stylu – s rolí výživy, pohybové aktivity, \r\nspánku, psychických faktorů a moderní farmakoterapie. Součástí výuky jsou také témata individualizovaného \r\npřístupu k pacientovi, moderních technologií, telemedicíny a role multidisciplinárního týmu v klinické praxi. Cílem \r\npředmětu je poskytnout studentům komplexní pohled na možnosti intervence životního stylu v reálné klinické praxi a \r\nzdůraznit význam dlouhodobé udržitelnosti změn.\r\n\r\n\n",
+  },
+  {
+    nazev: "Medicínské právo",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01334",
+    rocnik: [2, 3, 4, 5],
+    obor: ["LEK", "ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 30",
+    anotace:
+      "Bez znalosti základních práv, ale hlavně povinností se dnes již lékař při svém každodenním kontaktu s pacientem neobejde. Léčba podle nejlepšího vědomí lékaře ustupuje vůli pacienta rozhodovat o všem, co se s ním ve zdravotnickém zařízení bude dít. Orientace ve složitostech a nástrahách medicínského práva vám významně může pomoci předcházet situacím, s nimiž jsou spojeny pro zdravotnického pracovníka a poskytovatele zdravotních služeb právní důsledky.\r\n\n",
+  },
+  {
+    nazev: "Metoda Ludmily Mojžíšové",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01353",
+    rocnik: [3],
+    obor: ["FYZ"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 15",
+    anotace:
+      "Metoda Ludmily Mojžíšové byla původně určena pro léčbu vertebrogenních obtíží, ale na základě zkušeností z praxe se pak rozšířila na potíže urologické a gynekologické. Metoda je nejvíce spojována léčbou funkční sterility. Terapie podle Ludmily Mojžíšové spočívá v šetrné mobilizaci periferních kloubů a páteře, sternokostálních skloubení a kostrče. K terapii patří také speciální cvičení a dodržování zásad ergonomie.\r\n\r\n\n",
+  },
+  {
+    nazev: "Migration, ethnicity and health",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03022",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Moderní diagnostické techniky v mikrobiologii a imunologii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01670",
+    rocnik: [3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 3",
+    anotace:
+      "Předmět slouží k hlubšímu seznámení studentů s moderními technikami využitelnými v rutinní mikrobiologické a imunologické diagnostice, a to nejen v úrovni teoretické, nýbrž i formou praktického provedení vybraných technik.\r\npředmět je doplněn exkurzí do diagnostické laboratoře.\n",
+  },
+  {
+    nazev: "Moderní technologie v diabetologii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02919",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "NT"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 60",
+    anotace:
+      "Účelem předmětu je seznámit studenty s pokročilými technologiemi a léčebnými postupy v diabetologii. Předmět \r\nje určen primárně pro studenty oboru Všeobecné lékařství od 3. ročníku studia a nutriční terapeut a nutriční \r\nspecialista. Důraz bude kladen zejména na popis základní patofyziologii tohoto onemocnění, způsoby léčby jak ze \r\nstrany lékaře tak pacienta, seznámení se s dosavadními mobilními přístroji a softwarovými aplikacemi a v \r\nneposlední řadě také pohled do budoucnosti s ohledem na rapidní vývoj léčebných metod a zdravotnických \r\ntechnologií. Studenti si rovněž prakticky vyzkouší manipulaci s některými z probíraných přístrojů a díky zapojení \r\ntelemedicíny budou mít možnost sami zaujmout jak roli pacienta, tak i diabetologa. Výuka bude probíhat primárně \r\nprezenčně v prostorách Ústavu hygieny a epidemiologie na Albertově (učebna HYGEP1), Studničkova 7, Praha 2, a \r\nbude koncipována ve formě 6-ti bloků vždy od 15:00 do 17:30 v lichých výukových týdnech (konkretní rozpis dnů viz \r\nsekce Rozpis výuky v SIS). Abychom vyšli vstříc zájemcům o distanční formu výuky, budou přednášky k jednotlivým \r\ntématům streamovány pomocí MS Teams a prezentace budou průběžně uploadovány na web. Podmínkou k \r\nzískání zápočtu je splnění dvou praktických telemedicínských úloh, které lze rovněž realizovat distančně, nebo \r\nvytvoření stránky v projektu Wikistripta na jedno z témat probíraných v rámci předmětu.\r\n\n",
+  },
+  {
+    nazev: "Molekulární biologie - příprava k PhD studiu",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01958",
+    rocnik: [],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 2",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Muskuloskeletální ultrasonografie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03133",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 18",
+    anotace:
+      "Výuka praktické sonografie pohybového aparátu probíhá kombinovaně, formou teoretického semináře s \r\nnásledným praktickým cvičením na ultrazvukových přístrojích v menších skupinkách pod pohledem zkušených \r\nlékařů-sonografistů.\r\n\r\nV letním semestru akademického roku 2023/2024 výuka neprobíhá. \r\n\n",
+  },
+  {
+    nazev: "Muskuloskeletální ultrasonografie ve fyzioterapii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03620",
+    rocnik: [1, 2],
+    obor: ["NAF"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 9",
+    anotace:
+      "Výuka praktické sonografie pohybového aparátu probíhá kombinovaně, formou teoretického semináře s \r\nnásledným praktickým cvičením na ultrazvukových přístrojích v menších skupinkách pod pohledem zkušených \r\nlékařů-sonografistů.\r\n\n",
+  },
+  {
+    nazev: "Neuroanatomie v klinické praxi aneb co jsme vám ještě neřekli",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03621",
+    rocnik: [2, 3, 4],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "20 - 85",
+    anotace:
+      "Poznatky z neurologie, neurověd a příbuzných oborů rychle přibývají a do širšího povědomí i klinické praxe se často \r\ndostávají s velkým zpožděním. V průběhu studia medicíny není dostatek času a prostoru věnovat novým \r\npoznatkům náležitou pozornost. Přitom právě informace z kvalitních recenzovaných odborných periodik často \r\npřinášejí zcela nový pohled na anatomické souvislosti, patofyziologii onemocnění, klasifikaci nemocí, diagnostická \r\nkritéria i léčbu. Také správné pochopení nových informací není jednoduché. Cílem volitelného předmětu \r\n„Neuroanatomie v klinické praxi aneb co jsme vám ještě neřekli“ je srozumitelnou formou zprostředkovat nové \r\npohledy na vybraná témata z oborů neuroanatomie, neurologie s přesahem do neurofyziologie, neuropsychiatrie a \r\nneuropsychologie. Semináře vyžadují aktivní účast studentů a znalosti z neuroanatomie vyučované v 1. ročníku \r\nstudia. Při seminářích budou srovnávány tzv. učebnicové, vědecké a klinické pohledy na problematiku různých \r\ntémat v neurologii. Na programu budou témata zabývající se poruchami řízení hybnosti, senzorických funkcí, \r\nchování, emocí a kognitivních funkcí. Semináře jsou doporučujeme i studentům, kteří se nechtějí věnovat \r\nneurologii a příbuzným oborům, ale chtějí jen získat lepší představu o funkcích nervové soustavy.\r\n\n",
+  },
+  {
+    nazev: "Neurodynamika",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03306",
+    rocnik: [1, 2],
+    obor: ["NER"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "4 - 20",
+    anotace:
+      "Předmět je určen pro navazující magisterské studium Ergoterapie pro dospělé v kombinované formě. Studenti se \r\nseznámí se základy konceptu Neurodynamiky zahrnující vyšetření a terapii osob s periferní \r\nneuropatickou bolestí hodnocení změn dynamiky nervového systému (neurodynamiky) a dále základy terapie \r\npomocí mobilizace nervového systému. \r\n\n",
+  },
+  {
+    nazev: "Neurologem na zkoušku",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03622",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 20",
+    anotace:
+      "V průběhu výuky ve skupině není dostatek času věnovat se ukázce praktické denní práce lékaře. Volitelný předmět \r\n„Neurologem na zkouškou” umožní zájemcům o neurologická onemocnění seznámení s praktickou činností \r\nlékaře u jednolitých neurologických diagnóz. Student se bude na ambulancích i odděleních aktivně podílet na \r\nneurologickém vyšetření pacienta, konzultovat nález s lékařem, účastnit se stanovení diferenciální dg., indikovat \r\nvyšetření a podílet se na managmentu léčebného režimu. Stejně tak se zúčastní i noční služby, která zahrnuje péči \r\no akutní pacienty, komunikaci se záchranou službou, převzetí pacienta, zpracování dokumentace a vypracování \r\npříjmu na oddělení. Z tohoto důvodu je vyžadována předchozí zkouška z Neurologie, aby se student již mohl aktivně \r\nzapojit do praktické péče o pacienta a získal hlubší znalosti neurologie a praktické znalosti v péči o pacienta. Stáže \r\nbudou probíhat v jednotlivých centrech a ambulancích Neurologické kliniky (akutní všeobecná ambulance, \r\nspánkové centrum, centrum pro extrapyramidová onemocnění, centrum pro intervenční terapii motorických poruch, \r\ncentrum pro myastenii gravis a jiná nervosvalová onemocnění, centrum vysoce specializované péče pro \r\nroztroušenou sklerózu a neuromyelitis optica). Praktické cvičení umožní seznámení s odbornou neurologickou \r\npéčí o pacienta v ambulantním specializovaném provozu i na oddělení.\r\nCíl předmětu *: Seznámení š praktickou každodenní činností lékaře — neurologa, prohloubení zájnnu o obor, \r\nrozšíření poznatků a seznámení s atraktivitou oboru neurologie.\r\n\n",
+  },
+  {
+    nazev: "Neuropsychiatrie v ambulantní praxi ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03023",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 7",
+    anotace:
+      "Volitelný předmět cílí na praktické využití neuropsychiatrie v ambulantní praxi. Studenti se seznámí se základy \r\nneuropsychiatrického vyšetření, které si budou moci sami vyzkoušet na konkrétních dospělých i dětských \r\npacientech. Pozornost bude věnována např. Touretteově syndromu, Parkinsonově nemoci, kognitivním poruchám, \r\nepilepsii, ADHD, funkčním poruchám hybnosti, somatickým příznakům u úzkostné poruchy apod.    \r\n\n",
+  },
+  {
+    nazev: "Neurovědy a psychopatologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00720",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 5,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Nové směry v morfologickém výzkumu",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00744",
+    rocnik: [1, 2, 3, 4, 5],
+    obor: ["LEK", "ZUB"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 50",
+    anotace:
+      "Tento předmět je určen pro posluchače lékařství a zubního lékařství všech ročníků se zájmem o nejnovější \r\nvědecké poznatky v oblasti buněčné biologie, anatomie a embryologie. Předmět bude vyučován v březnu a dubnu \r\nvždy ve středu v 15:30 dle syllabu, který bude zveřejněn na začátku letního semestru. Přednášet budou pracovníci \r\nz celé řady institucí, kteří jsou odborníky v uvedených oblastech. Na přednášky a následnou diskusi je vhodné se \r\npředem připravit. Účast není omezena ani maximálním a ni minimálním počtem účastníku. Zápočet bude \r\nudělován na základě krátkého testu s několika stručnými a obecnými otázkami s velmi stručnou odpovědí. Tyto \r\notázky budou předem sděleny.\r\n\n",
+  },
+  {
+    nazev: "Novinky v imunologii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02917",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 30",
+    anotace:
+      "V rámci předmětu „ Novinky v imunologii“ se budou probírat témata, na která se nedostane v základních \r\nimunologických přednáškách. Zaměříme se méně známé či nedávno objevené buněčně subpopulace a jejich \r\nfunkce ve zdraví a nemoci. Rovněž budou diskutována aktuální témata imunologického výzkumu a objevů, které se zatím nedostaly do moderních učebnic imunologie.\r\n\n",
+  },
+  {
+    nazev: "O smrti a umírání: dítě, dospělý a rodič",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03594",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 40",
+    anotace:
+      "Budeme se v kurzu specificky věnovat tomu, jaké je to setkávat se smrtí jako dítě, dospělý i jako prarodič. Budeme \r\nspolečně mapovat potřeby, představy, motivy i scénáře, které se v setkání se smrtí objevují. Neoddělitelnou \r\nsoučástí kurzu bude uvažování o smrti v rovině, psychologické, sociální a spirituální. Nepomineme i existenciální \r\npohled na smrt jakožto hraniční situaci. Kurz bude vyvážen teorií i praxí. V praktické části budeme přehrávat a \r\nprožívat kazuistiky, které může přinášet lektor i účastníci. V teoretické části se nutně budeme zastavovat u vývojové \r\npsychologie, existenciální filozofie, umění i religionistického vhledu na smrt v kulturních tradicích evropských i \r\nsvětových.   \r\n\n",
+  },
+  {
+    nazev: "Obezitologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02326",
+    rocnik: [],
+    obor: ["NVDD", "BNT", "LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 25",
+    anotace:
+      "V akademickém roce 24/25 výuka neprobíhá\r\n\r\n\r\n\r\nPředmět přináší současný pohled na obezitu jako na komplexní nemoc, která v posledních desetiletích nabyla \r\ncharakteru celosvětové epidemie se závažnými zdravotními a sociálně-ekonomickými dopady. \r\nStudent se seznámí jak s epidemiologií a etiopatogenezí obezity, tak se současnými postupy v diagnostice, léčbě \r\na prevenci obezity.\r\n\r\n\n",
+  },
+  {
+    nazev: "Odběr žilní krve - flexi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03479",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 1,
+    semestr: "Oba",
+    kapacita: "12 - 20",
+    anotace:
+      "V trojici praktických cvičení studenti všeobecného lékařství získají dovednosti potřebné pro správný odběr žilní krve \r\npevnou jehlou pomocí uzavřeného vakuového odběrového systému (např. Vacutainer, Vacuette). Hlavní část výuky \r\nbude probíhat jako nácvik odběru na fantomu („odběrové ruce“). Důraz se klade na správnou techniku odběru od \r\npřípravy pomůcek, přes přípravu pacienta k odběru, vlastní odběr až po ošetření pacienta po odběru a přípravu \r\nvzorků k transportu. Pozornost se věnuje bezpečnosti procedury a provedení postupů tak, aby byla nedocházelo k \r\npreanalytickým chybám. V průběhu předmětu každý účastník samostatně provede desítky odběrů žilní krve na \r\nfantomu. Absolventi předmětu budou připraveni jednak pro plánovaný pokračovací kurz Odběr žilní krve II (obtížný \r\nodběr, odběr krve u dětí a seniorů, odběr jehlou s křidélky, kanylace periferní žíly a odběr krve z periferní kanyly), \r\njednak pro další nácvik odběrových technik s reálnými pacienty. Předpokládá se, že někteří z absolventů předmětu \r\nbudou následně vyškoleni jako lektoři pro další běhy předmětu.\r\n\n",
+  },
+  {
+    nazev: "Odběr žilní krve II",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03571",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 1,
+    semestr: "Oba",
+    kapacita: "6 - 12",
+    anotace:
+      "Dovednostní kurz Odběr žilní krve II navazuje na volitelný předmět B03479 Odběr žilní krve I – flexi. Ve dvojici \r\npraktických cvičení si studenti všeobecného a zubního lékařství rozšíří dovednosti získané v základním kurzu o \r\ntechniky odběru žilní krve v obtížných situacích pomocí jehly s křidélky s využitím uzavřeného vakuového \r\nodběrového systému (např. Vacutainer, Vacuette). Dále se naučí zavést periferní žilní kanylu, použít ji pro odběr žilní \r\nkrve, ošetřit ji a připravit ji pro další použití.\r\nHlavní část výuky bude probíhat jako nácvik odběru na fantomu („odběrové ruce“). Důraz se klade na správnou \r\ntechniku od přípravy pomůcek, přes přípravu pacienta k odběru, vlastní odběr až po ošetření pacienta po odběru a \r\npřípravu vzorků k transportu. Pozornost se věnuje bezpečnosti procedury a provedení postupů tak, aby \r\nnedocházelo k preanalytickým chybám.\r\n\n",
+  },
+  {
+    nazev: "Odběrová ruka na akce pro veřejnost",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03694",
+    rocnik: [2, 3, 4, 5],
+    obor: ["LEK"],
+    kredity: 1,
+    semestr: "Letní ☀️",
+    kapacita: "2 - 10",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Odběrové techniky",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01607",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "4 - 35",
+    anotace: "Praktická výuka odběru biologického materiálu.\n",
+  },
+  {
+    nazev: "Odborná práce",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01688",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "neomezen - neomezen",
+    anotace:
+      "Předmět je určený pro studenty 1. LF UK, kteří se podílí na výzkumných projektech. Předpokladem zápisu do předmětu je předložení předběžných výsledků, cílů projektu a souhlas školitele s vypracováním diplomové práce.   \n",
+  },
+  {
+    nazev: "Odraz duševních poruch a jejich léčby ve filmu a literatuře",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02881",
+    rocnik: [],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "8 - 25",
+    anotace:
+      "V rámci předmětu budou tematicky probírány jednotlivé psychiatrické diagnostické kategorie a jejich filmové a \r\nliterární zpracování. Podobně bude pozornost věnována některým formám léčby duševních poruch a další \r\nproblematice týkající se psychiatrie.  Sdělení budou doplněna filmovými a literárními ukázkami a klinickými \r\nkazuistikami. Předmět by měl zábavnou formou rozvíjet zájem studentů o obor psychiatrie.\r\n\n",
+  },
+  {
+    nazev: "Orální histologie a embryologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02681",
+    rocnik: [1],
+    obor: ["ZUB"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 60",
+    anotace:
+      "Tento předmět podává rozšíření základních znalostí z histologie, mikroskopické anatomie a embryologie oblasti \r\nhlavy a krku, které je důležitým podkladem pro studium zubního lékařství.\r\n\r\nPokrývá tato témata: Úvod do orální histologie a metody studia tvrdých tkání. Mikroskopická stavba zubu - sklovina \r\n(stavba, věkové změny, caries), dentin (stavba a klinický význam), cement (stavba a klinický význam) a zubní dřeň \r\n(stavba, věkové změny a funkce). Rozdíly ve stavbě dočasných a trvalých zubů. Mikroskopická stavba periodontia, \r\njeho funkce a klinický význam. Mikroskopická stavba alveolárního výběžku a klinické aspekty jeho přestavby. \r\nMikroskopická stavba orální sliznice a její regionalizace. Znaky a popis sliznice tvrdého patra, znaky a popis \r\nsliznice rtů a tváří, měkkého patra, spodiny dutiny ústní, spodní strany jazyka a sliznice alveolární, znaky a popis \r\nspecializované sliznice hřbetu jazyka. Chuť. Mikroskopická stavba dásně, sulcus gingivalis, epitelový úpon, klinický \r\nvýznam dásně. Obecná stavba a přehled slinných žláz dutiny ústní. Velké slinné žlázy dutiny ústní - stavba a popis. \r\nSlina. Vývoj a diferenciace zárodečných listů. Stomodeum a vývoj obličeje. Vývoj dutiny ústní a nosní. Vývoj \r\npředsíně dutiny ústní. Vývoj patra a nosní přepážky. Vývoj horní a dolní čelisti. Vývoj jazyka. Vývoj zubu (stadium \r\nprimordiální, zubního váčku a zubního pohárku). Vývoj zubní korunky a kořene. Prořezávání (erupce) zubů. Časový \r\npřehled prořezávání dočasné dentice. Vývoj trvalé dentice a časový přehled jejího prořezávání. Vývoj alveolárního \r\nvýběžku a ozubice (periodontium). Vývoj slinných žláz dutiny ústní.\r\n\n",
+  },
+  {
+    nazev: "ORL - praxe",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01662",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 8",
+    anotace:
+      "Jedná se o povinně volitelný předmět zaměřený na získávání praktických dovedností v ORL formou účasti na operačních sálech, specializovaných ambulancích a lůžkových odděleních. Pro doplňující informace a po přihlášení se přes SIS prosíme kontaktujte sekretariát ORL kliniky na tel.: +420 2 2443 4301 nebo e-mailem: renata.kodetova(zavinac)fnmotol.cz.\r\nStudent se zájmem o jednotlivé téma se dostaví na vypsané místo v určeném čase a domluví s některým z vyučujících formu stáže. Po absolvování si nechá potvrdit kredity. 2 hodiny přítomnosti obvykle znamenají 1 kredit. V případě zájmu lze získat více kreditů za 1 téma. Po dosažení 10 kreditů odevzdá student stážový list na sekretariátě a dostane zápočet.\r\n\n",
+  },
+  {
+    nazev: "ORL - praxe",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02253",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 8",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Orofaciální onkologie 1,2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00104",
+    rocnik: [4],
+    obor: ["ZUB"],
+    kredity: 6,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 21",
+    anotace:
+      "Prevence orofaciálních nádorů: Primární: hygiena, sanace chrupu, stravovací návyky, kouření, alkoholismus Sekundární: prekancerozy, včasná diagnostika, léčba Terciární: dispensarizace Diagnostika: prekancerozy,nádory ? TNM klasifikace => staging Léčba: Operace ? aktinoterapie (radioterapie ? brachyterapie, teleterapie) ? chemoterapie (regionální, systémová) ? konkomitance  (chemo ? radioterapie)Operace: Radikalita výkonu ? histologická typizace ? grading Pooperační péče, rehabilitace, rekonstrukční výkony. Dispensarizace: restaging\r\n\n",
+  },
+  {
+    nazev:
+      "Ošetření frontálního a postranního úseku chrupu metodou stratifikace 1,2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01341",
+    rocnik: [5],
+    obor: ["ZUB"],
+    kredity: 6,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Ošetřování pacientů se zdravotním rizikem",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01342",
+    rocnik: [4.0, 5.0],
+    obor: ["ZUB"],
+    kredity: 6,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 10",
+    anotace:
+      "Předmět se zaměřuje na specifika ošetřování stomatologických pacientů se zdravotními riziky a jinými interními \r\nstavy, které mohou ovlivňovat stomatologické ošetření.\r\n\n",
+  },
+  {
+    nazev: "Ošetřovatelské postupy refresh",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03623",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK", "ZUB", "BVO"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "6 - 15",
+    anotace:
+      "Student absolvování předmětu upevní a procvičí praktické dovednosti potřebné k poskytnutí základní \r\nošetřovatelské péče u pacienta. Kontaktní praktická výuka probíhá v malých skupinách studentů. Simulační výuka \r\nje zaměřená na nácvik jednotlivých ošetřovatelských dovedností.\r\n\n",
+  },
+  {
+    nazev: "Ošetřovatelství - práce u lůžek",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03390",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - neomezen",
+    anotace:
+      "Podmínkou splnění předmětu je práce u lůžka v rozsahu alespoň 150 hodin ve zdravotnickém nebo zdravotně \r\nsociálním zařízení dle volby nebo přidělení studenta.\r\nPředpokládáme zapojení především v roli ošetřovatele a/nebo pomocného personálu u lůžek. Doporučujeme \r\nvybrat si zařazení v nejvyšší dostupné kvalifikaci\r\n\n",
+  },
+  {
+    nazev: "Pacient care zážitkem",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03585",
+    rocnik: [2, 3, 4],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "6 - 15",
+    anotace:
+      "Předmět je koncipován jako teoreticko-praktický celek. V teoretické části si studenti rozšíří svou anglickou slovní \r\nzásobu o odborné výrazy v jednotlivých tématech. V praktické části si vyzkoušejí komunikaci v kolektivu a na \r\nsimulacích zjistí své reakce v jednotlivých situacích.  V neposlední řadě si vyzkoušejí jaké to je být zasahující, \r\npacient či náhodný chodec v nevyžádané situaci a také získají zkušenost s cílenou zpětnou vazbou na svou práci. \r\n\n",
+  },
+  {
+    nazev: "Pacient jako partner: kazuistiky a komunikační dovednosti",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03652",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "8 - 30",
+    anotace:
+      "Předmět se zaměřuje na rozvoj porozumění pacientovi jako aktivnímu partnerovi ve zdravotní péči a na rozvoj \r\nkomunikačních dovedností. Studenti se seznámí s principy péče orientované na člověka (patient-\r\ncentered care), s rolí pacienta v systému zdravotnictví a s významem pacientských organizací. Výuka je postavena \r\nna autentických kazuistikách pacientů s různými typy onemocnění a zkušenostech z praxe nemocničního \r\nombudsmana. Součástí kurzu jsou praktické workshopy zaměřené na komunikaci zdravotníka s pacientem, \r\nporozumění potřebám, očekáváním a emocím nemocných a na zvládání náročných komunikačních situací. Kurz \r\npropojuje teoretická východiska s praktickými dovednostmi a přispívá k formování profesionální identity zdravotníka \r\nzaložené na respektu, empatii a partnerském přístupu.\r\n\r\n\n",
+  },
+  {
+    nazev: "Paliativní medicína v praxi: naslouchat, sdílet a rozhodovat",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02243",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "8 - 20",
+    anotace:
+      "Paliativní medicína zlepšuje kvalitu života pacientů se závažným onemocněním. Od okamžiku diagnózy závažné \r\nnemoci až po terminální fázi. \r\nPaliativní přístup má zásadní roli v probíhající pandemii covid-19. V rámci nepovinného předmětu máte unikátní \r\nmožnost setkat se s experty z různých oborů, kteří přinesou zajímavá nová témata, dříve často opomíjená. \r\nPřednášet budou mimo jiné primářka MUDr. Irena Závadová, vedoucí zdravotního týmu Domácího hospice Cesta \r\ndomů (www.cestadomu.cz), Monika Matějková z Oddělení sociální péče, MUDr. MgA. Kateřina Rusinová, PhDr. et \r\nMgr. Zuzana Čepelíková a Ph. D. a MUDr. Ondřej Kopecký z Kliniky anesteziologie a resuscitace a Centra \r\npodpůrné a paliativní péče a další odborníci. V rámci nepovinného předmětu se seznámíte se základy \r\nkomunikace s pacientem se závažným onemocněním, naučíte se sdělit nepříznivou zprávu, nastavit adekvátní a \r\nrealistický cíl léčby, který odpovídá hodnotám pacienta. Budeme se učit o medicínských, právních a etických \r\naspektech pokročilých stavů, seznámíte se s tím, jaké jsou nejčastější terminální symptomy a jak se léčí. Budeme \r\nse také věnovat rozhodování v prokročilých stádiích nemoci, potřebám závažně chronicky nemocných pacientů z \r\npohledu bio-psycho-sociálního. V rámci praktické výuky budeme pracovat ve skupinách, řešit kazuistiky, budete \r\nmít možnost se podívat na oddělení intenzivní péče a vidět, do jaké míry paliativní přístup ovlivňuje volbu \r\nléčebného postupu. Kurz je zaměřen prakticky a vybaví vás mnohými dovednostmi, které budete v péči o \r\nchronicky a závaženě nemocné pacienty potřebovat. Předmět je určen pro studenty 4., 5. a nově i 6. ročníku.\r\n\r\n\n",
+  },
+  {
+    nazev:
+      "Patofyziologie horní končetiny u pacientů po získaném poškození mozku ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03136",
+    rocnik: [1, 2],
+    obor: ["NER"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 20",
+    anotace:
+      "V rámci tohoto předmětu se studenti seznámí s principy reciproční inhibice v kombinaci s využitím oscilační \r\nterapie v ergoterapii, s teorií neurální mobilizace, s přehledem poruch horního motoneuronu, s technikami \r\novlivňující svalový tonus horní končetiny, s problematikou v oblasti kinetiky a kineziologie po cévní mozkové \r\npříhodě a bioenergetikou lidského těla. \r\n\n",
+  },
+  {
+    nazev: "Patofyziologie v kazuistikách",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01972",
+    rocnik: [3, 4, 5],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 25",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Patofyziologie v simulacích/Pathophysiology in Medical Simulations",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03315",
+    rocnik: [3, 4],
+    obor: ["LEK", "ALEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "6 - 12",
+    anotace:
+      "Náplní předmětu je hands-on řešení klinických kazuistik v simulovaném klinickém prostředí se zaměřením na \r\nporozumění patofyziologickým souvislostem. Cílovou skupinou jsou studenti 3. a 4. ročníku. \r\nVstupní znalostí je porozumění základním patofyziologickým mechanismům ohrožujícím životní funkce a \r\nfyziologickým kompenzačním principům. \r\nVstupní dovedností je fyzikální vyšetření pacienta a základní monitorování v rozsahu povinné výuky fyziologie ve 2. \r\nročníku. Postupy, kterými studenti kazuistiky řeší, zahrnují především principy. (např. hypoxie – podání O2; zástava \r\nventilace - náhrada ventilace; hypovolémie - doplnění objemu; bolest - analgézie), nikoliv guidelines postupy \r\nPředmět nevyžaduje znalost farmakologie. \r\nVýhodou tohoto typu výuky je práce v malých skupinách (6 studentů/učitele), možnost udělat chyby beze škody pro \r\npacienta a možnost okamžité konzultace, popřípadě korekce omylů.\r\nPředmět je vhodný zejména pro studenty, kteří uvažují o specializaci na akutní medicínu či internu. \r\nAbsolventi předmětu se zájmem o simulační metodu výuky se mohou přihlásit do lektorského kurzu pořádaného \r\nkaždé září fyziologickým ústavem a pomáhat se simulační výukou. \r\n\n",
+  },
+  {
+    nazev: "Pediatrická intenzivní medicína v simulacích – FLEXI",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03625",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "6 - 12",
+    anotace:
+      "Předmět je určen pro studenty 4. a 5.ročníku se zájmem o akutní stavy v pediatrii. Není doporučeno pro 6.ročník. \r\nPřednost v přihlašování mají studenti, kteří absolvovali jeden nebo více z následujících volitelných předmětů: \r\nB01316 Diferenciální diagnostika v pediatrii a neonatologii, B00650 Adolescentologie, B03436 ALSS – Rozšířená \r\nprvní pomoc v simulacích a napíší mail na pims.lf1@gmail.com nejpozději 1. výukový týden semestru\r\n\n",
+  },
+  {
+    nazev: "Pediatrická propedeutika",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00610",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 30",
+    anotace:
+      "Základní údaje o růstu a vývoji dítěte, fyzikální vyšetření dítěte, psychomotorický vývoj, prevence v pediatrii.  Výuka formou stáží u lůžek děti na oddělení kojenců a batolat a odddělení větších dětí.\r\n\n",
+  },
+  {
+    nazev: "Percepční poruchy z pohledu ergoterapie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03398",
+    rocnik: [2, 3],
+    obor: ["BER"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 15",
+    anotace:
+      "V rámci předmětu se studenti seznámí s různými typy percepčních poruch. Nejprve bude představena etiologie \r\njejich vzniku spolu s jednotlivými typy percepčních poruch. Studenti se dále seznámí s různými hodnoceními \r\npercepčních poruch a s možnostmi terapie. V předmětu bude kladen důraz na možnost ovlivnění percepčních \r\nfunkcí ve vazbě k výkonu ADL. Výstupem předmětu bude vypracování jedné modelové činnosti k terapii percepčních \r\nfunkcí. \r\n\n",
+  },
+  {
+    nazev: "Perioperační medicína v simulacích",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02327",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "6 - 15",
+    anotace:
+      "Každý seminář kombinuje teoretické základy s praktickým nácvikem v simulovaném prostředí. \r\n\n",
+  },
+  {
+    nazev: "Plastická chirurgie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01073",
+    rocnik: [5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "5 - 15",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Podpora zdraví",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02706",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Pochopení EKG a jeho význam pro praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01344",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 80",
+    anotace:
+      'Pochopení EKG a jeho význam pro praxi - NAUČTE SE EKG !!! Další ročník tohoto populárního, ale náročného \r\nPVP:-) Poprvé se sejdeme  4.10. v 14 hodin V Charvátově síni 3. \r\ninterní kliniky (U nemocnice 1), dále ve stejnou dobu každou středu zimního semestru! Předmět bude vyučován \r\nformou přednášek a praktických cvičení, během kterých si studenti aktivně osvojí popis nejrůznějších EKG \r\npatologií. Největší pozornost bude věnována klinicky nejčastějším a nejzávažnějším EKG nálezům. Studenti se \r\nprakticky naučí rozpoznat akutní infarkt myokardu s elevacemi ST úseku, známky subendokardiální ischemie \r\nmyokardu, stav po prodělaném Q-IM, AV blokády, sinus arrest, komorové a supraventrikulární extrasystoly, \r\nraménkové blokády, fibrilaci síní, typický a atypický flutter síní, tachykardii se širokými komplexy QRS, fibrilaci \r\nkomor, základní supraventrikulární tachykardie a základní typy kardiostimulace. U jednotlivých diagnóz bude \r\nkrátce zmíněn i základní terapeutický postup. Kromě popisu 12-svodového EKG bude vysvětlen i přínos \r\nholterovského vyšetření, telemetrického monitorování a zátěžových EKG testů. Látka bude průběžně opakována v \r\npraktických cvičeních, aby si studenti bezpečně osvojili popis základních patologií. Protože je naším cílem, abyste \r\nse ekg naučili, bude zápočet udělován výhradně na základě (správného) popisu ekg křivek. POZOR: z naší \r\nstatistiky vyplývá, že zápočet snadno a na první pokus získají ti, co na semináře chodí. Naproti tomu úspěšnost \r\ntěch, co "odchodí" jen pár prvních seminářů se limitně blíží nule. Přihlaste se tedy, jen pokud to myslíte vážně!\r\n\n',
+  },
+  {
+    nazev: "Point-of-Care Ultrasonography (POCUS) v primární péči",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03638",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "2 - 8",
+    anotace:
+      "Cílem předmětu je zavedení metody Point-of-Care Ultrasonography (POCUS) do výuky studentů 1. lékařské fakulty \r\nUniverzity Karlovy. POCUS představuje moderní diagnostický přístup, který umožňuje cílené ultrazvukové vyšetření \r\npřímo na místě péče o pacienta, především pro rychlé a přesné zodpovězení specifických diagnostických a \r\nterapeutických otázek.\r\nV rámci projektu budou studenti seznámeni s teoretickými základy POCUS a jeho praktickým využitím, s důrazem \r\nna aplikaci v primární péči. \r\nProjekt reaguje na rostoucí význam POCUS v rámci moderní medicíny a jeho rozvoj jako standardního nástroje v \r\npraxi všeobecných lékařů. Vzdělávací iniciativa přispěje k lepší dostupnosti ultrazvukové diagnostiky, podpoří \r\npřesnější a rychlejší rozhodování a zvýší atraktivitu oboru pro mladé lékaře. Výsledkem bude nejen rozšíření \r\ndovedností budoucích lékařů, ale i zlepšení kvality péče o pacienty.\r\nProjekt rovněž navazuje na aktivity Společnosti všeobecného lékařství (SVL) a zahrnuje mezinárodní know-how i \r\nzkušenosti z výzkumných studií POCUS, realizovaných v ordinacích praktických lékařů.\r\n\n",
+  },
+  {
+    nazev: "Pokroky v gynekologii a porodnictví ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00133",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "20 - 50",
+    anotace:
+      "Nové poznatky v etiologii, patogenezi, diagnostice, prevenci, konzervativní a operační léčbě gynekologických onemocnění a onemocnění v graviditě. Spontánní a operační porod, následná běžná a intenzivní péče o matku a dítě.  \r\n\n",
+  },
+  {
+    nazev: "Popularizační přednášky z cyklu Pátečníci",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03645",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 1,
+    semestr: "Oba",
+    kapacita: "1 - 100",
+    anotace:
+      "Popularizační přednáškový cyklus Pátečníci pořádá Český klub skeptiků Sisyfos již více než dvacet let. Přednášky \r\nprobíhají téměř každý pátek a tematicky pokrývají široké spektrum vědeckých oborů. Přednášku vede obvykle \r\nodborník z příslušné oblasti. V průběhu semestru by se obvykle nejméně šest přednášek týká široce chápané \r\nbiomedicíny (základní přírodovědné obory, patologie, klinická medicína, psychologie, sociologie, dějiny medicíny, \r\nbioetika, sociologie medicíny atp.).\r\nVzhledem k charakteru předmětu je možný opakovaný zápis.\r\n\n",
+  },
+  {
+    nazev: "Praktická anesteziologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02921",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 15",
+    anotace:
+      "Pro studenty 5.-6. ročníku se zájmem o obor anesteziologie a intenzivní medicína.\r\n Teoretické základy formou přednášek, semináře formou práce u anestezie na operačních sálech – 1 asistent na 2 \r\nstudenty. Cílem volitelného předmětu je prohloubení teoretických znalostí v oboru anesteziologie /intenzivní \r\nmedicína a nácvik praktických dovedností nutných k peroperačnímu zajištění pacienta. Tyto praktické dovednosti \r\njsou společné pro anestezii a neodkladnou péči. Z tohoto úhlu lze na proces anestezie pohlížet jako na \r\n“modelovou” situaci a přípravu na související předmět Interaktivní základy intenzivní péče. \r\n\n",
+  },
+  {
+    nazev: "Praktická fyziologie I",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02000",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 50",
+    anotace:
+      "Kurz je zaměřen na prohlubování porozumění fyziologickým principům, aplikaci znalostí v klinickém kontextu, interpretaci výsledků, zlepšování praktických dovedností a komunikačních schopností. Frekventanti budou působit jako výukoví aistenti v praktických cvičeních z Lékařské fyziologie. Mimoto budou mít možnost spolupracovat na rozvoji Centra klinické fyziologie a dovedností. \n",
+  },
+  {
+    nazev: "Praktická fyziologie II",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02001",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 50",
+    anotace:
+      "Kurz je zaměřen na prohlubování porozumění fyziologickým principům, aplikaci znalostí v klinickém kontextu, interpretaci výsledků, zlepšování praktických dovedností a komunikačních schopností. Frekventanti budou působit jako výukoví aistenti v praktických cvičeních z Lékařské fyziologie. Mimoto budou mít možnost spolupracovat na rozvoji Centra klinické fyziologie a dovedností. \n",
+  },
+  {
+    nazev: "Praktická gynekologie a porodnictví",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02418",
+    rocnik: [5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 8",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Praktická gynekologie a porodnictví",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02423",
+    rocnik: [5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 9",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev:
+      "Praktická výuka základů gastrointestinální endoskopie na animálním modelu",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03536",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 8",
+    anotace:
+      "Předmět je určen pro zájemce o gastroenterologii obecně a zejména o endoskopické metody. Obsahem je \r\nteoretický úvod k získání bazálních znalostí o problému. Dominantní náplní je praktická výuka endoskopie ve formě \r\nhands-on tréninku na animálním modelu (prasečí žaludek). \r\n\n",
+  },
+  {
+    nazev: "Praktické dovednosti v kardiovaskulární chirurgii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02922",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 10",
+    anotace:
+      'Studenti budou seznámeni s některými základními návyky/dovednostmi v kardiovaskulární chirurgii. V průběhu kurzu budou na lůžkovém oddělení pod vedením mladších chirurgů provádět/přihlížet vyšetření nemocných, psaní ordinací, provádění převazů. Naučí se měřit tlakový index kotník-paže, zúčastní se duplexního ultrazvukového vyšetření žilního systému dolních končetin. Budou provádět převazy operačních ran při odpolední vizitě. Na modelu budou provádět cévní anastomózy. Naučí se prakticky přípravu operačního pole a přípravu operačního týmu, včetně tréninku sterilního oblékaní. Budou seznámeni s provozem na chirurgických sálech, přípravy a použití mimotělního oběhu a v případě zájmu budou moci asistovat při operacích. Pro předmět každý student obdrží logbook praktických dovedností a po jeho splnění bude udělen zápočet.\r\n\r\nZačátek první hodiny bude ve středu 14:00, II. chirurgická klinika kardiovaskulární chirurgie, 4. patro, posluchárna. Studenti budou seznámeni s náplní a organizací kurzu. Začátky jednotlivých "hodin" budou dle domluvy studentů s jednotlivými vyučujícími.\n',
+  },
+  {
+    nazev: "Praktické dovednosti v kardiovaskulární chirurgii II",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02997",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "2 - 10",
+    anotace:
+      "Předmět je určen pro všechny studenty, který mají zvládnuté základní chirurgické dovednosti v oblasti vyšetřovaní pacientů v oblasti kardiovaskulární chirurgie a chtějí rozšířit své teoretické ale především praktické chirurgické dovednosti. Studenti budou seznámení s komplexnějšíma vyšetřovacíma metodami (např. ABI, cévní SONO vyšetření žilního a arteriálního systému), aplikace léčivých přípravků atd.. Bude kladen vyšší důraz na detaily při rozboru vyšetřovacích metod (CTAG, SKG, DSA), dále bude probírán terapeutický plán pacientů cestou řízených kazuistik. Studenti si rozšíří své chirurgické dovednosti při nácviky cévních sutur a anastomóz cestou trenažéru.  \n",
+  },
+  {
+    nazev: "Praktické užití vybraných diagnostických přístrojů v geriatrii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02173",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 20",
+    anotace:
+      "Cílem předmětu je seznámit studenty s moderními metodami a technologiemi pro diagnostiku a terapii. Studenti se seznámí nejen s metodami a použitím diagnostických přístrojů, ale rovněž s technickými principy jejich fungování. Často se jedná o moderní metody, které jsou stále ve fázi výzkumu či klinického ověřování. V rámci praktické části výuky mají studenti možnost diskutovat s experty, kteří se podílejí na vývoji nových diagnostických zařízení čí vývoji nových nekonvenčních diagnostických metod. Nabyté vědomosti studenti využijí při vytvoření zvoleného článku pro projekt wikiskripta.\n",
+  },
+  {
+    nazev: "Praktické využití jógy v ergoterapii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03586",
+    rocnik: [1.0],
+    obor: ["BER"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 16",
+    anotace:
+      "V rámci toho předmětu se studenti seznámí se základními informacemi ohledně indikace cvičení jógy, vyzkouší si \r\nvybraná cvičení prakticky. Dále si vyzkouší vedení skupinového jógového cvičení. Po absolvování předmětu by měli \r\nbýt schopni vybrat vhodné jógové cviky pro specifické skupiny pacientů s neuromuskuloskeletálními \r\nonemocněními. \r\n\n",
+  },
+  {
+    nazev: "Praktické využití jógy ve fyzioterapii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01345",
+    rocnik: [1],
+    obor: ["FYZ"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 16",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Praktické základy chirurgických dovedností ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03138",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 40",
+    anotace:
+      "Nácvik sterilního oblékaní, chirurgických sutur a laparoskopických technik. Správné držení nástrojů. Náhlé příhody \r\nbřišní. Chirurgické instrumentárium. \r\n\n",
+  },
+  {
+    nazev:
+      "Praktické základy první pomoci u život ohrožujících stavů-simulační medicína",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02923",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "6 - 15",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Praktický kurz anatomie pohybového systému",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01200",
+    rocnik: [2, 3, 4, 5],
+    obor: ["LEK", "ERGO", "FYZ"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 11",
+    anotace:
+      "Volitelné předměty vázané na anatomickou pitvu \r\n\r\nJako volitelné předměty nabízíme část míst demonstrátorů, tedy studentů, kteří již mají zkoušku z anatomie a demonstrují postup pitvy svým mladším kolegům. Část míst demonstrátorů bude i nadále obsazována podle dosavadních zvyklostí. \r\n\r\nVzhledem k tomu, že o tato místa je obvykle větší zájem než můžeme uspokojit, je zápis podmíněn výsledkem testu. Předmět je třeba si zapsat v sekretariátu Anatomického ústavu a dostavit se na setkání s demonstrátory.  \r\n\r\n\r\nPosluchači bakalářského oboru ergoterapie a fyzioterapie pitvají v 13, výukovém týdnu \r\nvedoucí: dr. Kvasilová\r\nPředmětem pitvy je preparace všech anatomických struktur končetin s cílem poznat jejich stavbu a topografické vztahy. \r\n\r\n\n",
+  },
+  {
+    nazev: "Praktický kurz anatomie pro zubní lékařství",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01945",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["ZUB", "LEK"],
+    kredity: 6,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 8",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev:
+      "Praktický kurz buněčných kultur s aplikací pro studium dědičných metabolických poruch ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02187",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 6",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Praktický kurz DNA diagnostiky",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01680",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 6",
+    anotace:
+      "Jedná se o praktický kurz zaměřený na současné základní techniky využívané při DNA diagnostice. Kurz \r\nje určen pro vysoce motivované studenty 3. až 6. ročníku magisterského studia Všeobecného lékařství, kteří \r\nuvažují o Ph.D. studiu a dále pro postgraduální studenty v oborech, kde lze očekávat využití těchto technik. \r\n\r\n\r\n\n",
+  },
+  {
+    nazev: "Praktický kurz histologie a embryologie ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01346",
+    rocnik: [2, 3, 4],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 50",
+    anotace:
+      "Demonstrátor praktických cvičení  - praktické osvojení analýzy preparátu s výkladem.\r\n\n",
+  },
+  {
+    nazev: "Praktický kurz histologie a embryologie pro zubaře ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02081",
+    rocnik: [2, 3, 4],
+    obor: ["ZUB"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 50",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Praktický kurz klinické topografické anatomie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02092",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 40",
+    anotace:
+      "Demonstrování v předmětu Klinická topografická anatomie ve 4. ročníku, předmět je vyučován v prvých 3 týdnech \r\nZS. \r\n\n",
+  },
+  {
+    nazev:
+      "Praktický kurz konfokální mikroskopie: vícečetné fluorescenční značení, dekonvoluce, kolokalizace, 3D rekonstrukce",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01681",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "2 - 6",
+    anotace:
+      "Praktický kurz konfokální mikroskopie: vícečetné fluorescenční značení, dekonvoluce, kolokalizace, 3D rekonstrukce.\r\n\r\nJedná se o praktický kurz zaměřený na současné techniky buněčné biologie v oblasti optické mikroskopie s těžištěm v konfokální mikroskopii, restoraci a analýze obrazu. Kurz je určen pro vysoce motivované studenty magisterského studia přírodních oborů, kteří uvažují o Ph.D. studiu a dále pro postgraduální studenty v oborech, kde lze očekávat využití těchto technik. Výuka bude probíhat v českém jazyce ve skupině max. osmi studentů formou tří po sobě jdoucích teoreticko-praktických cvičení. Každé ze cvičení bude probíhat v rozsahu 4-6 hodin v odpoledních hodinách s využitím mikroskopického vybavení Laboratoře mikroskopie Ústavu dědičných metabolických poruch Ke Karlovu 2, Praha 2, budova E1a, 2.patro (http://www1.lf1.cuni.cz/udmp/Microscopy/index.php). Obsahem kurzu jsou vedle teoretických částí také modelová praktická cvičení příprava a pozorování fluorescenčně značených fixovaných ale i živých buněk, dále pak práce se sft určeným pro zpracování a restoraci (dekonvoluci) obrazu.\r\n\r\nÚčastníci kurzu budou vybráni z přihlášených studentů na základě stručného motivačního dopisu (max. 200 slov). Podmínkou pro zápočet je 100% účast na kurzu (cca 18 hodin). Postgraduálním studentům bude započet uznán po předchozím individuálním projednání s příslušnou oborovou radou. Pro oborovou radu Biochemie a patobiochemie byl již kurz schválen. Přesné termíny kurzu budou oznámeny v prvni tretine zimního i letního semestru prostřednictvím informačního systému UK a www stránek mikroskopické facility (http://www1.lf1.cuni.cz/udmp/Microscopy/index.php ).\r\n\r\nS ohledem na specifitu kurzu nelze vyloucit ucast anglicky mluvicich studentu, tzn. kazdy zajemce by se mel vyjadrit k moznosti absolvovat kurz v anglictine, jazyk bude zvolen dle skladby ucastniku.\n",
+  },
+  {
+    nazev: "Praktický kurz orofaciální anatomie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01199",
+    rocnik: [4, 5],
+    obor: ["ZUB", "LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 4",
+    anotace:
+      "Demonstrování v předmětu Klinická orofaciální anatomie ve 3. ročníku, předmět je vyučován v letním semestru.\r\nCílem je rozšíření znalostí z anatomie hlavy a krku v klinických souvislostech.\r\n\r\n\r\n\r\n\n",
+  },
+  {
+    nazev: "Praktický kurz topografické anatomie 1",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01198",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 80",
+    anotace:
+      "48 h  v zimním semestru, podle rozpisu jednotlivých kursů .\r\n\r\nhttp://anat.lf1.cuni.cz/vyuka/vseob1/pitvazs.php\r\n\r\n\r\nProbíhá v odpoledních hodinách, vhodné pro 3. a 4. ročník lékařství i zubního lékařství, kapacita omezena na 18 studentů.\r\nZápis předmětu v sekretariátu Anatomického ústavu, následně vstupní test při větším zájmu než je kapacita.\r\n\n",
+  },
+  {
+    nazev: "Praktický kurz topografické anatomie 2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01197",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 5,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 90",
+    anotace:
+      "* Praktický kurs topografické anatomie 2 \r\nv letním semestru, podle rozpisu jednotlivých kursů ve 2. - 10. týdnu výuky v odpoledních hodinách. Vhodné pro 2. až 6. ročník oboru lékařství, kapacita předběžně omezena  na 18 studentů v každém turnusu (podmínka: zkouška z anatomie, v případě velkého počtu zájemců písemný test)\r\n* Předběžný zápis předmětu v sekretariátu anatomického ústavu, ev. následuje test.\r\n\r\nPozvánka k setkání se zájemci\r\nhttp://anat.lf1.cuni.cz/vyuka/obecne/demonstratorLS.pdf\r\n\r\nTermíny pitev v LS\r\nhttp://anat.lf1.cuni.cz/vyuka/vseob1/pitvals.pdf\r\n\n",
+  },
+  {
+    nazev: "Praktický kurz ultrazvuku břicha ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03137",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 8",
+    anotace:
+      "Kurz se skládá z 8 workshopů, během nichž se studenti seznámí se základy ultrazvukování a budou procvičovat \r\nprakticky schopnost zobrazit orgány v břiše. Při výuce bude kladen důraz zejména na individuální přístup a \r\npraktické ukázky.\r\n\n",
+  },
+  {
+    nazev: "Praxe nutrice v onkologii a gastroenterologii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02315",
+    rocnik: [2, 3],
+    obor: ["BNT"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 40",
+    anotace:
+      "Předmět koncipován jako teoreticko-praktický. Orientován na základní znalosti subakutních a akutních poruch v oblasti \r\nGIT zahrnujících  především krvácení, jaterní insuf. a selhání, akut.pankreatitidu, komplikace nespecifických střevních \r\nzánětů typu Crohnovy nemoci a ulcerózní kolitidy včetně toxického megakolon. Teoretické základy parenterální a enterální \r\nvýživy.\r\n\n",
+  },
+  {
+    nazev: "Praxe v zubní laboratoři",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01347",
+    rocnik: [3, 4, 5],
+    obor: ["ZUB"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 40",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Preklinické zubní lékařství - demonstrátorství",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02245",
+    rocnik: [4, 5],
+    obor: ["ZUB"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 4",
+    anotace:
+      "Volitelný předmět pro 4. nebo 5. ročník zubního lékařství. \r\n\n",
+  },
+  {
+    nazev: "Preparační dovednosti v preklinickém zubním lékařství ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02866",
+    rocnik: [2],
+    obor: ["ZUB"],
+    kredity: 1,
+    semestr: "Zimní ❄️",
+    kapacita: "15 - 25",
+    anotace:
+      "Náplní předmětu jsou preparace zubů v záchovném či protetickém zubním lékařství a jiné praktické dovedností na simulátorech, které umožní zdokonalit praktickou přípravu studentů pro klinickou praxi.\n",
+  },
+  {
+    nazev: "Preventivní medicína 1,2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00088",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 60",
+    anotace:
+      "Předmět pokrývá problematiku prevence kardiovaskulárních onemocnění a jejich rizikových faktorů, \r\nonkologických onemocnění a dalších závažných chorob.\r\n\r\n\n",
+  },
+  {
+    nazev:
+      "Prezentace na studentské vědecké konferenci (přednáška, poster) nebo jiné odborné národní či mezinárodní konferenci (1. autor)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01230",
+    rocnik: [],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "neomezen - neomezen",
+    anotace:
+      "Předmět je určený pro studenty 1. LF UK, kteří jsou zapojeni do výzkumných projektů a prezentovali svou vědeckou práci na studentské vědecké konferenci nebo jiné národní či mezinárodní konferenci.\r\n\n",
+  },
+  {
+    nazev: "Principy a praxe jednodenní péče v chirurgii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03696",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "2 - 10",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Projekty a inovace: od nápadu k řešení",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03698",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor:["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "2 - 40",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Propedeutika a základy operačních technik v ortopedii 1",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02686",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 30",
+    anotace:
+      "Praktický kurs ortopedické propedeutiky pro zimní semestr. Kurz zahrnuje 30 hodin výuky na Ortopedické klinice 1. LF UK a FN Motol. Výuka probíhá v zimním semestru školního roku v dopoledních hodinách dle domluvy. Vhodné pro studenty 3., 4., 5. a 6. ročníku oboru lékařství. Kapacita omezena na 30 studentů. \r\n\r\nKurz je zaměřen na nácvik základních vyšetřovacích technik a základních praktických dovedností v ortopedické chirurgii. Výuka bude probíhat na ambulancích a aseptických operačních sálech Ortopedické kliniky 1. LF UK a FN Motol v dopoledních hodinách. Předmět je vhodný pro studenty oboru lékařství, kteří se plánují věnovat v budoucnu chirurgickému oboru, ev. ortopedii.\r\n\r\nDetailní rozpis dnů, kdy bude probíhat výuka, bude domluven po zápisu předmětu v studentském informačním systému anebo přes sekretariát kliniky.\r\n\n",
+  },
+  {
+    nazev: "Propedeutika a základy operačních technik v ortopedii 2 ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02687",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev:
+      "Propedeutika a základy operačních technik v traumatologii pohybového aparátu 1 ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02688",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 30",
+    anotace:
+      "Praktický kurs traumatologické propedeutiky pro zimní semestr. Kurz zahrnuje 30 hodin výuky na Ortopedické klinice 1. LF UK a FN Motol. Výuka probíhá ve všech výukových týdnech zimního semestru školního roku v dopoledních i odpoledních hodinách dle domluvy. Vhodné pro studenty 3., 4., 5. a 6. ročníku oboru lékařství. Kapacita předběžně omezena na 30 studentů.\r\nKurz je zaměřen na nácvik základních vyšetřovacích technik a základních praktických dovedností v traumatologii pohybového aparátu. Výuka bude probíhat na úrazových ambulancích (Emergency) a traumatologických operačních sálech Ortopedické kliniky 1. LF UK a FN Motol. Předmět je vhodný pro studenty oboru lékařství, kteří se plánují věnovat v budoucnu chirurgickým oborům..\r\n\r\n\r\nDetailní rozpis dnů a hodin, kdy bude probíhat výuka, bude domluven individuálně po zápisu předmětu v studentském informačním systému přes sekretariát kliniky.\n",
+  },
+  {
+    nazev:
+      "Propedeutika a základy operačních technik v traumatologii pohybového aparátu 2 ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02689",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Propedeutika infekčních onemocnění",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01673",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 10",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "První pomoc pohledem fyziologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03542",
+    rocnik: [1],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 24",
+    anotace:
+      "-                                       první pomoc - fyziologie-  komunikace - dovednost -                                          -\r\n\r\nHlavním zaměřením předmětu jsou první pomoc a lékařská fyziologie, tedy porozumění postupům první pomoci v \r\nkontextu principů fungování lidského organismu. Navazuje na výuku první pomoci v 1. ročníku všeobecného \r\nlékařství, a připravuje studenty na výuku v ročníku 2., včetně výuky simulační. Propojením první pomoci a fyziologie \r\npodporuje přechod studentů od mentálního modelu laického záchrance (volám o pomoc, vykonávám předepsané \r\nčinnosti bez porozumění) k modelu odborníka, jehož rolí je problém řešit (indikovat konkrétní řešení na základě \r\nporozumění). Předmět je založen na společném hledání a přemýšlení, nikoliv jednosměrném předávání informací.\r\n\n",
+  },
+  {
+    nazev: "První pomoc v praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03543",
+    rocnik: [2],
+    obor: ["LEK", "FYZ", "BER", "BADI", "VO", "BNT"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "6 - 24",
+    anotace:
+      "Předmět je koncipován jako teoreticko – praktický. Teoretická výuka probíhá prostřednictvím e-learningových metod \r\nvýuky, pomocí nichž si student zopakuje základní témata z první pomoci. Součástí je ověření znalostí formou \r\nzávěrečného testu.\r\nPraktická výuka probíhá v malých skupinkách zážitkovou metodou využívající simulaci akutních stavů a zranění s \r\nposkytnutím základní první pomoci. Studenti se během nasimulované situace dostávají do role zraněné osoby \r\nnebo osoby vyžadující poskytnutí první pomoci z důvodu akutně vzniklého stavu a roli zachránce, který první pomoc \r\nposkytuje. Při poskytování první pomoci si studenti osvojí techniky základního ošetření zranění, provedení základní \r\nkardiopulmonální resuscitace, poskytnutí první pomoci, komunikace se zraněným, osobami blízkými a \r\nzdravotnickou záchranou službou. \r\nKaždá modelová situace se studenty vždy následně analyzována a studentům bude poskytnutá zpětná vazba.\r\n\n",
+  },
+  {
+    nazev: "Přednáškové večery Spolku lékařů českých v Praze",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02095",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 50",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Přednáškové večery Spolku lékařů českých v Praze",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02097",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 50",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Psychiatrické kazuistiky - praktické příklady",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02694",
+    rocnik: [4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 20",
+    anotace: "Psychiatrické kazuistiky, práce s konkrétním pacientem.\r\n\n",
+  },
+  {
+    nazev: "Psychosomatická medicína",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01946",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 16",
+    anotace:
+      "Předmět je vyučován v zimním semestru.\r\n\r\nPředmět formou stáží, seminářů a přednášek zprostředkovává seznámení s biopsychosociálním pojetím nemoci, \r\nse \r\nvztahem tělesných příznaků a psychiky s psychosomatickým přístupem k nemocnému a s možnostmi \r\npsychosomatické \r\nléčby. \r\nPraktická část je zaměřena na vstupní vyšetření a týmovou spolupráci (somatických lékařů, psychiatra a \r\npsychoterapeutů)\r\nVýuka bude probíhat ve 2 hodinovém bloku (120 minut).\r\nZahájení podle rozpisu - přízemí budovy Psychosomatické kliniky - Patočkova 3, Praha 6 (roh Myslbekovy a \r\nPatočkovy ulice).\r\n\n",
+  },
+  {
+    nazev: "Psychoterapie 1",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00085",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 30",
+    anotace:
+      "Psychoterapie její psychologické a neurovědní principy, sebepoznání, analýza snů, stres, trauma.\r\nJe nutno zvážit přihlášení. Opakovaně se totiž stává, že si mnozí studenti nepřečtou informace, rychle si zapíšou toto PVP (protože má hodně kreditů, což bývá pro mnohé rozhodující) a pak jdou jinam, ale ze SISu se už neodhlásí. Toto PVP je dvousemestrové - nejde si proto vzít jenom půlku, tedy jeden semestr.\r\n\n",
+  },
+  {
+    nazev: "Psychoterapie 2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00393",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace:
+      "Psychoterapie, umění sebereflexe a rozhovoru, vybrané metody psychoterapie.\r\n\n",
+  },
+  {
+    nazev: "Publikace v odborném časopise s impakt faktorem (1.autor)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01233",
+    rocnik: [],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 6,
+    semestr: "Letní ☀️",
+    kapacita: "neomezen - neomezen",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Publikace v odborném časopise s impakt faktorem (spoluautor)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01232",
+    rocnik: [],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "neomezen - neomezen",
+    anotace:
+      "Předmět si mohou zapsat studenti, kteří jsou spoluautory publikace v časopise s impakt faktorem dle WOS. Podmínkou pro udělení zápočtu je předložení publikace a/nebo potvrzení o přijetí publikace do tisku. Započtené budou pouze publikace vydané/přijaté v průběhu studia.  \n",
+  },
+  {
+    nazev: "Publikace v recenzovaném odborném časopise (1.autor)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01281",
+    rocnik: [],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 4,
+    semestr: "Oba",
+    kapacita: "neomezen - neomezen",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Publikace v recenzovaném odborném časopise (spoluautor)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01280",
+    rocnik: [],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "neomezen - neomezen",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Radiační onkologie v běžné praxi – stáž",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03626",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 2",
+    anotace:
+      "Praktická stáž cílící na rozšíření informací o radioterapii, dalších léčebných modalitách a jejich sekvencích, \r\nhodnocení léčebné odpovědi, paliativní a symptomatické péči, psychoterapii v onkologii, léčebné rehabilitaci. Stáž \r\nje zaměřena rozvoj souvisejících dovedností, schopností, postojů i hodnot důležitých pro uplatnění budoucího \r\nlékaře v praxi i ve společnosti (kritické myšlení, rozhodování, komunikativní dovednosti, sociální kompetence).\r\n\n",
+  },
+  {
+    nazev: "Redakce wikiskript ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01969",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 50",
+    anotace:
+      "Předmět poskytuje podporu studentům, kteří se podílejí na zpracování odborných materiálů publikovaných ve WikiSkriptech, popřípadě se k této práci chtějí nově připojit. Účast na tomto volitelném předmětu umožní za práci na výukových materiálech získat i odpovídající kreditové hodnocení, není však podmínkou pro samotnou práci na WikiSkriptech - zájemci jsou zváni k účasti i mimo formální vedení. V rámci předmětu se studenti podílejí na redakčním zpracování medicínských výukových materiálů na stránkách https://www.wikiskripta.eu. Součástí výuky jsou povinné workshopy a semináře, individuální konzultace a samostatná práce. Účastníci se naučí zpracovávat odborný biomedicínský text. Nevyžaduje se předchozí znalost prostředí WikiSkript ani technické dovednosti. Předmět lze zapisovat opakovaně.\n",
+  },
+  {
+    nazev: "Religionistický seminář 1,2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00728",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 5,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 60",
+    anotace:
+      "Předmět seznamuje se základními pojmy, problematikou a metodologií religionistiky. V zájmu jsou aktuální velké náboženské systémy Orientu, judaismus, křesťanství, islám. Nechybí ani pohled na fenomény duchovního života.\n",
+  },
+  {
+    nazev: "Religionistika",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01372",
+    rocnik: [],
+    obor: ["ADI"],
+    kredity: 1,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 20",
+    anotace:
+      "Religionistika jako vědní obor. Duchovní a spirituální rozměr užívání návykových látek a jejich odezva v historii a \r\nsoučasnosti. Návykové látky v kontextu náboženských rituálů. Církve a náboženské spolky a výskyt návykových \r\nlátek v jejich kontextu, jejich vztah a postoj k těmto látkám atd.  \r\n\n",
+  },
+  {
+    nazev: "Religionistika",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01998",
+    rocnik: [],
+    obor: ["ADI-kombi"],
+    kredity: 1,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 20",
+    anotace:
+      "Religionistika jako vědní obor. Duchovní a spirituální rozměr užívání návykových látek a jejich odezva v historii a \r\nsoučasnosti. Návykové látky v kontextu náboženských rituálů. Církve a náboženské spolky a výskyt návykových \r\nlátek v jejich kontextu, jejich vztah a postoj k těmto látkám atd.  \r\n\n",
+  },
+  {
+    nazev: "Repetitorium ošetřovatelství",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03627",
+    rocnik: [3],
+    obor: ["BVO"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 40",
+    anotace:
+      "Předmět je koncipován jako předmět teoretický, který tvoří souhrn základních znalostí, které studenti získali \r\npředevším v předmětu Ošetřovatelství, Ošetřovatelské postupy, Základy pedagogiky a edukace klientů, \r\nZdravotnická psychologie a komunikace a Základy managementu a ekonomiky. Formou semináře s přispěním \r\nvlastní aktivity studentů si studenti ucelí základní znalosti, které jsou nezbytné pro výkon povolání všeobecné sestry.\r\n\r\n\n",
+  },
+  {
+    nazev: "Revmatologický kroužek",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03396",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 10",
+    anotace:
+      "Kroužek bude zaměřen především na klinické aspekty diagnostiky a léčby zánětlivých revmatických onemocnění a \r\nsystémových onemocnění pojiva. Budeme se podrobněji věnovat základům klinického přístupu v revmatologii \r\n(anamnéza, fyzikální vyšetření, indikace laboratorních vyšetření a zobrazovacích metod), klinickému rozvažovaní \r\nnad konkrétními i modelovými případy a kritickému čtení klinických studií. V jednotlivých případech může být po \r\nosobní dohodě umožněna pasivní účast v ambulantním provozu, nebo případně aktivní podíl na některém z \r\nvýzkumných programů probíhajících v Revmatologickém ústavu. \r\n\r\n\n",
+  },
+  {
+    nazev: "Robotická urologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03646",
+    rocnik: [4.0, 5.0, 6.0],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "2 - 6",
+    anotace:
+      "Robotická chirurgie je v současnosti nejsofistikovanější technologií používanou v chirurgické medicíně. Integrace \r\npočítačových, digitálních a robotických technologií přinesla možnost zlepšení výsledků náročných chirurgických \r\nvýkonů. Jednou z největších výhod robotické chirurgie je trojrozměrné zvětšené zobrazení operačního pole v \r\nkombinaci s vlastními robotickými nástroji, které dokonale přenášejí pohyb lidské ruky až na koncovou část \r\nnástrojů. Díky těmto přednostem dochází ke zvýšení přesnosti a chirurgické dovednosti i u technicky velmi \r\nnáročných operačních výkonů. \r\nPředmět je určen studentům se zájmem o chirurgické obory.\r\n\n",
+  },
+  {
+    nazev: "Scientific writing course",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03393",
+    rocnik: [1, 2, 3, 4, 5],
+    obor: ["LEK", "ALEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "5 - 21",
+    anotace:
+      "This course teaches students how to read, understand, and summarize original scientific research. Through \r\nself-directed work and editor guidance, students learn to search scientific databases, interpret key findings, and \r\nwrite concise scientific summaries in English. The course emphasizes individual initiative, editorial feedback, and \r\npractical understanding of scientific publishing\r\n\r\n\n",
+  },
+  {
+    nazev: "Sexuologie I.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01395",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 40",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Sexuologie II.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01606",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 40",
+    anotace: "V akademickém roce 2022/2023 výuka neprobíhá \r\n\n",
+  },
+  {
+    nazev: "SIM Instruktor ALSS – flexi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03480",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "ALEK", "AZUB"],
+    kredity: 4,
+    semestr: "Oba",
+    kapacita: "1 - 40",
+    anotace:
+      "Kurs slouží k přípravě student-lektorů pro volitelný předmět rozšířené první pomoci (předmět B03436). Kurs je \r\nzajímavý, zábavný a bývá zde velmi přátelská týmová nálada. I ta je důležitou součástí motivace a výcviku \r\nsimulačních lektorů. Kurs má dvě části: 1. nácvik úloh a lektorských dovedností a 2. lektorská praxe - tedy vedení \r\npraktických a/nebo simulačních úloh během kursu ALSS pro mediky. Předpokládá se, že účastníci instruktorského \r\npředmětu ALSS sami absolvovali základní ALSS kurs a základní kurs pro simulační lektory (SIM Instructor). Témata \r\njsou rozdělena do bloků trvajících cca 4 hodiny (viz sylabus). Každý uchazeč si může vybrat několik bloků. Praxe je \r\ntaké v blocích po cca 4 hodinách. Pro splnění předmětu je třeba absolvovat nácvik i praxi, aspoň 30 hod. Rozsah \r\npraxe pro každý tematický blok je aspoň dva výukové bloky. Příklad: zvolím 2 tematické bloky (2x4=8 hod), každý \r\nučím 3x (3x2x4=24 hod). Celkem 32 hod.\r\nJedná se o flexi VP, tedy zápis provádí vyučující až po úspěšném absolvování předmětu. Předmět (praxi) lze \r\ndokončit v následujícím semestru. Předmět lze opakovat.\r\n\n",
+  },
+  {
+    nazev: "SIM Instruktor Basic – flexi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03482",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK", "ALEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "1 - 40",
+    anotace:
+      "Základní kurs zaměřený k přípravě student-lektorů simulační výuky. Kurs je všeobecný, zaměřený na nácvik \r\nlektorských dovedností, nikoliv na temata konkrétních oborů. Na kursu bývá velmi přátelská týmová nálada. I ta je \r\ndůležitou součástí motivace a výcviku simulačních lektorů i samotné simulační výuky. \r\nKurs je jednou z podmínek pro lektorování v Centrum Medicinských Simulací (CMS). Jedná se o flexiVP, tedy zápis \r\nprovádí vyučující až po úspěšném absolvování předmětu. \r\n\n",
+  },
+  {
+    nazev: "SIM Instruktor BLSS – flexi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03481",
+    rocnik: [2, 3, 4, 5],
+    obor: ["LEK", "ALEK"],
+    kredity: 4,
+    semestr: "Oba",
+    kapacita: "1 - 40",
+    anotace:
+      "Kurs slouží k přípravě student-lektorů pro volitelný předmět zážitkový kurs první pomoci. Kurs je zajímavý, zábavný a \r\nbývá zde velmi přátelská týmová nálada. I ta je důležitou součástí motivace a výcviku simulačních lektorů. Kurs má \r\ndvě části: 1. nácvik úloh a lektorských dovedností a 2. lektorská praxe (vedení praktických a/nebo simulačních úloh \r\nběhem kursu BLSS pro mediky). Předpokládá se, že účastníci instruktorského předmětu BLSS sami absolvovali \r\nzákladní BLSS kurs. Účastník si během výukových 16 h rozdělených do 4 čtyřhodinových odpoledních sezeních \r\nprojde základy lektorských dovedností + celý obsah kurzu BLSS. Praxe proběhne během dalších 16 hodin, které už \r\nproběhnou na samotném kurzu BLSS ve výcvikovém středisku Dobronice nebo v Simulačním Centru, kde účastník \r\npůsobí jako lektor a projde s účastníky část programu dle lektorského rozpisu. Pro splnění předmětu je třeba \r\nabsolvovat nácvik i praxi, aspoň 32 hod. \r\nJedná se o flexiVP, tedy zápis provádí vyučující až po úspěšném absolvování předmětu. Předmět (praxi) lze \r\ndokončit v následujícím semestru. Předmět lze opakovat.\r\n\n",
+  },
+  {
+    nazev: "Simulace akutních stavů pro nelékaře ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03647",
+    rocnik: [2.0, 3.0],
+    obor: ["ADI", "BNT", "FYZ", "NER"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "6 - 15",
+    anotace:
+      "Předmět má vybavit nelékařské zdravotnické pracovníky praktickými dovednostmi a znalostmi nezbytnými pro \r\nefektivní poskytnutí první pomoci v krizových situacích. Výuka je zaměřena na zážitkovou formu učení, která \r\npodporuje aktivní zapojení, rozvoj rozhodovacích schopností a zvýšení sebedůvěry při zvládání akutních stavů. \r\nStudenti si osvojí základní postupy při život ohrožujících stavech, nácvik resuscitace, práci s automatickým externím \r\ndefibrilátorem, řešení traumatických situací a improvizovanou první pomoc v terénu. \r\n\n",
+  },
+  {
+    nazev: "Sociální deviace",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02601",
+    rocnik: [2],
+    obor: ["MADI", "BADI"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 25",
+    anotace:
+      "V rámci přednášek se pracuje se základními pojmy z oblasti sociálních deviací jako například pojmy ne/normality, \r\nsociální kontroly, morální paniky a podobně. \r\nNa seminářích se diskutují konkrétní témata na základě přečtené literatury. V rámci kurzu se pracuje s anglicky \r\npsanou literaturou.\r\n\n",
+  },
+  {
+    nazev:
+      "Spoluautor prezentace na národní nebo mezinárodní vědecké konferenci",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01284",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "neomezen - neomezen",
+    anotace:
+      "Předmět je určený pro studenty 1. LF UK, kteří jsou zapojeni do výzkumných projektů a výsledky výzkumného projektu, na kterém se podíleli byly prezentovány na národní nebo mezinárodní vědecké konferenci. Studentům bude udělen zápočet po zápisu předmětu a předložení abstraktu a programu konference.\n",
+  },
+  {
+    nazev: "Sportovní traumatologie dětí a dospělých",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02931",
+    rocnik: [5, 6],
+    obor: ["LEK", "FYZ"],
+    kredity: 1,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Srovnávací anatomie obratlovců",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03314",
+    rocnik: [1, 2, 3],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 20",
+    anotace:
+      "Anatomický ústav, U Nemocnice 3, 128 00 Praha 2 Vedoucí studijního předmětu: RNDr. Martina Gregorovičová, \r\nPh.D. Organizace studia bakalářských oborů: prof. MUDr. Ondřej Naňka, Ph.D. Časový rozvrh předmětu: Srovnávací \r\nanatomie obratlovců bude vyučována v letním semestru. Výuka zahrnuje seminář koncipovaný jako přednáška + \r\npraktická demonstrace na základě přednášky za využití preparátů Muzea Srovnávací Anatomie na Anatomickém \r\nÚstavu 1. LF UK. Absolvování semináře je povinné. Náplň předmětu: celkem 8 seminářů pokrývající skelet a \r\nvybrané orgánové soustavy z pohledu fylogeneze i ontogeneze obratlovců v porovnání s člověkem.  \r\n\r\n1. LEBKA I.\r\n\r\n2. LEBKA II.\r\n\r\n3. KONČETINY \r\n\r\n4. OSOVÝ SKELET\r\n\r\n5. GIT\r\n\r\n6. KARDIOVASKULÁRNÍ SYSTÉM\r\n\r\n7. MOČOPOHLAVNÍ SYSTÉM\r\n\r\n8. NERVOVÝ SYSTÉM A SMYSLY\r\n\r\n\n",
+  },
+  {
+    nazev: "Stáž na jednotce intenzivní metabolické péče ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02700",
+    rocnik: [2],
+    obor: ["NT", "VO"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 60",
+    anotace:
+      "Stáž na JIP metabolické péče.\r\nKontakt: Mgr. Alena Nováková (staniční sestra JIMP)\n",
+  },
+  {
+    nazev: "Strategie práce s odbornými lékařskými informacemi ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03139",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 1,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 25",
+    anotace:
+      "Předmět je koncipován jako ryze praktický. Provede studenty nejdůležitějšími oblastmi odborných lékařských \r\ninformací, naučí je informace efektivně využívat a kriticky zhodnotit.\r\n\r\n\n",
+  },
+  {
+    nazev: "Supervize odborných praxí",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03628",
+    rocnik: [1, 2, 3],
+    obor: ["BADI", "MADI"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "2 - 20",
+    anotace:
+      "Studenti se v úvodu seznámí se základními  informacemi  o supervizi (účel, formy, cíle) a s podobou supervizního \r\nkontraktu, který následně i s vyučujícím supervizorem uzavřou. Kontrakt bude uzavírán výhradně na skupinovou \r\nsupervizi s tématy z proběhlých odborných praxí v rámci studia adiktologie. Studenti si aktivně vyzkouší roli \r\nsupervizantů, přináší své zkušenosti, které mohly být dilematické, negativní, náročné či takové, ke kterým studenti \r\nocení pohled dalších osob. \r\n\n",
+  },
+  {
+    nazev: "Systémová medicína - základy lékařského myšlení ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02404",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "5 - 20",
+    anotace:
+      "V letním semestru ak. roku 2025/2026 výuka neprobíhá.\r\n\r\n\r\nV rámci předmětu bude studentům medicíny nabídnuto poučení o různých oblastech bezprostředně se dotýkající \r\nuvažování a rozhodování lékaře v jeho klinické práci. Během zimního semestru půjde o průřez rozmanitými \r\ndisciplínami od čisté logiky přes interpretaci projevů pacienta a poznávání zákonitostí lidského organismu až po \r\npřístup k nemocnému v rámci léčby. V letním semestru pak naváží přednášky o povaze lidské osoby a člověka v \r\njeho celku na dějinném pozadí.\r\n\r\n\n",
+  },
+  {
+    nazev: "Technika chirurgické sutury",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03639",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "2 - 10",
+    anotace:
+      "Nácvik chirurgické techniky cévní sutury na biologickém materiálu a cévní protéze\r\n\n",
+  },
+  {
+    nazev: "Telemedicína v klinické praxi a výzkumu",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=DV01360",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "6 - neurčen / neurčen (20)",
+    anotace:
+      "1.\tÚvod do současné praxe, možnosti a využití telemedicíny, patofyziologické metody v \r\ntelemedicíně - prof. MUDr. Jakub Otáhal, Ph.D. (2 hodiny)\r\n2.\tTechnické aspekty inovativních telemedicínských přístupů - MUDr. Ondřej Tefr MHA, \r\nprof. MUDr. Jakub Otáhal, Ph.D. (2 hodiny)\r\n3.\tTelemedicína v ordinaci praktického lékaře - MUDr. Ondřej Tefr MHA,  prof. MUDr. \r\nJakub Otáhal, Ph.D. (2 hodiny)\r\n4.\tTelemedicína v gynekologii a porodnictví - prim. MUDr. Hynek Heřman Ph.D., MHA, \r\nLL.M.,  MUDr. Adéla Tefr Faridová, prof. MUDr. Jakub Otáhal, Ph.D. (2 hodiny)\r\n5.\tTelemedicína pohledem práva - vztah pacienta a lékaře - doc. JUDr. Petr Šustek \r\nPh.D., prof. MUDr. Jakub Otáhal, Ph.D. (2 hodiny)\r\n6.\tPraktické zkušenosti - představení aktuálně probíhajících projektů, kazuistiky, \r\nzajímavosti - MUDr. Adéla Tefr Faridová, prof. MUDr. Jakub Otáhal, Ph.D. (2 hodiny)\r\n\r\n\r\nVýuka probíhá v průběhu letního semestru formou seminářů, úvodem semináře je vždy \r\npřednáška zaměřená na dané téma, poté diskuze a u vybraných seminářů praktická část. \r\nVolitelný předmět bude vždy probíhat ve čtvrtek 16-18 hod v Ústavu patofyziologie 2.LF UK, \r\ntermíny a učebna budou konkretizovány se začátkem letního semestru. Seminář je zaměřen \r\nna rychle se rozvíjející obor telemedicíny, využití zdravotnických aplikací v současné péči o \r\npacienta. Studenti budou moci navštívit pracoviště ÚPMD a ordinaci praktického lékaře. \r\nKontaktní osoba MUDr. Adéla Tefr Faridová (adela.faridova@gmail.com \r\n<mailto:adela.faridova@gmail.com>). \r\n\n",
+  },
+  {
+    nazev: "Tělesná výchova 5,6",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00507",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "12 - 120",
+    anotace:
+      "Na rozdíl od patogenetického myšlení prosazujeme salutogenetický model, který akcentuje psychosociální faktory zdraví a chápe je jako kvantifikovatelné kontinuum.Výuka tělesné výchovy je zaměřena na získání potřebných vědomostí, znalostí a pohybových dovedností s přihlédnutím na specifiku oboru studia. \r\n\n",
+  },
+  {
+    nazev: "Tělesná výchova 7,8",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01238",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "12 - 45",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Tělesná výchova 9,10",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02109",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "12 - 35",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Tělovýchovné lékařství a funkční diagnostika",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00079",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 4,
+    semestr: "Oba",
+    kapacita: "5 - 45",
+    anotace:
+      "Řízená pohybová aktivita působí blahodárně na řadu civilizačních chorob především na obezitu, cukrovku, hypertenzi, osteoporózu a ischemickou chorobu srdeční. \r\nNesprávně aplikovaná pohybová aktivita může pacientovi více uškodit než prospět. Proto je její odborné řízení, ať již metodické nebo přímé, podmínkou její \r\nmaximální účinnosti při zachování pacientovy bezpečnosti. \r\n\r\nNa našem ústavu ukážeme studentům různé formy zátěžových testů s monitorováním srdeční činnosti a analýzou vydechovaných plynů, \r\nstanovení kardiorespirační zdatnosti, seznámíme je s preskripcí pohybové aktivity, ukážeme jim antropometrická vyšetření, \r\nhodnocení somatotypu a s ním související morfologicko-funkční schopnosti sportovce nebo pacienta, vyhodnocování individuálních \r\njídelníčků ve srovnání s doporučenými výživovými dávkami atd...  Naší snahou bude přesvědčit vás o užitečnosti a potřebnosti \r\nsportovní medicíny pro naši populaci.\r\n\r\n\n",
+  },
+  {
+    nazev: "Testování ve fyzioterapii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02876",
+    rocnik: [2, 3],
+    obor: ["FYZ"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "8 - 16",
+    anotace:
+      "V rámci předmětu si studenti rozšíří teoretický základ možností testování pacientů ve fyzioterapii.\n",
+  },
+  {
+    nazev: "Tradiční léčebné systémy Asie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01070",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Transplantologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01608",
+    rocnik: [],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Trénink paměti ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02006",
+    rocnik: [2, 3],
+    obor: ["BER"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 16",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Trénink preparačních dovedností I.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02045",
+    rocnik: [3, 4],
+    obor: ["ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "3 - 6",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Trénink preparačních dovedností pro preklinické zubní lékařství  ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03027",
+    rocnik: [2],
+    obor: ["ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "4 - 10",
+    anotace:
+      "Trénink základních typů preparací pro záchovné zubní lékařství prováděný na dentálních simulátorech. Kontrola \r\nvypreparované kavity pomocí výukového přístroje PREPassist umožňujícího vizualizaci zpracování praktického \r\núkolu. Vizualizace usnadní přesnější zhodnocení preciznosti provedení zadaného typu preparace.\r\n\r\n\n",
+  },
+  {
+    nazev: "Tropické nemoci 1,2",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00134",
+    rocnik: [4, 5, 6],
+    obor: ["LEK", "ZUB"],
+    kredity: 6,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 30",
+    anotace:
+      "Epidemiologie, diagnostika, klinika a terapie vybraných tropických infekčních onemocnění. Diferenciální \r\ndiagnostika horečnatých stavů, exantémů a dalších kožních afekcí, lymfadenopatie, jaterních lézí a průjmových \r\nonemocnění v tropech. Specifika HIV/AIDS, tuberkulózy a dalších oportunních infekcí  v tropech.\r\nVýuka probíhá v zimním i letním semestru formou demonstrace skutečných klinických případů a jejich řešení \r\nstudenty formou problémově-orientované výuky. Kasuistiky zahrnují důležité klinické situace a jsou doplněny \r\nseminářem na dané téma. \r\n\r\n\r\n\r\n\n",
+  },
+  {
+    nazev: "Tvorba tréninkových plánů v ambulantní fyzioterapii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03648",
+    rocnik: [1, 2, 3],
+    obor: ["NAF", "FYZ"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 16",
+    anotace:
+      'Předmět "Tvorba individuálních tréninkových plánů v ambulantní fyzioterapii" je prakticky zaměřený kurz, jehož cílem \r\nje naučit studenty vytvářet účinné, motivující a personalizované cvičební plány pro ambulantní pacienty i jejich \r\ncvičební jednotky na doma. Kurz se zaměřuje na cvičení v rámci zlepšení mobility, redukci bolestí zad a jiných \r\nběžných pohybových obtíží pacienta. Studenti se naučí vypracovávat a upravovat cvičební jednotky, které budou \r\nmotivující, efektivní a bezpečné.\r\n\n',
+  },
+  {
+    nazev: "Týden s lékařem na A8 (chirurgie, radiologie, anesteziologie)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03640",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 10",
+    anotace:
+      "Stáž probíhá od pondělí do pátku. Jeden student stráví celou pracovní dobu s jedním lékařem, tedy od 7 hod. do \r\n15.30 hod. Během tří dnů na 1. chirurgické klinice bude provádět ranní vizity na lůžkovém chirurgickém oddělení, \r\núčastnit se ranního hlášení, asistovat na operačním sále nebo participovat při ošetřování pacientů na všeobecné \r\na traumatologické ambulanci. V rámci jednoho dne na radiodiagnostické klinice bude společně s radiologem \r\npopisovat rentgenové snímky, bude přítomen u sonografických vyšetření a seznámí se s provozem na CT \r\npracovišti. Jeden den student stráví ve společnosti anesteziologa.  Na operačním sále bude přítomen při úvodu a \r\nvedení anestezie, při aplikaci svodné anestezie, uvidí péči o pacienta na dospávacím pokoji, případně \r\nanesteziologickou premedikaci na lůžku před výkonem.\r\n\n",
+  },
+  {
+    nazev: "Urgentní medicína v simulacích - na příjmu (ALS)",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02090",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "6 - 32",
+    anotace:
+      'Výuka "Urgentní medicíny na příjmu" (Advanced Life Support v nemocnici nebo v sanitním voze) bude zahájena v pondělí 25.února (PŮVODNĚ PŘEKLEP) 2013 ve 14:15 v posluchárně KARIM. Zážitková výuka je postavená na simulacích, praktickém nácviku a rozboru kazuistik. Konfrontace s klinickou situací, vyžadující okamžité rozhodování a rutinní zásah. Studenti řeší případy pacientů s nastupujícím ohrožením životních funkcí. Výuka je založena na opakovaném rozboru vlastních řešení, správných i chybných. Vedena lékaři urgentní medicíny, využívá zkušeností zážitkové pedagogiky Prázdninové školy Lipnice (www.zdrsem.cz). Termín: vždy v pondělí 14:15 - 16:15 v posluchárně nebo v "terénu". Při simulacích předpokládejte opakované lehání na zem, v podmínkách více či méně drsných.Přizpůsobte prosím tomu své oblečení. \r\nPOZOR - VSTUPNÍ podmínkou je schopnost reagovat na okolnosti situace, mechanismus úrazu, poruchu vědomí, dechu či oběhu v rozsahu předmětu Urgentní medicína na ulici - výuka pomocí simulací - B01965. V případě nenaplnění předmětu do počtu 16 lidí lze výšezmíněné znalosti prokázat při zkušebních simulacích.\r\n\n',
+  },
+  {
+    nazev: "Úvod do skriptovacího jazyka R ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03128",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "2 - 25",
+    anotace:
+      "Předmět je určen studentům s ambicemi k vědecké práci. Tedy pregraduálním studentům se zájmem o budoucí \r\ndoktorandské studium, eventuálně přímo postgraduálním studentům. \r\n\r\nPředmět je koncipován jako úvod pro začátečníky. Předchozí znalosti jazyka R ani jiného programovacího jazyka \r\nnejsou vyžadovány. Student bude seznámen s instalací a spuštěním prostředí R, s importem, resp. exportem dat \r\ndo, resp. z R a s úpravou dat v prostředí R. Na praktických a jednoduchých příkladech z oblastí (bio)medicíny se \r\nstudent naučí práci s knihovnami R, vyzkouší si některé statistické analýzy a vizualizace nad daty; díky tomu \r\npochopí možnosti uplatnění R pro účely jeho budoucího výzkumu. Rovněž bude uveden do základů programování \r\na psaní vlastních funkcí v R. \r\n\r\nJazyk R je rovněž využíván lékaři k analýze hypotéz a dat. Využití jazyka R v publikacích je známkou kvality a \r\nsignifikantně zvyšuje citovanost publikace bez ohledu na biomedicínský obor.\r\n\r\nProstředí R je otevřené, zcela zdarma a uživatelsky relativně jednoduché. V některých oblastech biomedicíny, \r\nnapř. v analýze molekulárních dat na úrovni genů (platforma Bioconductor) nebo v hodnocení výsledků cross-over \r\ndesignů farmakologických trialů k němu dnes již prakticky neexistují alternativy.\r\n\n",
+  },
+  {
+    nazev: "Úvod do speciálních fyzioterapeutických metod",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02872",
+    rocnik: [1, 2],
+    obor: ["NER"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 22",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Úvod do zdravotnické informatiky",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02123",
+    rocnik: [1],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "12 - 85",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Vojtova metoda ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02083",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["BER", "FYZ", "NER", "LEK", "NAF"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Volitelná praxe pro ergoterapeuty",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03308",
+    rocnik: [1, 2],
+    obor: ["NER"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 25",
+    anotace:
+      "Předmět je určen pro studenty navazujícího magisterského studia Ergoterapie pro dospělé v kombinované formě. \r\nPředmět rozšiřuje praktickou výuku v povinných předmětech Ergoterapeutická praxe 1 a 2. Student se aktivně \r\nzapojuje do chodu pracoviště a v závěru praxe vypracovává souhrnný protokol z praxe, který je předmětem \r\nrozpravy na semináři. Rozsah volitelné praxe je 80 hodin.\r\nVhodnost pracoviště student konzultuje s garantem předmětu. Praxe v zařízení musí být předem smluvně \r\nošetřena.\r\n\n",
+  },
+  {
+    nazev: "Volnočasové aktivity u různých skupin pacientů ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01358",
+    rocnik: [1, 2],
+    obor: ["BER"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Vybrané aspekty zdravotní péče o lidí bez domova",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03653",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "16 - 25",
+    anotace:
+      "Kurz nabízí vhled do základních klinických kompetencí, porozumění sociálním determinantám zdraví a praktickým \r\nstrategiím, které jsou nezbytné pro účinnou zdravotní péče o lidi bez domova. Výuka klade důraz na holistický přístup \r\nzohledňující mimo strukturální a individuálních charakteristik lidí bez domova specificky také traumatické zážitky \r\n(včetně naučené bezmocnosti), který přesahují základní lékařskou péči a zahrnuje rovněž poznatky o \r\ninterdisciplinární (ne)spolupráci při řešení zdravotních potřeb lidí bez domova v České republice a mezinárodním \r\nsrovnání. \r\n\r\n\n",
+  },
+  {
+    nazev: "Vybrané chirurgické výkony",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01686",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace:
+      "Studenti medicíny (4., 5. a 6. ročníku) budou seznámení s vybranými chirurgickými výkony, jejich indikacemi, operační taktikou a postupem. Bude vysvětlen operační postup základních, ale i některých složitějších výkonů. Budou porovnány možnosti jejich otevřeného i miniinvasivního provedení. Jednotlivé lekce poskytnou hlubší pohled do operační taktiky výkonů v návaznosti na anatomii a klinickou diagnosu.\n",
+  },
+  {
+    nazev: "Vybrané kapitoly z embryologie člověka",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00736",
+    rocnik: [1, 2, 3, 4],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "20 - 190",
+    anotace:
+      "Cílem kursu je seznámení s některými aspekty lidské embryologie.\n",
+  },
+  {
+    nazev: "Vybrané kapitoly z kardiovaskulární chirurgie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01256",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 20",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Vybrané kapitoly z teratologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02937",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 25",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Vybrané kapitoly z vnitřního lékařství",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01235",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 30",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Využití 3D tisku v chirurgii a traumatologii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03654",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "2 - 10",
+    anotace:
+      "Předmět seznamuje studenty s praktickým využitím 3D tisku v chirurgii a traumatologii. Studenti projdou celým \r\nprocesem tvorby fyzického modelu zlomeniny – od zpracování CT dat, jejich segmentace a vytvoření 3D modelu, \r\npřes přípravu k tisku a vlastní 3D tisk, až po provedení osteosyntézy na vytištěném modelu. Kurz propojuje \r\nmedicínské znalosti s moderními technologickými postupy využitelnými v klinické praxi.\r\n\n",
+  },
+  {
+    nazev: "Vývoj a současnost mezinárodní spolupráce v ergoterapii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03309",
+    rocnik: [2, 3, 1],
+    obor: ["BER", "NER"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "1 - 30",
+    anotace:
+      "Pro vývoj profese v každé zemi je důležité znát nejen svou historii a vývoj, ale i komunikovat a spolupracovat s \r\nostatním ergoterapeutickými organizacemi v zahraničí. Studenti se seznámí se zahraničními ergoterapeutickými \r\norganizacemi, jejich aktivitami a jejich informačními kanály, aby mohli studenti dále tyto informace sledovat. Dále \r\nstudenty seznámí s možností internacionalizace v rámci studia ergoterapie. Studenti budou aktivně spolupracovat \r\nv rámci studentského spolku Mini SPOT na 1.LF UK, který se jmenuje SPOT Prague. Mini SPOT je spolek studentů \r\nergoterapie na jedné Univerzitě, spolupracující s ostatními Evropskými školami v rámci SPOT Europe (Europe \r\nStudent Platforme Occupational Therapy- Studentská ergoterapeutická platforma).\r\n\n",
+  },
+  {
+    nazev: "Vývojová kineziologie a principy Vojtovy metody",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03649",
+    rocnik: [2],
+    obor: ["NAF"],
+    kredity: 4,
+    semestr: "Zimní ❄️",
+    kapacita: "12 - 24",
+    anotace:
+      "Bloková výuka podává základní informace o vývoji lidské motoriky a principu Vojtovy metody. Poskytuje studentům \r\npředstavu o možnostech praktického využití Vojtovy metody v jejich budoucí praxi. Výuka \r\nje vedena tak, aby byl student v závěru schopen využít prvky reflexní lokomoce u dospělého pacienta.\r\n\r\n\n",
+  },
+  {
+    nazev: "Výzkum v nutricionistice",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02322",
+    rocnik: [],
+    obor: ["BNT"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "1 - 30",
+    anotace: "Typy výzkumných publikací a jejich interpretace\n",
+  },
+  {
+    nazev: "Výzkumná činnost v neurologii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03631",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK", "ALEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 50",
+    anotace:
+      "Předmět je určen studentům se zájmem o vědeckou práci v oboru neurověd.  Studenti se seznámí s různými \r\naspekty plánování a realizace výzkumných projektů a získají praktickou zkušenost s prací ve výzkumném týmu. \r\nZařazeni mohou být studenti, kteří se již dohodli s některým z vyučujicích na zapojení do konkrétního vědeckého \r\nprojektu. Studenti, kteří ještě nenavázali spolupráci s žádným mentorem mohou vyjádřit svůj zájem o vědeckou \r\npráci v oboru neurověd emailem (neuro@lf1.cuni.cz), avšak jejich zapojení nemůže být nárokováno.\r\n\n",
+  },
+  {
+    nazev:
+      "Základy adiktologie pro všeobecné sestry a porodní asistentky: screening a krátké intervence pro dospělé",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03605",
+    rocnik: [2],
+    obor: ["VO"],
+    kredity: 1,
+    semestr: "Oba",
+    kapacita: "3 - neomezen",
+    anotace:
+      "Tento předmět reaguje na potřebu rozšíření profesních i osobních kompetencí studentů všeobecného \r\nošetřovatelství a porodní asistentky. Předmět má za úkol navázat na předchozí vzdělávání studentů, rozšířit a \r\naktualizovat vzdělávání studentů všeobecného ošetřovatelství a porodní asistence ve vztahu k aktualitám v oboru \r\nadiktologie, nabídnout praktické vzdělávání týkající se epidemiologie, prevence, podpory, pomoci a motivace \r\npacientům s adiktologickou problematikou a jejich blízkým/rodinám v. č. nácviku praktických postupů v oblasti \r\nprevence, screeningu a krátkých intervencí. Klíčový je cílený rozvoj specializovaných dovedností a kompetencí \r\nstudentů všeobecného ošetřovatelství v komunikaci a práci s pacienty s adiktologickou problematikou. V průběhu \r\nvýuky předmětu si studenti všeobecného ošetřovatelství na základě seznámení s jednotlivými druhy \r\nscreeningových metod a přístupů osvojí teoretické znalosti a praktické dovednosti potřebné pro rozpoznávání \r\nrizikového chování a volby vhodných přístupů k pacientovi, včetně komunikace, motivace a přípravy pacienta na \r\nreferování do specializované péče.\r\n\n",
+  },
+  {
+    nazev: "Základy anesteziologie ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01261",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 15",
+    anotace:
+      "Povinně volitelný předmět určený posluchačům 4. a 5. ročníku lékařské fakulty. Předmět je zaměřen na rozšíření obzoru a znalostí studentů především v oboru anesteziologie. Přednáší se jak obecná část zaměřená na postupy a farmakologii, tak část speciální směřující k běžné praxi anestezie. Součástí předmětu je stáž na operačním sále v individuálním termínu.\n",
+  },
+  {
+    nazev: "Základy anesteziologie ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01362",
+    rocnik: [4, 5],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 10",
+    anotace:
+      "Povinně volitelný předmět určený posluchačům 4. a 5. ročníku lékařské fakulty. Předmět je zaměřen na rozšíření obzoru a znalostí studentů především v oboru anesteziologie. Přednáší se jak obecná část zaměřená na postupy a farmakologii, tak část speciální směřující k běžné praxi anestezie. Součástí předmětu je stáž na operačním sále v individuálním termínu.\n",
+  },
+  {
+    nazev: "Základy biologické psychiatrie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01363",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 14",
+    anotace:
+      "Nejprve jsou shrnuty informace o mezibuněčném a nitrobuněčném přenosu signálu v neuronech se zaměřením na neurotransmiterové receptorové systémy a signální cesty ovlivňované duševními poruchami a psychofarmaky. Následuje seznámení s procesy souvisejícími s neuroplasticitou, neurotoxicitou a stresem. Podrobně jsou probrány mechanismy účinků různých psychotropních látek, především antidepresiv, antipsychotik  a zneužívaných psychoaktivních látek. Dále jsou uvedeny základní biologické hypotézy o vzniku a podstatě duševních poruch, především poruch nálady, schizofrenie a Alzheimerovy nemoci. V závěrečné přednášce jsou studenti seznámeni s možnostmi výzkumu v oblasti molekulární psychiatrie na Psychiatrické klinice 1. LF UK a s některými výsledky studia mechanismů účinků antidepresiv, stabilizátorů nálady, kognitiv a hledání biologických znaků poruch nálady a neurodegenerativních onemocnění. Test.\n",
+  },
+  {
+    nazev: "Základy biomedicínského výzkumu pro studenty medicíny",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03692",
+    rocnik: [2, 3, 4],
+    obor: ["ZUB", "LEK", "ALEK", "AZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 25",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Základy buněčné biologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03650",
+    rocnik: [],
+    obor: ["LEK", "ZUB"],
+    kredity: 2,
+    semestr: "Oba",
+    kapacita: "5 - 140",
+    anotace:
+      "Přehled biologie buňky pro studenty prvního ročníku lékařské fakulty. Výklad vychází z Goodman’s Medical Cell \r\nBiology, vypuštěny jsou partie, které jsou z pohledu úvodního kurzu rozšiřující, a partie, které by duplikovaly výuku v \r\npovinném předmětu Biologie a genetika.\r\n\n",
+  },
+  {
+    nazev: "Základy digestivní endoskopie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02999",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "4 - 12",
+    anotace:
+      "Předmět je zaměřen pro zájemce o diagnostickou a terapeutickou digestivní endoskopii. Studenti budou \r\nseznámeni se základními technickými parametry endoskopických přístrojů, způsobem vyšetření, indikacemi, \r\nkontraindikacemi. Budou přítomni vyšetření pacientů v reálné praxi, součástí budou praktické semináře s využitím \r\norgánů zvířecích modelů, kde budou mít možnost provádět vystření pod dohledem vyučujícího.\r\n\n",
+  },
+  {
+    nazev: "Základy EKG",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00748",
+    rocnik: [2, 3, 4, 5],
+    obor: ["LEK"],
+    kredity: 4,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 130",
+    anotace:
+      "Seznámení se základními principy vzniku elektrického pole srdečního, jeho změn jak za fyziologických, tak i za nejčastějších patologických situací. Registrace EKG křivky a její změny. principy vícesvodové registrace změn elektrického pole srdečního.\r\nDalší informace budou: \r\nhttp://fyzi-web/index.html\n",
+  },
+  {
+    nazev: "Základy empatické komunikace: Roleplay",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03699",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["ZUB", "LEK", "ALEK", "AZUB"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 20",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Základy chirurgie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01365",
+    rocnik: [4],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 20",
+    anotace:
+      "Volitelný předmět Základy chirurgie je zaměřen na rozvíjení praktických znalostí v oboru chirurgie.\r\nVýuka probíhá v odpoledních hodinách na chirurgické klinice FN Bulovka.\r\nStudenti se v jednotlivých dnech dostaví buď jednotlivě nebo ve dvojicích, po domluvě vždy odpoledne ve dnech \r\npondělí až čtvrtek buď od 13 nebo od 14 hodin na dvě vyučovací hodiny (=90 minut) a výuka probíhá prakticky, a to \r\nna JIP (odpolední vizita, prezentace pacientů, RTG a laboratorních nálezů, společný rozbor diagnosticko-\r\nterapeutického postupu), akutní ambulanci nebo na operačním sále.\r\nTermíny si zvolí studenti sami, dle časových možností (aby nekolidovaly s výukou jiných předmětů), a to z \r\ndostatečného množství termínů. Termíny se dávají vždy v polovině měsíce na měsíc následující.\r\nZa celý akademický rok tak bude naplněno celkových 20 hodin výuky (10x2 hodiny).\r\n\n",
+  },
+  {
+    nazev: "Základy kinesiotapingu ",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03000",
+    rocnik: [2],
+    obor: ["FYZ"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "6 - 16",
+    anotace:
+      "Předmět studenty seznamuje s teoretickými základy technik kinesiotapingu – tj. aplikace elastických lepicích pásek k ovlivnění funkčních i strukturálních poruch pohybového aparátu. Popisuje principy základních svalových, mechanických – korekčních, funkčních, vazivových, fasciálních a lymfatických technik, rozebírá i jejich indikace a kontraindikace. Maximum dotace předmětu je věnováno praktickým aspektům použití kinesiotapu v praxi fyzioterapeuta a detailnímu nácviku všech teoreticky probíraných způsobů aplikace.\n",
+  },
+  {
+    nazev: "Základy kinesiotapingu v ergoterapii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03312",
+    rocnik: [1],
+    obor: ["NER"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "6 - 16",
+    anotace:
+      "Předmět je určen pro studenty navazujícího magisterského studia Ergoterapie pro dospělé v kombinované formě. \r\nPředmět seznamuje studenty s teoretickými základy technik kinesiotapingu – tj. aplikace elastických lepicích pásek \r\nk ovlivnění funkčních i strukturálních poruch pohybového aparátu. Popisuje principy základních svalových, \r\nmechanických – korekčních, funkčních, vazivových, fasciálních a lymfatických technik, rozebírá i jejich indikace a \r\nkontraindikace. Maximum dotace předmětu je věnováno praktickým aspektům použití kinesiotapu v praxi \r\nergoterapeuta a detailnímu nácviku všech teoreticky probíraných způsobů aplikace na horní končetině.\r\n\n",
+  },
+  {
+    nazev: "Základy klinické kardiologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B02705",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 25",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Základy klinického výzkumu",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03693",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "15 - 30",
+    anotace: "",
+  },
+  {
+    nazev: "Základy lékařské chemie - obecná a fyzikální chemie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01368",
+    rocnik: [1],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "10 - 110",
+    anotace:
+      "Předmět je určen studentům 1. ročníku Všeobecného lékařství, kteří si chtějí prohloubit znalosti z obecné a fyzikální chemie. Výuka probíhá v zimním semestru. \n",
+  },
+  {
+    nazev: "Základy lékařské chemie-organická chemie a biochemie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01940",
+    rocnik: [1],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 110",
+    anotace:
+      "Předmět je určen studentům 1. ročníku Všeobecného lékařství, kteří si chtějí prohloubit znalosti organické chemie. Poskytuje některé základní informace v tomto oboru a vysvětluje vztahy a souvislosti s biochemií.\r\n\n",
+  },
+  {
+    nazev: "Základy molekulární biologie nádorů",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B83588",
+    rocnik: [3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "3 - 15",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Základy neurověd",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00709",
+    rocnik: [3, 4],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 50",
+    anotace:
+      "Základy neurověd shrnují teoretické i klinicky zaměřené poznatky několika základních oblastí věd o mozku. Jejich \r\núkolem je přinést komplexní pohled na vybrané neurofysiologické mechanismy jak na buněčné úrovni, tak na \r\núrovni asociačních a kognitivních funkcí. Paralelní zaměření na studium změn funkcí způsobených nemocí nebo \r\nnemoci působící přináší teoretické poznatky pro poznání patogenezy neuropsychických poruch a tím i nových \r\npřístupů v jejich léčbě, prevenci a rehabilitaci.\r\n\n",
+  },
+  {
+    nazev: "Základy odborné první pomoci",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01260",
+    rocnik: [2, 3],
+    obor: ["LEK", "ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "5 - 15",
+    anotace:
+      "Povinně volitelný předmět určený studentům druhého a třetího ročníku lékařské fakulty. Předmět je zaměřen na \r\nvýuku první pomoci u akutních stavů dýchání, oběhu, traumat a náhlé zástavy oběhu. Součástí výuky je praktický \r\nnácvik neodkladné resuscitace. Výuka probíhá 6 týdnů vždy 1x týdně v pondělí. Podrobné informace: viz odkaz na \r\nWWW stránky kliniky, v sekci výuka\r\n\n",
+  },
+  {
+    nazev: "Základy odborné první pomoci",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01348",
+    rocnik: [2, 3],
+    obor: ["LEK", "ZUB"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "5 - 15",
+    anotace:
+      "Povinně volitelný předmět určený studentům druhého a třetího ročníku lékařské fakulty. Předmět je zaměřen na \r\nvýuku první pomoci u akutních stavů dýchání, oběhu, traumat a náhlé zástavy oběhu. Součástí výuky je praktický \r\nnácvik neodkladné resuscitace. Výuka probíhá 6 týdnů vždy 1x týdně v pondělí. Podrobné informace: viz odkaz na \r\nWWW stránky kliniky, v sekci výuka.\r\n\n",
+  },
+  {
+    nazev: "Základy operační techniky v ortopedii",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03655",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "6 - 12",
+    anotace:
+      "Student bude seznámen teoreticky a následně prakticky s pohybem na operačním sále z hlediska zachování \r\npřísných zásad sterility, dezinfekce k operaci, přípravy operačního pole a rouškování. Dojde ke zopakování operační \r\nanatomie v nejběžnějších operačních lokalitách. Na maketách si budou moci vyzkoušet základní obecní a \r\nortopedické operační techniky. Po absolvování úvodní části budou studenti moci asistovat u základních \r\nortopedických a traumatologických operací.\r\n\n",
+  },
+  {
+    nazev: "Základy ošetřovatelství v intenzivní péči prakticky",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03589",
+    rocnik: [2.0],
+    obor: ["VO"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 5",
+    anotace:
+      "Teoretická příprava probíhá formou samostudia v e-learningu, kde se student seznámí se základními tématy \r\nvysoce specializované ošetřovatelské péče o pacienta v intenzivní péči. Součástí e-learningu je ověření znalostí \r\nformou dílčích testů na jednotlivá témata.\r\nPříprava na stáž a seznámení s oblastmi péče o pacienta probíhá v simulovaném prostředí v učebně na \r\nošetřovatelských modelech a prostřednictvím simulace pacienta se selhání jednoho nebo více životně důležitých \r\norgánů.\r\nStáž probíhá na lůžkové částí Anesteziologicko-resuscitačního oddělení, kde student pod vedením a dohledem \r\nškolitele poskytuje vysoce specializovanou ošetřovatelskou péči. \r\n \r\n\n",
+  },
+  {
+    nazev: "Základy ošetřovatelství v intenzivní péči v praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03590",
+    rocnik: [3.0],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Oba",
+    kapacita: "1 - 5",
+    anotace:
+      "Teoretická příprava probíhá formou samostudia v e-learningu, kde se student seznámí se základními tématy \r\nvysoce specializované ošetřovatelské péče o pacienta v intenzivní péči. Součástí e-learningu je ověření znalostí \r\nformou dílčích testů na jednotlivá témata.\r\nPříprava na stáž a seznámení s oblastmi péče o pacienta probíhá v simulovaném prostředí v učebně na \r\nošetřovatelských modelech a prostřednictvím simulace pacienta se selhání jednoho nebo více životně důležitých \r\norgánů.\r\nStáž probíhá na lůžkové částí Anesteziologicko-resuscitačního oddělení, kde student pod vedením a dohledem \r\nškolitele poskytuje vysoce specializovanou ošetřovatelskou péči. \r\n\r\n\n",
+  },
+  {
+    nazev: "Základy paleopatologie",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00758",
+    rocnik: [2, 3, 4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 30",
+    anotace:
+      "Paleopatologie studuje choroby minulých populací, informuje jak nemoci v minulosti se vyvíjely, ale i jak ovlivnily dějiny.\r\n  Vysvětleny jsou vztahy oboru k archeologii, antropologii a medicíně, zdroje a chronologie, změny způsobené nemocemi, traumaty nebo záměrnými zásahy, pitvy a studie mumií.  \r\n\n",
+  },
+  {
+    nazev: "Základy práce v imunologické laboratoři",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01966",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 2,
+    semestr: "Letní ☀️",
+    kapacita: "1 - 3",
+    anotace:
+      "Předmět je určen pro studenty s hlubším zájmem o imunologii, je zaměřen hlavně na metody buněčné imunologie, ale student se postupně seznámí s celým spektrem imunologických laboratorních metod. V rámci předmětu si student vyzkouší i vyšetřování povrchových znaků na lymfocytech.\n",
+  },
+  {
+    nazev: "Základy válečné chirurgie a chirurgie v mimořádných situacích",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03001",
+    rocnik: [5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "3 - 15",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Zimní sportovně-fyzioterapeutický kurz",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B03591",
+    rocnik: [2, 3],
+    obor: ["FYZ", "NAF"],
+    kredity: 2,
+    semestr: "Zimní ❄️",
+    kapacita: "10 - 20",
+    anotace:
+      "Sportovně-fyzioterapeutický kurz je volitelný předmět, jehož výuka probíhá jako víkendový pobyt (pátek-neděle) na \r\nhorách. Výuka předmětu kombinuje semináře formou skupinové práce a diskusí studentů s vyučujícími nad \r\nzvolenými tématy fyzioterapeutické praxe se sportovními aktivitami – zimní turistikou nebo běžeckým lyžováním.\r\n\n",
+  },
+  {
+    nazev: "Zimní výcvikový kurz I.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00069",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "30 - 60",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Zimní výcvikový kurz II.",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B00753",
+    rocnik: [1, 2, 3, 4, 5, 6],
+    obor: ["ADI","ADI-kombi","ALEK","AZUB","BADI","BER","BNT","BVO","ERGO","FYZ","LEK","MADI","NAF","NER","NMgr.","NT","NVDD","PA","VO","ZUB"],
+    kredity: 3,
+    semestr: "Zimní ❄️",
+    kapacita: "30 - 60",
+    anotace: "Více informací v SIS",
+  },
+  {
+    nazev: "Zobrazovací metody v klinické praxi",
+    odkaz:
+      "https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=B01072",
+    rocnik: [4, 5, 6],
+    obor: ["LEK"],
+    kredity: 3,
+    semestr: "Letní ☀️",
+    kapacita: "10 - 20",
+    anotace:
+      "Výuka navazuje na předmět Radiodiagnostika a Nukleární medicína. Je zaměřena na praktickou výuku při interpretaci normálních a patologických obrazů v radiodiagnostice (radiologii) a nukleární medicíně a na správnou indikaci rentgenových i nerentgenových zobrazovacích metod. Jednotlivé hodiny jsou věnovány těmto oblastem a systémům: hrudník, srdce a cévy, retroperitoneum, zažívací trakt, skelet (včetně traumatologie), vývodné močové cesty, játra, žluční a žlučové cesty, pankreas, prs, nervový systém.\r\n\r\n\r\nZápočet se uděluje na základě aktivní docházky.\n",
+  },
+];
