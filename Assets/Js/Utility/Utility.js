@@ -7,6 +7,7 @@ var MasterSettings = {
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
+  { title: 'Voliltené předměty', href: '/Volitelne-predmety/', className: 'navLink', textContent: 'Volitelné předměty 🧩' },
   { title: 'Články', href: '/kurzy.html', className: 'navLink', textContent: 'Kurzy  🎓' },
   { title: 'Zdroje', href: '/index.html', className: 'navLink', textContent: 'Zdroje  📚' },
   { title: 'Články', href: '/Clanky.html', className: 'navLink', textContent: 'Články 📝' },

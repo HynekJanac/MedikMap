@@ -4,6 +4,7 @@ let semestr = [... new Set(Predmety.map(predmet => predmet.semestr))].sort().rev
 let rocnik = [... new Set(Predmety.map(predmet => predmet.rocnik).flat())].sort();
 let obor = [... new Set(Predmety.map(predmet => predmet.obor).flat())].sort();
 let kredity = [... new Set(Predmety.map(predmet => predmet.kredity))].sort()
+
 function createFilters(options,id){
     document.createElement("option")
     for (const option of options) {
@@ -37,9 +38,7 @@ function filter(){
     (semestr === "NoFilter" || predmet.semestr === semestr) &&
     (rocnik === "NoFilter" || predmet.rocnik.includes(Number(rocnik))) && 
     (obor === "NoFilter" || predmet.obor.includes(obor)) && 
-    (kredity === "NoFilter" || predmet.kredity === Number(kredity))
-    )
-    console.log(upraveneZdroje)
+    (kredity === "NoFilter" || predmet.kredity === Number(kredity)))
     zdrojeBuilder(upraveneZdroje)
 
 }

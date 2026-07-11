@@ -127,7 +127,7 @@ section > div{
     color: var(--text-color);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.8s ease-out;
     font-size: 1.1rem;
     padding-bottom: 10px;
 }
