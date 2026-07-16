@@ -39,7 +39,7 @@ function zdrojeBuilder(upraveneZdroje){
                 </div>
                 <div class="item-content" style="max-height: 0px;">
                     <div class="item-metadata">
-                        <i class="fa-solid fa-star"></i>Hodnocení učitele: <b>${predmet.hodnoceni.ucitel}</b> Teoretické výuky: <b>${predmet.hodnoceni.teorie}</b> Praktické výuky: <b>${predmet.hodnoceni.praxe}</b> <i>(1 - nejlepší, 4 - nejhorší)</i> 
+                        <i class="fa-solid fa-star"></i>Hodnocení učitele: <b>${predmet.hodnoceni.ucitel.replace("0","nehodnoceno")}</b> Teoretické výuky: <b>${predmet.hodnoceni.teorie.replace("0","nehodnoceno")}</b> Praktické výuky: <b>${predmet.hodnoceni.praxe.replace("0","nehodnoceno")}</b> <i>(1 - nejlepší, 4 - nejhorší)</i> 
                         <i class="fa-solid fa-calendar-check"></i>Semestr: <b>${predmet.semestr}</b>
                         <i class="fa-solid fa-graduation-cap"></i>Ročník: <b>${predmet.rocnik.sort()}</b>
                         <i class="fa-solid fa-trophy"></i>Kredity: <b>${predmet.kredity}</b>

@@ -3,7 +3,8 @@ document.getElementById("Search").style.display = "flex";
 let semestr = [... new Set(Predmety.map(predmet => predmet.semestr))].sort().reverse();
 let rocnik = [... new Set(Predmety.map(predmet => predmet.rocnik).flat())].sort();
 let obor = [... new Set(Predmety.map(predmet => predmet.obor).flat())].sort();
-let kredity = [... new Set(Predmety.map(predmet => predmet.kredity))].sort()
+let kredity = [... new Set(Predmety.map(predmet => predmet.kredity))].sort();
+let hodnoceni = [0,1,2,3,4]
 
 function createFilters(options,id){
     document.createElement("option")
@@ -19,6 +20,7 @@ createFilters(semestr,"semestr")
 createFilters(rocnik,"rocnik")
 createFilters(kredity,"kredity")
 createFilters(obor,"obor")
+createFilters(hodnoceni,"hodnoceni")
 
 function search(){
     let search = document.getElementById("SearchInput").value
@@ -32,22 +34,25 @@ function filter(){
     let rocnik = document.getElementById("rocnik").value
     let obor = document.getElementById("obor").value
     let kredity = document.getElementById("kredity").value
-    
+    let hodnoceni =  document.getElementById("hodnoceni").value
 
     let upraveneZdroje = Predmety.filter(predmet => 
     (semestr === "NoFilter" || predmet.semestr === semestr) &&
     (rocnik === "NoFilter" || predmet.rocnik.includes(Number(rocnik))) && 
     (obor === "NoFilter" || predmet.obor.includes(obor)) && 
-    (kredity === "NoFilter" || predmet.kredity === Number(kredity)))
+    (kredity === "NoFilter" || predmet.kredity === Number(kredity)) &&
+    (hodnoceni === "NoFilter" || (Math.round(Number(predmet.hodnoceni.ucitel))) === Number(hodnoceni))
+)
+
     zdrojeBuilder(upraveneZdroje)
 
 }
-
 function resetFilters(){
     document.getElementById("semestr").value = "NoFilter"
     document.getElementById("rocnik").value = "NoFilter"
     document.getElementById("obor").value = "NoFilter"
     document.getElementById("kredity").value = "NoFilter"
+     document.getElementById("hodnoceni").value = "NoFilter"
     document.getElementById("SearchInput").value = ""
     zdrojeBuilder()
 }

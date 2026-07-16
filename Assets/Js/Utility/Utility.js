@@ -1,99 +1,40 @@
 // Settings
-
 var MasterSettings = {
-  preloader: true,
+  preloader: false,
   infobox: true,
   infobox_message: '🧩 Spustili jsme nový prohlížeč volitelných předmětů. <a href="../Volitelne-predmety/">Vyzkoušet<a/>',
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
-  { title: 'Voliltené předměty', href: '/Volitelne-predmety/', className: 'navLink', textContent: 'Volitelné předměty 🧩' },
-  { title: 'Články', href: '/kurzy.html', className: 'navLink', textContent: 'Kurzy  🎓' },
-  { title: 'Zdroje', href: '/index.html', className: 'navLink', textContent: 'Zdroje  📚' },
-  { title: 'Články', href: '/Clanky.html', className: 'navLink', textContent: 'Články 📝' },
-  { title: 'O nás', href: '/onas.html', className: 'navLink', innerHTML: 'O nás' },
-  { title: 'Hledat', href: '/index.html', className: 'navLink', innerHTML: '<i class="fa-solid fa-magnifying-glass"></i>' }
+  { title: 'Voliltené předměty', href: '/Volitelne-predmety/', textContent: 'Volitelné předměty 🧩' },
+  { title: 'Články', href: '/kurzy.html', textContent: 'Kurzy  🎓' },
+  { title: 'Články', href: '/Clanky.html', textContent: 'Články 📝' },
+  { title: 'O nás', href: '/onas.html', textContent: 'O nás' },
+  { title: 'Hledat', href: '/index.html', textContent: '<i class="fa-solid fa-magnifying-glass"></i>' }
 ];
 
 function Header (NavLinks){
-  const header = document.createElement('header');
-  header.className = 'header';
-
-  // Create the logo link element
-  const logoLink = document.createElement('a');
-  logoLink.id = 'header__logo_link';
-  logoLink.href = '/';
-  logoLink.innerHTML = '<img src="/Assets/Icons/Logo.svg" alt="" class="logoImage">'
-  header.appendChild(logoLink);
-
-
-  // Create the jump to content link element
-  const jumptocontentLink = document.createElement('a');
-  jumptocontentLink.href = '#infobox';
-  jumptocontentLink.className = 'headerJumptocontent';
-  jumptocontentLink.textContent = 'Skočit k obsahu';
-  header.appendChild(jumptocontentLink);
-
-  // Create the menu div element
-  const menuDiv = document.createElement('div');
-  menuDiv.className = 'headerMenu';
-
-  const menuIcon = document.createElement('i');
-  menuIcon.id = 'menu_btn';
-  menuIcon.title = 'Otevřít menu';
-  menuIcon.tabIndex = 0;
-  menuIcon.className = 'fa-solid fa-bars';
-  menuIcon.style.color = 'var(--main-color)';
-  menuIcon.style.fontSize = '40px';
-
-  // Add the onclick event handler
-  menuIcon.onclick = Menu;
-
-  // Add the onkeydown event handler
-  menuIcon.onkeydown = function(event) {
-    if (event.keyCode === 13) {
-      Menu();
-    }
-  };
-
-  menuDiv.appendChild(menuIcon)
-  header.appendChild(menuDiv);
-
-  // Create the nav element
-  const nav = document.createElement('nav');
-  nav.className = 'headerNav';
-  header.appendChild(nav);
-
-  // Create the ul element
-  const ul = document.createElement('ul');
-  ul.className = 'navList';
-  nav.appendChild(ul);
-
-  // Create li and a elements for each link
-  NavLinks.forEach(link => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.title = link.title;
-    a.href = link.href;
-    a.className = link.className;
-    if (link.target) {
-      a.target = link.target;
-    }
-    if (link.innerHTML) {
-      a.innerHTML = link.innerHTML;
-    } else {
-      a.textContent = link.textContent;
-    }
-    li.appendChild(a);
-    ul.appendChild(li);
-});
-  // Append the header element to the document body or any other desired parent element
-  document.body.insertBefore(header, document.body.firstElementChild);
+  let links = ""
+  for (link of NavLinks){
+     links += `<li><a title="${link.title}" href="${link.href}" class="navLink">${link.textContent}</a></li>`
+  }
+  let header = `<header class="header">
+    <a id="header__logo_link" href="/"><img src="/Assets/Icons/Logo.svg" alt="" class="logoImage"></a>
+    <a href="#infobox" class="headerJumptocontent">Skočit k obsahu</a>
+    <div class="headerMenu">
+        <i id="menu_btn" onclick="Menu()" onfocus="Menu()" title="Otevřít menu" tabindex="0" class="fa-solid fa-bars" style="color: var(--main-color); font-size: 40px;">
+        </i>
+    </div>
+    <nav class="headerNav">
+        <ul class="navList">${links}</ul>
+    </nav>
+</header>`
+document.body.insertAdjacentHTML("afterbegin",header)
 }
+
 function Menu(){
     var nav = document.getElementsByClassName("headerNav")[0];
     let menu_btn = document.getElementById("menu_btn")
-    console.log(nav.style.opacity)
     if (nav.style.opacity == 0){
         nav.style.opacity = 1;
         nav.style.visibility = "visible"
@@ -108,59 +49,25 @@ function Menu(){
 
 function InfoBox(message){
 // Create the div element
-    var infobox = document.createElement('div');
-    infobox.className = 'infobox';
-    infobox.innerHTML = message;
-
+    var infobox = `<div class="infobox">${message}<div>`
     // Append the div element to the document body or any desired parent element
-    document.body.insertBefore(infobox, document.body.getElementsByTagName("main")[0]);
+  document.getElementsByTagName("main")[0].insertAdjacentHTML("beforebegin",infobox)
 }
-
-// shows and hides navigation menu
 
 function EndBlock(){
   //Custom endblock 
-  let endblock = document.createElement("div")
-  endblock.className = "endblock"
-  endblock.id = "endblock"
-  
-  let heading = document.createElement("p")
-  heading.className = "sub"
-  heading.innerText = "Zapoj se"
-  endblock.appendChild(heading)
-
-  let text = document.createElement("p")
-  text.className = "info"
-  text.innerText = "Víš o skvělém zdroji (webové stránce, nástroji, youtube kanálu...), který by mohl pomoct začínajícím medikům? Tak neváhej a pošli odkaz.  "
-  endblock.appendChild(text)
-
-  let footnote = document.createElement("div")
-  footnote.className = "sectionNote"
-  footnote.innerHTML = 'Jen prosím zkontroluj, zda už jsme zdroj nepřidali. :)'
-  endblock.appendChild(footnote)
-
-  let buttonContainer = document.createElement("div")
-  let button = document.createElement("button")
-  button.title = "Přidat"
-  button.innerText = "Přidat"
-  button.className = "singBtn"
-  button.id = "ShowForm"
-  button.setAttribute('onclick','ShowForm()')
-  buttonContainer.appendChild(button)
-  endblock.appendChild(buttonContainer)
-  
-  
-
-  let formContainer = document.createElement("div")
-  formContainer.className = "form-container"
-  let googleformIframe = document.createElement("iframe")
-  googleformIframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSeA7DkGzf9FJytPXsGDj2d9dpJyVMxRfMv5KuZETFF-T8jrXQ/viewform?embedded=true"
-  googleformIframe.className = "googleformIframe pridatZdroj"
-  googleformIframe.style.display = "none"
-  formContainer.appendChild(googleformIframe)
-  endblock.appendChild(formContainer)
-  
-  document.getElementsByTagName("main")[0].appendChild(endblock)
+  let endblock = `<div class="endblock" id="endblock">
+    <p class="sub">Zapoj se</p>
+    <p class="info">Víš o skvělém zdroji (webové stránce, nástroji, youtube kanálu...), který by mohl pomoct začínajícím medikům? Tak neváhej a pošli odkaz.  </p>
+    <div class="sectionNote">Jen prosím zkontroluj, zda už jsme zdroj nepřidali. :)</div>
+    <div>
+        <button title="Přidat" class="singBtn" id="ShowForm" onclick="ShowForm()">Přidat</button>
+    </div>
+    <div class="form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeA7DkGzf9FJytPXsGDj2d9dpJyVMxRfMv5KuZETFF-T8jrXQ/viewform?embedded=true" class="googleformIframe pridatZdroj" style="display: none;"></iframe>
+    </div>
+</div>`
+  document.getElementsByTagName("main")[0].insertAdjacentHTML("beforeend",endblock)
 }
 
 function ShowForm(){
@@ -169,13 +76,7 @@ function ShowForm(){
 }
 
 function socialShareGrid(){
-  // Create the div element
-  var socialShareGrid = document.createElement('div');
-  socialShareGrid.className = 'socialShareGrid';
-  socialShareGrid.id = 'socialShareGrid';
-
-  // Create an array of link objects
-  var SocialLinks = [
+  let SocialLinks = [
     {
       title: 'Přispět',
       href: 'https://www.paypal.com/donate/?hosted_button_id=WYUJMHWUYT47Q',
@@ -204,41 +105,22 @@ function socialShareGrid(){
   ];
 
   // Create the initial links
+  let links = ""
   for (const link of SocialLinks) {
-    var anchorElement = document.createElement('a');
-    anchorElement.title = link.title;
-    anchorElement.className = 'social';
-    anchorElement.href = link.href;
-    anchorElement.target = "'_blank'";
-
-    var iconElement = document.createElement('i');
-    iconElement.className = link.iconClassName;
-
-    anchorElement.appendChild(iconElement);
-    socialShareGrid.appendChild(anchorElement);
+    links += `<a title="${link.title}" class="social" href="${link.href}" target="'_blank'"><i class="${link.iconClassName}"></i></a>`
   }
-
-  document.getElementsByTagName("main")[0].appendChild(socialShareGrid)
+  let socialShareGrid = `<div class="socialShareGrid" id="socialShareGrid">${links}</div>`
+  document.body.innerHTML += socialShareGrid
 }
 
 // Back to top
 function BackToTop (){
   // Create the anchor element
-  var anchorElement = document.createElement('a');
-  anchorElement.title = 'Vrátit se zpět nahoru';
-  anchorElement.id = 'back-to-top';
-  anchorElement.className = 'back-to-top';
-  anchorElement.href = '#';
-
-  // Create the icon element
-  var iconElement = document.createElement('i');
-  iconElement.className = 'icon fas fa-angle-up';
-
-  // Append the icon element to the anchor element
-  anchorElement.appendChild(iconElement);
-
+  let BackToTop = `<a title="Vrátit se zpět nahoru" id="back-to-top" class="backToTopHide" href="#">
+    <i class="icon fas fa-angle-up"></i>
+</a>`
   // Append the anchor element to the document body or any desired parent element
-  document.getElementsByTagName("main")[0].appendChild(anchorElement)
+  document.getElementsByTagName("main")[0].innerHTML += BackToTop
   }
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -254,32 +136,13 @@ function scrollFunction() {
 
 // Cookie consent
 function CookiePopUp(){
-  var CookieConsentElement = Object.assign(document.createElement('div'), {
-    className: 'cookiesConsent',
-    id: 'cookiesConsent',
-    style: 'display: block;',
-  })
-
-  // Create the paragraph element
-  var paragraphElement = document.createElement('p');
-  paragraphElement.textContent = 'Tato stránka využívá soubory cookies k optimalizaci uživatelského zážitku a analytice návštěvnosti.';
-
-
-  // Append the paragraph element to the div element
-  CookieConsentElement.appendChild(paragraphElement);
-
-  // Create the "Got it!" button
-  var buttonElement = document.createElement('a');
-  buttonElement.className = 'cookieBtn';
-  buttonElement.textContent = 'OK';
-  buttonElement.onclick = GotIt;
-
-  // Append the button element to the div element
-  CookieConsentElement.appendChild(buttonElement);
-
+  let CokieConset = `<div class="cookiesConsent" id="cookiesConsent" style="display: block;">
+    <p>Tato stránka využívá soubory cookies k optimalizaci uživatelského zážitku a analytice návštěvnosti.</p>
+    <a class="cookieBtn" onclick="GotIt()">OK</a>
+</div>`
+  
   // Append the div element to the document body
-  document.getElementsByTagName("main")[0].appendChild(CookieConsentElement);
-
+  document.getElementsByTagName("main")[0].innerHTML += CokieConset
 }
 
 function getCookie(cname) {
@@ -334,23 +197,9 @@ function Preloader(){
 
 // Opt-out function which adds link to origianl hWeb website
 function PoweredByhWeb(){
-  let PoweredBy = document.createElement("p");
-  PoweredBy.className = "hWebCredit";
-
-  PoweredBy.innerText = "S láskou k medícíně vytvořil Hynek Janáč";
-
-  let hweb = document.createElement("p")
-  hweb.className = "hWebCredit";
-  hweb.innerText = "Poháněto technologí ";
-  let hWebLink = document.createElement("a");
-
-  hWebLink.href = "https://hweb-website.pages.dev/";
-  hWebLink.target = "_blank";
-  hWebLink.innerText = "hWeb";
- 
-  hweb.appendChild(hWebLink);
-  document.body.appendChild(PoweredBy);
-  document.body.appendChild(hweb)
+  let PoweredBy = `<p class="hWebCredit">S láskou k medícíně naprogramoval <b>Hynek Janáč</b></p>
+  <p class="hWebCredit">Poháněto technologí <b><a href="https://hweb-website.pages.dev/" target="_blank">hWeb</a></b></p>`
+  document.body.innerHTML += PoweredBy
 }
 
 function MasterFunction(){
@@ -378,9 +227,5 @@ function MasterFunction(){
 
   BackToTop()
   window.onscroll = function() {scrollFunction()};
-
-
-
 }
-
 MasterFunction()

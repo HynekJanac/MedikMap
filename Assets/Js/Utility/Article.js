@@ -55,10 +55,43 @@ else{
 }
 }
 
+function ReadNext(){
+  // Fukce vybere náhodné tři články k dalšímu čtení
+    if(typeof contentData !== "undefined"){
+    
+    let bezSoucasneho = contentData.filter((clanek => !window.location.pathname.includes(clanek.odkaz)))
+    let NahodneClanky = [...bezSoucasneho].sort(() => Math.random() - 0.5).slice(0, 3);
+    let clanky = ""
+    for(const element of NahodneClanky){
+        let clanek = `<article class="card">
+        <a class="cardLink" href="${element.odkaz}">
+            <div class="cardContent">
+                <img class="cardThumbnail" alt="image of a squares and circles" src="${element.obrazek}">
+                <div class="cardText">
+                    <h2 class="cardHeadline">${element.nazev}</h2>
+                    <p class="cardDescription">${element.popis}</p>
+                    <div class="cardMetadataWrap">
+                        <p class="cardMetadata metadataAction">Prozkoumat <i class="fa-solid fa-angle-right"></i>
+                        </p><a href="#" class="cardMetadata metadataAuthor">${element.autor}</a>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </article>` 
+    clanky += clanek
+}
+// Assemble elements
+let sekce = `<h1>Další články</h1>
+<section class="section" id="section">${clanky}</section>`
+document.getElementById("endblock").insertAdjacentHTML("beforebegin",sekce)
+  }
+}
+
 function ArticleImageViewer(){
-  let images = Array.from(document.querySelectorAll('article img'))
-  images.forEach( function(image){
-      image.setAttribute('onclick','ViewImage('+ images.indexOf(image)  + ')');
+  let images = Array.from(document.querySelectorAll('article img:not(.cardThumbnail)'))
+  if (typeof images !== "undefined"){
+    images.forEach( function(image){
+      image.setAttribute('onclick',`ViewImage(${images.indexOf(image)})`)
   } 
       
    )
@@ -70,38 +103,33 @@ function ArticleImageViewer(){
         document.getElementById('imageZoomContainer').style.display = "none";
         }
     });
-  document.getElementById("imageZoomContainer").onclick = () => {
+  document.getElementById("imageZoomImage").onclick = () => {
       document.getElementById('imageZoomContainer').style.display = "none";
+  }
   }
 }
 
-function ViewImage(image_id){
-  
-  let images = Array.from(document.querySelectorAll('article img'))
+function ViewImage(image_id){  
+  let images = Array.from(document.querySelectorAll('article img:not(.cardThumbnail)'))
   let caption = document.getElementsByClassName("caption")[image_id].textContent
-  
-  document.getElementById('imageZoomContainer').style.display = "flex";
+
+  document.getElementById("imageZoomContainer").style.display = "flex";
   document.getElementById("imageZoomImage").src = images[image_id].getAttribute('src')
   document.getElementsByClassName("imageZoomCaption")[0].innerHTML = caption
-  var image_id_left = String(image_id - 1)
-  var image_id_right = String(image_id + 1)
+  var image_id_left = image_id - 1
+  var image_id_right = image_id + 1
 
   if (image_id == 0){
-      var image_id_left = String(images.length - 1)
-      
+      var image_id_left = images.length - 1
   }
   if (image_id == images.length - 1){
-      var image_id_right = String(0)
+      var image_id_right = 0
   }
   
-
   let controls_right = document.getElementById("controls-right")
   let controls_left = document.getElementById("controls-left")
-  
-  controls_right.setAttribute("onclick", "ViewImage(" + image_id_right  +")")
-  controls_left.setAttribute("onclick", "ViewImage(" + image_id_left +")")
-  
-    
+  controls_right.setAttribute("onclick", `ViewImage(${image_id_right})`)
+  controls_left.setAttribute("onclick", `ViewImage(${image_id_left})`)
 }
 document.addEventListener("keydown", function(event) {
       if (event.key === "ArrowRight") {
@@ -114,5 +142,6 @@ document.addEventListener("keydown", function(event) {
         }
     }); 
 
-    TableOfContents()
+TableOfContents()
 ArticleImageViewer()
+ReadNext()

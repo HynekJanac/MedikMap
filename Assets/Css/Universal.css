@@ -1,5 +1,6 @@
 @import '/Assets/Icons/Fontawesome/css/fontawesome.min.css';
-@import "/Assets/Icons/Fontawesome/css/all.min.css";
+@import "/Assets/Icons/Fontawesome/css/solid.min.css";
+@import "/Assets/Icons/Fontawesome/css/brands.min.css";
 
 /*Import default and quote fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
@@ -250,6 +251,9 @@ main{
 	margin-bottom: 25px;
 }
 .socialShareGrid a{
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
 	padding: 20px;
 	background-color: var(--main-color);
 	border-radius: 10px;

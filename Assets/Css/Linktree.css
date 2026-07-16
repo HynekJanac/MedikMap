@@ -96,7 +96,9 @@ section{
 
 section > div{
     text-align: left;
-    margin: 10px 0 10px 0;
+}
+.item-wrap{
+    margin: 3px 0 3px 0;
 }
 
 .item-header{
