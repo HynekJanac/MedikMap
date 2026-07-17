@@ -58,8 +58,7 @@ else{
 function ReadNext(){
   // Fukce vybere náhodné tři články k dalšímu čtení
     if(typeof contentData !== "undefined"){
-    
-    let bezSoucasneho = contentData.filter((clanek => !window.location.pathname.includes(clanek.odkaz)))
+    let bezSoucasneho = contentData.filter((clanek => window.location.pathname.search(clanek.odkaz) === -1))
     let NahodneClanky = [...bezSoucasneho].sort(() => Math.random() - 0.5).slice(0, 3);
     let clanky = ""
     for(const element of NahodneClanky){

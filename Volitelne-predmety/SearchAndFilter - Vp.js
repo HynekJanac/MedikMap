@@ -41,8 +41,7 @@ function filter(){
     (rocnik === "NoFilter" || predmet.rocnik.includes(Number(rocnik))) && 
     (obor === "NoFilter" || predmet.obor.includes(obor)) && 
     (kredity === "NoFilter" || predmet.kredity === Number(kredity)) &&
-    (hodnoceni === "NoFilter" || (Math.round(Number(predmet.hodnoceni.ucitel))) === Number(hodnoceni))
-)
+    (hodnoceni === "NoFilter" || (Math.round(Number(predmet.hodnoceni.ucitel))) === Number(hodnoceni) || (Math.round(Number(predmet.hodnoceni.teorie))) === Number(hodnoceni) || (Math.round(Number(predmet.hodnoceni.praxe))) === Number(hodnoceni)))
 
     zdrojeBuilder(upraveneZdroje)
 
