@@ -12,6 +12,10 @@ function CloseCollapsible(CollapsibleIndex){
     document.getElementsByClassName("fa-circle-xmark")[CollapsibleIndex].style.display = "none"
 }
 
+function CopyKod(kod){
+    navigator.clipboard.writeText(kod)
+}
+
 function zdrojeBuilder(upraveneZdroje){
         if (!upraveneZdroje){
             var upraveneZdroje = Predmety
@@ -47,8 +51,7 @@ function zdrojeBuilder(upraveneZdroje){
                     </div>
                         <p>${predmet.anotace}</p>
                         <div style="text-align: center;">
-                        <a class="hodnoceni" target=_blank href="https://docs.google.com/forms/d/e/1FAIpQLSfh_i6glAXoPUaIfrfmkjUcXeDWEy8Kn9I3qhIoHzkbL8_Ung/viewform?usp=pp_url&entry.1959998708=${encodeURI(predmet.nazev)}">Ohodnotit předmět <i class="fa-solid fa-star"></i></a>
-                        </div>
+                        <button class="copyKod" onclick='CopyKod("${predmet.kod}")'><i class="fa-solid fa-copy"></i> Zkopírovat kód předmětu</button>                     </div>
                     </div>
             </div>`
             content = content + output

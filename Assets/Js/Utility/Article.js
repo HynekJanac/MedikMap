@@ -1,50 +1,25 @@
-function TableOfContents(){
-  let TableOfContents = document.createElement("nav")
-  TableOfContents.role = "navigation"
-  TableOfContents.className = "toc"
-  
-  let tocHeading = document.createElement("h2")
-  tocHeading.className = "contentsTitle"
-  tocHeading.innerText = "Obsah"
-  let ShowHidetocBtn  = document.createElement("a")
-  ShowHidetocBtn.id = "showHideContents"
-  ShowHidetocBtn.setAttribute("onclick", "ShowHideContents()")
-  ShowHidetocBtn.innerText = "(skrýt)"
-
-
-  // Create a list for the toc entries
-  let tocList = document.createElement("ul");
-  tocList.className = "tocList"
-  tocList.id = "tocList"   
-
-  // Get the h3 tags - toc entries
-  headers = document.getElementsByTagName("h2");
-
+function ToC(){
   // For each h2
+  let item = `<li><a href="#Uvodni-informace">Recenze 🔍</a></li>`
+  headers = document.getElementsByTagName("h2");
+  let contents = ""
   for (const heading of headers){
-  
     // a list item for the entry
-    tocListItem = document.createElement("li");
-
-    // a link for the h3
-    tocEntry = document.createElement("a");
-    tocEntry.setAttribute("href","#"+ heading.id);
-    tocEntry.innerText=heading.innerText;
-  
-    tocListItem.appendChild(tocEntry);
-    tocList.appendChild(tocListItem);
+    let item = `<li><a href="#${heading.id}">${heading.innerText}</a></li>`
+    contents += item
   }
-
-  TableOfContents.appendChild(tocHeading)
-  TableOfContents.appendChild(ShowHidetocBtn)
-  TableOfContents.appendChild(tocList)
-  let article = document.getElementsByTagName("article")[0]
-  document.getElementsByTagName("main")[0].insertBefore(TableOfContents, article)
-
+  let ToC = `<nav role="navigation" class="toc">
+    <h2 class="contentsTitle">Obsah</h2>
+    <a id="showHideContents" onclick="viewToC()">(skrýt)</a>
+    <ul class="tocList" id="tocList">
+        ${contents}
+    </ul>
+</nav>`
+  document.getElementsByTagName("article")[0].insertAdjacentHTML("beforebegin",ToC)  
 }
 
 // When the user clicks on the button, hide or show table of contents
-function ShowHideContents(){
+function viewToC(){
 if (document.getElementById("tocList").style.display == "none"){
   document.getElementById("tocList").style.display = "block";
   document.getElementById("showHideContents").innerText = "(skrýt)"
@@ -55,7 +30,7 @@ else{
 }
 }
 
-function ReadNext(){
+function readNext(){
   // Fukce vybere náhodné tři články k dalšímu čtení
     if(typeof contentData !== "undefined"){
     let bezSoucasneho = contentData.filter((clanek => !window.location.pathname.includes(clanek.odkaz.replace("\.html",""))))
@@ -86,11 +61,11 @@ document.getElementById("endblock").insertAdjacentHTML("beforebegin",sekce)
   }
 }
 
-function ArticleImageViewer(){
+function imageViewer(){
   let images = Array.from(document.querySelectorAll('article img:not(.cardThumbnail)'))
   if (typeof images !== "undefined"){
     images.forEach( function(image){
-      image.setAttribute('onclick',`ViewImage(${images.indexOf(image)})`)
+      image.setAttribute('onclick',`viewImage(${images.indexOf(image)})`)
   } 
       
    )
@@ -108,7 +83,7 @@ function ArticleImageViewer(){
   }
 }
 
-function ViewImage(image_id){  
+function viewImage(image_id){  
   let images = Array.from(document.querySelectorAll('article img:not(.cardThumbnail)'))
   let caption = document.getElementsByClassName("caption")[image_id].textContent
 
@@ -127,8 +102,8 @@ function ViewImage(image_id){
   
   let controls_right = document.getElementById("controls-right")
   let controls_left = document.getElementById("controls-left")
-  controls_right.setAttribute("onclick", `ViewImage(${image_id_right})`)
-  controls_left.setAttribute("onclick", `ViewImage(${image_id_left})`)
+  controls_right.setAttribute("onclick", `viewImage(${image_id_right})`)
+  controls_left.setAttribute("onclick", `viewImage(${image_id_left})`)
 }
 document.addEventListener("keydown", function(event) {
       if (event.key === "ArrowRight") {
@@ -141,6 +116,6 @@ document.addEventListener("keydown", function(event) {
         }
     }); 
 
-TableOfContents()
-ArticleImageViewer()
-ReadNext()
+ToC()
+imageViewer()
+readNext()

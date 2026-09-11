@@ -48,6 +48,7 @@
 	cursor: pointer;
 	transition: all .3s ease-in-out;
     background-color: var(--background-color);
+	-webkit-appearance: none;
 }
 .filterBtn:hover{
 	transform: scale(1.1);
