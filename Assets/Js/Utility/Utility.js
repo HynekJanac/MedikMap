@@ -158,7 +158,7 @@ function Donate(){
     <h3>Líbí se vám MedikMap?</h3>
     <p>I malý příspěvek je pro nás motivace web dále zlepšovat a provozovat.</p>
     <div id="donateAkce">
-      <a id="donateNow" onclick="window.location.reload();" href="/donate.html">Přispět</a>
+      <a id="donateNow" href="/donate.html">Přispět</a>
       <button id="donateLater" onclick="donateLater()">Možná příště</button>
     </div>
   </div>
