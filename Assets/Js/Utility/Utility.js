@@ -180,7 +180,6 @@ function Donate(){
   if (parseInt(localStorage.getItem("navstiveno")) == 30 || parseInt(localStorage.getItem("navstiveno")) == 90){
     document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend",popupsource)
   }
-  console.log(localStorage.getItem("navstiveno"))
 }
 function donateLater(){
   document.getElementById("donateOverlay").style.display = "none"
