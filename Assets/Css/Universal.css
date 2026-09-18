@@ -191,11 +191,11 @@ main{
 
 /*------------------------- Custom endblock (apears at the bottom of every page) ---------------------*/
 .endblock{
-	margin: 50px 0;
+	margin: 50px auto;
 	background-color: var(--secondary-color);
 	padding: 1em;
 	border-radius: 20px;
-	width: 100%;
+	width: 90%;
 	min-width: 347px;
 	text-align: center;
 	display: flex;
