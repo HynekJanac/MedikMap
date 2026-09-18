@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+  MEDIKMAP.CZ – DONATE POPUP SNIPPET
+  ===================================
+  Jak nasadit:
+  1. Zkopírujte CELÝ obsah tohoto souboru (style + HTML div + script)
+     a vložte ho na konec <body> na všech stránkách webu (např. do
+     společné patičky/šablony).
+  2. Upravte texty a odkaz na platbu v sekci <div id="mm-donate-popup">.
+  3. Hotovo – logika se stará o vše ostatní sama.
+
+  Chování:
+  - Popup se zobrazí, pokud nastane ANY z podmínek:
+      a) je to 5. (nebo další) návštěva webu v aktuálním kalendářním měsíci
+      b) uživatel stráví na webu 3 minuty (souhrnně, i po přechodu mezi stránkami)
+  - Po kliknutí na "Zavřít" se popup neukáže dalších 7 dní.
+  - Pokud ho uživatel zavře i podruhé, interval se prodlouží na 30 dní.
+  - Po kliknutí na "Přispět" se popup také schová na 30 dní (uživatel
+    už udělal, co jste chtěli, netřeba otravovat).
+-->
+
+<style>
+  #mm-donate-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    z-index: 9998;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  #mm-donate-overlay.mm-visible {
+    display: flex;
+  }
+  #mm-donate-popup {
+    background: #ffffff;
+    border-radius: 14px;
+    max-width: 380px;
+    width: 100%;
+    padding: 28px 24px 22px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    position: relative;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    text-align: center;
+    animation: mm-pop-in 0.25s ease-out;
+  }
+  @keyframes mm-pop-in {
+    from { transform: scale(0.92); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+  }
+  #mm-donate-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: #94a3b8;
+    padding: 4px;
+  }
+  #mm-donate-close:hover { color: #475569; }
+  #mm-donate-popup h3 {
+    margin: 4px 0 10px;
+    font-size: 19px;
+    color: #0f172a;
+  }
+  #mm-donate-popup p {
+    margin: 0 0 18px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: #475569;
+  }
+  #mm-donate-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  #mm-donate-cta {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14.5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  #mm-donate-cta:hover { background: #1d4ed8; }
+  #mm-donate-later {
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 14.5px;
+    cursor: pointer;
+  }
+  #mm-donate-later:hover { background: #e2e8f0; }
+</style>
+
+<div id="mm-donate-overlay">
+  <div id="mm-donate-popup">
+    <button id="mm-donate-close" aria-label="Zavřít">&times;</button>
+    <h3>Líbí se vám MedikMap?</h3>
+    <p>
+      Web provozujeme zdarma díky podpoře lidí, jako jste vy.
+      Malý příspěvek nám pomůže přidávat nové materiály a udržet web v provozu.
+    </p>
+    <div id="mm-donate-actions">
+      <a id="mm-donate-cta" href="/prispet">Přispět</a>
+      <button id="mm-donate-later">Možná příště</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------- KONFIGURACE ----------
+  var VISIT_THRESHOLD = 1;                     // po kolikáté návštěvě v měsíci ukázat
+  var TIME_THRESHOLD_MS = 3 * 60 * 1000;        // 3 minuty
+  var COOLDOWN_FIRST_DISMISS_DAYS = 7;          // po 1. zavření
+  var COOLDOWN_REPEAT_DISMISS_DAYS = 30;        // po 2.+ zavření nebo po kliku na "Přispět"
+  var STORAGE_KEY = "mm_donate_state_v1";
+  var SESSION_FLAG = "mm_donate_session_counted";
+  var SESSION_SHOWN_FLAG = "mm_donate_shown_this_session";
+
+  // ---------- POMOCNÉ FUNKCE ----------
+  function getMonthKey(date) {
+    return date.getFullYear() + "-" + (date.getMonth() + 1);
+  }
+
+  function loadState() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveState(state) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {
+      /* localStorage nedostupné - tiše ignorujeme */
+    }
+  }
+
+  function daysToMs(days) {
+    return days * 24 * 60 * 60 * 1000;
+  }
+
+  // ---------- INICIALIZACE STAVU ----------
+  var now = new Date();
+  var currentMonthKey = getMonthKey(now);
+
+  var state = loadState() || {
+    visitCount: 0,
+    monthKey: currentMonthKey,
+    dismissedUntil: 0,
+    dismissCount: 0
+  };
+
+  // reset počtu návštěv při novém měsíci
+  if (state.monthKey !== currentMonthKey) {
+    state.monthKey = currentMonthKey;
+    state.visitCount = 0;
+  }
+
+  // počítat návštěvu jen jednou za session (ne při každém načtení stránky)
+  if (!sessionStorage.getItem(SESSION_FLAG)) {
+    state.visitCount += 1;
+    sessionStorage.setItem(SESSION_FLAG, "1");
+  }
+
+  saveState(state);
+
+  // ---------- LOGIKA ZOBRAZENÍ ----------
+  var overlay = document.getElementById("mm-donate-overlay");
+  var closeBtn = document.getElementById("mm-donate-close");
+  var laterBtn = document.getElementById("mm-donate-later");
+  var ctaBtn = document.getElementById("mm-donate-cta");
+
+  function isInCooldown() {
+    return Date.now() < (state.dismissedUntil || 0);
+  }
+
+  function alreadyShownThisSession() {
+    return !!sessionStorage.getItem(SESSION_SHOWN_FLAG);
+  }
+
+  function showPopup() {
+    if (isInCooldown() || alreadyShownThisSession()) return;
+    overlay.classList.add("mm-visible");
+    sessionStorage.setItem(SESSION_SHOWN_FLAG, "1");
+  }
+
+  function hidePopup() {
+    overlay.classList.remove("mm-visible");
+  }
+
+  function dismissWithCooldown() {
+    state.dismissCount = (state.dismissCount || 0) + 1;
+    var days = state.dismissCount >= 2
+      ? COOLDOWN_REPEAT_DISMISS_DAYS
+      : COOLDOWN_FIRST_DISMISS_DAYS;
+    state.dismissedUntil = Date.now() + daysToMs(days);
+    saveState(state);
+    hidePopup();
+  }
+
+  function acceptDonate() {
+    // uživatel klikl na Přispět - dáme mu pokoj na 30 dní bez ohledu na dismissCount
+    state.dismissedUntil = Date.now() + daysToMs(COOLDOWN_REPEAT_DISMISS_DAYS);
+    saveState(state);
+    hidePopup();
+    // necháváme prokliknout na /prispet přirozeně (href), popup jen schováme
+  }
+
+  closeBtn.addEventListener("click", dismissWithCooldown);
+  laterBtn.addEventListener("click", dismissWithCooldown);
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) dismissWithCooldown();
+  });
+  ctaBtn.addEventListener("click", acceptDonate);
+
+  // podmínka A: dostatečný počet návštěv v měsíci
+  if (!isInCooldown() && state.visitCount >= VISIT_THRESHOLD) {
+    showPopup();
+  }
+
+  // podmínka B: čas strávený na webu (funguje i napříč více stránkami
+  // v rámci jedné prohlížecí session díky setTimeout na každé stránce)
+  setTimeout(function () {
+    showPopup();
+  }, TIME_THRESHOLD_MS);
+
+})();
+</script>
+</body>
+</html>

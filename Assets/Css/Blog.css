@@ -75,12 +75,10 @@
 	transition: transform .3s ease-in-out;
 }
 
-.card:hover{
+.card:hover, .card:focus{
 	transform: scale(1.05);
 }
-.card:focus{
-	transform: scale(1.05);
-}
+
 
 .cardLink{
 	text-decoration: none;
@@ -92,6 +90,11 @@
 	border-radius: 20px;
 	object-fit: cover;
 }
+
+.card:hover .cardThumbnail{
+	animation: Glow .7s ease-in-out infinite;
+}
+
 .cardContent{
 	display: flex;
 	flex-direction: column;

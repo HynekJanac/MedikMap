@@ -79,7 +79,7 @@ function socialShareGrid(){
   let SocialLinks = [
     {
       title: 'Přispět',
-      href: 'https://www.paypal.com/donate/?hosted_button_id=WYUJMHWUYT47Q',
+      href: '/donate.html',
       iconClassName: 'icon fas fa-heart'
     },
     {
@@ -134,42 +134,56 @@ function scrollFunction() {
   }
 }
 
-// Cookie consent
-function CookiePopUp(){
-  let CokieConset = `<div class="cookiesConsent" id="cookiesConsent" style="display: block;">
+function CookieNotice(){
+    let cookieConsent = `<div class="cookiesConsent" id="cookiesConsent" style="display: block;">
     <p>Tato stránka využívá soubory cookies k optimalizaci uživatelského zážitku a analytice návštěvnosti.</p>
     <a class="cookieBtn" onclick="GotIt()">OK</a>
 </div>`
-  
-  // Append the div element to the document body
-  document.getElementsByTagName("main")[0].innerHTML += CokieConset
+    let cookieinfo = localStorage.getItem("cookies")
+    if (cookieinfo != "ano"){
+        document.getElementsByTagName("main")[0].insertAdjacentHTML("beforeend",cookieConsent)
+    }
+
 }
 
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
-
 function GotIt() {
-    // Add one month to the current date
-    var currentDate = new Date();
-
-    // Add one month to the current date
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    
-    document.cookie = "cookiepolicy=True ; expires=" + String(currentDate);
     document.getElementById("cookiesConsent").style.display = "none"; 
+    localStorage.setItem("cookies","ano")
+} 
+
+function Donate(){
+  let popupsource = `<div id="donateOverlay">
+  <div id="donatePopup">
+    <button id="donateClose" onclick="donateLater()" aria-label="Zavřít">&times;</button>
+    <h3>Líbí se vám MedikMap?</h3>
+    <p>I malý příspěvek je pro nás motivace web dále zlepšovat a provozovat.</p>
+    <div id="donateAkce">
+      <a id="donateNow" onclick="window.location.reload();" target="_blank" href="/donate.html">Přispět</a>
+      <button id="donateLater" onclick="donateLater()">Možná příště</button>
+    </div>
+  </div>
+</div>`
+
+  const datum = new Date
+  let soucasnyMesic = datum.getMonth()
+  let posledniMesic = localStorage.getItem("mesic")
+  let navstiveno = localStorage.getItem("navstiveno")
+  if (parseInt(posledniMesic) != parseInt(soucasnyMesic)){
+    localStorage.setItem("navstiveno",1)
+    localStorage.setItem("mesic",soucasnyMesic)
+  } else if (navstiveno == null){
+    localStorage.setItem("navstiveno",1)
+  }
+  else{
+    localStorage.setItem("navstiveno",parseInt(navstiveno) + 1)
+  }
+  if (parseInt(localStorage.getItem("navstiveno")) == 30 || parseInt(localStorage.getItem("navstiveno")) == 90){
+    document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend",popupsource)
+  }
+  console.log(localStorage.getItem("navstiveno"))
+}
+function donateLater(){
+  document.getElementById("donateOverlay").style.display = "none"
 }
 
 //Preloader
@@ -218,14 +232,12 @@ function MasterFunction(){
   
   socialShareGrid()
   
-  CookiePopUp()
+  CookieNotice()
 
   PoweredByhWeb()
   
-  if (getCookie("cookiepolicy") == "True"){
-   document.getElementById("cookiesConsent").style.display = "none";}
-
   BackToTop()
   window.onscroll = function() {scrollFunction()};
 }
 MasterFunction()
+Donate()

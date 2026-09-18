@@ -47,12 +47,17 @@ main{
 	padding: 1em;
 }
 
+@keyframes Glow{
+	0%  { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.35); }
+	100%{ box-shadow: 0 0 0 15px rgba(255, 77, 77, 0); }
+}
+
 .headline{
 	color: var(--main-color);
 	font-weight: 900;
-	font-size: 1.5625rem;
+	font-size: 2rem;
 	text-align: center;
-	margin: 0;
+	margin: 0 0 15px 0;
 }
 
 /*Preloader*/
@@ -77,7 +82,7 @@ main{
     animation: spin 1.2s ease-in-out infinite;
   }
   
-  @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
@@ -138,28 +143,29 @@ main{
 	font-weight: 300;
 	line-height: 40px;
 	border-radius: 10px;
-	background-color: var(--main-color);
+	background-color: var(--secondary-color);
+	border: var(--main-color) 2px solid;
 	transition: all .3s ease-in-out;
+    animation: Glow .7s ease-in-out infinite;
 }
 .navLink{
 	text-decoration: none;
-	color: var(--secondary-color);
+	color: var(--main-color);
+	transition: all .3s ease-in-out;
+	font-size: 25px;
 }
 .navLink:hover,.navLink:focus {
-	transform: scale(1.1);
+	font-size: 26px;
+	color: var(--text-color);
 }
-.navLink[title*="[NEW]"]::after{
-	content: '';
-    background: var(--secondary-color);
-    border-radius: 100%;
-    border: none;
-    display: inline-block;
-    height: .85rem;
-    width: .85rem;
-	margin-left: 10px;
-	
-}
-
+.navLink .fa-solid{
+		color: var(--main-color);
+		transition: all .30s ease-in-out;
+	}
+.navLink:hover > .fa-solid{
+		font-size: 26px;
+		color: var(--text-color);
+	}
 
 /*------------------------ Infobox -------------------*/
 .infobox{
@@ -172,6 +178,7 @@ main{
 	font-weight: 600;
 	background-color: var(--main-color);
 	margin: 0 0.5em;
+	animation: Glow 2s ease-in-out infinite;
 }
 .infobox a{
 	color: var(--secondary-color);
@@ -180,6 +187,7 @@ main{
 .infobox a:hover{
 	color: var(--text-color);
 }
+
 
 /*------------------------- Custom endblock (apears at the bottom of every page) ---------------------*/
 .endblock{
@@ -223,11 +231,11 @@ main{
 	border-radius: 20px;
 	transition: all .50s ease;
 	width: 50%;
+	margin-top: 15px;
 }
 .singBtn:hover, .singBtn:focus{
-	color: var(--secondary-color);
-	background-color: var(--main-color);
 	transform: scale(1.05);
+	animation: Glow .7s ease-in-out infinite;
 }
 
 .googleformIframe{
@@ -241,6 +249,8 @@ main{
 	font-size: 15px;
 }
 /*------------------------ Footer ------------------------*/
+
+
 .socialShareGrid{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 70px);
@@ -264,21 +274,26 @@ main{
 }
 .social:hover, .social:focus{
 	transform: scale(1.1);
+	animation: Glow .7s ease-in-out infinite;
 }
+
 
 .icon{
 	color: var(--secondary-color);
 	font-size: 30px;
 	text-align: center;
 	transition: all .30s ease-in-out;
+
 }
 
 .navLink .fa-solid{
-	color: var(--secondary-color);
+	color: var(--main-color);
 	transition: all .30s ease-in-out;
 }
 
 /* ----------------- back to top button -------------*/
+
+
 .backToTopHide{
 	transform: scale(0);
 	opacity: 0;
@@ -307,6 +322,7 @@ main{
 	text-align: center;
 	border-radius: 50%;
 	transition: all 0.25s ease-in-out;
+	animation: Glow 2s infinite;
 }
 .backToTopShow i{
 	margin-top: 10px;
@@ -329,13 +345,22 @@ main{
 }
 
 /*------- Cookie consent ------- */
+@keyframes cookieRise {
+	from{
+		opacity: 0;
+		transform: translateY(+100px);
+	}
+	to{
+		opacity: 1;
+	}
+}
 .cookiesConsent{
 	background-color: var(--secondary-color);
 	width: 100%;
 	height: auto;
 	text-align: center;
 	color: var(--text-color);
-	
+	animation: cookieRise .6s ease-in-out;
 	bottom: 0;
 	left: 0;
 	position: fixed;
@@ -429,7 +454,7 @@ main{
 }
 
 
-
+ 
 /* hWeb Credit */
 .hWebCredit{
 	text-align: center;
@@ -439,6 +464,86 @@ main{
 
 .hWebCredit a{
 	color: var(--main-color);
+}
+
+/*Donate*/
+@keyframes fadein{
+	from {opacity: 0;}
+	to {opacity: 1;}	
+}
+
+#donateOverlay{
+	display: flex;
+    position: fixed;
+    inset: 0;
+    background: rgba(42, 15, 15, 0.55);
+    z-index: 9998;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+	animation: fadein ease-in-out 1s;
+}
+#donatePopup{
+	background-color: var(--background-color);
+	border-radius: 20px;
+	text-align: center;
+	max-width: 380px;
+	width: 100%;
+	color: var(--text-color);
+	padding: 16px;
+	position: relative;
+	box-shadow: 0 0 50px 1px var(--main-color);
+}
+#donatePopup h3{
+	color: var(--main-color);
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+#donateClose{
+	position: absolute;
+	top: 10px;
+	right: 12px;
+	background: none;
+	border: none;
+	font-size: 30px;
+	line-height: 1;
+	cursor: pointer;
+	color: var(--main-color);
+	padding: 4px;
+	transition: transform .2s ease-in-out;
+}
+#donateClose:hover, #donateClose.focus{
+	transform: scale(1.1);
+	color: var(--text-color);
+}
+#donateAkce{
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+}
+
+#donateNow,#donateLater {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+	color: var(--text-color);
+	border-radius: 10px;
+	font-family: var(--default-font);
+	cursor: pointer;
+	transition: transform .2s ease-in-out;
+
+}
+#donateNow {
+	background-color: var(--main-color);
+	text-decoration: none;
+	animation: Glow .7s ease-in-out infinite;
+}
+#donateNow:hover,#donateLater:hover {
+	transform: scale(1.1);
+}
+#donateLater {
+	background-color: var(--secondary-color);
+	border: none;
 }
 
 /* Media */
@@ -466,6 +571,8 @@ main{
 		flex-flow: row;
 		align-items: center;
 		background: transparent;
+		border: none;
+		animation: none;
 	}
 	.navLink{
 		text-decoration: none;
@@ -475,28 +582,10 @@ main{
 		transition: all .2s ease-in-out;
 	}
 	.navLink:hover, .navLink:focus{
-		font-size: 26px;
-		color: var(--text-color);
-	}
-	.navLink .fa-solid{
-		color: var(--main-color);
-		transition: all .30s ease-in-out;
-	}
-	.navLink:hover > .fa-solid{
-		font-size: 26px;
+		font-size: 27px;
 		color: var(--text-color);
 	}
 
-	.navLink[title*="[NEW]"]::after{
-		content: '';
-		background: var(--main-color);
-		border-radius: 100%;
-		border: none;
-		display: inline-block;
-		position: absolute;
-		height: .85rem;
-		width: .85rem;	
-	}
 	
 	/*------------------- Newsletter ------------------*/
 	.email{

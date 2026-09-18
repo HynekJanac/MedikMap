@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Přispět</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="No description has been provided, you will have to see for yourself!" />
+      <meta name="author" content="Hynek Janáč" />
+      <link rel="icon" type="image/x-icon" href="/Assets/Icons/Favicon.ico" />
+      <link rel="stylesheet" href="/Assets/Css/Article.css" />
+      <link rel="stylesheet" href="/Assets/Css/Universal.css" />
+      <link rel="stylesheet" href="/Assets/Css/Donations.css">
+      <script src="/Assets/Js/Utility/Utility.js" defer></script>
+    </head>
+    
+   <body>
+      <main>
+         <div class="imageZoomContainer" id="imageZoomContainer">
+            <span tabindex="0" id="imageZoomClose">×</span>
+            <div class="imageZoomControls"><i class="fa-solid fa-angle-left" tabindex="0" id="controls-left"></i><img class="imageZoomImage" id="imageZoomImage" src="" alt="" /><i class="fa-solid fa-angle-right" tabindex="0" id="controls-right"></i></div>
+            <p class="imageZoomCaption">Caption test</p>
+         </div>
+
+         <h1>Přispět ♥️</h1>
+         
+         <article>
+            <p>Myšlenka vytvořit MedikMap vznikla, když jsem se na začátku studia ztrácel v moři různých studijních zdrojů. A ten pravý jsem našel až den před zkouškou. 🌊</p>
+            <p>Proto jsme spolu s mým spolužákem Petrem v prváku vytvořili první verzi stránky.</p>
+            <p>Její základní myšlenkou bylo být "mapou" užitečných zdrojů a dalších materiálů pro studenty medicíny. 🗺️</p>
+
+            <p>Postupně se z pouhého seznamu zdrojů začal stávat komplexsnější web:</p>
+            <ul>
+               <li>🔬 Kurz histologie s 20 lekcemi, cvičnými testy a anki balíček s poznávačkou preparátů</li>
+               <li>🫀 Kurz anatomie s materiály na zimní i letní pitevnu</li>
+               <li>🧭 MedikMap navigátor –  nástroj na plánování učení na zkoušku</li>
+               <li>🧩 Přehledný prohlížeč volitelných předmětů s možností filtrovat podle semestru, oboru, ročníku, počtu kreditů i hodnocení od ostatních studentů</li>
+            </ul>
+            
+            <p>Dnes MedikMap.cz Za poslední rok  navštívilo přes <b>7 000 uživatelů</b>, cvičné testy vyplnilo přes <b>1000</b> studentů</p> a další přibívají.
+            <p>Věřím, že studium medicíny je týmový sport, a proto jsou všechny materiály volně dostupné.</p>
+
+            <p>Velmi si proto vážím vašeho příspěvku, který pomůže financovat provoz webu a bude mě motivovat k dalšímu vývoji.</p>
+            <p>Děkuji ♥️</p>
+          
+          <div class="progressWrap">
+            <h3>Hosting webu</h3>
+            <p>Roční provoz domény</p>
+            <div>
+               <div class="progressInfo">
+                  <div class="progressBar">
+                  <div id="progressBarFill"></div>
+               </div>
+               <span id="amount">0 / 360 Kč</span>
+               </div>
+               <p id="procenta">Vybráno 0 %</p>
+            </div>
+          </div>
+          <div class="DonateButtons">
+            <button onclick="Pay(50)">50 Kč</button>
+            <button onclick="Pay(150)">150 Kč</button>
+            <button onclick="Pay(300)">300 Kč</button>
+            <button onclick="Pay(500)">500 Kč</button>
+        </div>
+         <div class="fundingGoal">
+
+         </div>
+         <div class="payGate" id="payGate">
+            <img  id="donateKod" src="Assets/Img/QR/50.svg" alt="">
+            <p id="kodCaption"></p>
+            <p>Číslo účtu: <b>4292006073/0800</b></p>
+            <p>IBAN: <b>CZ81 0800 0000 0042 9200 6073</b></p>
+         </div>
+            <h2>MedikMap již podpořili: 🫶</h2>
+            <ul class="Darci" id="Darci">
+               <button>:Denča</button>
+               <button>Alex Hänsel</button>
+               <button>Roman Panasenko</button>
+            </ul>
+      
+         </article>
+      </main>
+   </body>
+   <script defer>
+        function Pay(castka){
+            document.getElementById("donateKod").src = `Assets/Img/QR/${castka}.svg`
+             document.getElementById("donateKod").alt = `QR platba ${castka} Kč`
+            document.getElementById("kodCaption").innerHTML = `${castka} Kč`
+            document.getElementById("payGate").style.display = "block"
+
+        }
+        function Cile(){
+        let cil = 360
+        let darovano = 0
+        let procenta = Math.floor((darovano / cil) * 100)
+        let bar =  document.getElementById("progressBarFill")
+        
+        bar.style.width = `${procenta}%`;
+
+        document.getElementById("amount").innerHTML = `${darovano} / ${cil} Kč`
+        document.getElementById("procenta").innerHTML = `Vybráno ${procenta} %`
+   
+        }
+        setTimeout(Cile, 200);
+        </script>
+</html>

@@ -35,6 +35,11 @@
 	font-weight: bold;
 	width: 90%;
 	font-family: var(--default-font);
+        outline: none;
+}
+
+.Search:focus-within{
+    animation: Glow 2s ease-in-out infinite;
 }
 
 /*Filter*/
@@ -64,13 +69,10 @@
     background-color: var(--background-color);
     -webkit-appearance: none;
 }
-.filterBtn:hover{
+.filterBtn:hover, .filterBtn:focus{
 	transform: scale(1.1);
+    animation: Glow .7s ease-in-out infinite;
 }
-.filterBtn:focus{
-	transform: scale(1.1);
-}
-
 /*LinkTree*/
 
 .linktree{
@@ -115,10 +117,12 @@ section > div{
     color: var(--main-color);
     cursor: pointer;
     transition: color 0.1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     font-size: 1.6rem;
 }
 .item-header a:hover, .item-header a:focus,.item-header i:hover, .item-header i:focus{
     color: var(--text-color);
+    transform: scale(1.1);
 }
 
 
@@ -163,12 +167,14 @@ text-decoration: none;
 }
 
 .copyKod:hover{
-     color: var(--text-color);
-    background-color: var(--main-color);
+    transform: scale(1.1);
+    animation: Glow .7s ease-in-out infinite;
 }
 
 .copyKod:active{
     font-size: 1.2em;
+    background-color: var(--main-color);
+    color: var(--text-color);
 }
 
 @media (min-width: 850px){

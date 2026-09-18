@@ -143,7 +143,7 @@ function exportProject(){
         {regex: /^(\d+\. +|- )(.*$)/gm, replace: "<li>$2</li>"}, // Jednotlivé položky
         {regex: /\!\[(.*)]\((.*)\)/gm, replace: '<div class="image"><img src="/Assets/Img/$2" alt="$1"><p class="caption">$1</p></div>'}, // Obrázek
         {regex: /<grid>(.*)<\/grid>/gms, replace: '<div class="imageGrid">$1</div>' }, // Galerie
-        {regex: /<youtube>(.*)<\/youtube>/gm, replace: '<iframe class="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/$1">'}, // YouTube
+        {regex: /<youtube>(.*)<\/youtube>/gm, replace: '<iframe class="youtube" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/$1">'}, // YouTube
         {regex: /^```(.*)```/gms, replace: '<pre>$1</pre>'}, // Kód
         {regex: /^(?!<)(.+)$/gm, replace: "<p>$1</p>"}, // Odstavce
     ]
