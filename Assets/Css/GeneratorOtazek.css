@@ -42,15 +42,19 @@ font-size: 23px;
     font-family: var(--default-font);
     border: 2px solid var(--main-color);
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
-.inputButton:hover{
+.inputButton:hover, .inputButton:focus{
+    transform: scale(1.05);
+    animation: Glow .7s ease-in-out infinite;
+}
+.inputButton:active{
     color: var(--background-color);
     background-color:  var(--main-color);
-    transform: scale(1.05);
+    transform: scale(0.9);
 }
-.inputButton:hover > .fa-solid{
+.inputButton:active > .fa-solid{
 		color: var(--secondary-color);
 	}
 .buttonsGrid{
