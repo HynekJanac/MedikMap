@@ -1,7 +1,7 @@
  .DonateButtons {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(212px,1fr));	
-            gap: 2em;
+            grid-template-columns: repeat(auto-fit, minmax(212px,0.5fr));	
+            gap: 1em;
         }
 
 .DonateButtons button{

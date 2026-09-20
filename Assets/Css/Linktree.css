@@ -172,7 +172,7 @@ text-decoration: none;
 }
 
 .copyKod:active{
-    font-size: 1.2em;
+    transform: scale(0.9);
     background-color: var(--main-color);
     color: var(--text-color);
 }
