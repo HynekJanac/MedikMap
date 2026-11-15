@@ -2,16 +2,20 @@
     color: var(--main-color);
     font-size: 2em;
 }
+
 .paragraf{
     color: var(--text-color);
     font-size: 1.1em;
 }
+
 .paragraf a{
     color: var(--main-color);
 }
+
 .paragraf a:hover{
     color: var(--text-color);
 }
+
 /* Search */
 .Search{
 	text-align: center;
@@ -42,7 +46,7 @@
     animation: Glow 2s ease-in-out infinite;
 }
 
-/*Filter*/
+/* Filter */
 .filter{
 	width: 100%;
 	display: flex;
@@ -52,6 +56,7 @@
 	margin: 1em auto;
 	padding: 0;
 }
+
 .filterBtn{
 	color: var(--main-color);
 	padding: 0.5em;
@@ -67,13 +72,15 @@
 	cursor: pointer;
 	transition: all .3s ease-in-out;
     background-color: var(--background-color);
-    -webkit-appearance: none;
+    appearance: none;
 }
+
 .filterBtn:hover, .filterBtn:focus{
 	transform: scale(1.1);
     animation: Glow .7s ease-in-out infinite;
 }
-/*LinkTree*/
+
+/* LinkTree */
 
 .linktree{
     text-align: center;
@@ -87,12 +94,14 @@
     width: 100%;
     margin: 0 auto;
     align-items: center;
+
 & h2{
     color: var(--main-color);
     font-size: 2.5rem;
     
 }}
-/*Item*/
+
+/* Item */
 section{
     min-width: 100%;
 }
@@ -100,8 +109,9 @@ section{
 section > div{
     text-align: left;
 }
+
 .item-wrap{
-    margin: 3px 0 3px 0;
+    margin: 3px 0;
 }
 
 .item-header{
@@ -120,6 +130,7 @@ section > div{
     transition: transform 0.3s ease-in-out;
     font-size: 1.6rem;
 }
+
 .item-header a:hover, .item-header a:focus,.item-header i:hover, .item-header i:focus{
     color: var(--text-color);
     transform: scale(1.1);
@@ -177,7 +188,7 @@ text-decoration: none;
     color: var(--text-color);
 }
 
-@media (min-width: 850px){
+@media (width >= 850px){
     .Links-Wrap{
         width: 70%;
         

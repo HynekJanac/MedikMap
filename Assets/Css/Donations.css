@@ -17,18 +17,22 @@
     transition: transform ease-in-out .2s;
 
 }
+
 .DonateButtons button:hover{
     transform: scale(1.2);
     animation: Glow .7s ease-in-out infinite;
 }
+
 .DonateButtons button:active{
     color: var(--text-color);
     background-color: var(--main-color);
     transform: scale(0.9);
 }
+
 #donateKod{
     width: 100%;
 }
+
 .payGate{
     display: none;
 }
@@ -69,6 +73,7 @@
 .progressBar{
     background-color: var(--background-color);
 }
+
 #progressBarFill{
     transition: width .7s ease;
     animation: Glow .7s ease-in-out infinite;
@@ -79,8 +84,7 @@
 
 .Darci{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
 	list-style: none;
 	font-size: 1.4rem;
@@ -88,6 +92,7 @@
     gap: 1em;
 	transition: all .3s ease-in-out;
 }
+
 .Darci button{
     color: var(--main-color);
     font-weight: bold;
@@ -97,6 +102,7 @@
     border: none;
     transition: all .3s ease-in-out;
 }
+
 .Darci button:hover{
     color: var(--text-color);
     transform: scale(1.1);
@@ -110,7 +116,8 @@
     color: var(--main-color);
     font-size: 2rem;
 }
-@media (min-width: 850px){
+
+@media (width >= 850px){
    #donateKod{
     width: 40%;
 }

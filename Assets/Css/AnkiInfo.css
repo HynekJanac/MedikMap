@@ -5,9 +5,9 @@
     --quote-font: 'Rokkitt', serif;
     --main-color: #ff4d4d;
     --background-color: #fcf9f9;
-    --secondary-color: #ffffff;
-    --text-color: #000000;
-    --section-note-color: rgba(0, 0, 0, 0.712);
+    --secondary-color: #fff;
+    --text-color: #000;
+    --section-note-color: rgb(0 0 0 / 71.2%);
     --grid: 1fr;
 }
 

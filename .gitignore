@@ -1,5 +1,8 @@
 .DS_Store
 *.py
+*.csv
+*.xbs
 links.json
 Roadmap.md
+/Kurzy/Nastroje/
 /Clanky/Koncepty/

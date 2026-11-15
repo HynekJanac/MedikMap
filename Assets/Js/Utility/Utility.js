@@ -2,7 +2,7 @@
 var MasterSettings = {
   preloader: false,
   infobox: true,
-  infobox_message: '🧩 Spustili jsme nový prohlížeč volitelných předmětů. <a href="../Volitelne-predmety/">Vyzkoušet<a/>',
+  infobox_message: '🎓 Vyzkoušejte naše interaktivní kurzy anatomie a histologie <a href="/kurzy.html">Prozkoumat<a/>',
 } 
 // adding [NEW] to the title adds a little dot
 const NavLinks = [
@@ -177,7 +177,7 @@ function Donate(){
   else{
     localStorage.setItem("navstiveno",parseInt(navstiveno) + 1)
   }
-  if (parseInt(localStorage.getItem("navstiveno")) == 30 || parseInt(localStorage.getItem("navstiveno")) == 90){
+  if (parseInt(localStorage.getItem("navstiveno")) == 15 || parseInt(localStorage.getItem("navstiveno")) == 30){
     document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend",popupsource)
   }
 }

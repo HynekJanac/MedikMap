@@ -35,7 +35,6 @@ font-size: 23px;
     background-color: var(--background-color);
     color: var(--main-color);
     border-radius: 20px;
-    border: none;
     font-size: 20px;
     padding: 10px;
     font-weight: bold;
@@ -49,14 +48,17 @@ font-size: 23px;
     transform: scale(1.05);
     animation: Glow .7s ease-in-out infinite;
 }
+
 .inputButton:active{
     color: var(--background-color);
     background-color:  var(--main-color);
     transform: scale(0.9);
 }
+
 .inputButton:active > .fa-solid{
 		color: var(--secondary-color);
 	}
+
 .buttonsGrid{
     display: grid;
     gap: 1em;
